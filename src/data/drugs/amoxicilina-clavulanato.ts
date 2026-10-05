@@ -6,7 +6,8 @@ export const amoxicilinaClavulanato: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'clavulin novamox clavulanato amox amoxicilina clavulin bd betalactamase sinot clav',
   classe: 'Antimicrobiano, Penicilina associada a Inibidor de Beta-Lactamase',
-  fontes: { HSL: '31/03/2022', EINP: '2024' },
+  dosePratica: 'Adulto: 875 + 125 mg (BD) VO de 12/12h (ou 500 + 125 mg VO de 8/8h) no início das refeições por 7 a 10 dias. EV: 1 g + 200 mg a cada 8h. Pediatria: Formulação BD (400+57mg/5mL): 25 a 45 mg/kg/dia VO divididos de 12/12h; Convencional (250+62,5mg/5mL): 20 a 40 mg/kg/dia divididos de 8/8h.',
+  fontes: { HSL: '31/03/2022', PSZERADO: '2025', EINP: '2024' },
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg + 125 mg, comprimido 875 mg + 125 mg, suspensão oral 50 mg/mL + 12,5 mg/mL (250+62,5mg/5mL) e suspensão oral 80 mg/mL + 11,4 mg/mL (400+57mg/5mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -209,6 +210,12 @@ export const amoxicilinaClavulanato: Farmaco = {
       fonte: 'HSL',
       trecho: 'Pediatria: Oral > 2 meses a 2 anos:',
       strong: true
+    },
+    {
+      msg: 'Contraindicado em pacientes com hipersensibilidade a penicilinas ou histórico de icterícia/disfunção hepática por amoxicilina + clavulanato (HSL).',
+      fonte: 'HSL',
+      trecho: 'Contraindicações: Pacientes com história de reações alérgicas e hipersensibilidade às penicilinas ou disfunção hepática associada à amoxicilina/ácido clavulânico.',
+      strong: false
     }
   ],
   ev: {

@@ -8,10 +8,10 @@
 
 [x] 1. Dipirona
 [x] 2. Paracetamol
-3. Ibuprofeno
-4. Cetoprofeno
-5. Amoxicilina
-6. Amoxicilina + clavulanato
+[x] 3. Ibuprofeno
+[x] 4. Cetoprofeno
+[x] 5. Amoxicilina
+[x] 6. Amoxicilina + clavulanato
 7. Azitromicina
 8. Cefalexina
 9. Ceftriaxona

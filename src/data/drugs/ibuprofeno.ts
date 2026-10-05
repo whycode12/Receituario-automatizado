@@ -6,7 +6,8 @@ export const ibuprofeno: Farmaco = {
   categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'alivium advil doraliv motrin spidufen ibuprofeno',
   classe: 'Analgésico, antipirético e anti-inflamatório não esteroidal (AINE)',
-  fontes: { HSL: '30/11/2020', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: 400 mg a 600 mg VO de 8/8h (ou 6/6h) junto a alimentos (máx. 2.400 mg a 3.200 mg/dia). Pediatria (≥ 6 meses): 5 a 10 mg/kg/dose VO de 8/8h (solução 100 mg/mL = 1 gota/kg; solução 50 mg/mL = 2 gotas/kg; máx. 40 mg/kg/dia ou 1.200 mg/dia).',
+  fontes: { HSL: '30/11/2020', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'dor ou febre',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 300 mg, comprimido 600 mg e suspensão oral 50 mg/mL. Farmácia Popular: não consta no elenco do programa.',
   apresentacoes: [

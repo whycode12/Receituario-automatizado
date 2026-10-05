@@ -6,7 +6,8 @@ export const cetoprofeno: Farmaco = {
   categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'profenid artrinid cetoprofeno',
   classe: 'Anti-inflamatório não esteroidal, antirreumático',
-  fontes: { HSL: '05/03/2025', EINP: '', EINA: '', BULA: '03/10/2026' },
+  dosePratica: 'Adulto: VO: 150 mg 1x/dia (ou 100 mg 12/12h, ou 50 mg 8/8h) junto a refeições. IM/EV: 100 mg a cada 12h a 24h (diluir EV em 100 mL de SF 0,9% em 20-30 min; máx. 300 mg/dia por até 48h). Contraindicado em < 15 anos.',
+  fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '03/10/2026' },
   snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: cetoprofeno não consta. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -79,6 +80,20 @@ export const cetoprofeno: Farmaco = {
       disp: '1 frasco-ampola',
       acesso: { rename: false, fp: false },
       obs: 'Após reconstituição/diluição: uso imediato (HSL).'
+    },
+    {
+      id: 'amp100',
+      forma: 'amp',
+      nome: 'Ampola 100 mg / 2 mL (solução)',
+      comercial: 'Profenid IM / IV',
+      conc: '50mg/mL',
+      rotulo: 'Cetoprofeno 100mg/2mL',
+      mgml: 50,
+      volml: 2,
+      vias: ['IM', 'EV'],
+      disp: '1 ampola',
+      acesso: { rename: false, fp: false },
+      obs: 'IM: injeção profunda no glúteo. EV: diluir em 100 mL de SF 0,9% e infundir em 20-30 min (PSZerado / HSL).'
     }
   ],
   regras: [
@@ -127,16 +142,16 @@ export const cetoprofeno: Farmaco = {
     {
       pub: 'adulto',
       se: { idadeMinAnos: 15 },
-      vias: ['EV'],
-      tipo: 'mg_dia',
+      vias: ['EV', 'IM'],
+      tipo: 'mg',
       min: 100,
-      max: 300,
+      max: 100,
       padrao: 100,
       dosesDia: [1, 3],
       dosesPadrao: 2,
       duracaoMaxDias: 2,
       fonte: 'HSL',
-      trecho: 'Injetável: 100-300mg/dia, EV. O tratamento deve durar no máximo 48h.'
+      trecho: 'Injetável: 100-300mg/dia, EV ou IM. O tratamento deve durar no máximo 48h.'
     }
   ],
   maximos: [
@@ -173,10 +188,10 @@ export const cetoprofeno: Farmaco = {
     fonteTxt: 'Reconstituir 100 mg com 5 mL de SF 0,9%. Diluir em 100-250 mL de SF ou SG5%. Tempo não inferior a 20 min.'
   },
   notas: {
-    indicacao: 'Anti-inflamatório não esteroidal e analgésico em afecções reumáticas e traumatológicas.',
-    administracao: 'VO: tomar junto às refeições ou com leite. EV: infusão intermitente em 30 min. IM não descrita nas fontes.',
-    cuidados: 'Contraindicado em úlcera péptica ativa, insuficiência renal/hepática severa e gestação.',
-    ajuste: 'Idosos e insuficiência renal/hepática: iniciar com a menor dose eficaz.'
+    indicacao: 'Anti-inflamatório não esteroidal e analgésico em afecções reumáticas, traumáticas, cólica renal e crises de enxaqueca (HSL / PSZerado).',
+    administracao: 'VO: tomar junto às refeições ou com leite. EV: diluir em 100-250 mL de SF 0,9% e infundir em 20 a 30 min. IM: injeção profunda no glúteo (máx. 48h de terapia parenteral) (HSL / PSZerado).',
+    cuidados: 'Contraindicado em úlcera péptica ativa, insuficiência renal/hepática severa, menores de 15 anos e gestação. Risco de sangramento digestivo e nefrotoxicidade.',
+    ajuste: 'Idosos e insuficiência renal/hepática: iniciar com a menor dose eficaz e monitorar função renal.'
   }
 };
 

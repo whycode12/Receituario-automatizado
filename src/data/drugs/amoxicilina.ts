@@ -6,10 +6,25 @@ export const amoxicilina: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'amoxil amoxicilina penicilina',
   classe: 'Antimicrobiano, Penicilina',
-  fontes: { HSL: '10/12/2018', EINP: '', EINA: '' },
+  dosePratica: 'Adulto: 500 mg VO de 8/8h (ou 875 mg VO de 12/12h) por 7 a 10 dias. Pediatria: 50 mg/kg/dia VO divididos de 8/8h (em otite média aguda de alto risco até 80 a 90 mg/kg/dia; máx. 500 mg/dose ou dose de adulto).',
+  fontes: { HSL: '10/12/2018', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): cápsula 500 mg, comprimido 500 mg e suspensão oral 50 mg/mL (250 mg/5 mL). Farmácia Popular: não consta.',
   apresentacoes: [
+    {
+      id: 'cp875',
+      forma: 'cp',
+      nome: 'Comprimido 875 mg',
+      comercial: 'Amoxil',
+      conc: '875mg',
+      rotulo: 'Amoxicilina 875mg',
+      mg: 875,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      obs: 'Posologia confortável de 12 em 12 horas para adultos.'
+    },
     {
       id: 'cap500',
       forma: 'cap',
@@ -57,6 +72,22 @@ export const amoxicilina: Farmaco = {
       pub: 'adulto',
       se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
       vias: ['VO'],
+      apres: ['cp875'],
+      tipo: 'mg',
+      min: 875,
+      max: 875,
+      padrao: 875,
+      dosesDia: [2, 2],
+      dosesPadrao: 2,
+      duracaoMaxDias: 14,
+      fonte: 'BULA',
+      trecho: 'Adultos: 875 mg por via oral a cada 12 horas.'
+    },
+    {
+      pub: 'adulto',
+      se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
+      vias: ['VO'],
+      apres: ['cap500', 'cp500'],
       tipo: 'mg',
       min: 250,
       max: 500,
@@ -132,11 +163,19 @@ export const amoxicilina: Farmaco = {
       trecho: 'Dose Máxima Adulto: 6g ao dia.'
     }
   ],
+  contra: [
+    {
+      msg: 'Contraindicado em pacientes com hipersensibilidade a penicilinas ou beta-lactâmicos (HSL).',
+      fonte: 'HSL',
+      trecho: 'Contraindicações: Pacientes com história de reações alérgicas e hipersensibilidade às penicilinas.',
+      strong: false
+    }
+  ],
   notas: {
-    indicacao: 'Tratamento de otite média, sinusite, infecções respiratórias, urinárias e de pele.',
-    administracao: 'VO com ou sem alimentos. Suspensão: agitar frasco com pó seco antes de abrir; adicionar água filtrada até a marca e agitar bem.',
-    cuidados: 'Contraindicado em hipersensibilidade a penicilinas.',
-    ajuste: 'Insuficiência renal: Clcr 10-30 mL/min (12/12h); Clcr < 10 mL/min (24/24h).'
+    indicacao: 'Tratamento de infecções bacterianas do trato respiratório superior e inferior (faringite, sinusite, otite média aguda, PAC), infecções urinárias e cutâneas (HSL / PSZerado).',
+    administracao: 'VO com ou sem alimentos. Suspensão oral: agitar o frasco com o pó seco para soltá-lo; adicionar água filtrada aos poucos até a marca e agitar vigorosamente até suspensão homogênea. Após reconstituição, estável por 14 dias em temperatura ambiente.',
+    cuidados: 'Contraindicado em indivíduos com histórico de alergia a penicilinas ou beta-lactâmicos. Risco de exantema cutâneo maculopapular em pacientes com mononucleose infecciosa.',
+    ajuste: 'Insuficiência renal: Clcr 10-30 mL/min: administrar 250 a 500 mg a cada 12 horas; Clcr < 10 mL/min: 250 a 500 mg a cada 24 horas (HSL).'
   }
 };
 
