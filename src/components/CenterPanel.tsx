@@ -1,7 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Farmaco, Apresentacao, Via, ModoUso, UnidadeDose, ResultadoCalculo, Paciente } from '../types';
-import { CFG, fmt, fmtMg, fonteNome, regraLabel } from '../utils/constants';
-import { unidades, unidLbl, fromMg, toMg, mgml, viasDisp } from '../engine/calculator';
+import { fmt, fmtMg, fonteNome } from '../utils/constants';
+import { unidades, unidLbl, fromMg, mgml, viasDisp } from '../engine/calculator';
+import { AcessoPopover } from './center/AcessoPopover';
+import { DoseSlider } from './center/DoseSlider';
+import { EvSection } from './center/EvSection';
+import { DrugDetails } from './center/DrugDetails';
 
 interface CenterPanelProps {
   drug: Farmaco | null;
@@ -67,10 +71,6 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   evTempo,
   setEvTempo
 }) => {
-  const [acessoOpen, setAcessoOpen] = useState(false);
-  const accWrapRef = useRef<HTMLSpanElement>(null);
-  const barRef = useRef<HTMLDivElement>(null);
-  const [dragging, setDragging] = useState(false);
   const [doseInput, setDoseInput] = useState<string>(
     doseVal != null ? String(doseVal).replace('.', ',') : ''
   );
@@ -83,17 +83,6 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
     }
   }, [doseVal]);
 
-  // Fecha o popover ao clicar fora
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (acessoOpen && accWrapRef.current && !accWrapRef.current.contains(e.target as Node)) {
-        setAcessoOpen(false);
-      }
-    };
-    document.addEventListener('click', handleOutsideClick);
-    return () => document.removeEventListener('click', handleOutsideClick);
-  }, [acessoOpen]);
-
   if (!drug || !apres) {
     return (
       <section className="col" id="centro">
@@ -103,75 +92,11 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   }
 
   const dispVias = viasDisp(drug);
-
   const curApresList = drug.apresentacoes.filter(a => a.vias.includes(via));
   const us = unidades(apres, paciente.peso, modo);
 
-  // Barra de cálculo
-  let uLo: number | null = null;
-  let uHi: number | null = null;
-  let top = 1;
-  let pc = (v: number) => 0;
-  let isBad = false;
-
-  if (calcResult.lo != null && calcResult.hi != null) {
-    uLo = fromMg(calcResult.lo, unid, apres, paciente.peso, n);
-    uHi = fromMg(calcResult.hi, unid, apres, paciente.peso, n);
-    const cur = doseVal;
-    top = Math.max((uHi || 0) * 1.5, cur || 0) * 1.05 || 1;
-    pc = (v: number) => Math.max(0, Math.min(100, (v / top) * 100));
-    isBad = cur != null && calcResult.mg != null && (calcResult.mg > calcResult.hi * 1.0001 || calcResult.mg < calcResult.lo * 0.9999);
-  }
-
-  const hasDoseError = Boolean(calcResult && calcResult.alerts && calcResult.alerts.length > 0);
-
-  const applyBarDrag = (clientX: number) => {
-
-    if (!barRef.current || !top) return;
-    const rect = barRef.current.getBoundingClientRect();
-    const pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    const raw = Math.round(pct * top);
-    setDoseVal(raw);
-  };
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    setDragging(true);
-    applyBarDrag(e.clientX);
-    e.preventDefault();
-  };
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setDragging(true);
-    applyBarDrag(e.touches[0].clientX);
-  };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (dragging) applyBarDrag(e.clientX);
-    };
-    const handleMouseUp = () => {
-      if (dragging) setDragging(false);
-    };
-    const handleTouchMove = (e: TouchEvent) => {
-      if (dragging && e.touches[0]) applyBarDrag(e.touches[0].clientX);
-    };
-    const handleTouchEnd = () => {
-      if (dragging) setDragging(false);
-    };
-
-    if (dragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove);
-      document.addEventListener('touchend', handleTouchEnd);
-    }
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [dragging, top]);
+  const uLo = calcResult.lo != null ? fromMg(calcResult.lo, unid, apres, paciente.peso, n) : null;
+  const uHi = calcResult.hi != null ? fromMg(calcResult.hi, unid, apres, paciente.peso, n) : null;
 
   // Montar partes descritivas do cálculo
   const calcParts: string[] = [];
@@ -209,39 +134,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
           ★
         </button>
 
-        {apres.acesso && (
-          <span className="acc-wrap" ref={accWrapRef}>
-            <button
-              className="acc"
-              onClick={() => setAcessoOpen(!acessoOpen)}
-              title="Disponibilidade no SUS (apresentação selecionada)"
-            >
-              <span className={`abadge ${apres.acesso.rename ? 'on' : 'off'}`}>RENAME</span>
-              <span className={`abadge ${apres.acesso.fp ? 'on' : 'off'}`}>F. POPULAR</span>
-            </button>
-            <div className={`apop ${acessoOpen ? 'open' : ''}`}>
-              <div className="apt">Disponibilidade no SUS por apresentação</div>
-              {drug.apresentacoes
-                .filter(a => a.acesso)
-                .map(a => (
-                  <div key={a.id} className={`arow ${a.id === apres.id ? 'cur' : ''}`}>
-                    <span className="an">{a.nome}</span>
-                    <span className={`ai ${a.acesso?.rename ? 'y' : 'n'}`}>
-                      {a.acesso?.rename ? '✓' : '✗'} RENAME
-                    </span>
-                    <span className={`ai ${a.acesso?.fp ? 'y' : 'n'}`}>
-                      {a.acesso?.fp ? '✓' : '✗'} F. Popular
-                    </span>
-                  </div>
-                ))}
-              <div className="afo">
-                {drug.acessoFonte || ''}
-                <br />
-                A disponibilidade real depende da REMUME do município.
-              </div>
-            </div>
-          </span>
-        )}
+        <AcessoPopover drug={drug} apres={apres} />
       </div>
 
       <div className="muted small">{drug.classe}</div>
@@ -413,27 +306,15 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
         <div id="calc" className="calc">
           {calcResult.lo != null && calcResult.hi != null && uLo != null && uHi != null && (
             <>
-              <div
-                ref={barRef}
-                className="bar"
-                data-top={top}
-                onMouseDown={handleMouseDown}
-                onTouchStart={handleTouchStart}
-              >
-                <div
-                  className="ok"
-                  style={{
-                    left: `${pc(uLo)}%`,
-                    width: `${Math.max(1, pc(uHi) - pc(uLo))}%`
-                  }}
-                />
-                {doseVal != null && (
-                  <div
-                    className={`mk ${isBad ? 'bad' : ''}`}
-                    style={{ left: `${pc(doseVal)}%` }}
-                  />
-                )}
-              </div>
+              <DoseSlider
+                calcResult={calcResult}
+                unid={unid}
+                apres={apres}
+                paciente={paciente}
+                n={n}
+                doseVal={doseVal}
+                setDoseVal={setDoseVal}
+              />
               <div className="sub">
                 Recomendado:{' '}
                 {uLo === uHi || Math.abs(uLo - uHi) < 1e-9 ? fmt(uHi) : `${fmt(uLo)} – ${fmt(uHi)}`}{' '}
@@ -461,114 +342,33 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
 
       {/* Diluição EV */}
       {via === 'EV' && drug.ev && (
-        <div className="box">
-          <div className="lbl" style={{ marginBottom: '10px' }}>
-            Diluição e administração EV
-          </div>
-          <div className="chips">
-            {drug.ev.diluentes.map(x => (
-              <button
-                key={x}
-                className={`chip ${evDil === x ? 'on' : ''}`}
-                onClick={() => setEvDil(x)}
-              >
-                {x}
-              </button>
-            ))}
-          </div>
-
-          <div className="row" style={{ marginTop: '10px' }}>
-            <label className="muted small" style={{ flex: 1 }}>
-              Volume final
-              <select
-                style={{ marginTop: '4px' }}
-                value={evVol ?? calcResult.ev?.vol ?? ''}
-                onChange={e => setEvVol(parseFloat(e.target.value) || null)}
-              >
-                {drug.ev.volOpcoes.map(v => (
-                  <option key={v} value={v}>
-                    {v} mL · {v <= CFG.limiteSeringaMl ? 'seringa' : 'bolsa'}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label className="muted small" style={{ flex: 1 }}>
-              Tempo (min)
-              <input
-                inputMode="decimal"
-                style={{ marginTop: '4px', width: '100%' }}
-                value={
-                  evTempo != null
-                    ? String(evTempo).replace('.', ',')
-                    : calcResult.ev?.t != null
-                    ? String(calcResult.ev.t).replace('.', ',')
-                    : ''
-                }
-                onChange={e => {
-                  const v = parseFloat(e.target.value.replace(',', '.'));
-                  setEvTempo(isNaN(v) ? null : v);
-                }}
-              />
-            </label>
-          </div>
-
-          <input
-            type="range"
-            style={{ width: '100%', marginTop: '10px', border: 0, padding: 0 }}
-            min={calcResult.ev?.tMin ? Math.max(1, Math.floor(calcResult.ev.tMin)) : 1}
-            max={calcResult.ev?.tMax || Math.max(30, Math.ceil((calcResult.ev?.t || 0) * 1.5))}
-            step={1}
-            value={
-              evTempo ??
-              calcResult.ev?.t ??
-              (calcResult.ev?.tMin ? Math.max(1, Math.floor(calcResult.ev.tMin)) : 1)
-            }
-            onChange={e => setEvTempo(parseFloat(e.target.value))}
-          />
-
-          {calcResult.ev && (
-            <div id="evcalc" className="sub" style={{ marginTop: '6px' }}>
-              <b>{calcResult.ev.seringa ? 'Seringa' : 'Bolsa'}</b>{' '}
-              {calcResult.ev.seringa ? '(bolus lento manual)' : ''} · volume da dose{' '}
-              {fmt(calcResult.ev.vDose)} mL · conc. final {fmt(calcResult.ev.conc)} mg/mL
-              {drug.ev.concMax ? ` (máx. ${fmt(drug.ev.concMax)})` : ''}
-              {!calcResult.ev.seringa && calcResult.ev.gtt != null && (
-                <>
-                  <br />
-                  <b>≈ {calcResult.ev.gtt} gotas/min</b> · {calcResult.ev.mlh} mL/h (macrogotas{' '}
-                  {CFG.gotasPorMl} gts/mL)
-                </>
-              )}
-              <br />
-              {(calcResult.ev.tMin || calcResult.ev.tMax) && (
-                <>
-                  Faixa:{' '}
-                  {calcResult.ev.tMin ? fmt(Math.ceil(calcResult.ev.tMin * 10) / 10, 1) : '—'}
-                  {calcResult.ev.tMax ? ` – ${calcResult.ev.tMax}` : '+'} min.{' '}
-                </>
-              )}
-              {calcResult.ev.tTxt}
-            </div>
-          )}
-        </div>
+        <EvSection
+          drug={drug}
+          calcResult={calcResult}
+          evDil={evDil}
+          setEvDil={setEvDil}
+          evVol={evVol}
+          setEvVol={setEvVol}
+          evTempo={evTempo}
+          setEvTempo={setEvTempo}
+        />
       )}
 
-        {/* Alertas */}
-        <div id="alerts" style={{ marginTop: '16px' }}>
-          {calcResult.alerts.map((x, i) => (
-            <div key={`al-${i}`} className={`alert red ${x.strong ? 'strong' : ''}`}>
-              {x.t}
-              {x.f && <span className="src">Fonte: {x.f}</span>}
-              {x.tr && <span className="tr">"{x.tr}"</span>}
-            </div>
-          ))}
-          {!hasDoseError && calcResult.arr && calcResult.R.length > 0 && (
-            <div className="alert green">
-              ✓ Dentro do recomendado ·{' '}
-              {[...new Set(calcResult.R.map(r => fonteNome(drug, r.fonte)))].join(' · ')}
-            </div>
-          )}
+      {/* Alertas */}
+      <div id="alerts" style={{ marginTop: '16px' }}>
+        {calcResult.alerts.map((x, i) => (
+          <div key={`al-${i}`} className={`alert red ${x.strong ? 'strong' : ''}`}>
+            {x.t}
+            {x.f && <span className="src">Fonte: {x.f}</span>}
+            {x.tr && <span className="tr">"{x.tr}"</span>}
+          </div>
+        ))}
+        {calcResult.alerts.length === 0 && calcResult.arr && calcResult.R.length > 0 && (
+          <div className="alert green">
+            ✓ Dentro do recomendado ·{' '}
+            {[...new Set(calcResult.R.map(r => fonteNome(drug, r.fonte)))].join(' · ')}
+          </div>
+        )}
 
         {calcResult.notes.map((x, i) => (
           <div key={`no-${i}`} className={`alert amber ${x.strong ? 'strong' : ''}`}>
@@ -587,63 +387,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
       </div>
 
       {/* Fontes e detalhes */}
-      <details>
-        <summary>Fontes e detalhes</summary>
-        <p>
-          <span className="k">Fontes:</span>{' '}
-          {Object.keys(drug.fontes)
-            .map(f => fonteNome(drug, f))
-            .join(' · ')}
-        </p>
-        <p>
-          <span className="k">Indicação:</span> {drug.notas.indicacao}
-        </p>
-        {(drug.dosePratica || drug.notas.dosePratica) && (
-          <p>
-            <span className="k">Prática Clínica Brasil:</span>{' '}
-            <b>{drug.dosePratica || drug.notas.dosePratica}</b>
-          </p>
-        )}
-        <p>
-          <span className="k">Regras de dose:</span>
-        </p>
-        {drug.regras.map((r, i) => (
-          <p key={i} className="small">
-            • <b>{regraLabel(r)}</b>
-            {r.apres
-              ? ` (${r.apres
-                  .map(id => drug.apresentacoes.find(a => a.id === id)?.nome)
-                  .filter(Boolean)
-                  .join(', ')})`
-              : ''}{' '}
-            — <i>"{r.trecho}"</i> <span className="muted">({r.fonte})</span>
-          </p>
-        ))}
-        {(drug.maximos || []).map((m, i) => (
-          <p key={i} className="small">
-            • <b>Máximo:</b> <i>"{m.trecho}"</i> <span className="muted">({m.fonte})</span>
-          </p>
-        ))}
-        {(drug.contra || []).map((c, i) => (
-          <p key={i} className="small">
-            • <b>Contraindicação:</b> <i>"{c.trecho}"</i> <span className="muted">({c.fonte})</span>
-          </p>
-        ))}
-        {drug.ev && (
-          <p>
-            <span className="k">Diluição EV:</span> {drug.ev.fonteTxt}
-          </p>
-        )}
-        <p>
-          <span className="k">Administração:</span> {drug.notas.administracao}
-        </p>
-        <p>
-          <span className="k">Cuidados:</span> {drug.notas.cuidados}
-        </p>
-        <p>
-          <span className="k">Ajuste de dose:</span> {drug.notas.ajuste}
-        </p>
-      </details>
+      <DrugDetails drug={drug} />
     </section>
   );
 };

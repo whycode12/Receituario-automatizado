@@ -172,7 +172,7 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
   }
 
-  // 5. Soluções líquidas e injetáveis com concentração mg/mL
+  // 6. Soluções líquidas e injetáveis com concentração mg/mL
   const c = mgml(ap);
   if (!c) {
     const ml = rml(mg);
