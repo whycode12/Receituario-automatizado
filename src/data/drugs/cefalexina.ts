@@ -6,7 +6,8 @@ export const cefalexina: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'keflex cefalexina cefalosporina primeira geracao antibiotico',
   classe: 'Antimicrobiano, Cefalosporina de 1ª Geração',
-  fontes: { HSL: '12/06/2019', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: 500 mg VO de 6/6h por 7 a 10 dias (infecções de pele/partes moles ou ITU não complicada). Pediatria (> 1 ano): 25 a 50 mg/kg/dia VO divididos de 6/6h (máx. 100 mg/kg/dia ou 4 g/dia).',
+  fontes: { HSL: '12/06/2019', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): cápsula/comprimido 500 mg e pó para suspensão oral 50 mg/mL (250 mg/5 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [

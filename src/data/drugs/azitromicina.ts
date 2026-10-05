@@ -6,7 +6,8 @@ export const azitromicina: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'zitromax azitromicina macrolideo azitrolab astro clamed zithromax',
   classe: 'Antimicrobiano, Macrolídeo',
-  fontes: { HSL: '10/06/2016' },
+  dosePratica: 'Adulto: 500 mg VO 1x/dia por 3 a 5 dias (ou 1 g VO em dose única para ISTs). EV: 500 mg 1x/dia em infusão lenta de 1h a 3h. Pediatria: 10 mg/kg/dia VO 1x/dia por 3 dias (máx. 500 mg/dia; não usar comprimido em < 45 kg).',
+  fontes: { HSL: '10/06/2016', PSZERADO: '2025' },
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg e pó para suspensão oral 40 mg/mL (600 mg e 900 mg). Farmácia Popular: não consta no elenco do programa.',
   apresentacoes: [
@@ -162,6 +163,12 @@ export const azitromicina: Farmaco = {
       fonte: 'HSL',
       trecho: 'Comprimidos: Não devem ser utilizados por crianças pesando < 45kg.',
       strong: true
+    },
+    {
+      msg: 'Contraindicado em pacientes com hipersensibilidade à azitromicina, eritromicina ou outros macrolídeos (HSL).',
+      fonte: 'HSL',
+      trecho: 'Contraindicações: Pacientes com hipersensibilidade à azitromicina, eritromicina, a qualquer macrolídeo ou cetolídeo.',
+      strong: false
     }
   ],
   ev: {

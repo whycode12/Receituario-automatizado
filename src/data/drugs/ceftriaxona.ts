@@ -6,7 +6,8 @@ export const ceftriaxona: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'rocefin keftron ceftriaxona cefalosporina terceira geracao fap ampola',
   classe: 'Antimicrobiano, Cefalosporina de 3ª Geração parenteral',
-  fontes: { HSL: '15/01/2026', EINA: '2024', EINP: '2024' },
+  dosePratica: 'Adulto: 1 g a 2 g EV ou IM a cada 24h (em meningite: 2 g EV de 12/12h; em gonorreia não complicada: 500 mg IM dose única com diluente de lidocaína). Pediatria: 50 a 75 mg/kg/dia EV ou IM 1x/dia (em meningite: 100 mg/kg/dia divididos de 12/12h; máx. 4 g/dia).',
+  fontes: { HSL: '15/01/2026', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
   snPadrao: 'infecção bacteriana moderada a grave',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): pó para solução injetável 500 mg e 1.000 mg (IM e EV). Farmácia Popular: não consta no elenco.',
   apresentacoes: [

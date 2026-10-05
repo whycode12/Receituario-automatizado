@@ -12,9 +12,9 @@
 [x] 4. Cetoprofeno
 [x] 5. Amoxicilina
 [x] 6. Amoxicilina + clavulanato
-7. Azitromicina
-8. Cefalexina
-9. Ceftriaxona
+[x] 7. Azitromicina
+[x] 8. Cefalexina
+[x] 9. Ceftriaxona
 10. Ciprofloxacino
 11. Butilbrometo de escopolamina
 12. Butilbrometo de escopolamina + dipirona
