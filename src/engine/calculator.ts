@@ -124,19 +124,8 @@ export function faixaRegra(r: RegraDose, p: Paciente, n: number): [number, numbe
 
 export function arred(mg: number | null, ap: Apresentacao): Arredondamento | null {
   if (mg == null || !(mg > 0)) return null;
-  if (ap.forma === 'sachet') {
-    const q = Math.max(1, Math.round(mg));
-    return { mg: q, ml: null, txt: `${q} envelope${q > 1 ? 's' : ''}`, whole: true };
-  }
-  if (ap.forma === 'sol_nasal' || ap.forma === 'sol_sro' || !mgml(ap)) {
-    const ml = rml(mg);
-    return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
-  }
-  if (ap.forma === 'gotas' && ap.mgml && ap.gotasml) {
-    const mpg = ap.mgml / ap.gotasml;
-    const g = Math.max(1, Math.round(mg / mpg));
-    return { mg: g * mpg, txt: `${g} gota${g > 1 ? 's' : ''}`, whole: false };
-  }
+
+  // 1. Unidades sólidas discretas: comprimidos, cápsulas, supositórios
   if (isUnid(ap) && ap.mg) {
     const st = ap.frac || 1;
     const q = Math.max(st, Math.round((mg / ap.mg) / st) * st);
@@ -153,11 +142,33 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     else txt = `${fracTxt(q)} ${q <= 1 ? sing : plur}`;
     return { mg: q * ap.mg, q, txt, whole: true };
   }
+
+  // 2. Envelopes / Sachês
+  if (ap.forma === 'sachet') {
+    const q = Math.max(1, Math.round(mg));
+    return { mg: q, ml: null, txt: `${q} envelope${q > 1 ? 's' : ''}`, whole: true };
+  }
+
+  // 3. Gotas
+  if (ap.forma === 'gotas' && ap.mgml && ap.gotasml) {
+    const mpg = ap.mgml / ap.gotasml;
+    const g = Math.max(1, Math.round(mg / mpg));
+    return { mg: g * mpg, txt: `${g} gota${g > 1 ? 's' : ''}`, whole: false };
+  }
+
+  // 4. Soluções nasais e SRO (sem mg/mL, dose já em mL)
+  if (ap.forma === 'sol_nasal' || ap.forma === 'sol_sro') {
+    const ml = rml(mg);
+    return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
+  }
+
+  // 5. Soluções líquidas e injetáveis com concentração mg/mL
   const c = mgml(ap);
   if (!c) {
     const ml = rml(mg);
     return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
   }
+
   const ml = rml(mg / c);
   const mgR = ml * c;
   let txt = `${fmt(ml)} mL`;
