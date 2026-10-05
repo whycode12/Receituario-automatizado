@@ -33,7 +33,7 @@
 # Ordenados dos mais para os menos usados na rotina de PS, UPA e UBS.
 # 100% dos arquivos da pasta Fontes/HSL contemplados sem omissões.
 
-23. Diclofenaco
+[x] 23. Diclofenaco
 24. Tramadol
 25. Naproxeno
 26. Tenoxicam

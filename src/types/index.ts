@@ -1,8 +1,8 @@
 export type Pub = 'adulto' | 'ped';
-export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA';
+export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA';
 export type ModoUso = 'agora' | 'sn' | 'continuo';
-export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal';
-export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff';
+export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal' | 'gel' | 'pomada' | 'creme';
+export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic';
 
 export interface Paciente {
   pub: Pub;

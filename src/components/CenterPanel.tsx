@@ -169,7 +169,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
       <div className="field">
         <div className="lbl">Via</div>
         <div className="chips">
-          {(['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[])
+          {(['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA', 'TOPICA'] as Via[])
             .filter(v => dispVias.includes(v) || via === v)
             .map(v => (
               <button
