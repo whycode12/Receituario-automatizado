@@ -114,7 +114,21 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
     isBad = cur != null && calcResult.mg != null && (calcResult.mg > calcResult.hi * 1.0001 || calcResult.mg < calcResult.lo * 0.9999);
   }
 
+  const hasDoseError =
+    (calcResult.hi != null && calcResult.mg != null && calcResult.mg > calcResult.hi * 1.0001) ||
+    (calcResult.lo != null && calcResult.mg != null && calcResult.mg < calcResult.lo * 0.9999) ||
+    (calcResult.dailyMax != null && calcResult.mg != null && calcResult.mg * n > calcResult.dailyMax * 1.0001) ||
+    (modo !== 'agora' && (n < calcResult.dmin || n > calcResult.dmax)) ||
+    calcResult.alerts.some(
+      a =>
+        a.t.includes('Acima da dose') ||
+        a.t.includes('Abaixo da dose') ||
+        a.t.includes('ultrapassa o máximo') ||
+        a.t.includes('fora do recomendado')
+    );
+
   const applyBarDrag = (clientX: number) => {
+
     if (!barRef.current || !top) return;
     const rect = barRef.current.getBoundingClientRect();
     const pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
@@ -515,21 +529,22 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
         </div>
       )}
 
-      {/* Alertas */}
-      <div id="alerts" style={{ marginTop: '16px' }}>
-        {calcResult.alerts.map((x, i) => (
-          <div key={`al-${i}`} className={`alert red ${x.strong ? 'strong' : ''}`}>
-            {x.t}
-            {x.f && <span className="src">Fonte: {x.f}</span>}
-            {x.tr && <span className="tr">"{x.tr}"</span>}
-          </div>
-        ))}
-        {calcResult.alerts.length === 0 && calcResult.arr && calcResult.R.length > 0 && (
-          <div className="alert green">
-            ✓ Dentro do recomendado ·{' '}
-            {[...new Set(calcResult.R.map(r => fonteNome(drug, r.fonte)))].join(' · ')}
-          </div>
-        )}
+        {/* Alertas */}
+        <div id="alerts" style={{ marginTop: '16px' }}>
+          {calcResult.alerts.map((x, i) => (
+            <div key={`al-${i}`} className={`alert red ${x.strong ? 'strong' : ''}`}>
+              {x.t}
+              {x.f && <span className="src">Fonte: {x.f}</span>}
+              {x.tr && <span className="tr">"{x.tr}"</span>}
+            </div>
+          ))}
+          {!hasDoseError && calcResult.arr && calcResult.R.length > 0 && (
+            <div className="alert green">
+              ✓ Dentro do recomendado ·{' '}
+              {[...new Set(calcResult.R.map(r => fonteNome(drug, r.fonte)))].join(' · ')}
+            </div>
+          )}
+
         {calcResult.notes.map((x, i) => (
           <div key={`no-${i}`} className={`alert amber ${x.strong ? 'strong' : ''}`}>
             {x.t}

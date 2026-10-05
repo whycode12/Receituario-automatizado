@@ -43,6 +43,26 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
     g.items.push(r);
   });
 
+  // Alerta de prescrição só deve disparar quando a dose ou frequência estiverem de fato fora do recomendado
+  const hasDoseError =
+    calcResult &&
+    ((calcResult.hi != null && calcResult.mg != null && calcResult.mg > calcResult.hi * 1.0001) ||
+      (calcResult.lo != null && calcResult.mg != null && calcResult.mg < calcResult.lo * 0.9999) ||
+      (calcResult.dailyMax != null &&
+        calcResult.mg != null &&
+        calcResult.mg * (calcResult.n || 1) > calcResult.dailyMax * 1.0001) ||
+      (calcResult.dmin != null &&
+        calcResult.dmax != null &&
+        calcResult.n != null &&
+        (calcResult.n < calcResult.dmin || calcResult.n > calcResult.dmax)) ||
+      calcResult.alerts.some(
+        a =>
+          a.t.includes('Acima da dose') ||
+          a.t.includes('Abaixo da dose') ||
+          a.t.includes('ultrapassa o máximo') ||
+          a.t.includes('fora do recomendado')
+      ));
+
   return (
     <section className="col" id="saida">
       <h2>Prescrição</h2>
@@ -53,11 +73,12 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
         </div>
       )}
 
-      {calcResult && calcResult.alerts.length > 0 && cards.length > 0 && (
+      {hasDoseError && cards.length > 0 && (
         <div className="alert red strong" style={{ margin: '0 0 12px' }}>
           ⚠ Atenção: há itens fora do recomendado (ver alertas).
         </div>
       )}
+
 
       {/* Cards de Prévia */}
       {cards.map((c, i) => (
