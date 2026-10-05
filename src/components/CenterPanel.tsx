@@ -71,6 +71,17 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   const accWrapRef = useRef<HTMLSpanElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
+  const [doseInput, setDoseInput] = useState<string>(
+    doseVal != null ? String(doseVal).replace('.', ',') : ''
+  );
+
+  useEffect(() => {
+    // Sincroniza quando doseVal muda externamente (mudança de remédio, slider, presets)
+    const curParsed = doseInput.trim() === '' ? null : parseFloat(doseInput.replace(',', '.'));
+    if (doseVal !== curParsed) {
+      setDoseInput(doseVal != null ? String(doseVal).replace('.', ',') : '');
+    }
+  }, [doseVal]);
 
   // Fecha o popover ao clicar fora
   useEffect(() => {
@@ -367,11 +378,22 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
         <div className="row dose">
           <input
             inputMode="decimal"
-            value={doseVal != null ? String(doseVal).replace('.', ',') : ''}
+            value={doseInput}
             placeholder={paciente.pub === 'ped' && !paciente.peso ? 'informe o peso ou use mg' : ''}
             onChange={e => {
-              const v = e.target.value.replace(',', '.');
-              setDoseVal(v === '' ? null : parseFloat(v) || null);
+              const raw = e.target.value;
+              // Permite apenas números, vírgula e ponto
+              if (!/^[\d.,]*$/.test(raw)) return;
+              setDoseInput(raw);
+              const normalized = raw.replace(',', '.');
+              if (normalized === '' || normalized === '.') {
+                setDoseVal(null);
+              } else {
+                const parsed = parseFloat(normalized);
+                if (!isNaN(parsed)) {
+                  setDoseVal(parsed);
+                }
+              }
             }}
           />
           <select value={unid} onChange={e => onUnidChange(e.target.value as UnidadeDose)}>
