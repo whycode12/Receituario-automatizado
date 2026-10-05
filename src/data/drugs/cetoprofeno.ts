@@ -3,6 +3,7 @@ import { Farmaco } from '../../types';
 export const cetoprofeno: Farmaco = {
   id: 'cetoprofeno',
   nome: 'Cetoprofeno',
+  categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'profenid artrinid cetoprofeno',
   classe: 'Anti-inflamatório não esteroidal, antirreumático',
   fontes: { HSL: '05/03/2025', EINP: '', EINA: '', BULA: '03/10/2026' },

@@ -3,6 +3,7 @@ import { Farmaco } from '../../types';
 export const amoxicilina: Farmaco = {
   id: 'amoxicilina',
   nome: 'Amoxicilina',
+  categoria: 'Antimicrobianos',
   busca: 'amoxil amoxicilina penicilina',
   classe: 'Antimicrobiano, Penicilina',
   fontes: { HSL: '10/12/2018', EINP: '', EINA: '' },

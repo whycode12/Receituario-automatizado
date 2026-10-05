@@ -35,6 +35,18 @@ export const DrugList: React.FC<DrugListProps> = ({
   const favList = ls.filter(d => favorites.includes(d.id));
   const restList = ls.filter(d => !favorites.includes(d.id));
 
+  // Agrupar por categorias
+  const categoriesMap = new Map<string, Farmaco[]>();
+  restList.forEach(d => {
+    const cat = d.categoria || 'Geral';
+    if (!categoriesMap.has(cat)) {
+      categoriesMap.set(cat, []);
+    }
+    categoriesMap.get(cat)!.push(d);
+  });
+
+  const categories = Array.from(categoriesMap.entries());
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       const first = favList[0] || restList[0];
@@ -55,6 +67,7 @@ export const DrugList: React.FC<DrugListProps> = ({
         onKeyDown={handleKeyDown}
       />
       <div id="lista">
+        {/* Favoritos */}
         {favList.length > 0 && (
           <>
             <div className="sec">Favoritos</div>
@@ -76,29 +89,36 @@ export const DrugList: React.FC<DrugListProps> = ({
                 </span>
               </div>
             ))}
-            <div className="sec">Todos</div>
           </>
         )}
-        {restList.map(d => (
-          <div
-            key={d.id}
-            className={`item ${selectedDrug?.id === d.id ? 'on' : ''}`}
-            onClick={() => onSelectDrug(d)}
-          >
-            <span>{d.nome}</span>
-            {favorites.includes(d.id) && (
-              <span
-                className="st"
-                onClick={e => {
-                  e.stopPropagation();
-                  onToggleFavorite(d.id);
-                }}
+
+        {/* Fármacos agrupados por categoria */}
+        {categories.map(([catName, catDrugs]) => (
+          <React.Fragment key={catName}>
+            <div className="sec">{catName}</div>
+            {catDrugs.map(d => (
+              <div
+                key={d.id}
+                className={`item ${selectedDrug?.id === d.id ? 'on' : ''}`}
+                onClick={() => onSelectDrug(d)}
               >
-                ★
-              </span>
-            )}
-          </div>
+                <span>{d.nome}</span>
+                {favorites.includes(d.id) && (
+                  <span
+                    className="st"
+                    onClick={e => {
+                      e.stopPropagation();
+                      onToggleFavorite(d.id);
+                    }}
+                  >
+                    ★
+                  </span>
+                )}
+              </div>
+            ))}
+          </React.Fragment>
         ))}
+
         {ls.length === 0 && (
           <div className="muted small" style={{ padding: '6px 10px' }}>
             Nenhum fármaco encontrado

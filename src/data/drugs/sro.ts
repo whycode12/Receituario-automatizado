@@ -21,6 +21,7 @@ function getInstrucaoSRO(p: Paciente) {
 export const sro: Farmaco = {
   id: 'sro',
   nome: 'Soro de Reidratação Oral (SRO)',
+  categoria: 'Soluções e Hidratação',
   busca: 'sro sais reidratacao oral soro caseiro diarreia desidratacao vomito plano a b',
   classe: 'Solução de Reidratação Hidroeletrolítica Oral',
   fontes: { MS: '2023' },

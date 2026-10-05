@@ -3,6 +3,7 @@ import { Farmaco } from '../../types';
 export const ibuprofeno: Farmaco = {
   id: 'ibuprofeno',
   nome: 'Ibuprofeno',
+  categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'alivium advil doraliv motrin spidufen ibuprofeno',
   classe: 'Analgésico, antipirético e anti-inflamatório não esteroidal (AINE)',
   fontes: { HSL: '30/11/2020', BULA: '04/10/2026' },

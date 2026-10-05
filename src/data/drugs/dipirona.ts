@@ -3,6 +3,7 @@ import { Farmaco } from '../../types';
 export const dipirona: Farmaco = {
   id: 'dipirona',
   nome: 'Dipirona',
+  categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'metamizol novalgina dipirona sodica',
   classe: 'Analgésico e antipirético',
   fontes: { HSL: '05/05/2025', EINP: '', EINA: '' },

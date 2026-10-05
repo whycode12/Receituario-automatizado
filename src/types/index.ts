@@ -82,6 +82,7 @@ export interface Contraindicacao {
   pub?: Pub;
   se?: CondicaoRegra;
   vias?: Via[];
+  apres?: string[];
   msg: string;
   fonte: string;
   trecho: string;
@@ -119,6 +120,7 @@ export interface NotasFarmaco {
 export interface Farmaco {
   id: string;
   nome: string;
+  categoria?: string;
   busca: string;
   classe: string;
   fontes: Record<string, string>;

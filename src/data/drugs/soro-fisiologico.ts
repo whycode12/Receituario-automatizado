@@ -35,6 +35,7 @@ function getPerfilNasal(p: Paciente) {
 export const soroFisiologico: Farmaco = {
   id: 'soro_fisiologico_nasal',
   nome: 'Soro Fisiológico 0,9% (Lavagem Nasal)',
+  categoria: 'Soluções e Hidratação',
   busca: 'soro fisiologico 0,9 cloreto de sodio nacl lavagem nasal seringa sbp',
   classe: 'Solução para Higiene e Desobstrução Nasal',
   fontes: { SBP: '2024' },
