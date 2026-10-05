@@ -1,18 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Star, AlertTriangle, CheckCircle2, ChevronDown, Info } from 'lucide-react';
 import { Farmaco, Apresentacao, Via, ModoUso, UnidadeDose, ResultadoCalculo, Paciente } from '../types';
-import { UNID_LBL, fmt, fmtMg, fonteNome } from '../utils/constants';
-import { unidades, unidLbl, fromMg, mgml } from '../engine/calculator';
+import { CFG, fmt, fmtMg, fonteNome, regraLabel } from '../utils/constants';
+import { unidades, unidLbl, fromMg, toMg, mgml } from '../engine/calculator';
 
 interface CenterPanelProps {
-  drug: Farmaco;
+  drug: Farmaco | null;
   paciente: Paciente;
   via: Via;
-  setVia: (v: Via) => void;
-  apres: Apresentacao;
-  setApresId: (id: string) => void;
+  onViaChange: (v: Via) => void;
+  apres: Apresentacao | null;
+  onApresChange: (id: string) => void;
   modo: ModoUso;
-  setModo: (m: ModoUso) => void;
+  onModoChange: (m: ModoUso) => void;
   n: number;
   setN: (n: number) => void;
   dias: number;
@@ -24,7 +23,7 @@ interface CenterPanelProps {
   doseVal: number | null;
   setDoseVal: (v: number | null) => void;
   unid: UnidadeDose;
-  setUnid: (u: UnidadeDose) => void;
+  onUnidChange: (u: UnidadeDose) => void;
   calcResult: ResultadoCalculo;
   isFav: boolean;
   onToggleFav: () => void;
@@ -41,11 +40,11 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   drug,
   paciente,
   via,
-  setVia,
+  onViaChange,
   apres,
-  setApresId,
+  onApresChange,
   modo,
-  setModo,
+  onModoChange,
   n,
   setN,
   dias,
@@ -57,7 +56,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   doseVal,
   setDoseVal,
   unid,
-  setUnid,
+  onUnidChange,
   calcResult,
   isFav,
   onToggleFav,
@@ -69,10 +68,29 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   setEvTempo
 }) => {
   const [acessoOpen, setAcessoOpen] = useState(false);
+  const accWrapRef = useRef<HTMLSpanElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
 
-  // Vias disponíveis para o fármaco selecionado
+  // Fecha o popover ao clicar fora
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (acessoOpen && accWrapRef.current && !accWrapRef.current.contains(e.target as Node)) {
+        setAcessoOpen(false);
+      }
+    };
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [acessoOpen]);
+
+  if (!drug || !apres) {
+    return (
+      <section className="col" id="centro">
+        <div className="empty">Selecione um fármaco à esquerda</div>
+      </section>
+    );
+  }
+
   const dispVias = (['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[]).filter(v =>
     drug.apresentacoes.some(a => a.vias.includes(v))
   );
@@ -80,454 +98,506 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   const curApresList = drug.apresentacoes.filter(a => a.vias.includes(via));
   const us = unidades(apres, paciente.peso, modo);
 
-  // Calcular limites para a barra de dose
-  const uLo = calcResult.lo != null ? fromMg(calcResult.lo, unid, apres, paciente.peso, n) : null;
-  const uHi = calcResult.hi != null ? fromMg(calcResult.hi, unid, apres, paciente.peso, n) : null;
-  const curVal = doseVal || 0;
-  const top = uHi != null ? Math.max(uHi * 1.5, curVal) * 1.05 || 1 : Math.max(100, curVal * 1.5);
-  const pc = (v: number) => Math.max(0, Math.min(100, (v / top) * 100));
+  // Barra de cálculo
+  let uLo: number | null = null;
+  let uHi: number | null = null;
+  let top = 1;
+  let pc = (v: number) => 0;
+  let isBad = false;
 
-  const isDoseBad =
-    doseVal != null &&
-    calcResult.mg != null &&
-    ((calcResult.hi != null && calcResult.mg > calcResult.hi * 1.0001) ||
-      (calcResult.lo != null && calcResult.mg < calcResult.lo * 0.9999));
+  if (calcResult.lo != null && calcResult.hi != null) {
+    uLo = fromMg(calcResult.lo, unid, apres, paciente.peso, n);
+    uHi = fromMg(calcResult.hi, unid, apres, paciente.peso, n);
+    const cur = doseVal;
+    top = Math.max((uHi || 0) * 1.5, cur || 0) * 1.05 || 1;
+    pc = (v: number) => Math.max(0, Math.min(100, (v / top) * 100));
+    isBad = cur != null && calcResult.mg != null && (calcResult.mg > calcResult.hi * 1.0001 || calcResult.mg < calcResult.lo * 0.9999);
+  }
 
-  // Arrastar barra com snap de números inteiros
-  const handleBarInteraction = (clientX: number) => {
+  const applyBarDrag = (clientX: number) => {
     if (!barRef.current || !top) return;
     const rect = barRef.current.getBoundingClientRect();
     const pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    const rawInt = Math.round(pct * top);
-    setDoseVal(rawInt);
+    const raw = Math.round(pct * top);
+    setDoseVal(raw);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    setDragging(true);
+    applyBarDrag(e.clientX);
+    e.preventDefault();
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setDragging(true);
+    applyBarDrag(e.touches[0].clientX);
   };
 
   useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (dragging) handleBarInteraction(e.clientX);
+    const handleMouseMove = (e: MouseEvent) => {
+      if (dragging) applyBarDrag(e.clientX);
     };
-    const onUp = () => setDragging(false);
+    const handleMouseUp = () => {
+      if (dragging) setDragging(false);
+    };
+    const handleTouchMove = (e: TouchEvent) => {
+      if (dragging && e.touches[0]) applyBarDrag(e.touches[0].clientX);
+    };
+    const handleTouchEnd = () => {
+      if (dragging) setDragging(false);
+    };
+
     if (dragging) {
-      window.addEventListener('mousemove', onMove);
-      window.addEventListener('mouseup', onUp);
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchend', handleTouchEnd);
     }
     return () => {
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseup', onUp);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
   }, [dragging, top]);
 
+  // Montar partes descritivas do cálculo
+  const calcParts: string[] = [];
+  if (calcResult.arr) {
+    const mg = calcResult.arr.mg;
+    if (paciente.peso) calcParts.push(`${fmt(mg / paciente.peso)} mg/kg/dose`);
+    if (modo !== 'agora') {
+      calcParts.push(`${fmtMg(mg * n)}/dia`);
+      if (paciente.peso) calcParts.push(`${fmt((mg * n) / paciente.peso)} mg/kg/dia`);
+      if (calcResult.arr.ml != null) {
+        const mlDia = calcResult.arr.ml * n;
+        calcParts.push(`${fmt(mlDia)} mL/dia`);
+        const fMl = frascoMl || apres.frascoMl;
+        if (modo === 'continuo' && fMl) {
+          const mlTotal = mlDia * (dias || 1);
+          const qtdF = Math.max(1, Math.ceil(mlTotal / fMl));
+          calcParts.push(`total ${fmt(mlTotal)} mL (${qtdF} frasco${qtdF > 1 ? 's' : ''})`);
+        }
+      }
+    } else if (calcResult.arr.ml != null && !String(calcResult.arr.txt).startsWith(fmt(calcResult.arr.ml))) {
+      calcParts.push(`${fmt(calcResult.arr.ml)} mL`);
+    }
+  }
+
   return (
-    <div className="flex-1 overflow-y-auto p-6 max-w-2xl bg-white dark:bg-notion-darkBg">
-      {/* Título do Fármaco & Selos SUS */}
-      <div className="flex items-start justify-between gap-4 mb-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">{drug.nome}</h2>
+    <section className="col" id="centro">
+      {/* Cabeçalho do fármaco */}
+      <div className="dhead">
+        <h1>{drug.nome}</h1>
+        <button
+          className={`star ${isFav ? 'on' : ''}`}
+          onClick={onToggleFav}
+          title="Favorito"
+        >
+          ★
+        </button>
+
+        {apres.acesso && (
+          <span className="acc-wrap" ref={accWrapRef}>
             <button
-              onClick={onToggleFav}
-              className={`p-1 rounded transition-colors ${
-                isFav ? 'text-amber-400' : 'text-gray-300 dark:text-gray-600 hover:text-amber-400'
-              }`}
+              className="acc"
+              onClick={() => setAcessoOpen(!acessoOpen)}
+              title="Disponibilidade no SUS (apresentação selecionada)"
             >
-              <Star className={`w-4 h-4 ${isFav ? 'fill-amber-400' : ''}`} />
+              <span className={`abadge ${apres.acesso.rename ? 'on' : 'off'}`}>RENAME</span>
+              <span className={`abadge ${apres.acesso.fp ? 'on' : 'off'}`}>F. POPULAR</span>
             </button>
-
-            {/* Selos de Acesso RENAME / Farmácia Popular */}
-            {apres.acesso && (
-              <div className="relative inline-flex items-center ml-1">
-                <button
-                  onClick={() => setAcessoOpen(!acessoOpen)}
-                  className="inline-flex gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold border transition-all hover:bg-gray-50 dark:hover:bg-notion-darkCard border-gray-200 dark:border-notion-darkBorder"
-                >
-                  <span className={apres.acesso.rename ? 'text-emerald-600 font-bold' : 'text-gray-400 line-through'}>
-                    RENAME
-                  </span>
-                  <span className={apres.acesso.fp ? 'text-emerald-600 font-bold' : 'text-gray-400 line-through'}>
-                    F. POPULAR
-                  </span>
-                </button>
-
-                {/* Popover com detalhamento de apresentações */}
-                {acessoOpen && (
-                  <div className="absolute left-0 top-full mt-2 w-80 p-3 bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-xl shadow-xl z-30 text-xs">
-                    <div className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                      Disponibilidade no SUS por apresentação
-                    </div>
-                    <div className="space-y-1.5">
-                      {drug.apresentacoes
-                        .filter(a => a.acesso)
-                        .map(a => (
-                          <div
-                            key={a.id}
-                            className={`p-1.5 rounded-md flex items-center justify-between gap-2 ${
-                              a.id === apres.id
-                                ? 'bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800'
-                                : 'hover:bg-gray-50 dark:hover:bg-notion-darkHover'
-                            }`}
-                          >
-                            <span className="truncate text-gray-800 dark:text-gray-200 font-medium">
-                              {a.nome}
-                            </span>
-                            <div className="flex items-center gap-1.5 shrink-0 text-[10px]">
-                              <span className={a.acesso?.rename ? 'text-emerald-600 font-bold' : 'text-gray-400'}>
-                                {a.acesso?.rename ? '✓' : '✗'} RENAME
-                              </span>
-                              <span className={a.acesso?.fp ? 'text-emerald-600 font-bold' : 'text-gray-400'}>
-                                {a.acesso?.fp ? '✓' : '✗'} FP
-                              </span>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-                    <div className="mt-3 pt-2 border-t border-gray-100 dark:border-notion-darkBorder text-[11px] text-gray-500 dark:text-notion-darkMuted leading-relaxed">
-                      {drug.acessoFonte || 'A disponibilidade final depende da REMUME de cada município.'}
-                    </div>
+            <div className={`apop ${acessoOpen ? 'open' : ''}`}>
+              <div className="apt">Disponibilidade no SUS por apresentação</div>
+              {drug.apresentacoes
+                .filter(a => a.acesso)
+                .map(a => (
+                  <div key={a.id} className={`arow ${a.id === apres.id ? 'cur' : ''}`}>
+                    <span className="an">{a.nome}</span>
+                    <span className={`ai ${a.acesso?.rename ? 'y' : 'n'}`}>
+                      {a.acesso?.rename ? '✓' : '✗'} RENAME
+                    </span>
+                    <span className={`ai ${a.acesso?.fp ? 'y' : 'n'}`}>
+                      {a.acesso?.fp ? '✓' : '✗'} F. Popular
+                    </span>
                   </div>
-                )}
+                ))}
+              <div className="afo">
+                {drug.acessoFonte || ''}
+                <br />
+                A disponibilidade real depende da REMUME do município.
               </div>
-            )}
-          </div>
-          <p className="text-xs text-gray-500 dark:text-notion-darkMuted mt-0.5">{drug.classe}</p>
+            </div>
+          </span>
+        )}
+      </div>
+
+      <div className="muted small">{drug.classe}</div>
+
+      {/* Via */}
+      <div className="field">
+        <div className="lbl">Via</div>
+        <div className="chips">
+          {(['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[])
+            .filter(v => dispVias.includes(v) || via === v)
+            .map(v => (
+              <button
+                key={v}
+                className={`chip ${via === v ? 'on' : ''}`}
+                disabled={!dispVias.includes(v)}
+                title={!dispVias.includes(v) ? 'Não disponível nas fontes' : undefined}
+                onClick={() => onViaChange(v)}
+              >
+                {v}
+              </button>
+            ))}
         </div>
       </div>
 
-      {/* Formulário Clínico */}
-      <div className="space-y-5">
-        {/* Seletor de Vias */}
-        <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-            Via de Administração
-          </label>
-          <div className="flex flex-wrap gap-1.5">
-            {(['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[])
-              .filter(v => dispVias.includes(v) || via === v)
-              .map(v => {
-                const available = dispVias.includes(v);
+      {/* Apresentação */}
+      <div className="field">
+        <div className="lbl">Apresentação</div>
+        <select value={apres.id} onChange={e => onApresChange(e.target.value)}>
+          {curApresList.map(a => (
+            <option key={a.id} value={a.id}>
+              {a.nome}
+              {a.comercial ? ` · ${a.comercial}` : ''}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Modo de Uso */}
+      <div className="field">
+        <div className="lbl">Uso</div>
+        <div className="seg">
+          {(
+            [
+              ['agora', 'Agora'],
+              ['sn', 'Se necessário'],
+              ['continuo', 'Contínuo']
+            ] as [ModoUso, string][]
+          ).map(([k, l]) => (
+            <button
+              key={k}
+              className={modo === k ? 'on' : ''}
+              onClick={() => onModoChange(k)}
+            >
+              {l}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Parâmetros se não for 'agora' */}
+      {modo !== 'agora' && (
+        <>
+          <div className="field">
+            <div className="lbl">Doses por dia</div>
+            <div className="chips">
+              {[1, 2, 3, 4].map(k => {
+                const bad = calcResult.R.length > 0 && (k < calcResult.dmin || k > calcResult.dmax);
                 return (
                   <button
-                    key={v}
-                    disabled={!available}
-                    onClick={() => setVia(v)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                      via === v
-                        ? 'bg-emerald-600 text-white shadow-sm'
-                        : available
-                        ? 'bg-gray-100 dark:bg-notion-darkCard text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-notion-darkHover'
-                        : 'bg-gray-50 dark:bg-notion-darkCard/50 text-gray-300 dark:text-gray-600 cursor-not-allowed'
-                    }`}
+                    key={k}
+                    className={`chip ${n === k ? 'on' : ''} ${bad ? 'warn' : ''}`}
+                    title={bad ? 'Fora do recomendado pela fonte' : undefined}
+                    onClick={() => setN(k)}
                   >
-                    {v}
+                    {k}× · {24 / k}/{24 / k}h
                   </button>
                 );
               })}
-          </div>
-        </div>
-
-        {/* Seletor de Apresentação */}
-        <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-            Apresentação
-          </label>
-          <div className="relative">
-            <select
-              value={apres.id}
-              onChange={e => setApresId(e.target.value)}
-              className="w-full appearance-none px-3 py-2 bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-xs text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-emerald-500 pr-8"
-            >
-              {curApresList.map(a => (
-                <option key={a.id} value={a.id}>
-                  {a.nome} {a.comercial ? `· ${a.comercial}` : ''}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-2.5 top-2.5 pointer-events-none" />
-          </div>
-        </div>
-
-        {/* Modo de Uso */}
-        <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-            Regime de Uso
-          </label>
-          <div className="inline-flex rounded-lg p-1 bg-gray-100 dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder">
-            {[
-              { id: 'agora', label: 'Agora (Dose Única)' },
-              { id: 'sn', label: 'Se Necessário (S/N)' },
-              { id: 'continuo', label: 'Uso Contínuo' }
-            ].map(m => (
-              <button
-                key={m.id}
-                onClick={() => setModo(m.id as ModoUso)}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all ${
-                  modo === m.id
-                    ? 'bg-white dark:bg-notion-darkBg text-gray-900 dark:text-gray-100 shadow-sm'
-                    : 'text-gray-600 dark:text-notion-darkMuted hover:text-gray-900 dark:hover:text-gray-200'
-                }`}
-              >
-                {m.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Doses por dia e Parâmetros */}
-        {modo !== 'agora' && (
-          <div className="space-y-4">
-            <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-                Doses ao Dia (Intervalo)
-              </label>
-              <div className="flex gap-2">
-                {[1, 2, 3, 4, 6].map(k => {
-                  const bad = calcResult.R.length > 0 && (k < calcResult.dmin || k > calcResult.dmax);
-                  return (
-                    <button
-                      key={k}
-                      onClick={() => setN(k)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
-                        n === k
-                          ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-700 dark:text-emerald-300 font-semibold'
-                          : bad
-                          ? 'bg-amber-50 dark:bg-amber-950/20 border-amber-300 dark:border-amber-800 text-amber-700 dark:text-amber-400'
-                          : 'bg-white dark:bg-notion-darkCard border-gray-200 dark:border-notion-darkBorder text-gray-700 dark:text-gray-300 hover:bg-gray-50'
-                      }`}
-                    >
-                      {k}× ({24 / k}h)
-                    </button>
-                  );
-                })}
-              </div>
             </div>
+          </div>
 
-            {modo === 'sn' ? (
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-                  Indicação (Se...)
-                </label>
+          {modo === 'sn' ? (
+            <div className="field">
+              <div className="lbl">Se…</div>
+              <input
+                value={condText}
+                onChange={e => setCondText(e.target.value)}
+                style={{ width: '100%' }}
+              />
+            </div>
+          ) : (
+            <div className="row" style={{ marginTop: '18px' }}>
+              <label className="field" style={{ flex: 1, marginTop: 0 }}>
+                <div className="lbl">Duração (dias)</div>
                 <input
-                  type="text"
-                  value={condText}
-                  onChange={e => setCondText(e.target.value)}
-                  className="w-full px-3 py-2 bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-xs text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  inputMode="numeric"
+                  value={dias}
+                  onChange={e => setDias(parseInt(e.target.value) || 1)}
+                  style={{ width: '100%' }}
                 />
-              </div>
-            ) : (
-              <div className="flex gap-4">
-                <div className="flex-1">
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-                    Duração do Tratamento
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="number"
-                      min="1"
-                      value={dias}
-                      onChange={e => setDias(Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-24 px-3 py-2 bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-xs text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                    />
-                    <span className="text-xs text-gray-500">dias</span>
-                  </div>
-                </div>
-
-                {/* Campo de Volume do Frasco para formulações líquidas */}
-                {(apres.frascoMl || (['sol', 'gotas', 'sol_nasal'].includes(apres.forma) && mgml(apres))) && (
-                  <div className="flex-1">
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-                      Volume do Frasco (mL)
-                    </label>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="number"
-                        min="1"
-                        value={frascoMl ?? apres.frascoMl ?? ''}
-                        onChange={e => setFrascoMl(e.target.value ? parseFloat(e.target.value) : null)}
-                        placeholder={String(apres.frascoMl || 150)}
-                        className="w-28 px-3 py-2 bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-xs text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                      />
-                      <span className="text-xs text-gray-500">mL</span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Campo de Dose & Unidade */}
-        <div>
-          <label className="block text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-notion-darkMuted mb-1.5">
-            Dose Desejada
-          </label>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              value={doseVal != null ? String(doseVal).replace('.', ',') : ''}
-              onChange={e => {
-                const v = e.target.value.replace(',', '.');
-                setDoseVal(v === '' ? null : parseFloat(v) || null);
-              }}
-              placeholder={paciente.pub === 'ped' && !paciente.peso ? 'informe o peso ou use mg' : '0'}
-              className="flex-1 px-3 py-2 text-base font-semibold bg-white dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-            />
-            <div className="relative">
-              <select
-                value={unid}
-                onChange={e => setUnid(e.target.value as UnidadeDose)}
-                className="h-full px-3 py-2 bg-gray-50 dark:bg-notion-darkCard border border-gray-200 dark:border-notion-darkBorder rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-1 focus:ring-emerald-500 pr-8"
-              >
-                {us.map(u => (
-                  <option key={u} value={u}>
-                    {unidLbl(u, apres)}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="w-3.5 h-3.5 text-gray-400 absolute right-2.5 top-3 pointer-events-none" />
+              </label>
+              {(apres.frascoMl ||
+                (['sol', 'gotas', 'susp', 'sol_nasal'].includes(apres.forma) && mgml(apres))) && (
+                <label className="field" style={{ flex: 1, marginTop: 0 }}>
+                  <div className="lbl">Volume do frasco (mL)</div>
+                  <input
+                    inputMode="numeric"
+                    placeholder={apres.frascoMl ? String(apres.frascoMl) : 'ex: 150'}
+                    value={frascoMl != null ? frascoMl : ''}
+                    onChange={e => setFrascoMl(e.target.value ? parseFloat(e.target.value) : null)}
+                    style={{ width: '100%' }}
+                  />
+                </label>
+              )}
             </div>
-          </div>
+          )}
+        </>
+      )}
 
-          {/* Barra de Dosagem Interativa com Snap de Inteiros */}
-          {calcResult.lo != null && calcResult.hi != null && (
-            <div className="mt-3">
+      {/* Campo Dose e Calculadora */}
+      <div className="field">
+        <div className="lbl">Dose</div>
+        <div className="row dose">
+          <input
+            inputMode="decimal"
+            value={doseVal != null ? String(doseVal).replace('.', ',') : ''}
+            placeholder={paciente.pub === 'ped' && !paciente.peso ? 'informe o peso ou use mg' : ''}
+            onChange={e => {
+              const v = e.target.value.replace(',', '.');
+              setDoseVal(v === '' ? null : parseFloat(v) || null);
+            }}
+          />
+          <select value={unid} onChange={e => onUnidChange(e.target.value as UnidadeDose)}>
+            {us.map(u => (
+              <option key={u} value={u}>
+                {unidLbl(u, apres)}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div id="calc" className="calc">
+          {calcResult.lo != null && calcResult.hi != null && uLo != null && uHi != null && (
+            <>
               <div
                 ref={barRef}
-                onMouseDown={e => {
-                  setDragging(true);
-                  handleBarInteraction(e.clientX);
-                }}
-                className="relative h-2 bg-gray-200 dark:bg-notion-darkHover rounded-full cursor-crosshair select-none"
+                className="bar"
+                data-top={top}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
               >
-                {/* Faixa Recomendada em Verde */}
                 <div
-                  className="absolute top-0 bottom-0 bg-emerald-400 dark:bg-emerald-600 rounded-full"
+                  className="ok"
                   style={{
-                    left: `${pc(uLo || 0)}%`,
-                    width: `${Math.max(2, pc(uHi || 0) - pc(uLo || 0))}%`
+                    left: `${pc(uLo)}%`,
+                    width: `${Math.max(1, pc(uHi) - pc(uLo))}%`
                   }}
                 />
-                {/* Risco Arrastável */}
-                {curVal != null && (
+                {doseVal != null && (
                   <div
-                    className={`absolute -top-1 w-1.5 h-4 rounded-full -translate-x-1/2 cursor-ew-resize shadow-sm transition-colors ${
-                      isDoseBad ? 'bg-red-500' : 'bg-gray-900 dark:bg-white'
-                    }`}
-                    style={{ left: `${pc(curVal)}%` }}
+                    className={`mk ${isBad ? 'bad' : ''}`}
+                    style={{ left: `${pc(doseVal)}%` }}
                   />
                 )}
               </div>
-
-              <div className="flex items-center justify-between mt-1 text-[11px] text-gray-500 dark:text-notion-darkMuted">
-                <span>
-                  Recomendado:{' '}
-                  {uLo === uHi ? fmt(uHi) : `${fmt(uLo)} a ${fmt(uHi)}`} {unidLbl(unid, apres)}
-                </span>
-                {calcResult.dailyMax && modo !== 'agora' && (
-                  <span>máx. {fmtMg(calcResult.dailyMax)}/dia</span>
-                )}
+              <div className="sub">
+                Recomendado:{' '}
+                {uLo === uHi || Math.abs(uLo - uHi) < 1e-9 ? fmt(uHi) : `${fmt(uLo)} – ${fmt(uHi)}`}{' '}
+                {unidLbl(unid, apres)}
+                {unid !== 'mg'
+                  ? ` (${calcResult.lo === calcResult.hi ? fmtMg(calcResult.hi) : fmt(calcResult.lo, 1) + ' – ' + fmtMg(calcResult.hi)})`
+                  : ''}
+                {modo !== 'agora' && calcResult.dailyMax != null
+                  ? ` · máx. ${fmtMg(calcResult.dailyMax)}/dia`
+                  : ''}
               </div>
-            </div>
+            </>
           )}
 
-          {/* Resumo da Conversão de Dose */}
           {calcResult.arr && (
-            <div className="mt-3 p-3 bg-gray-50 dark:bg-notion-darkCard rounded-lg border border-gray-100 dark:border-notion-darkBorder">
-              <div className="text-sm font-bold text-gray-900 dark:text-gray-100">
+            <>
+              <div className="big">
                 {fmtMg(calcResult.arr.mg)} → {calcResult.arr.txt}
               </div>
-              <div className="text-xs text-gray-500 dark:text-notion-darkMuted mt-0.5 space-x-2">
-                {paciente.peso && <span>{fmt(calcResult.arr.mg / paciente.peso)} mg/kg/dose</span>}
-                {modo !== 'agora' && (
-                  <>
-                    <span>·</span>
-                    <span>{fmtMg(calcResult.arr.mg * n)}/dia</span>
-                  </>
-                )}
-                {calcResult.arr.ml != null && (
-                  <>
-                    <span>·</span>
-                    <span>{fmt(calcResult.arr.ml * n)} mL/dia</span>
-                  </>
-                )}
-              </div>
+              {calcParts.length > 0 && <div className="sub">{calcParts.join(' · ')}</div>}
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* Diluição EV */}
+      {via === 'EV' && drug.ev && (
+        <div className="box">
+          <div className="lbl" style={{ marginBottom: '10px' }}>
+            Diluição e administração EV
+          </div>
+          <div className="chips">
+            {drug.ev.diluentes.map(x => (
+              <button
+                key={x}
+                className={`chip ${evDil === x ? 'on' : ''}`}
+                onClick={() => setEvDil(x)}
+              >
+                {x}
+              </button>
+            ))}
+          </div>
+
+          <div className="row" style={{ marginTop: '10px' }}>
+            <label className="muted small" style={{ flex: 1 }}>
+              Volume final
+              <select
+                style={{ marginTop: '4px' }}
+                value={evVol ?? calcResult.ev?.vol ?? ''}
+                onChange={e => setEvVol(parseFloat(e.target.value) || null)}
+              >
+                {drug.ev.volOpcoes.map(v => (
+                  <option key={v} value={v}>
+                    {v} mL · {v <= CFG.limiteSeringaMl ? 'seringa' : 'bolsa'}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="muted small" style={{ flex: 1 }}>
+              Tempo (min)
+              <input
+                inputMode="decimal"
+                style={{ marginTop: '4px', width: '100%' }}
+                value={
+                  evTempo != null
+                    ? String(evTempo).replace('.', ',')
+                    : calcResult.ev?.t != null
+                    ? String(calcResult.ev.t).replace('.', ',')
+                    : ''
+                }
+                onChange={e => {
+                  const v = parseFloat(e.target.value.replace(',', '.'));
+                  setEvTempo(isNaN(v) ? null : v);
+                }}
+              />
+            </label>
+          </div>
+
+          <input
+            type="range"
+            style={{ width: '100%', marginTop: '10px', border: 0, padding: 0 }}
+            min={calcResult.ev?.tMin ? Math.max(1, Math.floor(calcResult.ev.tMin)) : 1}
+            max={calcResult.ev?.tMax || Math.max(30, Math.ceil((calcResult.ev?.t || 0) * 1.5))}
+            step={1}
+            value={
+              evTempo ??
+              calcResult.ev?.t ??
+              (calcResult.ev?.tMin ? Math.max(1, Math.floor(calcResult.ev.tMin)) : 1)
+            }
+            onChange={e => setEvTempo(parseFloat(e.target.value))}
+          />
+
+          {calcResult.ev && (
+            <div id="evcalc" className="sub" style={{ marginTop: '6px' }}>
+              <b>{calcResult.ev.seringa ? 'Seringa' : 'Bolsa'}</b>{' '}
+              {calcResult.ev.seringa ? '(bolus lento manual)' : ''} · volume da dose{' '}
+              {fmt(calcResult.ev.vDose)} mL · conc. final {fmt(calcResult.ev.conc)} mg/mL
+              {drug.ev.concMax ? ` (máx. ${fmt(drug.ev.concMax)})` : ''}
+              {!calcResult.ev.seringa && calcResult.ev.gtt != null && (
+                <>
+                  <br />
+                  <b>≈ {calcResult.ev.gtt} gotas/min</b> · {calcResult.ev.mlh} mL/h (macrogotas{' '}
+                  {CFG.gotasPorMl} gts/mL)
+                </>
+              )}
+              <br />
+              {(calcResult.ev.tMin || calcResult.ev.tMax) && (
+                <>
+                  Faixa:{' '}
+                  {calcResult.ev.tMin ? fmt(Math.ceil(calcResult.ev.tMin * 10) / 10, 1) : '—'}
+                  {calcResult.ev.tMax ? ` – ${calcResult.ev.tMax}` : '+'} min.{' '}
+                </>
+              )}
+              {calcResult.ev.tTxt}
             </div>
           )}
         </div>
+      )}
 
-        {/* Diluição EV */}
-        {via === 'EV' && drug.ev && (
-          <div className="p-4 bg-gray-50 dark:bg-notion-darkCard rounded-xl border border-gray-200 dark:border-notion-darkBorder space-y-3">
-            <div className="text-xs font-semibold text-gray-900 dark:text-gray-100">
-              Diluição e Administração EV
-            </div>
-            <div className="flex gap-2">
-              {drug.ev.diluentes.map(dil => (
-                <button
-                  key={dil}
-                  onClick={() => setEvDil(dil)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
-                    evDil === dil
-                      ? 'bg-emerald-600 text-white border-emerald-600'
-                      : 'bg-white dark:bg-notion-darkBg border-gray-200 dark:border-notion-darkBorder text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  {dil}
-                </button>
-              ))}
-            </div>
-
-            {calcResult.ev && (
-              <div className="text-xs text-gray-600 dark:text-notion-darkMuted leading-relaxed">
-                <div>
-                  Modo: <b>{calcResult.ev.seringa ? 'Seringa (bolus lento manual)' : 'Bolsa de infusão'}</b> ·{' '}
-                  Volume final: {calcResult.ev.vol} mL
-                </div>
-                {calcResult.ev.gtt && (
-                  <div>
-                    Velocidade: <b>{calcResult.ev.gtt} gotas/min</b> ({calcResult.ev.mlh} mL/h)
-                  </div>
-                )}
-              </div>
-            )}
+      {/* Alertas */}
+      <div id="alerts" style={{ marginTop: '16px' }}>
+        {calcResult.alerts.map((x, i) => (
+          <div key={`al-${i}`} className={`alert red ${x.strong ? 'strong' : ''}`}>
+            {x.t}
+            {x.f && <span className="src">Fonte: {x.f}</span>}
+            {x.tr && <span className="tr">"{x.tr}"</span>}
+          </div>
+        ))}
+        {calcResult.alerts.length === 0 && calcResult.arr && calcResult.R.length > 0 && (
+          <div className="alert green">
+            ✓ Dentro do recomendado ·{' '}
+            {[...new Set(calcResult.R.map(r => fonteNome(drug, r.fonte)))].join(' · ')}
           </div>
         )}
-
-        {/* Alertas Clínicos */}
-        {calcResult.alerts.length > 0 && (
-          <div className="space-y-2">
-            {calcResult.alerts.map((al, idx) => (
-              <div
-                key={idx}
-                className="p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900/50 rounded-lg flex gap-2.5 text-xs text-red-800 dark:text-red-300"
-              >
-                <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
-                <div>
-                  <div className="font-semibold">{al.t}</div>
-                  {al.f && <div className="text-[11px] opacity-80 mt-0.5">Fonte: {al.f}</div>}
-                </div>
-              </div>
-            ))}
+        {calcResult.notes.map((x, i) => (
+          <div key={`no-${i}`} className={`alert amber ${x.strong ? 'strong' : ''}`}>
+            {x.t}
+            {x.f && <span className="src">Fonte: {x.f}</span>}
+            {x.tr && <span className="tr">"{x.tr}"</span>}
           </div>
-        )}
-
-        {/* Detalhes e Fontes Médicas */}
-        <details className="text-xs text-gray-600 dark:text-notion-darkMuted pt-2">
-          <summary className="cursor-pointer font-medium hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">
-            <Info className="w-3.5 h-3.5" />
-            Fontes científicas e notas farmacêuticas
-          </summary>
-          <div className="mt-3 p-3 bg-gray-50 dark:bg-notion-darkCard rounded-lg space-y-2 border border-gray-200 dark:border-notion-darkBorder">
-            <div>
-              <b>Indicação:</b> {drug.notas.indicacao}
-            </div>
-            <div>
-              <b>Administração:</b> {drug.notas.administracao}
-            </div>
-            <div>
-              <b>Cuidados:</b> {drug.notas.cuidados}
-            </div>
+        ))}
+        {calcResult.infos.map((x, i) => (
+          <div key={`in-${i}`} className={`alert gray ${x.strong ? 'strong' : ''}`}>
+            {x.t}
+            {x.f && <span className="src">Fonte: {x.f}</span>}
+            {x.tr && <span className="tr">"{x.tr}"</span>}
           </div>
-        </details>
+        ))}
       </div>
-    </div>
+
+      {/* Fontes e detalhes */}
+      <details>
+        <summary>Fontes e detalhes</summary>
+        <p>
+          <span className="k">Fontes:</span>{' '}
+          {Object.keys(drug.fontes)
+            .map(f => fonteNome(drug, f))
+            .join(' · ')}
+        </p>
+        <p>
+          <span className="k">Indicação:</span> {drug.notas.indicacao}
+        </p>
+        <p>
+          <span className="k">Regras de dose:</span>
+        </p>
+        {drug.regras.map((r, i) => (
+          <p key={i} className="small">
+            • <b>{regraLabel(r)}</b>
+            {r.apres
+              ? ` (${r.apres
+                  .map(id => drug.apresentacoes.find(a => a.id === id)?.nome)
+                  .filter(Boolean)
+                  .join(', ')})`
+              : ''}{' '}
+            — <i>"{r.trecho}"</i> <span className="muted">({r.fonte})</span>
+          </p>
+        ))}
+        {(drug.maximos || []).map((m, i) => (
+          <p key={i} className="small">
+            • <b>Máximo:</b> <i>"{m.trecho}"</i> <span className="muted">({m.fonte})</span>
+          </p>
+        ))}
+        {(drug.contra || []).map((c, i) => (
+          <p key={i} className="small">
+            • <b>Contraindicação:</b> <i>"{c.trecho}"</i> <span className="muted">({c.fonte})</span>
+          </p>
+        ))}
+        {drug.ev && (
+          <p>
+            <span className="k">Diluição EV:</span> {drug.ev.fonteTxt}
+          </p>
+        )}
+        <p>
+          <span className="k">Administração:</span> {drug.notas.administracao}
+        </p>
+        <p>
+          <span className="k">Cuidados:</span> {drug.notas.cuidados}
+        </p>
+        <p>
+          <span className="k">Ajuste de dose:</span> {drug.notas.ajuste}
+        </p>
+      </details>
+    </section>
   );
 };

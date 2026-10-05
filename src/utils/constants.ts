@@ -66,3 +66,25 @@ export function leader(l: string, r: string): string {
   const k = Math.max(3, CFG.colunaQuantidade - l.length - 2);
   return `${l} ${'—'.repeat(k)} ${r}`;
 }
+
+export function lev(a: string, b: string): number {
+  const m = [...Array(b.length + 1).keys()];
+  for (let i = 1; i <= a.length; i++) {
+    let prev = m[0];
+    m[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const t = m[j];
+      m[j] = Math.min(m[j] + 1, m[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = t;
+    }
+  }
+  return m[b.length];
+}
+
+export function regraLabel(r: { vias?: string[]; pub: string; min: number; max: number; tipo: string }): string {
+  const u = UNID_LBL[r.tipo] || r.tipo;
+  const v = r.min === r.max ? fmt(r.min) : `${fmt(r.min)}–${fmt(r.max)}`;
+  const viasStr = r.vias && r.vias.length > 0 ? r.vias.join('/') + ' ' : '';
+  return `${viasStr}${r.pub === 'ped' ? 'pediátrico' : 'adulto'}: ${v} ${u}`;
+}
+

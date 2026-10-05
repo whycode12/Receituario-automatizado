@@ -2,7 +2,7 @@ import {
   Paciente, Apresentacao, RegraDose, CondicaoRegra, Via,
   UnidadeDose, Arredondamento, CalculoEV, ResultadoCalculo, Farmaco, RegraEV
 } from '../types';
-import { CFG, fonteNome, fmt, fmtMg, rml, UNID_LBL } from '../utils/constants';
+import { CFG, fonteNome, fmt, fmtMg, rml, UNID_LBL, regraLabel } from '../utils/constants';
 
 export const mgml = (ap: Apresentacao): number | null =>
   ap.mgml || (ap.reconstMl && ap.mg ? ap.mg / ap.reconstMl : null);
@@ -264,43 +264,70 @@ export function calcularPrescricao(
 
   // Faixas recomendadas
   const fx: { r: RegraDose; f: [number, number] }[] = [];
-  C.R.forEach(r => {
+  for (const r of C.R) {
     const f = faixaRegra(r, p, n);
     if (f) fx.push({ r, f });
-  });
+    else C.notes.push({ t: `Informe o peso para aplicar a regra ${regraLabel(r)}.` });
+  }
 
   if (fx.length) {
     C.lo = Math.min(...fx.map(x => x.f[0]));
-    C.hi = Math.max(...fx.map(x => x.f[1]));
+    C.hi = Math.min(...fx.map(x => x.f[1]));
+    if (C.lo > C.hi) C.lo = C.hi;
+    if (fx.length > 1 && new Set(fx.map(x => x.f[1].toFixed(2))).size > 1) {
+      C.notes.push({
+        t: `Conflito: mais de uma regra se aplica (${fx.map(x => regraLabel(x.r) + ' → máx. ' + fmtMg(x.f[1])).join('; ')}). Considerando a mais restritiva: máx. ${fmtMg(C.hi)} por dose.`
+      });
+    }
+  }
+
+  for (const r of C.R) {
+    if (r.dosesDia) {
+      C.dmin = Math.max(C.dmin, r.dosesDia[0]);
+      C.dmax = Math.min(C.dmax, r.dosesDia[1]);
+    }
   }
 
   // Máximos diários
   const ex: { m: any; v: number }[] = [];
-  (drug.maximos || []).forEach(m => {
-    if (aplica(m, p, via, apres.id) !== true) return;
-    if (m.tipo === 'mg_dia' && m.valor != null) ex.push({ m, v: m.valor });
-    if (m.tipo === 'mg_kg_dia' && m.valor != null && p.peso) ex.push({ m, v: m.valor * p.peso });
-    if (m.tipo === 'mg_dia_peso' && m.faixas && p.peso) {
-      const f = m.faixas.find(fx => p.peso! >= fx[0] && p.peso! < fx[1]);
-      if (f) ex.push({ m, v: f[2] });
+  for (const m of drug.maximos || []) {
+    if (aplica(m, p, via, apres.id) !== true) continue;
+    let v: number | null = null;
+    if (m.tipo === 'mg_dia') v = m.valor ?? null;
+    else if (m.tipo === 'mg_kg_dia' && p.peso && m.valor != null) v = m.valor * p.peso;
+    else if (m.tipo === 'mg_dia_peso' && p.peso != null && m.faixas) {
+      const f = m.faixas.find(f => p.peso! >= f[0] && p.peso! < f[1]);
+      if (f) v = f[2];
     }
-  });
+    if (v != null) ex.push({ v, m });
+  }
 
   const imp: { r: RegraDose; v: number; nm: number }[] = [];
-  C.R.forEach(r => {
-    const nm = r.dosesDia ? r.dosesDia[1] : n;
-    let v: number | null = null;
-    if (r.tipo === 'mg_dia') v = r.max;
-    else if (r.tipo === 'mg_kg_dia' && p.peso) v = r.max * p.peso;
-    else if (r.tipo === 'mg') v = r.max * nm;
-    else if (r.tipo === 'mg_kg_dose' && p.peso) v = r.max * p.peso * nm;
-    if (v != null) imp.push({ r, v, nm });
-  });
+  for (const r of C.R) {
+    const nm = (r.dosesDia || [1, 4])[1];
+    const f = faixaRegra(r, p, nm);
+    if (f) imp.push({ v: f[1] * nm, r, nm });
+  }
 
   const allMax = [...ex.map(x => x.v), ...imp.map(x => x.v)];
   if (allMax.length) C.dailyMax = Math.min(...allMax);
   const exMin = ex.length ? Math.min(...ex.map(x => x.v)) : null;
   C.dailySrc = ex.find(x => x.v === exMin) || null;
+
+  if (modo !== 'agora') {
+    if (ex.length > 1 && new Set(ex.map(x => x.v)).size > 1) {
+      C.notes.push({
+        t: `Conflito entre máximos diários (${ex.map(x => fmtMg(x.v)).join(' × ')}). Considerando o mais restritivo: ${fmtMg(exMin)}/dia.`
+      });
+    }
+    for (const x of imp) {
+      if (exMin != null && x.v > exMin + 0.01) {
+        C.notes.push({
+          t: `Conflito: a regra ${regraLabel(x.r)} permitiria até ${fmtMg(x.v)}/dia (${x.nm}×/dia), mas o máximo diário da fonte é ${fmtMg(exMin)}/dia. Considerando o mais restritivo.`
+        });
+      }
+    }
+  }
 
   // Cálculo da dose
   C.mgRaw = toMg(doseVal, unid, apres, p.peso, n);

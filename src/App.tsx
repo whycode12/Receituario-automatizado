@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { DRUGS } from './data';
 import { Farmaco, Apresentacao, Via, ModoUso, UnidadeDose, Paciente, ItemReceita } from './types';
-import { num, VIA_GRUPO, VIA_EXT, leader, fmt, fmtMg } from './utils/constants';
-import { calcularPrescricao, viasDisp, mgml } from './engine/calculator';
+import { num, VIA_GRUPO, VIA_EXT, leader, fmt, fmtMg, rml } from './utils/constants';
+import { calcularPrescricao, viasDisp, toMg, fromMg, mgml, aplica } from './engine/calculator';
 import { Header } from './components/Header';
 import { DrugList } from './components/DrugList';
 import { CenterPanel } from './components/CenterPanel';
 import { PrescriptionPanel } from './components/PrescriptionPanel';
 
 export const App: React.FC = () => {
-  // 1. Estado do Paciente
+  // 1. Paciente
   const [pub, setPub] = useState<'adulto' | 'ped'>('adulto');
   const [peso, setPeso] = useState<string>('');
   const [anos, setAnos] = useState<string>('');
   const [meses, setMeses] = useState<string>('');
   const [darkMode, setDarkMode] = useState<boolean>(() => localStorage.getItem('rx_dark') === '1');
 
-  // 2. Fármaco Selecionado & Busca
+  // 2. Fármaco & Busca & Favoritos
   const [search, setSearch] = useState<string>('');
   const [selectedDrug, setSelectedDrug] = useState<Farmaco | null>(() => DRUGS[0] || null);
   const [favorites, setFavorites] = useState<string[]>(() => {
@@ -33,7 +33,7 @@ export const App: React.FC = () => {
   const [modo, setModo] = useState<ModoUso>('sn');
   const [n, setN] = useState<number>(4);
   const [dias, setDias] = useState<number>(7);
-  const [condText, setCondText] = useState<string>('dor ou febre');
+  const [condText, setCondText] = useState<string>('dor');
   const [doseVal, setDoseVal] = useState<number | null>(null);
   const [unid, setUnid] = useState<UnidadeDose>('mg');
   const [frascoMl, setFrascoMl] = useState<number | null>(null);
@@ -41,10 +41,13 @@ export const App: React.FC = () => {
   // Parâmetros EV
   const [evDil, setEvDil] = useState<string>('SF 0,9%');
   const [evVol, setEvVol] = useState<number | null>(null);
+  const [volManual, setVolManual] = useState<boolean>(false);
   const [evTempo, setEvTempo] = useState<number | null>(null);
 
-  // 4. Receita Montada & Toast
-  const [receitaMontada, setReceitaMontada] = useState<ItemReceita[]>([]);
+  // 4. Receita Montada, Edições e Toast
+  const [receita, setReceita] = useState<ItemReceita[]>([]);
+  const [receitaGrp, setReceitaGrp] = useState<Record<string, string>>({});
+  const [previewCardTexts, setPreviewCardTexts] = useState<Record<number, string>>({});
   const [toastMsg, setToastMsg] = useState<string | null>(null);
 
   const showToast = (msg: string) => {
@@ -65,106 +68,242 @@ export const App: React.FC = () => {
 
   // Sincronizar favoritos
   const toggleFavorite = (id: string) => {
-    const updated = favorites.includes(id)
-      ? favorites.filter(x => x !== id)
-      : [...favorites, id];
+    const updated = favorites.includes(id) ? favorites.filter(x => x !== id) : [...favorites, id];
     setFavorites(updated);
     localStorage.setItem('rx_favs', JSON.stringify(updated));
   };
 
-  // Atualizar apresentação ao trocar fármaco ou via
-  useEffect(() => {
-    if (!selectedDrug) return;
-    const disp = viasDisp(selectedDrug);
-    const activeVia = disp.includes(via) ? via : disp[0] || 'VO';
-    setVia(activeVia);
-
-    const aps = selectedDrug.apresentacoes.filter(a => a.vias.includes(activeVia));
-    const activeApres = aps[0];
-    if (activeApres) {
-      setApresId(activeApres.id);
-      setFrascoMl(activeApres.frascoMl || null);
-    }
-    setCondText(selectedDrug.snPadrao || 'dor');
-    setModo(activeVia === 'EV' || activeVia === 'IM' ? 'agora' : 'sn');
-  }, [selectedDrug]);
-
-  const currentApres =
-    selectedDrug?.apresentacoes.find(a => a.id === apresId) ||
-    selectedDrug?.apresentacoes[0];
-
-  // Objeto Paciente
+  // Montar objeto Paciente
   const numPeso = num(peso);
   const numAnos = num(anos);
   const numMeses = num(meses);
   const idadeTotalMeses =
     pub === 'ped'
       ? (numAnos != null ? numAnos * 12 : 0) + (numMeses != null ? numMeses : 0)
-      : 216; // 18 anos padrão
+      : 216;
 
-  const pacienteObj: Paciente = {
-    pub,
-    peso: numPeso,
-    anos: numAnos,
-    meses: numMeses,
-    idadeM: pub === 'ped' && (numAnos != null || numMeses != null) ? idadeTotalMeses : pub === 'adulto' ? 216 : null
-  };
+  const pacienteObj: Paciente = useMemo(
+    () => ({
+      pub,
+      peso: numPeso,
+      anos: numAnos,
+      meses: numMeses,
+      idadeM: pub === 'ped' && (numAnos != null || numMeses != null) ? idadeTotalMeses : pub === 'adulto' ? 216 : null
+    }),
+    [pub, numPeso, numAnos, numMeses, idadeTotalMeses]
+  );
 
-  // Cálculo
-  const calcResult =
-    selectedDrug && currentApres
-      ? calcularPrescricao(
-          selectedDrug,
-          currentApres,
-          pacienteObj,
-          via,
-          modo,
-          n,
-          doseVal,
-          unid,
-          evDil,
-          evVol,
-          false,
-          evTempo
-        )
-      : {
-          R: [],
-          dmin: 1,
-          dmax: 4,
-          n,
-          lo: null,
-          hi: null,
-          dailyMax: null,
-          dailySrc: null,
-          mgRaw: null,
-          arr: null,
-          mg: null,
-          ev: null,
-          alerts: [],
-          notes: [],
-          infos: []
-        };
+  // Apresentação atual
+  const currentApres = useMemo(() => {
+    if (!selectedDrug) return null;
+    const aps = selectedDrug.apresentacoes.filter(a => a.vias.includes(via));
+    return aps.find(a => a.id === apresId) || aps[0] || selectedDrug.apresentacoes[0] || null;
+  }, [selectedDrug, via, apresId]);
 
-  // Definir dose padrão na troca de regra/apresentação se nula
-  useEffect(() => {
-    if (!selectedDrug || !currentApres) return;
-    const r = calcResult.R[0];
-    if (r) {
-      if ((r.tipo === 'mg_kg_dose' || r.tipo === 'mg_kg_dia') && pacienteObj.peso) {
-        setUnid(r.tipo);
+  // Definir padrões (equivalente a setDefaults da versão legada)
+  const applyDefaults = useCallback(
+    (
+      targetDrug: Farmaco | null,
+      targetVia: Via | null,
+      targetApresId: string | null,
+      p: Paciente
+    ) => {
+      if (!targetDrug) return;
+      const disp = viasDisp(targetDrug);
+      const chosenVia = targetVia && disp.includes(targetVia) ? targetVia : disp[0] || 'VO';
+      setVia(chosenVia);
+
+      const aps = targetDrug.apresentacoes.filter(a => a.vias.includes(chosenVia));
+      const chosenApres = aps.find(a => a.id === targetApresId) || aps[0] || targetDrug.apresentacoes[0];
+      if (chosenApres) {
+        setApresId(chosenApres.id);
+        setFrascoMl(chosenApres.frascoMl || null);
+      }
+
+      const chosenModo: ModoUso = chosenVia === 'EV' || chosenVia === 'IM' ? 'agora' : 'sn';
+      setModo(chosenModo);
+      setCondText(targetDrug.snPadrao || 'dor');
+
+      const r = chosenApres
+        ? targetDrug.regras.find(reg => aplica(reg, p, chosenVia, chosenApres.id) === true)
+        : null;
+
+      const newN = r ? (r.intervaloFixo ? 24 / r.intervaloFixo : (r.dosesPadrao || (r.dosesDia || [1, 4])[1])) : 4;
+      setN(newN);
+
+      if (r && (r.tipo === 'mg_kg_dose' || r.tipo === 'mg_kg_dia')) {
+        if (p.peso) {
+          setUnid(r.tipo);
+          setDoseVal(r.padrao);
+        } else {
+          setUnid('mg');
+          setDoseVal(null);
+        }
+      } else if (r) {
+        setUnid('mg');
         setDoseVal(r.padrao);
       } else {
         setUnid('mg');
-        setDoseVal(r.padrao);
+        setDoseVal(null);
       }
-    }
-  }, [selectedDrug?.id, currentApres?.id, via]);
 
-  // Geração de Prévia dos Cards de Prescrição
-  const previewCards: ItemReceita[] = [];
-  if (selectedDrug && currentApres && calcResult.arr) {
+      setVolManual(false);
+      setEvVol(null);
+      setEvTempo(null);
+      setEvDil(targetDrug.ev ? targetDrug.ev.diluentes[0] : 'SF 0,9%');
+    },
+    []
+  );
+
+  // Inicialização no primeiro carregamento
+  useEffect(() => {
+    if (selectedDrug) {
+      applyDefaults(selectedDrug, via, apresId, pacienteObj);
+    }
+  }, []);
+
+  // Handlers
+  const handleSelectDrug = (drug: Farmaco) => {
+    setSelectedDrug(drug);
+    setPreviewCardTexts({});
+    applyDefaults(drug, null, null, pacienteObj);
+  };
+
+  const handlePubChange = (newPub: 'adulto' | 'ped') => {
+    setPub(newPub);
+    const updatedPac: Paciente = {
+      ...pacienteObj,
+      pub: newPub,
+      idadeM: newPub === 'adulto' ? 216 : (numAnos != null ? numAnos * 12 : 0) + (numMeses != null ? numMeses : 0)
+    };
+    if (selectedDrug) {
+      applyDefaults(selectedDrug, via, apresId, updatedPac);
+    }
+  };
+
+  const handlePesoChange = (newPeso: string) => {
+    setPeso(newPeso);
+    const pVal = num(newPeso);
+    if (selectedDrug && doseVal == null) {
+      const updatedPac: Paciente = { ...pacienteObj, peso: pVal };
+      applyDefaults(selectedDrug, via, apresId, updatedPac);
+    }
+  };
+
+  const handleAnosChange = (newAnos: string) => {
+    setAnos(newAnos);
+    const aVal = num(newAnos);
+    const mVal = num(meses);
+    if (selectedDrug && doseVal == null) {
+      const updatedPac: Paciente = {
+        ...pacienteObj,
+        anos: aVal,
+        idadeM: (aVal != null ? aVal * 12 : 0) + (mVal != null ? mVal : 0)
+      };
+      applyDefaults(selectedDrug, via, apresId, updatedPac);
+    }
+  };
+
+  const handleMesesChange = (newMeses: string) => {
+    setMeses(newMeses);
+    const aVal = num(anos);
+    const mVal = num(newMeses);
+    if (selectedDrug && doseVal == null) {
+      const updatedPac: Paciente = {
+        ...pacienteObj,
+        meses: mVal,
+        idadeM: (aVal != null ? aVal * 12 : 0) + (mVal != null ? mVal : 0)
+      };
+      applyDefaults(selectedDrug, via, apresId, updatedPac);
+    }
+  };
+
+  const handleViaChange = (newVia: Via) => {
+    setVia(newVia);
+    setPreviewCardTexts({});
+    if (selectedDrug) {
+      applyDefaults(selectedDrug, newVia, null, pacienteObj);
+    }
+  };
+
+  const handleApresChange = (newApresId: string) => {
+    setApresId(newApresId);
+    setPreviewCardTexts({});
+    if (selectedDrug) {
+      applyDefaults(selectedDrug, via, newApresId, pacienteObj);
+    }
+  };
+
+  const handleModoChange = (newModo: ModoUso) => {
+    if (newModo === 'agora' && unid === 'mg_kg_dia' && currentApres) {
+      const mg = toMg(doseVal, unid, currentApres, pacienteObj.peso, n);
+      setModo('agora');
+      setUnid('mg_kg_dose');
+      const nv = fromMg(mg, 'mg_kg_dose', currentApres, pacienteObj.peso, 1);
+      setDoseVal(nv != null ? Math.round(nv * 100) / 100 : null);
+    } else {
+      setModo(newModo);
+    }
+    setPreviewCardTexts({});
+  };
+
+  const handleUnidChange = (newUnid: UnidadeDose) => {
+    if (currentApres) {
+      const mg = toMg(doseVal, unid, currentApres, pacienteObj.peso, n);
+      setUnid(newUnid);
+      const nv = fromMg(mg, newUnid, currentApres, pacienteObj.peso, n);
+      setDoseVal(nv != null ? Math.round(nv * 100) / 100 : null);
+    } else {
+      setUnid(newUnid);
+    }
+  };
+
+  // Cálculo de Prescrição
+  const calcResult = useMemo(() => {
+    if (!selectedDrug || !currentApres) {
+      return {
+        R: [],
+        dmin: 1,
+        dmax: 4,
+        n,
+        lo: null,
+        hi: null,
+        dailyMax: null,
+        dailySrc: null,
+        mgRaw: null,
+        arr: null,
+        mg: null,
+        ev: null,
+        alerts: [],
+        notes: [],
+        infos: []
+      };
+    }
+    return calcularPrescricao(
+      selectedDrug,
+      currentApres,
+      pacienteObj,
+      via,
+      modo,
+      n,
+      doseVal,
+      unid,
+      evDil,
+      evVol,
+      volManual,
+      evTempo
+    );
+  }, [selectedDrug, currentApres, pacienteObj, via, modo, n, doseVal, unid, evDil, evVol, volManual, evTempo]);
+
+  // Geração de Cards
+  const generatedCards: ItemReceita[] = useMemo(() => {
+    if (!selectedDrug || !currentApres || !calcResult.arr) return [];
+    const d = selectedDrug;
+    const ap = currentApres;
     const a = calcResult.arr;
+    const p = pacienteObj;
     const h = 24 / n;
+
     const posExt =
       modo === 'agora'
         ? 'agora'
@@ -187,194 +326,244 @@ export const App: React.FC = () => {
         ? `1x/dia, por ${dias} dias`
         : `de ${h}/${h}h, por ${dias} dias`;
 
-    const nomeInt = `${selectedDrug.nome} (${currentApres.conc})`;
+    const nomeInt = `${d.nome} (${ap.conc})`;
+    const out: ItemReceita[] = [];
 
     if (via === 'VO' || via === 'VR' || via === 'NASAL') {
       const g = VIA_GRUPO[via];
-      const rot =
-        typeof currentApres.rotulo === 'function'
-          ? currentApres.rotulo(pacienteObj, a)
-          : currentApres.rotulo;
+      const rot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
       const verbo = via === 'VO' ? 'Tomar' : via === 'VR' ? 'Aplicar' : 'Instilar';
+      let disp = typeof ap.disp === 'function' ? ap.disp(p, a) : ap.disp;
 
-      let disp =
-        typeof currentApres.disp === 'function'
-          ? currentApres.disp(pacienteObj, a)
-          : currentApres.disp;
-
-      if (modo === 'continuo' && (currentApres.frascoMl || frascoMl) && a.ml != null) {
-        const fMl = frascoMl || currentApres.frascoMl || 150;
+      if (modo === 'continuo' && ap.frascoMl && frascoMl && a.ml != null) {
         const mlDia = a.ml * n;
-        const mlTotal = mlDia * dias;
-        const qtdFrascos = Math.max(1, Math.ceil(mlTotal / fMl));
+        const mlTotal = mlDia * (dias || 1);
+        const qtdFrascos = Math.max(1, Math.ceil(mlTotal / frascoMl));
         disp = `${qtdFrascos} frasco${qtdFrascos > 1 ? 's' : ''}`;
       }
 
-      const rawInstrucao =
-        typeof currentApres.instrucao === 'function'
-          ? currentApres.instrucao(pacienteObj, a)
-          : currentApres.instrucao;
+      const rawInstrucao = typeof ap.instrucao === 'function' ? ap.instrucao(p, a) : ap.instrucao;
       const extra = rawInstrucao ? `\n   ${rawInstrucao}` : '';
       const doseTxt = a.txt + (via === 'NASAL' ? ' em cada narina' : '');
 
-      previewCards.push({
+      out.push({
         grupo: g,
         sub: 'Receita Médica',
         texto: `${leader('1. ' + rot, disp)}\n${verbo} ${doseTxt}, ${VIA_EXT[via]}, ${posExt}.${extra}`
       });
-
-      previewCards.push({
+      out.push({
         grupo: g,
         sub: 'Prescrição Interna',
-        texto: `${leader('1. ' + nomeInt, a.txt)}\nAdministrar ${doseTxt}${
-          currentApres.mg ? ` (${fmtMg(a.mg)})` : ''
-        }, ${via}, ${posAbr}.`
+        texto: `${leader('1. ' + nomeInt, a.txt)}\nAdministrar ${doseTxt}${ap.mg ? ` (${fmtMg(a.mg)})` : ''}, ${via}, ${posAbr}.`
       });
-    } else if (via === 'IM') {
+    }
+
+    if (via === 'IM') {
       const dose = a.whole ? a.txt : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
-      previewCards.push({
+      out.push({
         grupo: VIA_GRUPO.IM,
         sub: '',
         texto: `${leader('1. ' + nomeInt, dose)}\nAdministrar ${dose}, IM, sem diluição, ${posAbr}.`
       });
-    } else if (via === 'EV' && calcResult.ev) {
+    }
+
+    if (via === 'EV' && calcResult.ev) {
       const E = calcResult.ev;
-      const qtdEV = `${fmt(E.vol)} mL (${E.seringa ? 'seringa' : 'bolsa'})`;
+      const dil = evDil;
       let pre = '';
-      if (currentApres.forma === 'fap') {
-        const k = Math.ceil((a.mg / (currentApres.mg || 1)) - 1e-9);
-        pre = `Reconstituir ${k} frasco${k > 1 ? 's' : ''}-ampola com ${currentApres.reconstMl} mL de ${currentApres.reconstDil}${k > 1 ? ' cada' : ''}. `;
+      let dose: string | null = null;
+
+      if (ap.forma === 'fap' && ap.mg && ap.reconstMl && ap.reconstDil) {
+        const k = Math.ceil(a.mg / ap.mg - 1e-9);
+        pre = `Reconstituir ${k} frasco${k > 1 ? 's' : ''}-ampola com ${ap.reconstMl} mL de ${ap.reconstDil}${k > 1 ? ' cada' : ''} (${fmt(mgml(ap))} mg/mL)`;
+        dose = a.whole ? null : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
+      } else {
+        dose = a.whole ? a.txt : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
       }
-      previewCards.push({
+
+      const t = E.t != null ? fmt(E.t, 1) : '__';
+      let txt: string;
+
+      if (E.seringa) {
+        const resto = rml(E.vol - E.vDose);
+        const asp = dose || `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
+        txt = `${pre ? pre + '; ' : ''}Aspirar ${asp}${resto > 0 ? ` + ${fmt(resto)} mL de ${dil}` : ''} em seringa de ${fmt(E.vol)} mL; administrar EV lento em ${t} min, ${posAbr}.`;
+      } else {
+        const gt = E.gtt != null ? ` (≈ ${E.gtt} gts/min)` : '';
+        if (ap.forma === 'fap' && a.whole) {
+          txt = `${pre} e diluir em ${fmt(E.vol)} mL de ${dil}; infundir EV em ${t} min${gt}, ${posAbr}.`;
+        } else {
+          txt = `${pre ? pre + '; ' : ''}Diluir ${dose} em ${fmt(E.vol)} mL de ${dil}; infundir EV em ${t} min${gt}, ${posAbr}.`;
+        }
+      }
+
+      const qtdEV = a.whole ? a.txt : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
+      out.push({
         grupo: VIA_GRUPO.EV,
         sub: '',
-        texto: `${leader('1. ' + nomeInt, qtdEV)}\n${pre}Diluir em ${E.vol} mL de ${evDil}. Infundir em ${E.t} minutos (${E.gtt} gotas/min).`
+        texto: `${leader('1. ' + nomeInt, qtdEV)}\n${txt}`
       });
     }
-  }
 
-  // Ações de cópia
-  const copyToClipboard = (txt: string) => {
-    navigator.clipboard.writeText(txt);
-    showToast('Copiado para a área de transferência');
+    return out;
+  }, [selectedDrug, currentApres, calcResult, pacienteObj, via, modo, n, condText, dias, frascoMl, evDil]);
+
+  // Cards ativos com possíveis edições manuais
+  const activeCards = useMemo(() => {
+    return generatedCards.map((c, i) => ({
+      ...c,
+      texto: previewCardTexts[i] != null ? previewCardTexts[i] : c.texto
+    }));
+  }, [generatedCards, previewCardTexts]);
+
+  // Funções de formatação de receita
+  const grpTxt = useCallback((g: { k: string; items: ItemReceita[] }): string => {
+    return g.items
+      .map((r, idx) => {
+        const lines = r.texto.split('\n');
+        const first = lines[0].replace(/^\d+\.\s*/, `${idx + 1}. `);
+        return [first, ...lines.slice(1)].join('\n');
+      })
+      .join('\n\n');
+  }, []);
+
+  const getTextoReceita = useCallback((): string => {
+    const grps: { k: string; items: ItemReceita[] }[] = [];
+    receita.forEach(r => {
+      let g = grps.find(x => x.k === r.grupo);
+      if (!g) {
+        g = { k: r.grupo, items: [] };
+        grps.push(g);
+      }
+      g.items.push(r);
+    });
+    return grps
+      .map(g => {
+        const body = receitaGrp[g.k] != null ? receitaGrp[g.k] : grpTxt(g);
+        return g.k.toUpperCase() + '\n\n' + body;
+      })
+      .join('\n\n');
+  }, [receita, receitaGrp, grpTxt]);
+
+  // Ações de cópia e receita montada
+  const handleCopy = (txt: string) => {
+    navigator.clipboard.writeText(txt).then(() => {
+      showToast('Copiado');
+    });
   };
 
-  const copyAllReceita = () => {
-    const gruposMap = new Map<string, string[]>();
-    receitaMontada.forEach(item => {
-      if (!gruposMap.has(item.grupo)) {
-        gruposMap.set(item.grupo, []);
-      }
-      gruposMap.get(item.grupo)!.push(item.texto);
+  const handleAddToReceita = (cardIndex: number) => {
+    const c = activeCards[cardIndex];
+    if (!c) return;
+    setReceita(prev => [...prev, { grupo: c.grupo, sub: c.sub, texto: c.texto }]);
+    setReceitaGrp(prev => {
+      const next = { ...prev };
+      delete next[c.grupo];
+      return next;
     });
+    showToast('Adicionado à receita');
+  };
 
-    const fullBlocks: string[] = [];
-    gruposMap.forEach((textos, grupoNome) => {
-      const renumbered = textos.map((t, idx) => t.replace(/^\d+\.\s*/, `${idx + 1}. `));
-      fullBlocks.push(`${grupoNome.toUpperCase()}\n\n${renumbered.join('\n\n')}`);
+  const handleUpdateCardTexto = (index: number, newTexto: string) => {
+    setPreviewCardTexts(prev => ({ ...prev, [index]: newTexto }));
+  };
+
+  const handleUpdateGrpTexto = (grupo: string, newTexto: string) => {
+    setReceitaGrp(prev => ({ ...prev, [grupo]: newTexto }));
+  };
+
+  const handleDelGrp = (grupo: string) => {
+    setReceita(prev => prev.filter(r => r.grupo !== grupo));
+    setReceitaGrp(prev => {
+      const next = { ...prev };
+      delete next[grupo];
+      return next;
     });
+  };
 
-    copyToClipboard(fullBlocks.join('\n\n\n'));
+  const handleClear = () => {
+    setReceita([]);
+    setReceitaGrp({});
   };
 
   return (
-    <div className="flex flex-col h-screen bg-white dark:bg-notion-darkBg font-sans text-gray-900 dark:text-gray-100 transition-colors">
-      {/* Toast flutuante */}
-      {toastMsg && (
-        <div className="fixed bottom-6 right-6 z-50 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 rounded-lg shadow-xl text-xs font-semibold animate-fade-in">
-          {toastMsg}
-        </div>
-      )}
-
-      {/* Header com perfil do paciente */}
+    <>
       <Header
         pub={pub}
-        setPub={setPub}
+        setPub={handlePubChange}
         peso={peso}
-        setPeso={setPeso}
+        setPeso={handlePesoChange}
         anos={anos}
-        setAnos={setAnos}
+        setAnos={handleAnosChange}
         meses={meses}
-        setMeses={setMeses}
+        setMeses={handleMesesChange}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-
-      {/* Corpo com 3 colunas */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Coluna 1: Lista de Fármacos */}
+      <main className="grid">
         <DrugList
           drugs={DRUGS}
           selectedDrug={selectedDrug}
-          onSelectDrug={d => setSelectedDrug(d)}
+          onSelectDrug={handleSelectDrug}
           favorites={favorites}
           onToggleFavorite={toggleFavorite}
           search={search}
           setSearch={setSearch}
         />
-
-        {/* Coluna 2: Centro (Configurações da Dose e Cálculos) */}
-        {selectedDrug && currentApres ? (
-          <CenterPanel
-            drug={selectedDrug}
-            paciente={pacienteObj}
-            via={via}
-            setVia={setVia}
-            apres={currentApres}
-            setApresId={setApresId}
-            modo={modo}
-            setModo={setModo}
-            n={n}
-            setN={setN}
-            dias={dias}
-            setDias={setDias}
-            condText={condText}
-            setCondText={setCondText}
-            frascoMl={frascoMl}
-            setFrascoMl={setFrascoMl}
-            doseVal={doseVal}
-            setDoseVal={setDoseVal}
-            unid={unid}
-            setUnid={setUnid}
-            calcResult={calcResult}
-            isFav={favorites.includes(selectedDrug.id)}
-            onToggleFav={() => toggleFavorite(selectedDrug.id)}
-            evDil={evDil}
-            setEvDil={setEvDil}
-            evVol={evVol}
-            setEvVol={setEvVol}
-            evTempo={evTempo}
-            setEvTempo={setEvTempo}
-          />
-        ) : (
-          <div className="flex-1 flex items-center justify-center text-xs text-gray-400">
-            Nenhum fármaco selecionado
-          </div>
-        )}
-
-        {/* Coluna 3: Prescrição Montada e Prévia */}
-        <PrescriptionPanel
-          previewCards={previewCards}
-          receitaMontada={receitaMontada}
-          onAddToReceita={item => {
-            setReceitaMontada([...receitaMontada, item]);
-            showToast('Adicionado à receita');
+        <CenterPanel
+          drug={selectedDrug}
+          paciente={pacienteObj}
+          via={via}
+          onViaChange={handleViaChange}
+          apres={currentApres}
+          onApresChange={handleApresChange}
+          modo={modo}
+          onModoChange={handleModoChange}
+          n={n}
+          setN={setN}
+          dias={dias}
+          setDias={setDias}
+          condText={condText}
+          setCondText={setCondText}
+          frascoMl={frascoMl}
+          setFrascoMl={setFrascoMl}
+          doseVal={doseVal}
+          setDoseVal={setDoseVal}
+          unid={unid}
+          onUnidChange={handleUnidChange}
+          calcResult={calcResult}
+          isFav={selectedDrug ? favorites.includes(selectedDrug.id) : false}
+          onToggleFav={() => selectedDrug && toggleFavorite(selectedDrug.id)}
+          evDil={evDil}
+          setEvDil={setEvDil}
+          evVol={evVol}
+          setEvVol={v => {
+            setEvVol(v);
+            setVolManual(true);
           }}
-          onRemoveFromReceita={idx => {
-            setReceitaMontada(receitaMontada.filter((_, i) => i !== idx));
-          }}
-          onClearReceita={() => setReceitaMontada([])}
-          onUpdateReceitaTexto={(idx, newTxt) => {
-            const up = [...receitaMontada];
-            up[idx].texto = newTxt;
-            setReceitaMontada(up);
-          }}
-          onCopyAll={copyAllReceita}
-          onCopyText={copyToClipboard}
+          evTempo={evTempo}
+          setEvTempo={setEvTempo}
         />
+        <PrescriptionPanel
+          drug={selectedDrug}
+          calcResult={calcResult}
+          cards={activeCards}
+          receita={receita}
+          receitaGrp={receitaGrp}
+          onUpdateCardTexto={handleUpdateCardTexto}
+          onUpdateGrpTexto={handleUpdateGrpTexto}
+          onAddToReceita={handleAddToReceita}
+          onDelGrp={handleDelGrp}
+          onClear={handleClear}
+          onCopy={handleCopy}
+          onCopyAll={() => handleCopy(getTextoReceita())}
+          grpTxt={grpTxt}
+        />
+      </main>
+      <div className={`toast ${toastMsg ? 'on' : ''}`} id="toast">
+        {toastMsg || 'Copiado'}
       </div>
-    </div>
+    </>
   );
 };
-
 export default App;
