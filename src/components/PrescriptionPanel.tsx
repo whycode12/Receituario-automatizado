@@ -25,12 +25,21 @@ interface AutoTextareaProps {
 const AutoTextarea: React.FC<AutoTextareaProps> = ({ value, onChange }) => {
   const ref = React.useRef<HTMLTextAreaElement>(null);
 
-  React.useEffect(() => {
+  const resize = React.useCallback(() => {
     if (ref.current) {
       ref.current.style.height = 'auto';
       ref.current.style.height = `${ref.current.scrollHeight}px`;
     }
-  }, [value]);
+  }, []);
+
+  React.useLayoutEffect(() => {
+    resize();
+  }, [value, resize]);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  }, [resize]);
 
   return (
     <textarea
@@ -39,7 +48,7 @@ const AutoTextarea: React.FC<AutoTextareaProps> = ({ value, onChange }) => {
       spellCheck={false}
       value={value}
       onChange={e => onChange(e.target.value)}
-      style={{ overflow: 'hidden', resize: 'none' }}
+      style={{ overflow: 'hidden', resize: 'none', display: 'block', width: '100%' }}
     />
   );
 };
@@ -70,25 +79,8 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
     g.items.push(r);
   });
 
-  // Alerta de prescrição só deve disparar quando a dose ou frequência estiverem de fato fora do recomendado
-  const hasDoseError =
-    calcResult &&
-    ((calcResult.hi != null && calcResult.mg != null && calcResult.mg > calcResult.hi * 1.0001) ||
-      (calcResult.lo != null && calcResult.mg != null && calcResult.mg < calcResult.lo * 0.9999) ||
-      (calcResult.dailyMax != null &&
-        calcResult.mg != null &&
-        calcResult.mg * (calcResult.n || 1) > calcResult.dailyMax * 1.0001) ||
-      (calcResult.dmin != null &&
-        calcResult.dmax != null &&
-        calcResult.n != null &&
-        (calcResult.n < calcResult.dmin || calcResult.n > calcResult.dmax)) ||
-      calcResult.alerts.some(
-        a =>
-          a.t.includes('Acima da dose') ||
-          a.t.includes('Abaixo da dose') ||
-          a.t.includes('ultrapassa o máximo') ||
-          a.t.includes('fora do recomendado')
-      ));
+  // Alerta de prescrição só deve disparar quando houver alertas clínicos reais
+  const hasDoseError = Boolean(calcResult && calcResult.alerts && calcResult.alerts.length > 0);
 
   return (
     <section className="col" id="saida">

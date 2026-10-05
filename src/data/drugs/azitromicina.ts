@@ -60,6 +60,7 @@ export const azitromicina: Farmaco = {
       conc: '500mg',
       rotulo: 'Azitromicina 500mg IV',
       mg: 500,
+      volml: 4.8,
       reconstMl: 4.8,
       reconstDil: 'AD',
       vias: ['EV'],

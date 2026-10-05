@@ -47,6 +47,7 @@ export const omeprazol: Farmaco = {
       conc: '40mg',
       rotulo: 'Omeprazol 40mg frasco-ampola',
       mg: 40,
+      volml: 10,
       reconstMl: 10,
       reconstDil: 'Diluente próprio (10 mL)',
       vias: ['EV'],

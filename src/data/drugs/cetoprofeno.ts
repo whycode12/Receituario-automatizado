@@ -72,6 +72,7 @@ export const cetoprofeno: Farmaco = {
       conc: '100mg',
       rotulo: 'Cetoprofeno 100mg',
       mg: 100,
+      volml: 5,
       reconstMl: 5,
       reconstDil: 'SF 0,9%',
       vias: ['EV'],

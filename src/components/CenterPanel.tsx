@@ -123,18 +123,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
     isBad = cur != null && calcResult.mg != null && (calcResult.mg > calcResult.hi * 1.0001 || calcResult.mg < calcResult.lo * 0.9999);
   }
 
-  const hasDoseError =
-    (calcResult.hi != null && calcResult.mg != null && calcResult.mg > calcResult.hi * 1.0001) ||
-    (calcResult.lo != null && calcResult.mg != null && calcResult.mg < calcResult.lo * 0.9999) ||
-    (calcResult.dailyMax != null && calcResult.mg != null && calcResult.mg * n > calcResult.dailyMax * 1.0001) ||
-    (modo !== 'agora' && (n < calcResult.dmin || n > calcResult.dmax)) ||
-    calcResult.alerts.some(
-      a =>
-        a.t.includes('Acima da dose') ||
-        a.t.includes('Abaixo da dose') ||
-        a.t.includes('ultrapassa o máximo') ||
-        a.t.includes('fora do recomendado')
-    );
+  const hasDoseError = Boolean(calcResult && calcResult.alerts && calcResult.alerts.length > 0);
 
   const applyBarDrag = (clientX: number) => {
 
@@ -281,12 +270,22 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
       <div className="field">
         <div className="lbl">Apresentação</div>
         <select value={apres.id} onChange={e => onApresChange(e.target.value)}>
-          {curApresList.map(a => (
-            <option key={a.id} value={a.id}>
-              {a.nome}
-              {a.comercial ? ` · ${a.comercial}` : ''}
-            </option>
-          ))}
+          {curApresList.map(a => {
+            const fapVol = a.forma === 'fap' ? (a.volml != null ? a.volml : a.reconstMl != null ? a.reconstMl : null) : null;
+            const hasVolInName = fapVol != null && (
+              a.nome.toLowerCase().includes(`${fapVol} ml`) ||
+              a.nome.toLowerCase().includes(`${fapVol}ml`) ||
+              a.nome.toLowerCase().includes(`${fmt(fapVol)} ml`) ||
+              a.nome.toLowerCase().includes(`${fmt(fapVol)}ml`)
+            );
+            const volSuffix = fapVol != null && !hasVolInName ? ` (${fmt(fapVol)} mL)` : '';
+            return (
+              <option key={a.id} value={a.id}>
+                {a.nome}{volSuffix}
+                {a.comercial ? ` · ${a.comercial}` : ''}
+              </option>
+            );
+          })}
         </select>
       </div>
 

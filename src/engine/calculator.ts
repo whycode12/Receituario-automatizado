@@ -5,7 +5,7 @@ import {
 import { CFG, fonteNome, fmt, fmtMg, rml, UNID_LBL, regraLabel } from '../utils/constants';
 
 export const mgml = (ap: Apresentacao): number | null =>
-  ap.mgml || (ap.reconstMl && ap.mg ? ap.mg / ap.reconstMl : null);
+  ap.mgml || ((ap.volml || ap.reconstMl) && ap.mg ? ap.mg / (ap.volml || ap.reconstMl)! : null);
 
 export const isUnid = (ap: Apresentacao): boolean =>
   ['cp', 'cap', 'sup'].includes(ap.forma);
@@ -197,7 +197,8 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     if (Math.abs(k - Math.round(k)) < 1e-6 && k >= 1) {
       k = Math.round(k);
       whole = true;
-      txt = `${k} frasco${k > 1 ? 's' : ''}-ampola`;
+      const volTxt = ml != null && ml > 0 ? ` (${fmt(ml)} mL)` : '';
+      txt = `${k} frasco${k > 1 ? 's' : ''}-ampola${volTxt}`;
     }
   }
   return { mg: mgR, ml, txt, whole, k };

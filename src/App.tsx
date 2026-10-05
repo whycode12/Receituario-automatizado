@@ -326,12 +326,17 @@ export const App: React.FC = () => {
         ? `1x/dia, por ${dias} dias`
         : `de ${h}/${h}h, por ${dias} dias`;
 
-    const nomeInt = `${d.nome} (${ap.conc})`;
+    const fapVol = ap.forma === 'fap' ? (ap.volml != null ? ap.volml : ap.reconstMl != null ? ap.reconstMl : null) : null;
+    const fapVolStr = fapVol != null && !ap.conc.toLowerCase().includes('ml') ? ` / ${fmt(fapVol)} mL` : '';
+    const nomeInt = `${d.nome} (${ap.conc}${fapVolStr})`;
     const out: ItemReceita[] = [];
 
     if (via === 'VO' || via === 'VR' || via === 'NASAL' || via === 'INALATORIA') {
       const g = VIA_GRUPO[via];
-      const rot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
+      const rawRot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
+      const rot = (ap.forma === 'fap' && fapVol != null && !rawRot.toLowerCase().includes('ml'))
+        ? `${rawRot} (${fmt(fapVol)} mL)`
+        : rawRot;
       const verbo = via === 'VO' ? 'Tomar' : via === 'VR' ? 'Aplicar' : via === 'INALATORIA' ? (ap.forma === 'spray' ? 'Inalar' : 'Inalar / Nebulizar') : 'Instilar';
       let disp = typeof ap.disp === 'function' ? ap.disp(p, a) : ap.disp;
 
@@ -360,9 +365,23 @@ export const App: React.FC = () => {
 
     if (via === 'IM') {
       const dose = a.whole ? a.txt : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
+      const rawRot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
+      const rot = (ap.forma === 'fap' && fapVol != null && !rawRot.toLowerCase().includes('ml'))
+        ? `${rawRot} (${fmt(fapVol)} mL)`
+        : rawRot;
+      let disp = typeof ap.disp === 'function' ? ap.disp(p, a) : ap.disp;
+      if (ap.forma === 'fap' && fapVol != null && typeof disp === 'string' && !disp.toLowerCase().includes('ml')) {
+        disp = `${disp} (${fmt(fapVol)} mL)`;
+      }
+
       out.push({
         grupo: VIA_GRUPO.IM,
-        sub: '',
+        sub: 'Receita Médica',
+        texto: `${leader('1. ' + rot, disp)}\nAplicar ${dose}, intramuscular, ${posExt}.`
+      });
+      out.push({
+        grupo: VIA_GRUPO.IM,
+        sub: 'Prescrição Interna',
         texto: `${leader('1. ' + nomeInt, dose)}\nAdministrar ${dose}, IM, sem diluição, ${posAbr}.`
       });
     }
@@ -372,10 +391,11 @@ export const App: React.FC = () => {
       const dil = evDil;
       let pre = '';
       let dose: string | null = null;
+      const reconstVolume = ap.reconstMl || ap.volml;
 
-      if (ap.forma === 'fap' && ap.mg && ap.reconstMl && ap.reconstDil) {
+      if (ap.forma === 'fap' && ap.mg && reconstVolume && ap.reconstDil) {
         const k = Math.ceil(a.mg / ap.mg - 1e-9);
-        pre = `Reconstituir ${k} frasco${k > 1 ? 's' : ''}-ampola com ${ap.reconstMl} mL de ${ap.reconstDil}${k > 1 ? ' cada' : ''} (${fmt(mgml(ap))} mg/mL)`;
+        pre = `Reconstituir ${k} frasco${k > 1 ? 's' : ''}-ampola com ${reconstVolume} mL de ${ap.reconstDil}${k > 1 ? ' cada' : ''} (${fmt(mgml(ap))} mg/mL)`;
         dose = a.whole ? null : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
       } else {
         dose = a.whole ? a.txt : `${fmt(a.ml)} mL (${fmtMg(a.mg)})`;
