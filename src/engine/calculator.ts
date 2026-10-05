@@ -255,7 +255,13 @@ export function calcularPrescricao(
   // 1. Contraindicações
   (drug.contra || []).forEach(c => {
     if (aplica(c, p, via, apres.id) === true) {
-      C.alerts.push({ t: c.msg, f: fonteNome(drug, c.fonte), tr: c.trecho, strong: c.strong });
+      if (c.se) {
+        // Contraindicação real do paciente cadastrado (ex: idade ou peso violados): alerta vermelho
+        C.alerts.push({ t: c.msg, f: fonteNome(drug, c.fonte), tr: c.trecho, strong: c.strong });
+      } else {
+        // Alerta fixo / aviso clínico geral (não condicionado a idade/peso do paciente): exibido em âmbar (notes)
+        C.notes.push({ t: c.msg, f: fonteNome(drug, c.fonte), tr: c.trecho, strong: c.strong });
+      }
     }
   });
 
