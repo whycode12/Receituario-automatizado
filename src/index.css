@@ -2,12 +2,14 @@
   --bg:#ffffff; --fg:#37352f; --muted:#787774; --line:#e9e9e7; --hover:#f1f1ef; --soft:#f7f7f5;
   --accent:#2f2f2f; --accent-fg:#fff;
   --red:#d44c47; --red-bg:#fdebec; --amber:#9f6b00; --amber-bg:#fbf3db; --green:#2b6a3f; --green-bg:#dbeddb;
+  --blue:#2563eb; --blue-bg:#eff6ff; --blue-fg:#1d4ed8;
   --radius:8px;
 }
 html.dark{
   --bg:#191919; --fg:#e6e6e4; --muted:#9b9a97; --line:#2f2f2f; --hover:#262626; --soft:#202020;
   --accent:#e6e6e4; --accent-fg:#191919;
   --red:#ff7b72; --red-bg:#3b1f1e; --amber:#e3b341; --amber-bg:#3a2f12; --green:#7ee2a8; --green-bg:#16301f;
+  --blue:#60a5fa; --blue-bg:rgba(59, 130, 246, 0.16); --blue-fg:#93c5fd;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -75,6 +77,9 @@ html.dark .bar .ok{background:#2f6b45}
 .alert.amber{background:var(--amber-bg);color:var(--amber)}
 .alert.gray{background:var(--soft);color:var(--muted)}
 .alert.green{background:var(--green-bg);color:var(--green);display:inline-block;padding:4px 10px}
+.alert.blue{background:var(--blue-bg);color:var(--blue-fg);border-left:3px solid var(--blue)}
+.dose-pratica-box{margin:8px 0 6px;padding:8px 12px;background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:6px;font-size:12.5px;line-height:1.45;color:var(--blue-fg)}
+.dose-pratica-box b{font-weight:600;color:var(--blue-fg)}
 .alert .src{display:block;font-weight:400;font-size:11.5px;opacity:.85;margin-top:3px}
 .alert .tr{display:block;font-weight:400;font-style:italic;font-size:11.5px;opacity:.8}
 details{margin-top:22px;border-top:1px solid var(--line);padding-top:12px}

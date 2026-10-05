@@ -15,19 +15,19 @@
 [x] 7. Azitromicina
 [x] 8. Cefalexina
 [x] 9. Ceftriaxona
-10. Ciprofloxacino
-11. Butilbrometo de escopolamina
-12. Butilbrometo de escopolamina + dipirona
-13. Metoclopramida
-14. Ondansetrona
-15. Omeprazol
-16. Prednisona
-17. Dexclorfeniramina
-18. Loratadina
-19. Salbutamol
-20. Brometo de ipratrópio
-21. Soro fisiológico 0,9% (Lavagem nasal)
-22. Sais para reidratação oral (SRO)
+[x] 10. Ciprofloxacino
+[x] 11. Butilbrometo de escopolamina
+[x] 12. Butilbrometo de escopolamina + dipirona
+[x] 13. Metoclopramida
+[x] 14. Ondansetrona
+[x] 15. Omeprazol
+[x] 16. Prednisona
+[x] 17. Dexclorfeniramina
+[x] 18. Loratadina
+[x] 19. Salbutamol
+[x] 20. Brometo de ipratrópio
+[x] 21. Soro fisiológico 0,9% (Lavagem nasal)
+[x] 22. Sais para reidratação oral (SRO)
 
 ## PARTE 2: NOVOS CADASTROS (FASE 2 - EXPANSÃO EM BLOCOS)
 # Ordenados dos mais para os menos usados na rotina de PS, UPA e UBS.

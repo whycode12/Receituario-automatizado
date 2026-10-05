@@ -22,9 +22,10 @@ export const sro: Farmaco = {
   id: 'sro',
   nome: 'Soro de Reidratação Oral (SRO)',
   categoria: 'Soluções e Hidratação',
-  busca: 'sro sais reidratacao oral soro caseiro diarreia desidratacao vomito plano a b',
+  busca: 'sro sais reidratacao oral soro caseiro diarreia desidratacao vomito plano a b rehidrat pedialyte',
   classe: 'Solução de Reidratação Hidroeletrolítica Oral',
-  fontes: { MS: '2023' },
+  dosePratica: 'Plano A (domiciliar): após cada evacuação líquida ou vômito, ingerir aos poucos: < 1 ano: 50 a 100 mL; 1 a 10 anos: 100 a 200 mL; > 10 anos e adultos: 200 a 400 mL (à vontade). Plano B (na unidade de saúde): 50 a 100 mL/kg em 4 a 6 horas em pequenos goles.',
+  fontes: { MS: '2023', PSZERADO: '2025' },
   snPadrao: 'evacuações diarreicas ou vômitos',
   acessoFonte: 'RENAME 2024 (Componente Básico): sais para reidratação oral em envelopes. Farmácia Popular: não consta.',
   apresentacoes: [
@@ -123,10 +124,18 @@ export const sro: Farmaco = {
       trecho: 'Adultos: 200 a 400 mL após cada perda líquida ou vômito.'
     }
   ],
+  contra: [
+    {
+      msg: 'Contraindicado uso oral exclusivo em íleo paralítico, obstrução intestinal, perfuração gastrintestinal, rebaixamento importante de consciência ou vômitos incoercíveis (indicação de hidratação parenteral - Plano C).',
+      fonte: 'MS',
+      trecho: 'Impossibilidade de tolerância ou absorção por via oral requer terapia de reidratação venosa imediata.',
+      strong: false
+    }
+  ],
   notas: {
-    indicacao: 'Prevenção e tratamento da desidratação em diarreia aguda e vômitos.',
-    administracao: 'Oferecer aos poucos em colher ou copo. Não adoçar.',
-    cuidados: 'Sinais de alerta: sangue nas fezes, vômitos incoercíveis, fraqueza severa, olhos fundos.',
+    indicacao: 'Prevenção e tratamento da desidratação em diarreia aguda e vômitos (Planos A e B da OMS/MS).',
+    administracao: 'Oferecer aos poucos em colher ou copo. Não adoçar nem ferver após o preparo. Se vômito, aguardar 10 min e retomar lentamente.',
+    cuidados: 'Sinais de alerta: recusa de líquidos, vômitos incoercíveis, sangue nas fezes, prostração grave, olhos fundos ou sem urina > 6h.',
     ajuste: 'Não necessita de ajuste.'
   }
 };

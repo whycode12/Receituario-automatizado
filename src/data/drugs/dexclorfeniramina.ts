@@ -6,7 +6,8 @@ export const dexclorfeniramina: Farmaco = {
   categoria: 'Antialérgicos e Anti-histamínicos',
   busca: 'polaramine dexclorfeniramina antialergico anti-histaminico rinite prurido alergia',
   classe: 'Anti-histamínico H1 de 1ª Geração (Sedativo / Clássico)',
-  fontes: { HSL: '10/06/2016', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: VO: 2 mg (1 comprimido ou 5 mL da solução 0,4 mg/mL) de 6/6h a 8/8h se alergia/prurido (máx. 12 mg/dia; causa sonolência). Pediatria: VO (2-6 anos): 0,5 mg (1,25 mL) 3x/dia (máx. 3 mg/dia); (6-12 anos): 1 mg (2,5 mL ou 1/2 comp) 3x/dia (máx. 6 mg/dia). Contraindicado em < 2 anos.',
+  fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'reação alérgica, prurido ou rinite',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 2 mg e solução oral / xarope 0,4 mg/mL (frasco 120 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -138,7 +139,7 @@ export const dexclorfeniramina: Farmaco = {
       msg: 'Contraindicado em pacientes em tratamento com inibidores da monoaminoxidase (IMAO) devido ao risco de prolongamento dos efeitos anticolinérgicos e hipotensão.',
       fonte: 'BULA',
       trecho: 'Contraindicado em pacientes que estejam fazendo uso de inibidores da MAO.',
-      strong: true
+      strong: false
     }
   ],
   conflitos: [

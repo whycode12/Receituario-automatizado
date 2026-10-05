@@ -6,7 +6,8 @@ export const omeprazol: Farmaco = {
   categoria: 'Gastrintestinal e Antissecretores',
   busca: 'losec omeprazol ibp refluxo gastrite ulcera estomago esofagite',
   classe: 'Inibidor da Bomba de Prótons (IBP)',
-  fontes: { HSL: '27/09/2023', EINP: '2024', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: VO: 20 mg a 40 mg 1x/dia pela manhã em jejum (30 min antes do café) por 4 a 8 semanas. EV: 40 mg 1x/dia (ou 40 mg 12/12h em HDA ativa) com diluente próprio de 10 mL. Pediatria (≥ 1 ano): VO: 1 mg/kg/dia 1x/dia em jejum (10-20 kg: 10 mg; > 20 kg: 20 mg); EV: 0,5 a 1 mg/kg/dia.',
+  fontes: { HSL: '27/09/2023', PSZERADO: '2025', EINP: '2024', BULA: '04/10/2026' },
   snPadrao: 'epigastralgia, pirose ou refluxo',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): cápsula de liberação retardada 20 mg e frasco-ampola pó liofilizado 40 mg. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -165,7 +166,7 @@ export const omeprazol: Farmaco = {
       msg: 'Uso concomitante com rilpivirina, atazanavir ou nelfinavir não é recomendado (redução crítica da absorção antirretroviral).',
       fonte: 'BULA',
       trecho: 'A administração concomitante com inibidores de protease do HIV como atazanavir e nelfinavir não é recomendada.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Em insuficiência hepática grave, reduzir a dose máxima diária para 10 a 20 mg/dia (HSL).',

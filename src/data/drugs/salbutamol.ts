@@ -6,7 +6,8 @@ export const salbutamol: Farmaco = {
   categoria: 'Respiratório e Broncodilatadores',
   busca: 'aerolin salbutamol spray aerossol bombinha broncodilatador asma',
   classe: 'Broncodilatador (Beta-2 agonista seletivo de curta ação)',
-  fontes: { HSL: '17/06/2019', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: Spray 100 mcg: 2 a 4 jatos com espaçador até de 4/4h a 6/6h se crise (em exacerbação aguda no PS: 4 a 8 jatos a cada 20 min na 1ª hora); Nebulização: 10 a 20 gotas em 3 mL de SF. Pediatria: Spray: 2 jatos com espaçador e máscara (na crise aguda: 2 a 4 jatos a cada 20 min na 1ª hora); Nebulização: 1 gota a cada 2-3 kg.',
+  fontes: { HSL: '17/06/2019', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'falta de ar ou chiado no peito',
   acessoFonte: 'RENAME 2024 (Componente Básico): aerossol oral 100 mcg/dose (spray com 200 doses) e solução para nebulização 5 mg/mL (frasco 10 mL). Farmácia Popular: aerossol oral 100 mcg/dose.',
   apresentacoes: [

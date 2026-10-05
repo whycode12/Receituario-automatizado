@@ -6,7 +6,8 @@ export const ondansetrona: Farmaco = {
   categoria: 'Gastrintestinal e Antieméticos',
   busca: 'zofran vonau flash ansentron ondansetrona antiemetico nausea vomito',
   classe: 'Antiemético (Antagonista Seletivo dos Receptores 5-HT3 de Serotonina)',
-  fontes: { HSL: '12/01/2021', EINA: '2024', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: VO: 4 a 8 mg (orodispersível ou comprimido) até de 8/8h se náuseas/vômitos (máx. 24 mg/dia; em hepatopatia grave máx. 8 mg/dia). EV/IM: 4 a 8 mg EV lento em 2-5 min. Pediatria (≥ 6 meses): VO/EV: 0,15 mg/kg/dose (máx. 4 a 8 mg/dose) até de 8/8h.',
+  fontes: { HSL: '12/01/2021', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
   snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): comprimido 4 mg, comprimido 8 mg e solução injetável 2 mg/mL (ampola 2 mL e 4 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -161,13 +162,13 @@ export const ondansetrona: Farmaco = {
       msg: 'Uso concomitante com apomorfina é formalmente contraindicado pelo risco de hipotensão profunda e síncope.',
       fonte: 'BULA',
       trecho: 'Contraindicado o uso concomitante com apomorfina devido a relatos de hipotensão profunda e perda de consciência.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Insuficiência hepática moderada a grave: dose diária total não deve exceder 8 mg/dia (HSL).',
       fonte: 'HSL',
       trecho: 'Insuficiência hepática: Pacientes com insuficiência hepática moderada ou grave não devem exceder 8mg/dia.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Alerta ANVISA Gestação: cautela no 1º trimestre pelo risco de malformações orofaciais (fenda palatina) identificado em estudos (HSL).',

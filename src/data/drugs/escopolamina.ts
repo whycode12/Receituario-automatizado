@@ -6,7 +6,8 @@ export const escopolamina: Farmaco = {
   categoria: 'Gastrintestinal e Antiespasmódicos',
   busca: 'buscopan escopolamina butilbrometo colica antiespasmodico',
   classe: 'Antiespasmódico, Anticolinérgico',
-  fontes: { HSL: '26/02/2024', EINA: '2024', EINP: '2024' },
+  dosePratica: 'Adulto: VO: 10 a 20 mg (1 a 2 drágeas ou 20 a 40 gotas) até de 8/8h se cólica abdominal (máx. 60 mg/dia). EV/IM: 20 mg (1 ampola) EV lento em 2-3 min ou em 20 mL de SF (máx. 100 mg/dia). Pediatria: VO (1-6 anos): 0,3 a 0,5 mg/kg/dose até 3x/dia; EV/IM: 0,3 a 0,6 mg/kg/dose (máx. 1,5 mg/kg/dia).',
+  fontes: { HSL: '26/02/2024', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
   snPadrao: 'cólica ou espasmos abdominais',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido/drágea 10 mg e ampola 20 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [

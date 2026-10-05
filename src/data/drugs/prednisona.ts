@@ -6,7 +6,8 @@ export const prednisona: Farmaco = {
   categoria: 'Corticoides Sistêmicos',
   busca: 'meticorten prednisona corticoide cortisona prednison',
   classe: 'Anti-inflamatório Hormonal, Corticosteroide Sistêmico',
-  fontes: { HSL: '02/10/2026', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: 20 mg a 60 mg VO 1x/dia pela manhã após o café (em crise de asma/alergia: 40 a 60 mg/dia por 5 a 7 dias sem desmame). Pediatria: 1 a 2 mg/kg/dia VO 1x/dia pela manhã por 3 a 5 dias (máx. 40 a 60 mg/dia; preferir prednisolona oral em crianças pequenas).',
+  fontes: { HSL: '02/10/2026', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'inflamação ou exacerbação alérgica',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 5 mg e comprimido 20 mg. Farmácia Popular: não consta no elenco do programa.',
   apresentacoes: [
@@ -101,7 +102,7 @@ export const prednisona: Farmaco = {
       msg: 'Contraindicado em pacientes com infecções fúngicas sistêmicas ou hipersensibilidade à prednisona ou a outros corticosteroides.',
       fonte: 'BULA',
       trecho: 'Contraindicações: hipersensibilidade à prednisona ou a outros corticosteroides e infecções fúngicas sistêmicas.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Administrar preferencialmente em dose única matinal, logo após o café da manhã, para mimetizar o pico circadiano do cortisol e minimizar irritação gástrica (HSL).',

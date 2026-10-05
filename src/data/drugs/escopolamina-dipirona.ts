@@ -6,7 +6,8 @@ export const escopolaminaDipirona: Farmaco = {
   categoria: 'Gastrintestinal e Antiespasmódicos',
   busca: 'buscopan composto escopolamina dipirona metamizol colica antiespasmodico',
   classe: 'Antiespasmódico associado a Analgésico',
-  fontes: { HSL: '23/04/2019', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: VO: 1 a 2 comprimidos (ou 20 a 40 gotas) até de 6/6h a 8/8h se cólica intensa. EV/IM: 1 ampola (5 mL) EV lento em 5 min (ou em 50-100 mL SF) ou IM profunda. Pediatria: Gotas VO (1-6 anos): 5 a 10 gotas até 3-4x/dia; (6-12 anos): 10 a 20 gotas até 3-4x/dia. Injetável contraindicado em < 1 ano.',
+  fontes: { HSL: '23/04/2019', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'cólica ou dor espasmódica intensa',
   acessoFonte: 'RENAME 2024: isolados (butilbrometo de escopolamina e dipirona) constam na RENAME; a associação fixa composta consta amplamente no mercado comercial e em serviços hospitalares.',
   apresentacoes: [
@@ -151,14 +152,14 @@ export const escopolaminaDipirona: Farmaco = {
       msg: 'Contraindicado em pacientes com glaucoma de ângulo fechado, taquicardia, megacólon, miastenia gravis, hipertrofia prostática com retenção urinária ou alergia a pirazolonas (HSL).',
       fonte: 'HSL',
       trecho: 'Não deve ser administrado por via parenteral em pacientes com glaucoma, taquicardia, estenoses mecânicas no trato gastrintestinal, megacólon, miastenia grave ou hipertrofia prostática com retenção urinária. Não deve ser utilizados em idosos especialmente sensíveis aos antimuscarínicos.',
-      strong: true
+      strong: false
     },
     {
       vias: ['EV'],
       msg: 'A administração intravenosa direta deve ser estritamente lenta (mínimo de 5 minutos, velocidade máxima de 1 mL/minuto) para evitar hipotensão grave e choque (HSL).',
       fonte: 'HSL',
       trecho: 'Administração: Via EV direta em no mínimo 5 minutos (min 1mL/min), ou via IM profunda (intraglútea). Não deve ser administrado via SC.',
-      strong: true
+      strong: false
     }
   ],
   ev: {

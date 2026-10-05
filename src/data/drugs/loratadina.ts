@@ -6,7 +6,8 @@ export const loratadina: Farmaco = {
   categoria: 'Antialérgicos e Anti-histamínicos',
   busca: 'claritin loratadina antialergico rinite urticaria anti-histaminico',
   classe: 'Anti-histamínico H1 de 2ª Geração (Não Sedativo)',
-  fontes: { HSL: '10/06/2016', BULA: '04/10/2026' },
+  dosePratica: 'Adulto e crianças > 12 anos (> 30 kg): VO: 10 mg (1 comprimido ou 10 mL de xarope 1 mg/mL) 1x/dia (não sedativo). Pediatria (2-12 anos e ≤ 30 kg): VO: 5 mg (5 mL de xarope) 1x/dia. Contraindicado em < 2 anos.',
+  fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'sintomas alérgicos, rinite ou urticária',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 10 mg e xarope/solução oral 1 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [

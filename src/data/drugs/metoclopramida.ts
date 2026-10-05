@@ -6,7 +6,8 @@ export const metoclopramida: Farmaco = {
   categoria: 'Gastrintestinal e Antieméticos',
   busca: 'plasil metoclopramida procinetico antiemetico enjoo vomito',
   classe: 'Antiemético e Procinético (Antagonista Dopaminérgico D2)',
-  fontes: { HSL: '13/04/2023', EINA: '2024', EINP: '2024' },
+  dosePratica: 'Adulto: VO/EV/IM: 10 mg (1 comprimido ou 1 ampola 2 mL) até de 8/8h se náuseas/vômitos (máx. 30 mg/dia; injetar EV lento em 3-5 min ou diluído em 50 mL de SF para prevenir acatisia). Pediatria: uso restrito (contraindicado em < 1 ano; VO gotas 1-3 anos: 1 mg; 3-5 anos: 2 mg; 5-14 anos: 2,5-5 mg até 3x/dia).',
+  fontes: { HSL: '13/04/2023', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
   snPadrao: 'náuseas, vômitos ou plenitude gástrica',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): comprimido 10 mg e solução injetável 5 mg/mL (ampola 2 mL = 10 mg). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -153,20 +154,20 @@ export const metoclopramida: Farmaco = {
       msg: 'Associação contraindicada com Levodopa ou agonistas dopaminérgicos (antagonismo recíproco) (HSL).',
       fonte: 'HSL',
       trecho: 'A combinação de metoclopramida com levodopa é contraindicada, pois apresentam um antagonismo mútuo.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Contraindicado em situações em que o estímulo da motilidade gastrintestinal seja perigoso: hemorragia gastrintestinal ativa, obstrução mecânica ou perfuração digestiva.',
       fonte: 'BULA',
       trecho: 'A metoclopramida é contraindicada em pacientes com hemorragia gastrintestinal, obstrução mecânica ou perfuração gastrintestinal.',
-      strong: true
+      strong: false
     },
     {
       vias: ['EV'],
       msg: 'Velocidade de injeção EV: aplicar lentamente em no mínimo 3 a 5 minutos. Injeções rápidas causam estados intensos de ansiedade, agitação transitória e acatisia, seguidos de sonolência (HSL).',
       fonte: 'HSL',
       trecho: 'Estados de ansiedade e agitação transitórias intensas, seguido de sonolência, podem ocorrer com a administração EV rápida (em menos de 3 minutos).',
-      strong: true
+      strong: false
     }
   ],
   ev: {

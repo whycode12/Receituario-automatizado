@@ -38,10 +38,24 @@ export const soroFisiologico: Farmaco = {
   categoria: 'Soluções e Hidratação',
   busca: 'soro fisiologico 0,9 cloreto de sodio nacl lavagem nasal seringa sbp',
   classe: 'Solução para Higiene e Desobstrução Nasal',
+  dosePratica: 'Lactentes até 6 meses: 0,5 a 1 mL por narina; 6 meses a 2 anos: 2 a 5 mL; 2 a 8 anos: 5 a 10 mL; > 8 anos e adultos: 10 a 20 mL por narina, 3 a 6x ao dia (ou SN antes de mamadas/sono).',
   fontes: { SBP: '2024' },
   snPadrao: 'obstrução ou secreção nasal',
   acessoFonte: 'RENAME 2024 (Componente Básico): cloreto de sódio 0,9% frasco. Farmácia Popular: não consta.',
   apresentacoes: [
+    {
+      id: 'sf_ampola_10',
+      forma: 'sol_nasal',
+      nome: 'Soro fisiológico 0,9% ampolas de 10 mL (caixa c/ ampolas)',
+      conc: '0,9%',
+      rotulo: (p: Paciente) => `Soro fisiológico 0,9% ampolas 10 mL + ${getPerfilNasal(p).seringa}`,
+      frascoMl: 10,
+      vias: ['NASAL'],
+      unidades: ['ml'],
+      disp: (p: Paciente) => `01 caixa (ampolas 10 mL) / 01 ${getPerfilNasal(p).seringa}`,
+      instrucao: (p: Paciente) => `Instruções: ${getPerfilNasal(p).tecnica}`,
+      obs: 'Ampolas plásticas de dose única ou fracionada, práticas para higiene fora de casa.'
+    },
     {
       id: 'sf_seringa_auto',
       forma: 'sol_nasal',
@@ -147,6 +161,14 @@ export const soroFisiologico: Farmaco = {
       dosesPadrao: 4,
       fonte: 'SBP',
       trecho: 'Adultos e adolescentes: 10 a 20 mL por narina com seringa.'
+    }
+  ],
+  contra: [
+    {
+      msg: 'Uso com pressão contraindicado em suspeita de fratura de base de crânio com rinoliquorreia.',
+      fonte: 'SBP',
+      trecho: 'Risco de contaminação retrógrada e pneumoencéfalo.',
+      strong: false
     }
   ],
   notas: {

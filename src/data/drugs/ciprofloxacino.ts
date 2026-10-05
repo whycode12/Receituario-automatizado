@@ -6,7 +6,8 @@ export const ciprofloxacino: Farmaco = {
   categoria: 'Antimicrobianos',
   busca: 'cipro ciprofloxacino quinolona fluorquinolona ciproxil',
   classe: 'Antimicrobiano, Fluoroquinolona de amplo espectro',
-  fontes: { HSL: '27/09/2022', EINA: '2024', BULA: '04/10/2026' },
+  dosePratica: 'Adulto: VO: 500 mg de 12/12h por 7 a 14 dias (pielonefrite, ITU complicada, prostatite; cistite simples 250-500 mg 12/12h por 3 dias). EV: 400 mg de 12/12h em infusão de 60 min. Pediatria: uso excepcional restrito (20 a 30 mg/kg/dia divididos de 12/12h; máx. adulto).',
+  fontes: { HSL: '27/09/2022', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
   snPadrao: 'infecção bacteriana suscetível',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): comprimido 500 mg e solução injetável 2 mg/mL bolsa 100 mL (200 mg). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -137,7 +138,7 @@ export const ciprofloxacino: Farmaco = {
       msg: 'Contraindicado uso concomitante com tizanidina (risco de hipotensão profunda e sedação excessiva).',
       fonte: 'BULA',
       trecho: 'A administração concomitante de ciprofloxacino e tizanidina é contraindicada.',
-      strong: true
+      strong: false
     },
     {
       msg: 'Uso em crianças e adolescentes em fase de crescimento: reservado estritamente para infecções graves específicas (como exacerbação pulmonar em fibrose cística ou antraz) devido ao risco teórico de artropatia cartilaginosa em animais jovens.',
