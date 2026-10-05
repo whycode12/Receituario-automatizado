@@ -21,7 +21,8 @@ export const UNID_LBL: Record<string, string> = {
   ml: 'mL',
   gotas: 'gotas',
   mg_dia: 'mg/dia',
-  sachet: 'envelope(s)'
+  sachet: 'envelope(s)',
+  puff: 'jatos (puffs)'
 };
 
 export const VIA_GRUPO: Record<string, string> = {
@@ -29,7 +30,8 @@ export const VIA_GRUPO: Record<string, string> = {
   VR: 'Uso Retal',
   IM: 'Uso Intramuscular',
   EV: 'Uso Endovenoso',
-  NASAL: 'Uso Nasal'
+  NASAL: 'Uso Nasal',
+  INALATORIA: 'Uso Inalatório'
 };
 
 export const VIA_EXT: Record<string, string> = {
@@ -37,7 +39,8 @@ export const VIA_EXT: Record<string, string> = {
   VR: 'via retal',
   IM: 'via intramuscular',
   EV: 'via intravenosa',
-  NASAL: 'via nasal'
+  NASAL: 'via nasal',
+  INALATORIA: 'via inalatória'
 };
 
 export const num = (v: any): number | null => {

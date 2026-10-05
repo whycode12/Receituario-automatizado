@@ -57,7 +57,7 @@ export function aplica(it: { pub?: string; se?: CondicaoRegra; vias?: Via[]; apr
 }
 
 export const viasDisp = (d: Farmaco): Via[] =>
-  (['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
+  (['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
 
 export function unidades(ap: Apresentacao, peso: number | null, modo: string): UnidadeDose[] {
   if (ap.unidades) return ap.unidades;
@@ -70,6 +70,7 @@ export function unidades(ap: Apresentacao, peso: number | null, modo: string): U
   if (mgml(ap)) u.push('ml');
   if (ap.forma === 'gotas') u.push('gotas');
   if (isUnid(ap)) u.push('unid');
+  if (ap.forma === 'spray') u.push('puff');
   if (!u.length) u.push('ml');
   return u;
 }
@@ -90,6 +91,7 @@ export function toMg(val: number | null, unid: UnidadeDose, ap: Apresentacao, pe
     case 'gotas': return ap.mgml && ap.gotasml ? (val * ap.mgml) / ap.gotasml : val;
     case 'unid':  return ap.mg ? val * ap.mg : val;
     case 'sachet': return val;
+    case 'puff':   return ap.mg ? val * ap.mg : val;
     default: return val;
   }
 }
@@ -107,6 +109,7 @@ export function fromMg(mg: number | null, unid: UnidadeDose, ap: Apresentacao, p
     case 'gotas': return ap.mgml && ap.gotasml ? mg / (ap.mgml / ap.gotasml) : mg;
     case 'unid':  return ap.mg ? mg / ap.mg : mg;
     case 'sachet': return mg;
+    case 'puff':   return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
     default: return mg;
   }
 }
@@ -149,14 +152,21 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     return { mg: q, ml: null, txt: `${q} envelope${q > 1 ? 's' : ''}`, whole: true };
   }
 
-  // 3. Gotas
+  // 3. Spray / Aerossol inalatório (puffs/jatos)
+  if (ap.forma === 'spray' && ap.mg) {
+    const q = Math.max(1, Math.round(mg / ap.mg));
+    const pl = q > 1;
+    return { mg: q * ap.mg, q, txt: `${q} jato${pl ? 's' : ''} (puff${pl ? 's' : ''})`, whole: true };
+  }
+
+  // 4. Gotas
   if (ap.forma === 'gotas' && ap.mgml && ap.gotasml) {
     const mpg = ap.mgml / ap.gotasml;
     const g = Math.max(1, Math.round(mg / mpg));
     return { mg: g * mpg, txt: `${g} gota${g > 1 ? 's' : ''}`, whole: false };
   }
 
-  // 4. Soluções nasais e SRO (sem mg/mL, dose já em mL)
+  // 5. Soluções nasais e SRO (sem mg/mL, dose já em mL)
   if (ap.forma === 'sol_nasal' || ap.forma === 'sol_sro') {
     const ml = rml(mg);
     return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };

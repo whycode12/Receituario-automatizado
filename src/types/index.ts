@@ -1,8 +1,8 @@
 export type Pub = 'adulto' | 'ped';
-export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL';
+export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA';
 export type ModoUso = 'agora' | 'sn' | 'continuo';
-export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro';
-export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet';
+export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal';
+export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff';
 
 export interface Paciente {
   pub: Pub;
@@ -71,6 +71,8 @@ export interface RegraDose {
 export interface MaximoDose {
   pub: Pub;
   se?: CondicaoRegra;
+  vias?: Via[];
+  apres?: string[];
   tipo: 'mg_dia' | 'mg_kg_dia' | 'mg_dia_peso';
   valor?: number;
   faixas?: [number, number, number][]; // [pesoMin, pesoMax, maxMgDia]

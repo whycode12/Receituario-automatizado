@@ -329,10 +329,10 @@ export const App: React.FC = () => {
     const nomeInt = `${d.nome} (${ap.conc})`;
     const out: ItemReceita[] = [];
 
-    if (via === 'VO' || via === 'VR' || via === 'NASAL') {
+    if (via === 'VO' || via === 'VR' || via === 'NASAL' || via === 'INALATORIA') {
       const g = VIA_GRUPO[via];
       const rot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
-      const verbo = via === 'VO' ? 'Tomar' : via === 'VR' ? 'Aplicar' : 'Instilar';
+      const verbo = via === 'VO' ? 'Tomar' : via === 'VR' ? 'Aplicar' : via === 'INALATORIA' ? (ap.forma === 'spray' ? 'Inalar' : 'Inalar / Nebulizar') : 'Instilar';
       let disp = typeof ap.disp === 'function' ? ap.disp(p, a) : ap.disp;
 
       if (modo === 'continuo' && ap.frascoMl && frascoMl && a.ml != null) {

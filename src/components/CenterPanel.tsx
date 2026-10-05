@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Farmaco, Apresentacao, Via, ModoUso, UnidadeDose, ResultadoCalculo, Paciente } from '../types';
 import { CFG, fmt, fmtMg, fonteNome, regraLabel } from '../utils/constants';
-import { unidades, unidLbl, fromMg, toMg, mgml } from '../engine/calculator';
+import { unidades, unidLbl, fromMg, toMg, mgml, viasDisp } from '../engine/calculator';
 
 interface CenterPanelProps {
   drug: Farmaco | null;
@@ -91,9 +91,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
     );
   }
 
-  const dispVias = (['VO', 'EV', 'IM', 'VR', 'NASAL'] as Via[]).filter(v =>
-    drug.apresentacoes.some(a => a.vias.includes(v))
-  );
+  const dispVias = viasDisp(drug);
 
   const curApresList = drug.apresentacoes.filter(a => a.vias.includes(via));
   const us = unidades(apres, paciente.peso, modo);
