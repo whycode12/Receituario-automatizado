@@ -98,6 +98,26 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   const uLo = calcResult.lo != null ? fromMg(calcResult.lo, unid, apres, paciente.peso, n) : null;
   const uHi = calcResult.hi != null ? fromMg(calcResult.hi, unid, apres, paciente.peso, n) : null;
 
+  let uPadrao: number | null = null;
+  const activeRegra = calcResult.R[0];
+  if (activeRegra) {
+    if (activeRegra.tipo === unid) {
+      uPadrao = activeRegra.padrao;
+    } else {
+      const pMg =
+        activeRegra.tipo === 'mg_kg_dose' && paciente.peso
+          ? activeRegra.padrao * paciente.peso
+          : activeRegra.tipo === 'mg_kg_dia' && paciente.peso
+          ? (activeRegra.padrao * paciente.peso) / n
+          : activeRegra.tipo === 'mg'
+          ? activeRegra.padrao
+          : null;
+      if (pMg != null) {
+        uPadrao = fromMg(pMg, unid, apres, paciente.peso, n);
+      }
+    }
+  }
+
   // Montar partes descritivas do cálculo
   const calcParts: string[] = [];
   if (calcResult.arr) {
@@ -325,6 +345,51 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
                 {modo !== 'agora' && calcResult.dailyMax != null
                   ? ` · máx. ${fmtMg(calcResult.dailyMax)}/dia`
                   : ''}
+              </div>
+
+              {/* Atalhos rápidos de dose (Mín / Padrão / Máx) */}
+              <div className="chips" style={{ marginTop: '8px' }}>
+                {uLo === uHi || Math.abs(uLo - uHi) < 1e-9 ? (
+                  <button
+                    type="button"
+                    className={`chip ${doseVal === Math.round(uLo * 100) / 100 ? 'on' : ''}`}
+                    style={{ fontSize: '11.5px', padding: '3px 10px' }}
+                    onClick={() => setDoseVal(Math.round(uLo * 100) / 100)}
+                  >
+                    Usual: {fmt(uLo)} {unidLbl(unid, apres)}
+                  </button>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      className={`chip ${doseVal === Math.round(uLo * 100) / 100 ? 'on' : ''}`}
+                      style={{ fontSize: '11.5px', padding: '3px 10px' }}
+                      onClick={() => setDoseVal(Math.round(uLo * 100) / 100)}
+                    >
+                      Mín: {fmt(uLo)}
+                    </button>
+                    {uPadrao != null &&
+                      Math.abs(uPadrao - uLo) > 1e-4 &&
+                      Math.abs(uPadrao - uHi) > 1e-4 && (
+                        <button
+                          type="button"
+                          className={`chip ${doseVal === Math.round(uPadrao * 100) / 100 ? 'on' : ''}`}
+                          style={{ fontSize: '11.5px', padding: '3px 10px' }}
+                          onClick={() => setDoseVal(Math.round(uPadrao! * 100) / 100)}
+                        >
+                          Padrão: {fmt(uPadrao)}
+                        </button>
+                      )}
+                    <button
+                      type="button"
+                      className={`chip ${doseVal === Math.round(uHi * 100) / 100 ? 'on' : ''}`}
+                      style={{ fontSize: '11.5px', padding: '3px 10px' }}
+                      onClick={() => setDoseVal(Math.round(uHi * 100) / 100)}
+                    >
+                      Máx: {fmt(uHi)}
+                    </button>
+                  </>
+                )}
               </div>
             </>
           )}
