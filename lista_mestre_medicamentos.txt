@@ -35,14 +35,14 @@
 
 [x] 23. Diclofenaco
 [x] 24. Tramadol
-25. Naproxeno
-26. Tenoxicam
-27. Ácido mefenâmico
-28. Ciclobenzaprina
-29. Codeína
-30. Celecoxibe
-31. Penicilina benzatina
-32. Benzetacil (penicilina benzatina)
+[x] 25. Naproxeno
+[x] 26. Tenoxicam
+[x] 27. Ácido mefenâmico
+[x] 28. Ciclobenzaprina
+[x] 29. Codeína
+[x] 30. Celecoxibe
+[x] 31. Penicilina benzatina
+[x] 32. Benzetacil (penicilina benzatina)
 33. Sulfametoxazol + trimetoprima
 34. Nitrofurantoína
 35. Metronidazol
