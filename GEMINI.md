@@ -30,7 +30,7 @@
 
 ---
 
-## 3. Apresentações em Frasco-Ampola (`fap`)
+## 3. Apresentações em Frasco-Ampola (`fap`) e Injetáveis
 
 - Sempre que um frasco-ampola possuir volume especificado (`volml` ou volume de reconstituição `reconstMl`):
   1. **Seletor de apresentações:** Exibir o sufixo com o volume (ex: `(2 mL)`), caso o nome já não o contenha.
@@ -38,3 +38,56 @@
   3. **Prescrições e Receitas:**
      - No identificador do fármaco (`nomeInt`), incluir a concentração e volume (ex: `Ceftriaxona sódica (500mg / 2 mL)`).
      - Na via **IM**, disponibilizar os cards de **Receita Médica** e **Prescrição Interna** trazendo a especificação do volume em mL.
+  4. **Pós liofilizados:** Cadastrar sempre `reconstMl` e `reconstDil`.
+  5. **Via EV:** Preencher o bloco `ev` com `concMax`, `diluentes`, `volOpcoes` e faixa de `tempo` diferenciada para adultos e pediatria.
+
+---
+
+## 4. Hierarquia Oficial de Fontes Clínicas (Pasta `Fontes/`)
+
+Sempre consultar em ordem de prioridade:
+1. **Fontes Primárias Locais na pasta `Fontes/`**:
+   - **Guia Farmacêutico Hospital Sírio-Libanês (`Fontes/HSL/`)**: posologias adultas e pediátricas, apresentações, doses máximas, contraindicações e ajustes renais/hepáticos. Sigla: `'HSL'`.
+   - **Manuais de Diluição Einstein (`Einstein ADULTOS.html` e `Einstein PEDIATRICO.html`)**: diluição, compatibilidade, concentrações e tempos de infusão EV. Siglas: `'EINA'` e `'EINP'`.
+   - **Guia de Prescrição PSZerado 2ª Edição 2025 (`Fontes/Guia de Prescricao PSZerado 2 Ed 2025.pdf`)**: condutas de pronto-socorro, urgência/emergência médica, doses práticas e esquemas de ataque/manutenção. Sigla: `'PSZERADO'`.
+2. **Sociedades Especialistas e Ministério da Saúde**: SBP, MS, PCDTs.
+3. **Mercado Farmacêutico e SUS**: RENAME, Farmácia Popular, Bulário Eletrônico da ANVISA (`'BULA'`).
+
+---
+
+## 5. Regras de Dose, Horários e Liberdade Prescritiva
+
+- **Sugestão Inicial (`padrao`):**
+  - O valor `padrao` deve ser a dose mais habitual e estar estritamente dentro da faixa `[min, max]`.
+- **Faixa de Frequência Recomendada (`dosesDia: [min, max]`):**
+  - Baliza a posologia recomendada pelas fontes (ex: de 8/8h = `[3, 3]`; sintomáticos de 6/6h a 8/8h = `[3, 4]`).
+- **Liberdade Clínica (Sinalização Sem Bloqueio):**
+  - O sistema **NUNCA impede** o médico de prescrever em outro horário ou frequência que ele julgar clinicamente necessário.
+  - Se o médico escolher um horário fora de `[min, max]`, o sistema permite a prescrição normalmente, apenas sinalizando o alerta de que a frequência difere da literatura de referência.
+- **Intervalo Inicial Padronizado (`intervaloFixo` ou `dosesPadrao`):**
+  - Define qual frequência abre pré-selecionada na tela (ex: `intervaloFixo: 8` para 8/8h ou `intervaloFixo: 6` para 6/6h).
+
+---
+
+## 6. Instruções Detalhadas de Aplicação (`instrucao`)
+
+- **Pomadas, Cremes, Géis, Soluções Tópicas e Curativos:**
+  - Devem conter obrigatoriamente o campo `instrucao` detalhando o modo de preparo e aplicação na receita médica.
+  - Exemplos:
+    - *"Higienizar a área lesionada com soro fisiológico 0,9% e secar suavemente antes da aplicação. Aplicar uma camada fina sobre a lesão e cobrir com gaze estéril."*
+    - *"Aplicar sobre a área afetada massageando suavemente até completa absorção. Lavar as mãos após o uso."*
+- **Colírios, Sprays Nasais e Inalatórios:**
+  - Instruções de preparo, posições ou higiene (ex: *"Assoar o nariz antes da aplicação; manter a cabeça ereta e aplicar em cada narina"*).
+- Esse texto é impresso automaticamente logo abaixo da posologia na receita do paciente.
+
+---
+
+## 7. Padrões de Cadastro para Evitar Retrabalho
+
+- **Líquidos e Gotas:**
+  - `frascoMl` obrigatório em todo xarope, suspensão ou solução líquida para cálculo automático de frascos na receita contínua.
+  - `gotasml: 20` obrigatório em apresentações em gotas.
+- **Sintoma do "Se Necessário" (`snPadrao`):**
+  - Personalizar para a classe do medicamento (ex: `'dor ou febre'`, `'náuseas ou vômitos'`, `'cólica abdominal'`, `'crise alérgica'`).
+- **Busca (`busca`):**
+  - Incluir os principais nomes comerciais no Brasil, termos sinônimos e grafias populares para facilitar a busca rápida.

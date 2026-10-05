@@ -11,6 +11,7 @@ export const FONTES: Record<string, string> = {
   EINA: 'Manual Farmacêutico Einstein – Tabela de diluição IV adulto',
   SBP:  'Sociedade Brasileira de Pediatria (SBP) – Documento Científico de Higiene Nasal',
   MS:   'Ministério da Saúde – Manual de Terapia de Reidratação Oral (TRO)',
+  PSZERADO: 'Guia de Prescrição PSZerado (2ª Ed. 2025)',
   BULA: '⚠ Bula do fabricante (FORA das fontes HSL/Einstein; conferir no Bulário ANVISA)'
 };
 

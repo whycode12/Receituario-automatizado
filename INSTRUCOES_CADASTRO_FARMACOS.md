@@ -8,8 +8,9 @@ Este documento estabelece o protocolo obrigatório e padronizado para o cadastro
 
 1. **Prioridade 1 — Arquivos Locais na Pasta `Fontes/`**:
    - É a **fonte primária e soberana**. Sempre consultar primeiro os arquivos salvos pelo usuário em `Fontes/`:
-     - **Guia Farmacêutico Hospital Sírio-Libanês (`HSL - [Medicamento].html`)**: posologias adultas e pediátricas, indicações, apresentações, doses máximas, contraindicações, cuidados e ajustes renais/hepáticos.
-     - **Manuais Einstein (`Einstein ADULTOS.html` e `Einstein PEDIATRICO.html`)**: diluição, compatibilidade, concentrações e tempos de infusão EV.
+     - **Guia Farmacêutico Hospital Sírio-Libanês (`Fontes/HSL/`)**: posologias adultas e pediátricas, indicações, apresentações, doses máximas, contraindicações, cuidados e ajustes renais/hepáticos (sigla: `'HSL'`).
+     - **Manuais Einstein (`Einstein ADULTOS.html` e `Einstein PEDIATRICO.html`)**: diluição, compatibilidade, concentrações e tempos de infusão EV (siglas: `'EINA'` e `'EINP'`).
+     - **Guia de Prescrição PSZerado 2ª Edição 2025 (`Guia de Prescricao PSZerado 2 Ed 2025.pdf`)**: condutas práticas de emergência e pronto-socorro, doses usuais e esquemas terapêuticos de pronto atendimento (sigla: `'PSZERADO'`).
 2. **Prioridade 2 — Sociedades Especialistas e Ministério da Saúde**:
    - Manuais e diretrizes clínicas oficiais:
      - **SBP**: Sociedade Brasileira de Pediatria (ex: higiene nasal, cuidados neonatais/pediátricos).
@@ -113,4 +114,34 @@ Para a segurança do médico prescritor e transparência das regras:
    - O alerta `⚠ Atenção: há itens fora do recomendado (ver alertas).` só deve aparecer quando a **dose estiver de fato fora do recomendado**. Alertas fixos em âmbar não acionam esse aviso.
 4. **Frasco-Ampola (`fap`)**:
    - Sempre cadastrar `volml` e/ou `reconstMl` quando o frasco-ampola possuir volume definido (ex.: Ceftriaxona 500mg IM = 2 mL), permitindo que o sistema exiba o volume na visualização e nas receitas.
+
+---
+
+## 7. Regras de Dose, Horários e Liberdade Prescritiva
+
+1. **Sugestão Inicial (`padrao`)**:
+   - O valor `padrao` deve ser a dose mais habitual da prática médica e estar estritamente contido no intervalo `[min, max]`.
+2. **Faixa Posológica Recomendada (`dosesDia: [min, max]`)**:
+   - Limita a faixa de tomadas diárias preconizada na literatura médica (ex.: de 8/8h = `[3, 3]`; sintomáticos de 6/6h a 8/8h = `[3, 4]`).
+3. **Liberdade Clínica (Sinalização Sem Bloqueio)**:
+   - O sistema **NUNCA impede** o médico de prescrever em outro horário ou frequência que ele julgar clinicamente necessário para aquele caso concreto.
+   - Caso o médico escolha uma frequência fora de `[min, max]`, o sistema gera a receita normalmente, emitindo apenas um alerta informativo de divergência com as fontes.
+4. **Horário Inicial Sugerido (`intervaloFixo` ou `dosesPadrao`)**:
+   - Define a opção que já abre pré-selecionada na interface (ex.: `intervaloFixo: 8` para 8/8h ou `intervaloFixo: 6` para 6/6h).
+
+---
+
+## 8. Instruções Detalhadas de Aplicação (`instrucao`)
+
+1. **Pomadas, Cremes, Géis, Tópicos e Curativos**:
+   - Devem conter obrigatoriamente o campo `instrucao` em cada apresentação, especificando a técnica de assepsia, preparo da pele e aplicação.
+   - Exemplo:
+     ```ts
+     instrucao: 'Higienizar o local lesionado com soro fisiológico 0,9% e secar suavemente antes da aplicação. Aplicar uma camada fina sobre a lesão e cobrir com gaze estéril se indicado.'
+     ```
+2. **Colírios, Sprays Nasais e Inalatórios**:
+   - Incluir instruções de posicionamento e uso (ex.: *"Assoar o nariz antes da aplicação; manter a cabeça ereta e aplicar em cada narina"*).
+3. **Comportamento na Receita**:
+   - O conteúdo do campo `instrucao` é inserido de forma automática e destacada logo abaixo da linha posológica na receita médica do paciente.
+
 
