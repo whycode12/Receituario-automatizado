@@ -144,4 +144,18 @@ Para a segurança do médico prescritor e transparência das regras:
 3. **Comportamento na Receita**:
    - O conteúdo do campo `instrucao` é inserido de forma automática e destacada logo abaixo da linha posológica na receita médica do paciente.
 
+---
+
+## 9. Dose Prática Habitual no Brasil (`dosePratica` - Opcional)
+
+1. **Objetivo Clínico**:
+   - Fornecer um guia rápido e prático ao médico com a conduta mais usual e consagrada na prática médica brasileira em pronto-socorro (PS), UBS e ambulatório.
+2. **Critério de Inclusão**:
+   - Preencher apenas quando existir um consenso clínico consolidado na rotina do Brasil (ex.: *"Dipirona 500mg a 1g VO de 6/6h se dor ou febre"*; *"Benzetacil 1.200.000 UI IM dose única"*; *"Azitromicina 500mg 1x/dia por 3 a 5 dias"*).
+3. **Regra de Ouro (Nunca Inventar)**:
+   - Se a dose for altamente variável conforme a indicação/patologia, requerer titulação ou não houver um padrão universal na prática médica, **deixar o campo omitido** (`undefined`). Nunca inventar doses.
+4. **Campos Suportados**:
+   - Pode ser incluído na raiz do fármaco (`dosePratica?: string`) ou no bloco de notas (`notas.dosePratica?: string`).
+
+
 

@@ -1,0 +1,256 @@
+1. Diclofenaco
+2. Tramadol
+3. Naproxeno
+4. Tenoxicam
+5. Ácido Mefenâmico
+6. Ciclobenzaprina
+7. Codeína
+8. Celecoxibe
+9. Penicilina Benzatina (Benzetacil)
+10. Sulfametoxazol + Trimetoprima (Bactrim)
+11. Nitrofurantoína
+12. Metronidazol
+13. Cefuroxima
+14. Cefazolina
+15. Doxiciclina
+16. Clindamicina
+17. Eritromicina
+18. Levofloxacino
+19. Fosfomicina (Monuril)
+20. Albendazol
+21. Ivermectina
+22. Nitazoxanida (Annita)
+23. Ciprofloxacino + Dexametasona (otológico)
+24. Pantoprazol
+25. Bromoprida
+26. Dimenidrinato (Dramin)
+27. Dimenidrinato + Piridoxina (Dramin B6)
+28. Simeticona (Luftal / Dimeticona)
+29. Lactulose
+30. Saccharomyces boulardii (Floratil)
+31. Racecadotrila (Tiorfan)
+32. Domperidona
+33. Hidróxido de Alumínio
+34. Hidróxido de Magnésio
+35. Cimetidina
+36. Esomeprazol
+37. Bisacodil
+38. Dexametasona
+39. Prednisolona
+40. Hidrocortisona
+41. Betametasona
+42. Budesonida
+43. Beclometasona
+44. Acetilcisteína
+45. Terbutalina (Bricanyl)
+46. Metilprednisolona
+47. Salmeterol
+48. Captopril
+49. Enalapril
+50. Anlodipino
+51. Hidroclorotiazida
+52. Furosemida
+53. Propranolol
+54. Carvedilol
+55. Metoprolol
+56. Espironolactona
+57. Hidralazina
+58. Clortalidona
+59. Desloratadina
+60. Cetirizina
+61. Difenidramina
+62. Neomicina + Bacitracina (Nebacetin)
+63. Sulfadiazina de Prata
+64. Colagenase
+65. Miconazol
+66. Nistatina
+67. Mupirocina (Bactroban)
+68. Triancinolona Acetonida (Omcilon-A orabase)
+69. Iodopovidona (PVPI)
+70. Neomicina + Polimixina B + Hidrocortisona (Otosporin)
+71. Tobramicina (colírio)
+72. Tobramicina + Dexametasona (Tobradex)
+73. Fenazopiridina (Pyridium)
+74. Desonida
+75. Ácido Fusídico
+76. Adrenalina (Epinefrina)
+77. Atropina
+78. Adenosina
+79. Amiodarona
+80. Diazepam
+81. Midazolam
+82. Fentanil
+83. Gluconato de Cálcio
+84. Sulfato de Magnésio
+85. Nitroglicerina (Tridil)
+86. Ácido Tranexâmico
+87. Lidocaína
+88. Bupivacaína
+89. Naloxona (Narcan)
+90. Flumazenil
+91. Metformina
+92. Gliclazida
+93. Glimepirida
+94. Insulina NPH
+95. Insulina Regular
+96. Sinvastatina
+97. Atorvastatina
+98. Rosuvastatina
+99. AAS (Ácido Acetilsalicílico)
+100. Clopidogrel
+101. Enoxaparina
+102. Varfarina
+103. Rivaroxabana
+104. Apixabana
+105. Deslanosídeo (Cedilanide)
+106. Diltiazem
+107. Verapamil
+108. Bisoprolol
+109. Clonazepam
+110. Alprazolam
+111. Paroxetina
+112. Sertralina
+113. Escitalopram
+114. Amitriptilina
+115. Citalopram
+116. Carbamazepina
+117. Fenitoína (Hidantal)
+118. Fenobarbital (Gardenal)
+119. Valproato de Sódio / Ácido Valproico
+120. Risperidona
+121. Quetiapina
+122. Clorpromazina
+123. Sulfato Ferroso
+124. Colecalciferol (Vitamina D3)
+125. Tiamina (Vitamina B1)
+126. Piridoxina (Vitamina B6)
+127. Vitamina K1 (Fitomenadiona)
+128. Alopurinol
+129. Colchicina
+130. Levotiroxina
+131. Levonorgestrel (pílula do dia seguinte)
+132. Diosmina + Hesperidina
+133. Ampicilina
+134. Ampicilina + Sulbactam
+135. Amoxicilina + Sulbactam
+136. Oxacilina
+137. Penicilina Cristalina (Penicilina G Potássica)
+138. Piperacilina + Tazobactam (Tazocin)
+139. Meropeném
+140. Vancomicina
+141. Cefepima
+142. Ceftazidima
+143. Cefotaxima
+144. Cefaclor
+145. Gentamicina
+146. Aciclovir
+147. Fluconazol
+148. Itraconazol
+149. Noradrenalina (Norepinefrina)
+150. Dobutamina
+151. Dopamina
+152. Vasopressina
+153. Alteplase
+154. Propofol
+155. Etomidato
+156. Cetamina (Ketamina)
+157. Escetamina
+158. Rocurônio
+159. Tiopental
+160. Terlipressina
+161. Octreotida
+162. Sacubitril + Valsartana (Entresto)
+163. Dapagliflozina
+164. Empagliflozina
+165. Liraglutida
+166. Sitagliptina
+167. Vildagliptina
+168. Pioglitazona
+169. Ezetimiba
+170. Ezetimiba + Sinvastatina
+171. Ezetimiba + Rosuvastatina
+172. Ciprofibrato
+173. Fibrato
+174. Pitavastatina
+175. Ramipril
+176. Lisinopril
+177. Amilorida
+178. Prazosina
+179. Propafenona
+180. Edoxabana
+181. Ticagrelor
+182. Prasugrel
+183. Pregabalina
+184. Gabapentina
+185. Duloxetina
+186. Venlafaxina
+187. Desvenlafaxina
+188. Bupropiona
+189. Trazodona
+190. Mirtazapina
+191. Nortriptilina
+192. Clomipramina
+193. Imipramina
+194. Lamotrigina
+195. Levetiracetam
+196. Topiramato
+197. Lorazepam
+198. Bromazepam
+199. Olanzapina
+200. Biperideno
+201. Baclofeno
+202. Cinarizina
+203. Meclizina
+204. Meclozina
+205. Insulina Glargina
+206. Insulina Degludeca
+207. Insulina Detemir
+208. Insulina Lispro
+209. Insulina Asparte
+210. Fluticasona
+211. Tiotrópio
+212. Umeclidínio
+213. Tansulosina
+214. Oxibutinina
+215. Carboximaltose Férrica
+216. Eritropoetina
+217. Linezolida
+218. Polimixina B
+219. Moxifloxacino
+220. Norfloxacino
+221. Rifampicina
+222. Rifaximina
+223. Sulfadiazina
+224. Valaciclovir
+225. Colestiramina
+226. Mesalazina
+227. Mebeverina
+228. Prucaloprida
+229. Melatonina
+230. Ramelteona
+231. Vareniclina
+232. Misoprostol
+233. Oxicodona
+234. Nalbufina
+235. Sumatriptano
+236. Nitrofurazona
+237. Ureia
+238. Óleo Mineral
+239. Glicerina (supositório/enema)
+240. Fosfato de Sódio (enema)
+241. Ciclopentolato
+242. Cinchocaína
+243. Ácido Ursodesoxicólico
+244. Ácido Zoledrônico
+245. Pamidronato
+246. Metotrexato
+247. Hidroxicloroquina
+248. Fludrocortisona
+249. Glucagon
+250. Poliestirenossulfonato de Cálcio (Sorcal)
+251. Ciclossilicato de Zircônio
+252. Hialuronato de Sódio
+253. L-Glutamina
+254. Probenecida
+255. Vitamina E
+256. Neomicina

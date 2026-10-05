@@ -117,6 +117,7 @@ export interface NotasFarmaco {
   administracao: string;
   cuidados: string;
   ajuste: string;
+  dosePratica?: string;
 }
 
 export interface Farmaco {
@@ -128,6 +129,7 @@ export interface Farmaco {
   fontes: Record<string, string>;
   snPadrao?: string;
   acessoFonte?: string;
+  dosePratica?: string;
   apresentacoes: Apresentacao[];
   regras: RegraDose[];
   maximos?: MaximoDose[];

@@ -1,0 +1,22 @@
+amoxicilina-clavulanato.ts | amoxicilina_clavulanato | Amoxicilina + Clavulanato de Potássio
+amoxicilina.ts | amoxicilina | Amoxicilina
+azitromicina.ts | azitromicina | Azitromicina
+cefalexina.ts | cefalexina | Cefalexina
+ceftriaxona.ts | ceftriaxona | Ceftriaxona Sódica
+cetoprofeno.ts | cetoprofeno | Cetoprofeno
+ciprofloxacino.ts | ciprofloxacino | Cloridrato de Ciprofloxacino
+dexclorfeniramina.ts | dexclorfeniramina | Maleato de Dexclorfeniramina
+dipirona.ts | dipirona | Dipirona
+escopolamina-dipirona.ts | escopolamina_dipirona | Butilbrometo de Escopolamina + Dipirona Sódica
+escopolamina.ts | escopolamina | Butilbrometo de Escopolamina
+ibuprofeno.ts | ibuprofeno | Ibuprofeno
+ipratropio.ts | ipratropio | Brometo de Ipratrópio
+loratadina.ts | loratadina | Loratadina
+metoclopramida.ts | metoclopramida | Cloridrato de Metoclopramida
+omeprazol.ts | omeprazol | Omeprazol
+ondansetrona.ts | ondansetrona | Cloridrato de Ondansetrona
+paracetamol.ts | paracetamol | Paracetamol
+prednisona.ts | prednisona | Prednisona
+salbutamol.ts | salbutamol | Sulfato de Salbutamol
+soro-fisiologico.ts | soro_fisiologico_nasal | Soro Fisiológico 0,9% (Lavagem Nasal)
+sro.ts | sro | Soro de Reidratação Oral (SRO)

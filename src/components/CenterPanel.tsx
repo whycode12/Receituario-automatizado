@@ -246,6 +246,23 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
 
       <div className="muted small">{drug.classe}</div>
 
+      {(drug.dosePratica || drug.notas.dosePratica) && (
+        <div
+          style={{
+            margin: '8px 0 4px',
+            padding: '7px 11px',
+            background: 'rgba(37, 99, 235, 0.07)',
+            borderLeft: '3px solid #2563eb',
+            borderRadius: '6px',
+            fontSize: '12px',
+            lineHeight: '1.4',
+            color: '#1e3a8a',
+          }}
+        >
+          💡 <b>Dose prática mais usual (Brasil):</b> {drug.dosePratica || drug.notas.dosePratica}
+        </div>
+      )}
+
       {/* Via */}
       <div className="field">
         <div className="lbl">Via</div>
@@ -592,6 +609,12 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
         <p>
           <span className="k">Indicação:</span> {drug.notas.indicacao}
         </p>
+        {(drug.dosePratica || drug.notas.dosePratica) && (
+          <p>
+            <span className="k">Prática Clínica Brasil:</span>{' '}
+            <b>{drug.dosePratica || drug.notas.dosePratica}</b>
+          </p>
+        )}
         <p>
           <span className="k">Regras de dose:</span>
         </p>

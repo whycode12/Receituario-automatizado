@@ -91,3 +91,16 @@ Sempre consultar em ordem de prioridade:
   - Personalizar para a classe do medicamento (ex: `'dor ou febre'`, `'náuseas ou vômitos'`, `'cólica abdominal'`, `'crise alérgica'`).
 - **Busca (`busca`):**
   - Incluir os principais nomes comerciais no Brasil, termos sinônimos e grafias populares para facilitar a busca rápida.
+
+---
+
+## 8. Dose Prática Habitual no Brasil (`dosePratica` - Opcional)
+
+- **Objetivo:** Oferecer um guia rápido e prático ao médico prescritor com a conduta mais consagrada na rotina clínica brasileira de pronto atendimento e UBS.
+- **Quando preencher:**
+  - Apenas quando existir um consenso prático evidente no dia a dia do Brasil (ex.: *"Benzetacil 1.200.000 UI IM dose única para faringoamigdalite estreptocócica"*; *"Dipirona 500mg a 1g até 4x/dia se dor/febre"*; *"Azitromicina 500mg 1x/dia por 3 a 5 dias"*).
+- **Regra de Ouro (Nunca Inventar):**
+  - Caso o fármaco tenha posologia altamente variável conforme patologia grave, titulação individualizada, ou esquemas múltiplos sem um único consenso absoluto, **NÃO INVENTAR**. Deixar o campo omitido (`undefined`).
+- **Comportamento no Sistema:**
+  - Exibido como callout visual informativo amigável no topo do painel e detalhado na seção de fontes, sem interferir nem limitar a flexibilidade do médico na prescrição.
+

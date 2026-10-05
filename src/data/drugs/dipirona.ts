@@ -6,7 +6,8 @@ export const dipirona: Farmaco = {
   categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'metamizol novalgina dipirona sodica',
   classe: 'Analgésico e antipirético',
-  fontes: { HSL: '05/05/2025', EINP: '', EINA: '' },
+  dosePratica: 'Adulto: 500 mg a 1.000 mg (1 g) VO ou EV até de 6/6h se dor ou febre (máx. 4 g a 5 g/dia). Pediatria (> 3 meses e > 5 kg): 10 a 15 mg/kg/dose VO até de 6/6h (1 gota/kg da solução 500 mg/mL, máx. 40 gotas/dose).',
+  fontes: { HSL: '05/05/2025', PSZERADO: '2025', EINP: '', EINA: '' },
   snPadrao: 'dor ou febre',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg, solução oral 500 mg/mL e ampola 500 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [

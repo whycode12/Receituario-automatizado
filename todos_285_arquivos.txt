@@ -1,0 +1,285 @@
+﻿HSL - AAS.html
+HSL - Acetilcisteína.html
+HSL - Aciclovir.html
+HSL - Ácido fusídico.html
+HSL - Ácido mefenâmico.html
+HSL - Ácido tranexâmico.html
+HSL - Ácido ursodesoxicólico.html
+HSL - Ácido zoledrônico.html
+HSL - Adenosina.html
+HSL - Adrenalina.html
+HSL - Albendazol.html
+HSL - Alopurinol.html
+HSL - Alprazolam.html
+HSL - Alteplase.html
+HSL - Amilorida.html
+HSL - Amiodarona.html
+HSL - Amitriptilina.html
+HSL - AMOXICILINA ＋ CLAVULANATO DE POTÁSSIO.html
+HSL - Amoxicilina + clavulanato.html
+HSL - Amoxicilina + sulbactam.html
+HSL - Amoxicilina.html
+HSL - Ampicilina + sulbactam.html
+HSL - Ampicilina.html
+HSL - Anlodipino.html
+HSL - Apixabana.html
+HSL - Atorvastatina.html
+HSL - Atropina.html
+HSL - Azitromicina.html
+HSL - Baclofeno.html
+HSL - Beclometasona.html
+HSL - Benzetacil (penicilina benzatina).html
+HSL - Betametasona.html
+HSL - Biperideno.html
+HSL - Bisacodil.html
+HSL - Bisoprolol.html
+HSL - Bromazepam.html
+HSL - Bromoprida.html
+HSL - Budesonida.html
+HSL - Bupivacaína.html
+HSL - Bupropiona.html
+HSL - Captopril.html
+HSL - Carbamazepina.html
+HSL - Carboximaltose férrica.html
+HSL - Carvedilol.html
+HSL - Cefaclor.html
+HSL - Cefalexina.html
+HSL - Cefazolina.html
+HSL - Cefepima.html
+HSL - Cefotaxima.html
+HSL - Ceftazidima.html
+HSL - Ceftriaxona.html
+HSL - Cefuroxima.html
+HSL - Celecoxibe.html
+HSL - Cetamina.html
+HSL - Cetirizina.html
+HSL - Cetoprofeno.html
+HSL - Ciclobenzaprina.html
+HSL - Ciclopentolato.html
+HSL - Ciclossilicato de zircônio.html
+HSL - Cimetidina.html
+HSL - Cinarizina.html
+HSL - Cinchocaína.html
+HSL - Ciprofibrato.html
+HSL - Ciprofloxacino + dexametasona.html
+HSL - Ciprofloxacino.html
+HSL - Citalopram.html
+HSL - Clindamicina.html
+HSL - Clomipramina.html
+HSL - Clonazepam.html
+HSL - Clopidogrel.html
+HSL - Clorpromazina.html
+HSL - Clortalidona.html
+HSL - Codeína.html
+HSL - Colagenase.html
+HSL - Colchicina.html
+HSL - Colecalciferol.html
+HSL - Colestiramina.html
+HSL - Dapagliflozina.html
+HSL - Deslanosídeo.html
+HSL - Desloratadina.html
+HSL - Desonida.html
+HSL - Desvenlafaxina.html
+HSL - Dexametasona.html
+HSL - DEXCLORFENIRAMINA.html
+HSL - Diazepam.html
+HSL - Diclofenaco.html
+HSL - Difenidramina.html
+HSL - Diltiazem.html
+HSL - Dimenidrinato + piridoxina.html
+HSL - Dimenidrinato.html
+HSL - Dimeticona.html
+HSL - Diosmina + hesperidina.html
+HSL - Dipirona.html
+HSL - Dobutamina.html
+HSL - Domperidona.html
+HSL - Dopamina.html
+HSL - Doxiciclina.html
+HSL - Duloxetina.html
+HSL - Edoxabana.html
+HSL - Empagliflozina.html
+HSL - Enalapril.html
+HSL - Enoxaparina.html
+HSL - Eritromicina.html
+HSL - Eritropoetina.html
+HSL - Escetamina.html
+HSL - Escitalopram.html
+HSL - ESCOPOLAMINA ＋ DIPIRONA SÓDICA.html
+HSL - Escopolamina.html
+HSL - Esomeprazol.html
+HSL - Espironolactona.html
+HSL - Etomidato.html
+HSL - Ezetimiba + rosuvastatina.html
+HSL - Ezetimiba + sinvastatina.html
+HSL - Ezetimiba.html
+HSL - Fenazopiridina.html
+HSL - Fenitoína.html
+HSL - Fenobarbital.html
+HSL - Fentanil.html
+HSL - Fibrato.html
+HSL - Fluconazol.html
+HSL - Fludrocortisona.html
+HSL - Flumazenil.html
+HSL - Fluticasona.html
+HSL - Fosfato de sódio.html
+HSL - Fosfomicina.html
+HSL - Furosemida.html
+HSL - Gabapentina.html
+HSL - Gentamicina.html
+HSL - Glicerina.html
+HSL - Gliclazida.html
+HSL - Glimepirida.html
+HSL - Glucagon.html
+HSL - Gluconato de cálcio.html
+HSL - Hialuronato de sódio.html
+HSL - Hidralazina.html
+HSL - Hidroclorotiazida.html
+HSL - Hidrocortisona.html
+HSL - Hidroxicloroquina.html
+HSL - Hidróxido de alumínio.html
+HSL - Hidróxido de magnésio.html
+HSL - Ibuprofeno.html
+HSL - Imipramina.html
+HSL - Insulina asparte.html
+HSL - Insulina degludeca.html
+HSL - Insulina detemir.html
+HSL - Insulina glargina.html
+HSL - Insulina lispro.html
+HSL - Insulina NPH.html
+HSL - Insulina regular.html
+HSL - Iodopovidona.html
+HSL - Ipratropio.html
+HSL - Ipratrópio.html
+HSL - Itraconazol.html
+HSL - Ivermectina.html
+HSL - Lactulose.html
+HSL - Lamotrigina.html
+HSL - Levetiracetam.html
+HSL - Levofloxacino.html
+HSL - Levonorgestrel.html
+HSL - Levotiroxina.html
+HSL - L-glutamina.html
+HSL - Lidocaína.html
+HSL - Linezolida.html
+HSL - Liraglutida.html
+HSL - Lisinopril.html
+HSL - Loratadina.html
+HSL - Lorazepam.html
+HSL - Maleato de dexclorfeniramina.html
+HSL - Mebeverina.html
+HSL - Meclizina.html
+HSL - Meclozina.html
+HSL - Melatonina.html
+HSL - Meropeném.html
+HSL - Mesalazina.html
+HSL - Metformina.html
+HSL - Metilprednisolona.html
+HSL - Metoclopramida.html
+HSL - Metoprolol.html
+HSL - Metotrexato.html
+HSL - Metronidazol.html
+HSL - Miconazol.html
+HSL - Midazolam.html
+HSL - Mirtazapina.html
+HSL - Misoprostol.html
+HSL - Moxifloxacino.html
+HSL - Mupirocina.html
+HSL - Nalbufina.html
+HSL - Naloxona.html
+HSL - Naproxeno.html
+HSL - Neomicina + bacitracina.html
+HSL - Neomicina + polimixina B + hidrocortisona.html
+HSL - Neomicina.html
+HSL - Nistatina.html
+HSL - Nitazoxanida.html
+HSL - Nitrofurantoína.html
+HSL - Nitrofurazona.html
+HSL - Nitroglicerina.html
+HSL - Noradrenalina.html
+HSL - Norfloxacino.html
+HSL - Nortriptilina.html
+HSL - Octreotida.html
+HSL - Olanzapina.html
+HSL - Óleo mineral.html
+HSL - Omeprazol.html
+HSL - Ondansetrona.html
+HSL - Oxacilina.html
+HSL - Oxibutinina.html
+HSL - Oxicodona.html
+HSL - Pamidronato.html
+HSL - Pantoprazol.html
+HSL - Paracetamol.html
+HSL - Paroxetina.html
+HSL - Penicilina benzatina.html
+HSL - Penicilina cristalina.html
+HSL - Penicilina G.html
+HSL - Pioglitazona.html
+HSL - Piperacilina + tazobactam.html
+HSL - Piridoxina.html
+HSL - Pitavastatina.html
+HSL - Poliestirenossulfonato de cálcio.html
+HSL - Polimixina B.html
+HSL - Prasugrel.html
+HSL - Prazosin.html
+HSL - Prednisolona.html
+HSL - Prednisona.html
+HSL - Pregabalina.html
+HSL - Probenecida.html
+HSL - Propafenona.html
+HSL - Propofol.html
+HSL - Propranolol.html
+HSL - Prucaloprida.html
+HSL - Quetiapina.html
+HSL - Racecadotrila.html
+HSL - Ramelteona.html
+HSL - Ramipril.html
+HSL - Rifampicina.html
+HSL - Rifaximina.html
+HSL - Risperidona.html
+HSL - Rivaroxabana.html
+HSL - Rocurônio.html
+HSL - Rosuvastatina.html
+HSL - Saccharomyces boulardii.html
+HSL - Sacubitril + valsartana.html
+HSL - Salbutamol.html
+HSL - Salmeterol.html
+HSL - Sertralina.html
+HSL - Simeticona.html
+HSL - Sinvastatina.html
+HSL - Sitagliptina.html
+HSL - Sulfadiazina de prata.html
+HSL - Sulfadiazina.html
+HSL - Sulfametoxazol + trimetoprima.html
+HSL - Sulfato de magnésio.html
+HSL - Sulfato ferroso.html
+HSL - Sumatriptano.html
+HSL - Tansulosina.html
+HSL - Tazobactam.html
+HSL - Tenoxicam.html
+HSL - Terbutalina.html
+HSL - Terlipressina.html
+HSL - Tiamina.html
+HSL - Ticagrelor.html
+HSL - Tiopental.html
+HSL - Tiorfan.html
+HSL - Tiotrópio.html
+HSL - Tobramicina + dexametasona.html
+HSL - Tobramicina.html
+HSL - Topiramato.html
+HSL - Tramadol.html
+HSL - Tranexâmico.html
+HSL - Trazodona.html
+HSL - Triancinolona acetonida.html
+HSL - Umeclidínio.html
+HSL - Ureia.html
+HSL - Valaciclovir.html
+HSL - Valproato.html
+HSL - Vancomicina.html
+HSL - Vareniclina.html
+HSL - Varfarina.html
+HSL - Vasopressina.html
+HSL - Venlafaxina.html
+HSL - Verapamil.html
+HSL - Vildagliptina.html
+HSL - Vitamina E.html
+HSL - Vitamina K.html
