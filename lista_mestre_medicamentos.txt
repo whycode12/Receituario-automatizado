@@ -43,10 +43,10 @@
 [x] 30. Celecoxibe
 [x] 31. Penicilina benzatina
 [x] 32. Benzetacil (penicilina benzatina)
-33. Sulfametoxazol + trimetoprima
-34. Nitrofurantoína
-35. Metronidazol
-36. Cefuroxima
+[x] 33. Sulfametoxazol + trimetoprima
+[x] 34. Nitrofurantoína
+[x] 35. Metronidazol
+[x] 36. Cefuroxima
 37. Cefazolina
 38. Doxiciclina
 39. Clindamicina
