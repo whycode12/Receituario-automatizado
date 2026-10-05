@@ -183,6 +183,7 @@ export const amoxicilinaClavulanato: Farmaco = {
   maximos: [
     {
       pub: 'adulto',
+      vias: ['VO'],
       tipo: 'mg_dia',
       valor: 1750,
       fonte: 'HSL',

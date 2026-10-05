@@ -17,6 +17,33 @@ interface PrescriptionPanelProps {
   grpTxt: (g: { k: string; items: ItemReceita[] }) => string;
 }
 
+interface AutoTextareaProps {
+  value: string;
+  onChange: (val: string) => void;
+}
+
+const AutoTextarea: React.FC<AutoTextareaProps> = ({ value, onChange }) => {
+  const ref = React.useRef<HTMLTextAreaElement>(null);
+
+  React.useEffect(() => {
+    if (ref.current) {
+      ref.current.style.height = 'auto';
+      ref.current.style.height = `${ref.current.scrollHeight}px`;
+    }
+  }, [value]);
+
+  return (
+    <textarea
+      ref={ref}
+      className="txt"
+      spellCheck={false}
+      value={value}
+      onChange={e => onChange(e.target.value)}
+      style={{ overflow: 'hidden', resize: 'none' }}
+    />
+  );
+};
+
 export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
   drug,
   calcResult,
@@ -79,7 +106,6 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
         </div>
       )}
 
-
       {/* Cards de Prévia */}
       {cards.map((c, i) => (
         <React.Fragment key={i}>
@@ -88,12 +114,9 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
             {c.sub ? <span>({c.sub})</span> : ''}
           </div>
           <div className="card">
-            <textarea
-              className="txt"
-              spellCheck={false}
+            <AutoTextarea
               value={c.texto}
-              onChange={e => onUpdateCardTexto(i, e.target.value)}
-              rows={c.texto.split('\n').length}
+              onChange={val => onUpdateCardTexto(i, val)}
             />
             <div className="acts">
               <button onClick={() => onCopy(c.texto)} title="Copiar">
@@ -135,12 +158,9 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
               <React.Fragment key={g.k}>
                 <div className="ghead">{g.k.toUpperCase()}</div>
                 <div className="card">
-                  <textarea
-                    className="txt"
-                    spellCheck={false}
+                  <AutoTextarea
                     value={txt}
-                    onChange={e => onUpdateGrpTexto(g.k, e.target.value)}
-                    rows={txt.split('\n').length}
+                    onChange={val => onUpdateGrpTexto(g.k, val)}
                   />
                   <div className="acts">
                     <button

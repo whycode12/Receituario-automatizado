@@ -150,10 +150,19 @@ export const escopolamina: Farmaco = {
   maximos: [
     {
       pub: 'adulto',
+      vias: ['VO'],
+      tipo: 'mg_dia',
+      valor: 60,
+      fonte: 'HSL',
+      trecho: 'Dose máxima Adulto: VO: 60mg/dia.'
+    },
+    {
+      pub: 'adulto',
+      vias: ['EV', 'IM'],
       tipo: 'mg_dia',
       valor: 100,
       fonte: 'HSL',
-      trecho: 'Dose máxima Adulto: IV: 100mg/dia, VO: 60mg/dia.'
+      trecho: 'Dose máxima Adulto: IV: 100mg/dia.'
     },
     {
       pub: 'ped',

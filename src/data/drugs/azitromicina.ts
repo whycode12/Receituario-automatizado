@@ -128,6 +128,7 @@ export const azitromicina: Farmaco = {
   maximos: [
     {
       pub: 'adulto',
+      vias: ['VO'],
       tipo: 'mg_dia',
       valor: 2000,
       fonte: 'HSL',
@@ -135,6 +136,7 @@ export const azitromicina: Farmaco = {
     },
     {
       pub: 'ped',
+      vias: ['VO'],
       tipo: 'mg_dia',
       valor: 2000,
       fonte: 'HSL',
@@ -142,6 +144,7 @@ export const azitromicina: Farmaco = {
     },
     {
       pub: 'adulto',
+      vias: ['EV'],
       tipo: 'mg_dia',
       valor: 500,
       fonte: 'HSL',
