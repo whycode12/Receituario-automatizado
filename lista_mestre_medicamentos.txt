@@ -47,40 +47,40 @@
 [x] 34. Nitrofurantoína
 [x] 35. Metronidazol
 [x] 36. Cefuroxima
-37. Cefazolina
-38. Doxiciclina
-39. Clindamicina
-40. Eritromicina
-41. Levofloxacino
-42. Fosfomicina
-43. Albendazol
-44. Ivermectina
-45. Nitazoxanida
-46. Ciprofloxacino + dexametasona
-47. Pantoprazol
-48. Esomeprazol
-49. Bromoprida
-50. Dimenidrinato
-51. Dimenidrinato + piridoxina
-52. Simeticona
-53. Dimeticona
-54. Lactulose
-55. Saccharomyces boulardii
-56. Racecadotrila
-57. Tiorfan
-58. Domperidona
-59. Hidróxido de alumínio
-60. Hidróxido de magnésio
-61. Cimetidina
-62. Bisacodil
-63. Prednisolona
-64. Dexametasona
-65. Hidrocortisona
-66. Betametasona
-67. Budesonida
-68. Beclometasona
-69. Acetilcisteína
-70. Terbutalina
+[x] 37. Cefazolina
+[x] 38. Doxiciclina
+[x] 39. Clindamicina
+[x] 40. Eritromicina
+[x] 41. Levofloxacino
+[x] 42. Fosfomicina
+[x] 43. Albendazol
+[x] 44. Ivermectina
+[x] 45. Nitazoxanida
+[x] 46. Ciprofloxacino + dexametasona
+[x] 47. Pantoprazol
+[x] 48. Esomeprazol
+[x] 49. Bromoprida
+[x] 50. Dimenidrinato
+[x] 51. Dimenidrinato + piridoxina
+[x] 52. Simeticona
+[x] 53. Dimeticona
+[x] 54. Lactulose
+[x] 55. Saccharomyces boulardii
+[x] 56. Racecadotrila
+[x] 57. Tiorfan
+[x] 58. Domperidona
+[x] 59. Hidróxido de alumínio
+[x] 60. Hidróxido de magnésio
+[x] 61. Cimetidina
+[x] 62. Bisacodil
+[x] 63. Prednisolona
+[x] 64. Dexametasona
+[x] 65. Hidrocortisona
+[x] 66. Betametasona
+[x] 67. Budesonida
+[x] 68. Beclometasona
+[x] 69. Acetilcisteína
+[x] 70. Terbutalina
 71. Metilprednisolona
 72. Salmeterol
 73. Captopril

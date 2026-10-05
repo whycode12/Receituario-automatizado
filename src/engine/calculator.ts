@@ -57,7 +57,7 @@ export function aplica(it: { pub?: string; se?: CondicaoRegra; vias?: Via[]; apr
 }
 
 export const viasDisp = (d: Farmaco): Via[] =>
-  (['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA', 'TOPICA'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
+  (['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA', 'TOPICA', 'OFTALMICA'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
 
 export function unidades(ap: Apresentacao, peso: number | null, modo: string): UnidadeDose[] {
   if (ap.unidades) return ap.unidades;
@@ -160,9 +160,10 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     return { mg: q * ap.mg, q, txt: `${q} jato${pl ? 's' : ''} (puff${pl ? 's' : ''})`, whole: true };
   }
 
-  // 3.1. Formas tópicas (gel, pomada, creme)
-  if (['gel', 'pomada', 'creme'].includes(ap.forma)) {
-    return { mg: 1, ml: null, txt: '1 camada fina', whole: true };
+  // 3.1. Formas tópicas e oftálmicas (gel, pomada, creme, pomada_oft)
+  if (['gel', 'pomada', 'creme', 'pomada_oft'].includes(ap.forma)) {
+    const txt = ap.forma === 'pomada_oft' ? '1 pequena quantidade (no saco conjuntival)' : '1 camada fina';
+    return { mg: 1, ml: null, txt, whole: true };
   }
 
   // 4. Gotas

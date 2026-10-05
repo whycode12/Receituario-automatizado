@@ -34,7 +34,8 @@ export const VIA_GRUPO: Record<string, string> = {
   EV: 'Uso Endovenoso',
   NASAL: 'Uso Nasal',
   INALATORIA: 'Uso Inalatório',
-  TOPICA: 'Uso Tópico'
+  TOPICA: 'Uso Tópico',
+  OFTALMICA: 'Uso Oftálmico'
 };
 
 export const VIA_EXT: Record<string, string> = {
@@ -44,7 +45,8 @@ export const VIA_EXT: Record<string, string> = {
   EV: 'via intravenosa',
   NASAL: 'via nasal',
   INALATORIA: 'via inalatória',
-  TOPICA: 'uso tópico'
+  TOPICA: 'uso tópico',
+  OFTALMICA: 'via oftálmica'
 };
 
 export const num = (v: any): number | null => {
