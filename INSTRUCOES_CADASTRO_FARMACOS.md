@@ -99,3 +99,18 @@ Para a segurança do médico prescritor e transparência das regras:
    npm run build
    ```
    - O build deve compilar com código 0 (sem erros de TypeScript nem falhas de lint).
+
+---
+
+## 6. Padronização de Alertas Clínicos e Cores
+
+1. **Cor Vermelha (`alert red` / `alerts`)**:
+   - Reservada para **DOSE ou FREQUÊNCIA FORA DO ADEQUADO** (abaixo do mín, acima do máx, teto diário ultrapassado, frequência incompatível, concentração EV excessiva) ou **contraindicações reais violadas pelo paciente cadastrado** (aquelas que possuem condição objetiva `se`, como idade ou peso mínimos/máximos).
+2. **Cor Âmbar / Amarelo (`alert amber` / `notes`)**:
+   - Reservada para **alertas fixos**, precauções clínicas, avisos de bula/fontes e contraindicações genéricas (aquelas sem bloco `se`, como hipersensibilidade, infecções fúngicas, cautela em insuficiência renal/hepática, interações potenciais).
+   - **Regra**: Alertas fixos nunca devem aparecer em vermelho.
+3. **Banner na Prescrição**:
+   - O alerta `⚠ Atenção: há itens fora do recomendado (ver alertas).` só deve aparecer quando a **dose estiver de fato fora do recomendado**. Alertas fixos em âmbar não acionam esse aviso.
+4. **Frasco-Ampola (`fap`)**:
+   - Sempre cadastrar `volml` e/ou `reconstMl` quando o frasco-ampola possuir volume definido (ex.: Ceftriaxona 500mg IM = 2 mL), permitindo que o sistema exiba o volume na visualização e nas receitas.
+
