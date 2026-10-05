@@ -34,7 +34,7 @@
 # 100% dos arquivos da pasta Fontes/HSL contemplados sem omissões.
 
 [x] 23. Diclofenaco
-24. Tramadol
+[x] 24. Tramadol
 25. Naproxeno
 26. Tenoxicam
 27. Ácido mefenâmico
