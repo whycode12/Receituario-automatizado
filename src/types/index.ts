@@ -1,8 +1,8 @@
 export type Pub = 'adulto' | 'ped';
-export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA' | 'OFTALMICA';
+export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA' | 'OFTALMICA' | 'SC';
 export type ModoUso = 'agora' | 'sn' | 'continuo';
 export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal' | 'gel' | 'pomada' | 'creme' | 'pomada_oft';
-export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic';
+export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic' | 'ui' | 'ui_kg_dia';
 
 export interface Paciente {
   pub: Pub;
@@ -55,7 +55,7 @@ export interface RegraDose {
   se?: CondicaoRegra;
   vias?: Via[];
   apres?: string[];
-  tipo: 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'mg_dia' | 'ml' | 'sachet';
+  tipo: 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'mg_dia' | 'ml' | 'sachet' | 'ui' | 'ui_kg_dia';
   min: number;
   max: number;
   padrao: number;

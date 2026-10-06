@@ -50,7 +50,7 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
   const nomeInt = `${d.nome} (${ap.conc}${fapVolStr})`;
   const out: ItemReceita[] = [];
 
-  if (via === 'VO' || via === 'VR' || via === 'NASAL' || via === 'INALATORIA' || via === 'TOPICA' || via === 'OFTALMICA') {
+  if (via === 'VO' || via === 'VR' || via === 'NASAL' || via === 'INALATORIA' || via === 'TOPICA' || via === 'OFTALMICA' || via === 'SC') {
     const g = VIA_GRUPO[via];
     const rawRot = typeof ap.rotulo === 'function' ? ap.rotulo(p, a) : ap.rotulo;
     const rot = (ap.forma === 'fap' && fapVol != null && !rawRot.toLowerCase().includes('ml'))
@@ -58,7 +58,7 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       : rawRot;
     const verbo = via === 'VO'
       ? 'Tomar'
-      : (via === 'VR' || via === 'TOPICA' || ap.forma === 'pomada_oft')
+      : (via === 'VR' || via === 'TOPICA' || via === 'SC' || ap.forma === 'pomada_oft')
       ? 'Aplicar'
       : via === 'INALATORIA'
       ? (ap.forma === 'spray' ? 'Inalar' : 'Inalar / Nebulizar')

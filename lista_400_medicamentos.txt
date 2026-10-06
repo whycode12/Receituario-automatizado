@@ -409,8 +409,8 @@
 # MEDICAMENTOS ADICIONADOS DOS 4 GUIAS (UBS, UPA, PRESCRIÇÕES E PSZERADO)
 # ==============================================================================
 
-401. Cetoconazol  # Antifúngico imidazólico (comprimido 200mg, creme 2%, shampoo 2% - Guia UBS, UPA e PSZerado)
-402. Clobetasol  # Propionato de clobetasol creme/pomada 0,05% (corticoide tópico superpotente - Guia UPA)
+[x] 401. Cetoconazol  # Antifúngico imidazólico (comprimido 200mg, creme 2%, shampoo 2% - Guia UBS, UPA e PSZerado)
+[x] 402. Clobetasol  # Propionato de clobetasol creme/pomada 0,05% (corticoide tópico superpotente - Guia UPA)
 403. Isoconazol  # Nitrato de isoconazol creme vaginal e dermatológico (Guia UBS)
 404. Oxiconazol  # Nitrato de oxiconazol creme/loção tópica (Guia UPA)
 405. Griseofulvina  # Antifúngico oral para dermatofitoses e tinha do couro cabeludo (Guia UPA)
