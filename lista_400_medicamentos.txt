@@ -91,7 +91,7 @@
 85. Codeína
 86. Colchicina
 87. Colestiramina
-88. Colagenase
+[x] 88. Colagenase
 89. Colecalciferol
 90. Deslanosídeo
 91. Desloratadina
@@ -298,7 +298,7 @@
 292. Sitagliptina
 293. Sorbitol + laurilsulfato de sódio
 294. Succinilcolina
-295. Sulfadiazina de prata
+[x] 295. Sulfadiazina de prata
 296. Sulfametoxazol + trimetoprima
 297. Sulfato de magnésio
 298. Sulfato ferroso
@@ -465,3 +465,17 @@
 454. Cianocobalamina  # Vitamina B12 injetável e oral para anemia megaloblástica (Guia UBS)
 455. Glicose hipertônica  # Glicose 50% injetável para reversão de hipoglicemia aguda no PS (Guia UPA e PSZerado)
 456. Soro de reidratação oral (SRO)  # Sais de reidratação oral padronizados OMS/SUS (Guia UBS e UPA)
+[x] 457. Ácidos graxos essenciais (AGE / Óleo Dersani)  # Cicatrização e prevenção de lesões por pressão (Guia UBS e UPA)
+[x] 458. Pasta d'água (Óxido de Zinco 25% + Glicerina + Talco)  # Protetor cutâneo secativo e antipruriginoso brotoeja/catapora (HSL e Farmacopeia)
+[x] 459. Nitrato de prata (bastão aplicador)  # Cauterizante químico para granuloma umbilical de recém-nascido e hipergranulação (SBP e MS)
+[x] 460. Permetrina (loção 5% e 1%)  # Escabicida e pediculicida padrão-ouro, seguro em gestantes e crianças (PSZerado, MS e SBP)
+[x] 461. Nistatina + Óxido de zinco pomada  # Assaduras complicadas por cândida e eritema glúteo com lesões satélites (SBP, MS e RENAME)
+[x] 462. Mupirocina pomada 2%  # Antimicrobiano tópico de 1ª linha para impetigo crostoso/bolhoso e foliculite (HSL, PSZerado e SBP)
+[x] 463. Neomicina + Bacitracina pomada  # Antimicrobiano tópico para cortes, escoriações e pequenos machucados Nebacetin (MS, RENAME e PSZerado)
+[x] 464. Hidrocortisona creme 1%  # Corticoide tópico de baixa potência para face, dobras e dermatite atópica em crianças (PSZerado, MS e SBP)
+[x] 465. Dexametasona creme 0,1%  # Corticoide tópico de média potência para alergias cutâneas, picadas e dermatite de contato (MS, RENAME e PSZerado)
+[x] 466. Tobramicina colírio 0,3%  # Antimicrobiano oftálmico para conjuntivite bacteriana purulenta aguda em adultos e crianças (RENAME, SBP e CBO)
+[x] 467. Ciprofloxacino colírio 0,3%  # Fluoroquinolona oftálmica para conjuntivite bacteriana aguda e usuários de lentes de contato Ciloxan (PSZerado, CBO e RENAME)
+[x] 468. Carmelose sódica colírio 0,5%  # Lubrificante ocular e lágrima artificial para olho seco e conjuntivite viral Fresh Tears (HSL, PSZerado e CBO)
+[x] 469. Polimixina B + Neomicina + Hidrocortisona gotas otológicas  # Tratamento tópico de escolha para otite externa bacteriana Otosporin (RENAME e ABORL-CCF)
+[x] 470. Hidroxiquinolina + Trolamina (Cerumin gotas otológicas)  # Emoliente e ceruminolítico para remoção de rolha de cera no ouvido (HSL e ABORL-CCF)

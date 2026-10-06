@@ -58,7 +58,7 @@ export function aplica(it: { pub?: string; se?: CondicaoRegra; vias?: Via[]; apr
 }
 
 export const viasDisp = (d: Farmaco): Via[] =>
-  (['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA', 'TOPICA', 'OFTALMICA', 'SC'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
+  (['VO', 'EV', 'IM', 'VR', 'NASAL', 'INALATORIA', 'TOPICA', 'OFTALMICA', 'OTOLOGICA', 'VAGINAL', 'SC'] as Via[]).filter(v => d.apresentacoes.some(a => a.vias.includes(v)));
 
 export function unidades(ap: Apresentacao, peso: number | null, modo: string): UnidadeDose[] {
   if (ap.unidades) return ap.unidades;

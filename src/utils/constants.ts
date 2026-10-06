@@ -38,6 +38,8 @@ export const VIA_GRUPO: Record<string, string> = {
   INALATORIA: 'Uso Inalatório',
   TOPICA: 'Uso Tópico',
   OFTALMICA: 'Uso Oftálmico',
+  OTOLOGICA: 'Uso Otológico',
+  VAGINAL: 'Uso Vaginal',
   SC: 'Uso Subcutâneo'
 };
 
@@ -50,6 +52,8 @@ export const VIA_EXT: Record<string, string> = {
   INALATORIA: 'via inalatória',
   TOPICA: 'uso tópico',
   OFTALMICA: 'via oftálmica',
+  OTOLOGICA: 'via otológica (no ouvido)',
+  VAGINAL: 'via vaginal',
   SC: 'via subcutânea'
 };
 
