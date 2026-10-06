@@ -179,7 +179,7 @@
 173. Insulina glulisina
 174. Insulina lispro
 [x] 175. Insulina NPH
-176. Insulina regular
+[x] 176. Insulina regular
 177. Ipratrópio
 178. Irbesartana
 179. Isoniazida
