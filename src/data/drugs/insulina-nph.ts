@@ -23,7 +23,7 @@ export const insulinaNph: Farmaco = {
       disp: '1 frasco (10 mL)',
       unidades: ['ui', 'ui_kg_dia'],
       acesso: { rename: true, fp: true },
-      instrucao: 'ADMINISTRAÇÃO EXCLUSIVAMENTE SUBCUTÂNEA (SC): Rolar o frasco suavemente entre as palmas das mãos pelo menos 10 a 20 vezes antes de aspirar até que a suspensão fique homogeneamente leitosa (NÃO agitar com vigor para evitar bolhas). Utilizar seringa própria para insulina graduada em Unidades (100 UI/mL). Locais de injeção: abdômen (distante 2 dedos do umbigo), face lateral das coxas, face posterior dos braços ou nádegas. Fazer prega subcutânea e injetar em ângulo de 90° (ou 45° em pacientes muito magros), mantendo a agulha sob a pele por 5 a 10 segundos antes de retirar. Alternar sempre o local de injeção para prevenir lipodistrofia. CONSERVAÇÃO: Manter frascos lacrados sob refrigeração (2°C a 8°C - nunca congelar). O frasco em uso pode permanecer em temperatura ambiente (até 30°C) longe do sol direto por até 28 dias.',
+      instrucao: 'Como aplicar e guardar em casa:\n1. Antes de usar, role o frasco devagar entre as palmas das mãos por 10 a 20 vezes até o líquido ficar esbranquiçado por igual (não chacoalhe com força).\n2. Use seringa própria para insulina (de 100 UI). Puxe a quantidade exata de unidades receitada.\n3. Onde aplicar: na barriga (deixando 2 dedos de distância do umbigo), na frente das coxas ou atrás dos braços.\n4. Faça uma preguinha leve na pele com os dedos, espete a agulha, empurre o êmbolo até o fim e conte até 10 antes de retirar a agulha da pele.\n5. Mude o lugar da picada a cada aplicação para não criar caroços ou machucados na pele.\n6. Como guardar: o frasco fechado deve ficar na geladeira (nunca no congelador). O frasco que estiver usando pode ficar fora da geladeira, em local fresco e longe do sol, por até 28 dias.',
       obs: 'RENAME / SUS. Início de ação em 1 a 2 horas, pico entre 4 a 10 horas e duração de efeito de 12 a 18 horas.'
     },
     {
@@ -38,7 +38,7 @@ export const insulinaNph: Farmaco = {
       disp: '1 caneta / refil (3 mL)',
       unidades: ['ui', 'ui_kg_dia'],
       acesso: { rename: true, fp: true },
-      instrucao: 'Homogeneizar a suspensão invertendo a caneta lentamente 10 a 20 vezes antes da aplicação. Rosquear agulha nova para caneta (4 mm ou 5 mm). Selecionar a dose no seletor da caneta. Injetar via subcutânea em ângulo de 90° e manter o botão pressionado até o fim por 10 segundos antes de puxar a agulha da pele. Descartar a agulha após cada injeção. Rotação diária dos pontos de injeção.',
+      instrucao: 'Como aplicar e guardar com a caneta:\n1. Vire a caneta de cima para baixo devagar por 10 a 20 vezes até a insulina ficar branquinha por igual.\n2. Rosqueie uma agulha nova na ponta da caneta e gire o botão até a quantidade exata de unidades receitada.\n3. Onde aplicar: na barriga (a 2 dedos do umbigo), nas coxas ou atrás dos braços.\n4. Espete a agulha na pele, aperte o botão até o fim e segure apertado contando até 10 antes de retirar a agulha.\n5. Descarte a agulha após cada aplicação e mude sempre o local da picada a cada dia para proteger sua pele.\n6. A caneta em uso não precisa ficar na geladeira: guarde em local fresco, longe do calor e do sol direto (válida por até 28 dias após aberta).',
       obs: 'Padronizado no SUS para crianças, adolescentes, idosos e gestantes, além de farmácias comunitárias.'
     }
   ],

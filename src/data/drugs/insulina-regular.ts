@@ -23,7 +23,7 @@ export const insulinaRegular: Farmaco = {
       disp: '1 frasco (10 mL)',
       unidades: ['ui', 'ui_kg_dia', 'ml'],
       acesso: { rename: true, fp: true },
-      instrucao: 'Solução límpida e incolor. ADMINISTRAÇÃO SUBCUTÂNEA (SC): Administrar 30 minutos antes das refeições principais. Utilizar seringa própria para insulina graduada (100 UI/mL). Locais de injeção: abdômen, face lateral das coxas, braços ou nádegas. Fazer rotação dos pontos de aplicação. Não necessita agitação (solução já homogênea). USO INTRAVENOSO (EV): Uso restrito a ambiente de pronto-socorro / hospitalar em emergências (CAD, EHH, hipercalemia grave). CONSERVAÇÃO: Manter frascos lacrados na geladeira (2°C a 8°C). O frasco em uso pode permanecer em temperatura ambiente (até 30°C) por até 28 dias.',
+      instrucao: 'Como aplicar e guardar em casa:\n1. A insulina regular é transparente como água límpida (não precisa agitar nem rolar o frasco antes de usar).\n2. Aplicar 30 minutos antes da refeição (café da manhã, almoço ou jantar).\n3. Use sempre seringa própria para insulina (de 100 UI) com a quantidade exata de unidades receitada.\n4. Onde aplicar: na barriga (a 2 dedos de distância do umbigo), na frente das coxas ou atrás dos braços. Faça uma preguinha leve na pele, espete a agulha, empurre o êmbolo e conte até 10 antes de retirar.\n5. Alterne o local da picada a cada aplicação para não machucar a pele.\n6. Como guardar: o frasco fechado deve ficar na geladeira (nunca no congelador). O frasco em uso pode ficar em local fresco e longe do sol por até 28 dias.',
       obs: 'RENAME / SUS. Início de ação em 30 minutos, pico entre 2 a 3 horas e duração de efeito de 5 a 8 horas. Única insulina humana que pode ser administrada por via EV.'
     }
   ],
