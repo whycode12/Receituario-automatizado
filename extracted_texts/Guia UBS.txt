@@ -1,0 +1,3608 @@
+
+--- PAGINA 1 ---
+ 
+2026
+UBS DE
+BOLSO
+A prática da UBS na
+palma da sua mão.
+
+--- PAGINA 2 ---
+                 
+ 
+2 
+ 
+SUMÁRIO 
+GUIA	DE	ANAMNESE	+	EXAME	FÍSICO	(SOAP)	__________________________________________________	6	
+PRÉ-NATAL:	_________________________________________________________________________________________	11	
+SAÚDE	DA	FAMÍLIA	E	DA	COMUNIDADE	______________________________________________________	11	
+NÁUSEA	E	VÔMITOS	NA	GESTANTE:	_____________________________________________________________	12	
+ITU	NA	GESTANTE:	_________________________________________________________________________________	12	
+DMG	NA	GESTAÇAO	________________________________________________________________________________	13	
+HIPERTENSÃO	GESTACIONAL:	___________________________________________________________________	13	
+ANTICONCEPÇÃO:	__________________________________________________________________________________	15	
+AMENORREIA	_______________________________________________________________________________________	15	
+SÍNDROME	DOS	OVÁRIOS	POLICÍSTICOS	_______________________________________________________	15	
+DISMENORREIA:	____________________________________________________________________________________	16	
+SANGRAMENTO	UTERINO	ANORMAL:	__________________________________________________________	16	
+CLIMATÉRIO:	________________________________________________________________________________________	17	
+VULVOVAGINITES:	_________________________________________________________________________________	18	
+CERVICITES:	_________________________________________________________________________________________	19	
+DOENÇA	INFLAMATÓRIA	PÉLVICA:	_____________________________________________________________	19	
+VIOLÊNCIA	SEXUAL:	________________________________________________________________________________	20	
+MASTALGIA:	_________________________________________________________________________________________	21	
+MASTITE	AGUDA:	__________________________________________________________________________________	21	
+CÂNCER	DE	MAMA	_________________________________________________________________________________	22	
+CÂNCER	DE	COLO	DE	ÚTERO:	_____________________________________________________________________	23	
+SAÚDE	DA	CRIANÇA	E	DO	ADOLESCENTE	____________________________________________________	24	
+PUERICULTURA:	____________________________________________________________________________________	24	
+CRIPTORQUIDIA	____________________________________________________________________________________	25	
+HÉRNIA	UMBILICAL	________________________________________________________________________________	25	
+PREPÚCIO	NÃO	RETRÁTIL	________________________________________________________________________	26	
+GASTROENTERITE	VIRAL	AGUDA	NA	INFÂNCIA	/	DIARREIA	AGUDA:	_____________________	26	
+PARASITOSES	INTESTINAIS	NA	INFÂNCIA:	_____________________________________________________	28	
+AMEBÍASE	/GIARDÍASE:	___________________________________________________________________________	28	
+ASCARIDÍASE/ANCILOSTOMÍASE/OXIURÍASE/TRICURÍASE	________________________________	28	
+ESCABIOSE	NA	INFÂNCIA:	_________________________________________________________________________	29	
+PEDICULOSE	NA	INFÂNCIA:	_______________________________________________________________________	29	
+--- PAGINA 3 ---
+                 
+ 
+3 
+LARVA	MIGRANS	NA	INFÂNCIA:	__________________________________________________________________	29	
+MILIÁRIA	/	BROTOEJA:	____________________________________________________________________________	30	
+ESTRÓFULO:	________________________________________________________________________________________	30	
+FURUNCULOSE	NA	INFÂNCIA:	____________________________________________________________________	30	
+CANDIDÍASE	ORAL	NA	INFÂNCIA	(MONILÍASE):	_______________________________________________	31	
+CANDIDÍASE	CUTÂNEA	NA	INFÂNCIA:	__________________________________________________________	31	
+DERMATITE	DE	FRALDAS:	________________________________________________________________________	31	
+TINEA	CAPITIS	NA	INFÂNCIA:	____________________________________________________________________	31	
+TINEA	CORPORIS	/	CRURIS	/	PEDIS	NA	INFÂNCIA:	___________________________________________	32	
+ONICOMICOSE	NA	INFÂNCIA	(TINEA	DA	UNHA):	______________________________________________	32	
+PITIRÍASE	VERSICOLOR	NA	INFÂNCIA	(ZILLERI	POSITIVO):	________________________________	32	
+URTICÁRIA	NA	INFÂNCIA	/	DERMATITE	ATÓPICA	NA	INFÂNCIA:	__________________________	32	
+IMPETIGO	NA	INFÂNCIA:	__________________________________________________________________________	33	
+CONSTIPAÇÃO	INTESTINAL	NA	INFÂNCIA:	_____________________________________________________	34	
+REFLUXO	/	REGURGITAÇÃO	NA	INFÂNCIA:	____________________________________________________	35	
+RESFRIADO	COMUM	NA	INFÂNCIA:	______________________________________________________________	35	
+OTITE	MÉDIA	AGUDA	NA	INFÂNCIA:	____________________________________________________________	36	
+MASTOIDITE	AGUDA	NA	INFÂNCIA:	_____________________________________________________________	37	
+SINUSITE	BACTERIANA	AGUDA	NA	INFÂNCIA:	________________________________________________	37	
+FARINGOAMIGDALITE	NA	INFÂNCIA	/	ESCARLATINA:	_______________________________________	37	
+DOENÇAS	EXANTEMÁTICAS	VIRAIS	NA	INFÂNCIA:	___________________________________________	38	
+ASMA	NA	INFÂNCIA:	_______________________________________________________________________________	40	
+RINITE	ALÉRGICA	NA	INFÂNCIA:	_________________________________________________________________	41	
+PNEUMONIA	NA	INFÂNCIA:	_______________________________________________________________________	42	
+ITU	NA	INFÂNCIA:	__________________________________________________________________________________	44	
+SAÚDE	DO	ADULTO	______________________________________________________________________________	46	
+HIPERTENSÃO	ARTERIAL	SISTÊMICA:	__________________________________________________________	46	
+DISLIPIDEMIA:	______________________________________________________________________________________	49	
+DIABETES	MELLITUS	TIPO	2:	_____________________________________________________________________	51	
+NEUROPATIA	PERIFÉRICA:	_______________________________________________________________________	53	
+INVESTIGAÇÃO	INICIAL	E	ABORDAGEM	DA	ANEMIA:	________________________________________	54	
+OSTEOPOROSE:	_____________________________________________________________________________________	54	
+OSTEOARTRITE:	____________________________________________________________________________________	55	
+HIPOTIREOIDISMO	PRIMÁRIO:	__________________________________________________________________	56	
+HIPERTIREOIDISMO:	______________________________________________________________________________	56	
+ABSCESSO	CUTÂNEO	/	CELULITE:	_______________________________________________________________	56	
+--- PAGINA 4 ---
+                 
+ 
+4 
+ERISIPELA:	__________________________________________________________________________________________	57	
+IMPETIGO:	___________________________________________________________________________________________	57	
+INFECÇÃO	DO	TRATO	URINÁRIO:	________________________________________________________________	58	
+PROSTATITE:	_______________________________________________________________________________________	58	
+HIPERPLASIA	PROSTÁTICA	BENIGNA:	__________________________________________________________	59	
+PNEUMONIA	COMUNITÁRIA:	_____________________________________________________________________	59	
+ASMA:	________________________________________________________________________________________________	61	
+DPOC:	________________________________________________________________________________________________	63	
+RINITE	ALÉRGICA:	_________________________________________________________________________________	66	
+RINOSSINUSITE:	____________________________________________________________________________________	67	
+TUBERCULOSE	PULMONAR:	______________________________________________________________________	67	
+INFECÇÃO	LATENTE	DE	TUBERCULOSE:	________________________________________________________	69	
+HANSENÍASE:	_______________________________________________________________________________________	70	
+TINEA	CAPITIS:	_____________________________________________________________________________________	71	
+TINEA	CORPORIS	/	CRURIS	/	PEDIS:	____________________________________________________________	71	
+ONICOMICOSE:	______________________________________________________________________________________	73	
+CANDIDÍASE	CUTÂNEA:	___________________________________________________________________________	73	
+PITIRÍASE	VERSICOLOR:	__________________________________________________________________________	73	
+ESCABIOSE:	__________________________________________________________________________________________	73	
+PEDICULOSE:	________________________________________________________________________________________	74	
+PARASITOSE	INTESTINAL:	________________________________________________________________________	74	
+ACNE:	_________________________________________________________________________________________________	74	
+DOENÇA	AFTOSA:	__________________________________________________________________________________	75	
+VERRUGA	VULGAR:	________________________________________________________________________________	75	
+CEFALEIA	MIGRÂNEA:	_____________________________________________________________________________	75	
+DORSALGIA	/	DOR	INTENSA	/	DISCOPATIA:	___________________________________________________	76	
+FIBROMIALGIA:	_____________________________________________________________________________________	76	
+VERTIGEM:	__________________________________________________________________________________________	77	
+GECA	/	DIARRÉIA:	__________________________________________________________________________________	78	
+CONSTIPAÇÃO	INTESTINAL:	______________________________________________________________________	79	
+DOENÇA	DO	REFLUXO	GASTROESOFÁGICO:	___________________________________________________	79	
+GASTRITE	/	DOENÇA	ULCEROSA	PÉPTICA:	_____________________________________________________	80	
+CONJUNTIVITE	______________________________________________________________________________________	81	
+HORDÉOLO:	_________________________________________________________________________________________	82	
+OTITE	MÉDIA	AGUDA:	_____________________________________________________________________________	82	
+OTITE	EXTERNA:	___________________________________________________________________________________	82	
+--- PAGINA 5 ---
+                 
+ 
+5 
+ROLHA	DE	CERUME:	_______________________________________________________________________________	83	
+FARINGOAMIGDALITE:	____________________________________________________________________________	83	
+GOTA:	________________________________________________________________________________________________	84	
+INSUFICIÊNCIA	VENOSA	CRÔNICA:	______________________________________________________________	84	
+HERPES	MUCOCUTÂNEA:	_________________________________________________________________________	85	
+HERPES-ZOSTER:	___________________________________________________________________________________	85	
+INFECÇÕES	SEXUALMENTE	TRANSMISSÍVEIS:	_________________________________________________	85	
+RASTREIO	DE	CÂNCERES:	_________________________________________________________________________	87	
+ABORDAGEM	NA	COVID-19:	______________________________________________________________________	87	
+SAÚDE	MENTAL	___________________________________________________________________________________	90	
+TRANSTORNO	DEPRESSIVO	MAIOR	(TDM)	____________________________________________________	90	
+DEPRESSÃO	COM	LETARGIA/APATIA/BAIXA	MOTIVAÇAO	_________________________________	90	
+DEPRESSÃO	COM	INSÔNIA/PERDA	DE	PESO/AGITAÇÃO	____________________________________	91	
+DEPRESSÃO	COM	DOR	NEUROPÁTICA/MUSCULOESQUELÉTICA	___________________________	91	
+TRANSTORNO	DE	ANSIEDADE	GENERALIZADA	(TAG)	_______________________________________	92	
+TRANSTORNO	DO	PÂNICO:	_______________________________________________________________________	93	
+TRANSTORNO	OBSESSIVO-COMPULSIVO	(TOC):	______________________________________________	93	
+INSÔNIA	ASSOCIADA	A	DEPRESSÃO	_____________________________________________________________	93	
+DEPRESSÃO	COM	DISFUNÇÃO	SEXUAL:	_________________________________________________________	94	
+IDOSOS/CARDIOPATAS	___________________________________________________________________________	94	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGINA 6 ---
+                 
+ 
+6 
+ 
+ 
+GUIA DE ANAMNESE + EXAME FÍSICO (SOAP) 
+ 
+ 
+Por que usar SOAP? 
+O SOAP organiza o raciocínio clínico e padroniza o registro do atendimento. Melhora 
+a continuidade do cuidado, facilita auditoria/teleconsulta, reduz omissões e dá 
+rastreabilidade às decisões. 
+ 
+ 
+O que é “problema” de saúde? 
+Segundo o MS, é tudo que requer ou pode requerer ação da equipe, motivando um 
+plano de intervenção. Pode ser sintoma, sinal, síndrome, achado em exame, trauma, 
+fator de risco, questão social/familiar, etc. 
+ 
+ 
+O que é o SOAP? (explicado sem mistério) 
+O SOAP é um acrônimo para Subjetivo, Objetivo, Avaliação e Plano. Ele organiza o 
+registro por problemas e ajuda a acompanhar o paciente ao longo do tempo. 
+A lógica é: primeiro ouço (S), depois meço/examino (O), então interpreto e digo 
+quais problemas estão em jogo (A) e, por fim, defino o que será feito (P). 
+ 
+ 
+S-SUBJETIVO (O QUE O PACIENTE CONTA 
+Pergunta-guia: O que trouxe você aqui hoje? 
+O que entra: motivo da consulta e a história desse(s) problema(s) (HDA), em 
+linguagem simples, do ponto de vista do paciente. Use o ICE do método centrado na 
+pessoa: 
+● I – Ideias: o que ele acha que é. 
+● C – Concerns (Preocupações): medos, receios. 
+● E – Expectations (Expectativas): o que espera da consulta. 
+--- PAGINA 7 ---
+                 
+ 
+7 
+Contexto útil: antecedentes, cirurgias, alergias, medicações com dose/horário, 
+hábitos (tabaco, álcool, atividade física), trabalho/família e história familiar. 
+Vários problemas? Separe: S1, S2, S3… Cada problema terá sua própria avaliação 
+(A) e plano (P). 
+Exemplo breve: 
+S1 (dor lombar): começou há 5 dias após esforço; acha que “travou”; teme ficar 
+afastado; espera remédio e orientações. 
+ 
+O- OBJETIVO (O QUE O PROFISSIONAL OBSERVA/MEDE 
+ 
+Pergunta-guia: Quais dados objetivos eu tenho hoje? 
+Ordem sugerida: 
+1. Estado geral 
+2. Sinais vitais (PA, FC, FR, Temp, SpO₂) 
+3. Exame físico por sistemas (achados positivos e negativos relevantes) 
+4. Exames complementares (sempre com data) 
+Exceção prática: em seguimentos muito próximos, sem queixas novas, pode não 
+haver O (se todo o exame já foi feito recentemente). Deixe claro que não houve 
+novos achados. 
+Exemplo breve: 
+EG bom; PA 122/78, FC 78, FR 16, Temp 36,6, SpO₂ 98%; paravertebrais 
+dolorosos, sem dor à percussão; Lasègue negativo; força 5/5; sem exames hoje. 
+ 
+ 
+ 
+A — AVALIAÇÃO (INTERPRETAÇÃO + LISTA DE PROBLEMAS DA CONSULTA) 
+Pergunta-guia: Dado o S e o O, quais problemas estão presentes hoje? 
+Como escrever: liste cada problema identificado nesta consulta. O problema pode 
+ser sinal, sintoma, síndrome, diagnóstico, achado de exame, questão social/familiar, 
+etc. 
+Qualifique quando ajudar: [novo] [ativo] [resolvido] [recidiva]. 
+Sem evidência suficiente para diagnóstico? Registre a síndrome/achado (ex.: “tosse 
+subaguda”, “hiperglicemia em jejum”). 
+Evite rótulos com “?” solto; prefira descrições claras e rastreáveis. 
+Exemplo breve: 
+--- PAGINA 8 ---
+                 
+ 
+8 
+1. Dor lombar mecânica [novo]. 
+2. Ergonomia inadequada [fator de risco]. 
+3. Ansiedade relacionada à dor/trabalho [psicossocial]. 
+ 
+ 
+ 
+P — PLANO (O QUE SERÁ FEITO, PROBLEMA A PROBLEMA) 
+ 
+Pergunta-guia: O que vou investigar, tratar, acompanhar e explicar para cada 
+problema? 
+Estruture o P em 4 subitens: 
+1. Plano diagnóstico – exames, testes, encaminhamentos, matriciamento, 
+perguntas a retomar. 
+2. Plano terapêutico – medidas farmacológicas e não farmacológicas. 
+3. Plano de acompanhamento – quando e como reavaliar, o que monitorar. 
+4. Plano educacional – explicações, sinais de alarme, metas compartilhadas. 
+Dica prática: escreva o P logo abaixo de cada problema do A. Fica fácil 
+de ler e auditar. 
+Exemplo breve (para o problema 1 – dor lombar mecânica): 
+● Diagnóstico: sem exames agora; reavaliar se piora/não melhora em 7–10 
+dias. 
+● Terapêutico: analgésico simples curto prazo; calor local; manter atividades 
+conforme tolerado; evitar opioide. 
+● Acompanhamento: retorno em 7–10 dias; sinais de alarme orientados. 
+● Educacional: ergonomia, alongamentos, expectativa de melhora. 
+ 
+Resumo para não errar: 
+● S: história do problema na visão do paciente + ICE + contexto relevante. 
+● O: dados objetivos na ordem padrão; exames sempre com data. 
+● A: sua interpretação → lista de problemas da consulta (qualifique). 
+● P: 4 blocos (diagnóstico, terapêutico, acompanhamento, educacional) para 
+cada problema. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGINA 9 ---
+                 
+ 
+9 
+ 
+ 
+ 
+ 
+ 
+ 
+SOAP NA PRÁTICA 
+S – Subjetivo (Anamnese) 
+1. Identificação 
+ Nome: _______ 
+ Sexo: _______ 
+ Idade: _______ 
+ Profissão: _______ 
+ Religião (se relevante): _______ 
+ 
+Queixa Principal (QP): 
+História da Doença Atual (HDA): 
+● Início, duração e frequência: _______ 
+● Qualidade: _______ 
+● Irradiação: _______ 
+● Intensidade/Severidade: _______ 
+● Fatores de melhora/piora: _______ 
+● Sinais e sintomas associados: _______ 
+● Interferência nas atividades diárias: _______ 
+ 
+História Patológica Pregressa (HPP): 
+● Doenças crônicas: _______ 
+● Cirurgias/Internações prévias: _______ 
+● Alergias: _______ 
+● Medicações em uso contínuo: _______ 
+Hábitos e Estilo de Vida: 
+● Tabagismo: nunca / ex-fumante / atual → (anos/maços-dia) 
+● Etilismo: ocasional / social / diário → (tipo e quantidade) 
+● Drogas ilícitas: _______ 
+● Atividade física: tipo, frequência, duração 
+● Alimentação: equilibrada? consumo de sal, açúcar, gordura 
+● Sono: horas/noite, qualidade 
+ 
+História Familiar (HF): 
+ 
+--- PAGINA 10 ---
+                 
+ 
+10 
+● Doenças em parentes de 1º grau: _______ 
+ 
+Contexto Social e Demográfico (ISDA): 
+Revisão de Sistemas: 
+ 
+ 
+O – Objetivo (Exame Físico + Sinais Vitais) 
+● Sinais vitais: 
+ PA: x mmHg | FC: ___ bpm | FR: ___ ipm | Temp: ____ °C 
+● Aspecto geral: bom estado geral, orientado, contactuante, hidratado, nutrido, 
+sem postura preferencial. 
+ 
+● Pele e anexos: corada, úmida, normotérmica, elástica, sem lesões; cabelos, 
+pelos e unhas normais; sem edema; linfonodos não palpáveis. 
+● Sistema osteomuscular: sem deformidades, sem dor, marcha e força 
+preservadas. 
+● Aparelho respiratório: tórax simétrico, sem retrações; frêmito presente e 
+simétrico; som claro pulmonar; murmúrio vesicular preservado, sem ruídos 
+adventícios. 
+● Aparelho cardiovascular: sem abaulamento precordial; ictus palpável no 4º–
+5º EIC esquerdo; bulhas normofonéticas, sem sopros/atritos; pulsos 
+periféricos presentes e simétricos. 
+● Abdome: plano, flácido, indolor; RHA normoativos; sem massas ou 
+visceromegalias; fígado palpável até 3 cm do RCD; Baço e rins não palpáveis; 
+Blumberg, Murphy e Giordano negativos. 
+● Extremidades: bem perfundidas, sem edemas; TEC < 2s. 
+● Neurológico: Glasgow 15, sem sinais de meningismo. 
+ 
+A – Avaliação (Hipótese Diagnóstica):  
+P – Plano (Condutas) 
+● Exames complementares: _______ 
+● Medicações: _______ 
+● Orientações: _______ 
+● Retorno/reavaliação: _______ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGINA 11 ---
+                 
+ 
+11 
+ 
+ 
+ 
+ 
+● Diagnóstico de gravidez: Amenorréia + BCG quantitativo (> 1.000) 
+● Caderneta de Gestante 
+● DUM 
+● Aconselhar consulta de pré-natal mensal (mínimo de 6 consultas) 
+ 
+1) Exames de 1ª consulta:  
+• TS e Fator Rh Hemograma 
+• GJ (1ª consulta / 30ª semana) EAS (1ª consulta / 30ª semana) 
+• Sífilis (TR / VDRL) - (1ª consulta / 30ª semana / anteparto) 
+• Sorologias HIV (1ª consulta / 30ª semana) 
+• Sorologia Toxoplasmose (1ª consulta) HBsAg (1ª consulta) 
+• Urocultura 
+Obs.: TOTG (24ª semana se GJ < 92) / Coombs Indireto (Se Rh negativo) 
+2)  Avaliar necessidade de USTV (6ª - 13ª semana) 
+3) Situação vacinal: 
+● Hepatite B: Completar o esquema de 3 doses. Se não possui 
+caderneta de vacinação = Fazer as 3 doses (0-1-6 meses) 
+● Influenza 
+● dT / dTpa (Prevenção tétano neonatal): Toda gestante necessita de 3 
+doses da vacina antitetânica, sendo a última dose a menos de 5 
+anos: 
+○ Zero: 2 doses dT (0-2) + 1 dose dTpa (> 20 sem)  
+○ Uma: 1 dose dT + 1 dose dTpa (> 20 sem)  
+○ Duas: 1 dose dTpa (> 20 sem)
+SAÚDE DA FAMÍLIA E DA COMUNIDADE 
+PRÉ-NATAL: 
+ 
+--- PAGINA 12 ---
+                 
+ 
+12 
+4) Suplementação: 
+1. Ácido Fólico 0,2mg/mL ———————————- Uso contínuo. 
+Tomar 40 gotas, via oral, 1x/dia até 12 semanas de gestação 
+Obs.: Se DM / IMC > 35 / Uso de anticonvulsivantes ou metotrexato >>> Tomar 
+Ácido Fólico 5mg/dia (1cp) 
+2. Sulfato Ferroso 200mg/cp ——————————— Uso contínuo. 
+ Tomar 1 cp, via oral, 30 minutos antes do almoço a partir da 26ª semana 
+5) Orientações médicas: 
+● Evitar contato com gatos (prevenção toxoplasmose)  
+● Utilizar repelentes se necessário (prevenção zika vírus) 
+● Orientações quanto aos pródromo do TP e maternidade de referência 
+ 
+ 
+ 
+ 
+INTERCORRÊNCIAS NO PRÉ-NATAL: 
+ 
+- NÁUSEA E VÔMITOS NA GESTANTE: 
+1. Dimenidrato 50mg + Piridoxina 10mg (Draminhas B6®)—- 21 cp 
+Tomar 01 comp, via oral, 8/8 horas por 7 dias 
+ 
+ 
+ 
+ 
+Cistite / Bacteriúria assintomática: 
+1. Cefalexina 500mg/cp —————————————- 28 cp  
+Tomar 01 comp, via oral, 6/6 horas por 7 dias 
+ 
+Recorrência: 
+2. Nitrofurantoina 100mg/cp ——————————— Uso contínuo  
+Tomar 01 comp, via oral, 1x/dia até 37ª semana 
+ 
+Pielonefrite: 
+1. Indicar internação 
+ITU NA GESTANTE: 
+ 
+NÁUSEA E VÔMITOS NA GESTANTE: 
+ 
+--- PAGINA 13 ---
+                 
+ 
+13 
+2. Cefalotina 1g - 1amp + 100mL SF 0,9%, EV, 6/6 horas até 48 horas 
+após último pico febril 
+3. Alta 
+4. Cefalexina 500mg/cp ——————————————- 56 cp 
+Tomar 1 comp, via oral, 6/6 horas até completar o 14º dia 
+ 
+ 
+ 
+ 
+DM prévio (GJ ≥ 126 mg/dL / Já em tratamento com hipoglicemiantes orais) 
+Iniciar ou trocar hipoglicemiantes orais pro Insulina NPH 0,5U/kg/dia 
+Ex: 65 kg 
+3. Insulina NPH 100U/mL ————————————— 1 frasco  
+Aplicar 21 unidades, SC, em jejum e 11 unidades, SC, antes do jantar 
+4. Agulhas e Seringas ———————————————— 60 unidades 
+ 
+ 
+DM gestacional (GJ 92-125 mg/dL / alteração no TOTG na 24ª sem): 
+● Orientações dietéticas e Atividade física 
+ 
+ 
+GJ continua alterada após 2 sem: 
+● Encaminhar ao Pré-natal de Alto risco (iniciar insulinoterapia)  
+Na impossibilidade: 
+● Insulinoterapia (Insulina NPH 100U/mL + Insulina Regular 100U/mL) 
+Dose: 0,5/0,7/0,9 U/kg/dia 
+ 
+ 
+ 
+• Investigar Pré-Eclâmpsia após 20ª semana 
+ 
+Controle Pressórico: 
+HIPERTENSÃO GESTACIONAL: 
+ 
+DMG NA GESTAÇAO 
+--- PAGINA 14 ---
+                 
+ 
+14 
+1. Metildopa 250-500mg/cp ———————————- Uso contínuo  
+Dose: 750 - 2000mg/dia,via oral, 6/6 horas. 
+2. Anlodipino 5mg/cp ——————————————- Uso contínuo  
+Tomar 01 comp, via oral, 12/12 horas 
+ 
+Necessidade de terceira droga: 
+3.  Carverdilol 6,25-12,5mg-25mg/cp —————— Uso contínuo 
+Dose: 12,5-50mg/dia, via oral, 12/12 horas. Ou esquema abaixo 
+ 
+4.  Hidralazina 25-50mg/cp ————————————- Uso contínuo  
+ 
+Dose: 50-150mg/dia, via oral, 8/8 horas. Ou esquema abaixo 
+ 
+5.  Clonidina 0,1-0,2mg/cp ————————————— Uso contínuo  
+ 
+Dose: 0,2-0,6mg/dia, via oral, 8/8 horas. Ou esquema abaixo.
+--- PAGINA 15 ---
+                 
+ 
+15 
+ 
+SAÚDE DA MULHER 
+ 
+ 
+ 
+Etinilestradiol 0,03mg + Levonorgestrel 0,15mg (Ciclo 21)- ----------Uso 
+contínuo 
+Tomar 01 comp, via oral, 1x/dia durante 21 dias. Intervalo de 7 dias. Ou 
+esquema 2 
+ 
+Mesigyna ———————-———————————————-—— 01 amp 
+Aplicar 01 amp, IM, a cada 30 dias. Não massagear no local da aplicação. 
+Ou esquema 3 
+ 
+Acetato de Medroxiprogesterona 150mg ——————— 01 amp  
+Aplicar 01 amp, IM, a cada 3 meses. Não massagear no local da aplicação 
+ 
+ 
+ 
+INVESTIGAÇÃO INICIAL DE AMENORREIA: 
+• Solicitar B-HCG / TSH / Prolactina 
+• Todos normais: Realizar Teste da Progesterona 
+ 
+ 
+Acetato de Medroxiprogesterona 10mg/dia ———————- 7 cp  
+Tomar 01 comp, via oral, 1x/dia por 7 dias. Interromper o uso e retornar no 14º dia. 
+- Com sangramento: Possível SOP. Iniciar ACO. 
+- Sem sangramento: Prosseguir com teste do Estrogênio. Solicitar FSH e LH + 
+Encaminhamento à atenção especializada 
+ 
+ 
+ 
+INVESTIGAÇÃO SÍNDROME DOS OVÁRIOS POLICÍSTICOS: 
+- Solicitar GJ / Colesterol total e frações / B-HCG (se amenorreia) / TSH / 
+ANTICONCEPÇÃO: 
+ 
+AMENORREIA 
+SÍNDROME DOS OVÁRIOS POLICÍSTICOS 
+--- PAGINA 16 ---
+                 
+ 
+16 
+PRL / Testosterona total e livre / S-DHEA / 17-OH-Progesterona / LH / FSH 
+ 
+Etinilestradiol 0,035mg + Acetato de Ciproterona 2mg — Uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+Se hirsutismo: 
+Finasterida 5mg/cp ——————————————— Uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+ 
+Ibuprofeno 500mg ——————————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Associar esquema 2 
+Paracetamol+Codeína 500mg/30mg (Paco) ————————— 1 cx 
+ Tomar 01 comp, via oral, 8/8 horas se dor refratária 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. Solicitar B-HCG / Hemograma / TAP / INR / TTPa / PRL / TSH / T4 livre 
+USGTV 
+Obs.: Causa comum em TH 
+2. Etinilestradiol 0,03mg + Levonorgestrel 0,15mg (Ciclo 21)--Uso 
+contínuo 
+Tomar 01 comp, via oral, 1x/dia durante 21 dias. Intervalo de 7 dias. 
+Associado ao esquema 3 
+3. Ibuprofeno 500mg —————————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias 
+ 
+Se coagulopatias: 
+DISMENORREIA:  
+ 
+ 
+ 
+SANGRAMENTO UTERINO ANORMAL: 
+ 
+ 
+ 
+--- PAGINA 17 ---
+                 
+ 
+17 
+4. Ácido Tranexâmico 250mg ——————————————- 1 cx  
+Tomar 01 comp, via oral, 8/8 horas por 3-5 dias 
+5. Encaminhar ao especialista se causas estruturais 
+ 
+ 
+ 
+ 
+ 
+1. Solicitar FSH / LH / Estradiol / Densitometria óssea (> 65 anos ou FR) 
+ 
+2. Estradiol gel 1mg/g ————————————————— 1 tubo  
+Aplicar gel em face interna da coxa 1x/dia. Associado ao esquema 3 
+ 
+3. Noretisterona 0,35,g/cp ———————————- Uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+Apenas sintomas vaginais (atrofia):  
+ 
+Promestieno creme vaginal 10mg ————————————— 1 tubo  
+Aplicar via vaginal à noite por 30 dias 
+ 
+Perda de DMO / Osteoporose (Z-score ≥ 2,5 ou T-score ≤ -2,5) 
+4. Solicitar 25-OH-Vitamina D / Cálcio / TSH / TGO / TGP / Ur / Cr 
+5. Carbonato de cálcio 600mg + Vitamina D 400UI ————— 60cp  
+Tomar 01 comp, via oral, à noite 1x/dia. Associado ao esquema 7 
+6. Alendronato de Sódio 70mg ————————————————— 8 cp 
+Tomar 01 comp, via oral, em jejum 1x por semana. Não deitar após tomada. 
+ 
+ 
+Se 25-OH-Vitamina D < 20 ng/mL: 
+7. Vitamina D 50.000 UI ————————————————————— 8 cp 
+Tomar 01 comp, via oral, 1x/semana por 8 semanas 
+8. Vitamina D 1.000 UI —————————————— uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+CLIMATÉRIO: 
+ 
+ 
+ 
+--- PAGINA 18 ---
+                 
+ 
+18 
+ 
+Osteoporose + Sintomas vasomotores. Avaliar TH: 
+9. Investigar RCV / Solicitar Colesterol total e frações / GJ / USGTV 
+10. Tibolona 1,25mg ——————————————— uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+ 
+ 
+11. Exame especular / Toque vaginal / Teste do pH ou KOH 
+ 
+ 
+VAGINOSE BACTERIANA (branco-acizentado fétido): 
+12. Metronidazol 250mg/cp ——————————————— 28 cp  
+Tomar 02 comp, via oral, 12/12 horas por 7 dias. Considerar 14 dias se 
+recorrência. Evitar álcool. Ou esquema abaixo 
+13. Clindamicina 300mg/cp —————————————— 28 cp 
+Tomar 01 comp, via oral, 12/12 horas por 7 dias  
+ 
+CANDIDÍASE VULVOVAGINAL (branco grumoso, inodoro + prurido): 
+3. Miconazol creme vaginal 2% ———————————— 1 tubo  
+Aplicar à noite por 7 dias. Ou esquema abaixo 
+ 
+4. Clotrimazol creme 1% ——————————————— 1 tubo  
+Aplicar à noite por 7 dias. Ou esquema abaixo 
+ 
+5. Nistatina 100.000UI ——————————————————— 1 tubo 
+Aplicar à noite por 14 dias. Ou esquema abaixo 
+ 
+6. Fluconazol 150mg/cp ———————————————— 1cp  
+Tomar 01 comp, via oral, dose única. Ou esquema abaixo 
+ 
+VULVOVAGINITES: 
+ 
+ 
+ 
+--- PAGINA 19 ---
+                 
+ 
+19 
+7. Itraconazol 100mg/cp ———————————————— 4 cp  
+Tomar 02 comp, via oral, 12/12 horas 
+ 
+Recorrência (≥4x/ano): 
+8. Fluconazol 150mg/cp ———————————————— 31 cp  
+Tomar 01 comp, via oral, nos dias 1,4,7. Manter 1 cp, via oral, 1x/sem 
+por 6 meses 
+ 
+ 
+TRICOMONÍASE (amarelo-esverdeado, bolhoso + hiperemia e prurido / 
+Assintomáticas em Colpocitologia oncótica): 
+1. Metronidazol 250mg/cp ———————————————— 8 cp  
+Tomar 08 comp, via oral, dose única. Tratar parceiro. Ou esquema 
+abaixo 
+2. Metronidazol 250mg/cp —————————————— 28 cp  
+Tomar 02 comp, via oral, 12/12 horas por 7 dias. Tratar parceiro 
+ 
+ 
+ 
+14. Exame especular / Toque vaginal / Solicitar anti-HIV / VDRL / HBsAg 
+15. Ceftriaxona 500mg/amp ——————————————— 1amp  
+Aplicar 1 amp, IM, em dose única. Associar com esquema 3 
+ 
+16. Azitromicina 500mg/cp ———————————————— 2cp  
+Tomar 02 comp, via oral, dose única 
+17. Tratar parceiro 
+ 
+ 
+18. Exame especular + Toque vaginal / Solicitar Hemograma / VHS / PCR 
+19. Ceftriaxona 500mg/amp —————————————— 1amp  
+Aplicar 1 amp, IM, em dose única. Associar com esquema 3 
+CERVICITES: 
+ 
+DOENÇA INFLAMATÓRIA PÉLVICA: 
+ 
+--- PAGINA 20 ---
+                 
+ 
+20 
+20. Metronidazol 250mg/cp ————————————————— 52 cp 
+Tomar 02 comp, via oral, 12/12 horas por 14 dias. Associar com esquema 4 
+21. Doxiciclina 100mg/cp ————————————————— 28 cp  
+Tomar 01 comp, via oral, 12/12 horas por 14 dias 
+22. Tratar Parceiro (Esquema para cervicite) 
+23. Retornar em 72 horas. 
+24. Solicitar internação se: Gravidez / Sinais de peritonite / Sem 
+melhora após 72 horas 
+ 
+ 
+ 
+● Solicitar anti-HIV / VDRL / HBsAg / Anti-HBS / Anti-HCV 
+Avaliar situação vacinal para Hepatite B. Completar esquema 
+ 
+Contracepção de emergência: 
+25. Levonorgestrel 1,5 mg/cp —————————1cp  
+Tomar 01 comp, via oral, dose única. Associar com esquema 2  
+ 
+Profilaxia ISTs: 
+26. Tenofovir + Lamivudina 300mg/300mg/cp ——————— 28 cp  
+Tomar 01 comp, via oral, 1x/dia por 4 sem. Associar com esquema 3 
+27. Dolutegravir 50mg/cp ————————————————— 28 cp  
+Tomar 01 comp, via ora, 1x/dia por 4 sem. Associar com esquema 4 
+28. Penicilina Benzatina 1.200.000U/amp —————————— 2 amp  
+Aplicar 1 amp, IM, em cada glúteo. Associar com esquema 5 
+29. Ceftriaxona 500mg/amp ————————————————1 amp  
+Aplicar 1 amp, IM, dose única. Associar com esquema 6  
+30. Azitromicina 500mg/cp ————————————————— 2 cp  
+Tomar 02 comp, via oral, dose única. Associar com esquema 7 
+VIOLÊNCIA SEXUAL: 
+ 
+--- PAGINA 21 ---
+                 
+ 
+21 
+31. Metronidazol 250mg/cp ———————————————— 8cp  
+Tomar 08 cp, via oral, dose única 
+ 
+ 
+Cíclica bilateral: 
+32. Solicitar USG mamária (Se cistos) 
+33. Melhorar sustentação das mamas 
+34. Emama 400mg/cp (vitamina E) ———————————— 60 cp  
+Tomar 01 drágea, via oral, 1x/dia por 3 meses 
+35. Tamoxifeno 10mg/cp ————————————————— 60 cp 
+ Tomar 01 comp, via oral, 1x/dia por 2-6 meses se dor intensa e refratária 
+ 
+ 
+ 
+36. Cefalexina 500mg/cp ————————————————— 28cp  
+Tomar 01 comp, via oral, 6/6 horas por 7 dias 
+37. Considerar drenagem, se 
+abscessomamário  
+ 
+Candidíase + Monilíase: 
+Mãe: 
+38. Miconazol tópico 20mg/g ————————————— 1 tubo  
+Aplicar em área lesionada após cada mamada por 14 d. Ou esquema 4 
+39. Cetoconazol tópico 20mg/g ————————————— 1 tubo  
+Aplicar em área lesionada após cada mamada por 14 dias 
+ 
+Monilíase no lactente: 
+40. Nistatina sup oral 100.000U/mL ——————————— 1 frasco  
+Aplicar 1-2 mL em cada lado da bochecha, em 6/6 horas, por 14 dias
+MASTALGIA: 
+ 
+MASTITE AGUDA: 
+ 
+--- PAGINA 22 ---
+                 
+ 
+22 
+ 
+ 
+ 
+Exame clínico + Mamografia Anual 40 - 69 anos (FEBRASGO)  
+• BI-RADS 1 - 2 
+➡ Seguimento anual 
+• BI-RADS 3 
+➡ Seguimento semestral no primeiro ano 
+• BI-RADS 4 - 5 (espiculado ou microcalcificações pleomórficas) 
+➡Encaminhar para biópsia 
+ 
+ 
+   RASTREIO DE CÂNCERES NA MULHER: 
+ 
+CÂNCER DE MAMA 
+LEMBRAR DE PREENCHER A REQUISIÇÃO DE MMG (MS). 
+ 
+--- PAGINA 23 ---
+                 
+ 
+23 
+ 
+ 
+ 
+1. Colpocitologia oncótica anual 25 - 64 anos (após sexarca). Após 
+2 negativos consecutivos —> A cada 3 anos 
+Obs.:  
+HIV positivo: 
+• Após sexarca: 6/6 meses no 1º ano  
+o - CD4≥ 200: Continuar 1x/ano 
+o CD4 < 200: manter 6/6 meses 
+ 
+- Como conduzir? 
+● LIE-BG (LSIL) 
+➡ Repetir 
+➡ 6 meses (≥ 25 anos) / 3 anos (< 25 anos) 
+➡ Se 
+nova LIE-BG (≥ 25 anos) 
+➡ Colposcopia 
+● ASC-US 
+➡ Repetir 
+➡ 6 meses (≥ 30 anos) / 12 meses (25-29 anos) / 3 anos 
+(< 25 anos) 
+➡ Se nova ASC-US (≥ 25 anos) 
+➡ Colposcopia 
+Obs.: LIE-BG ou ASC-US + HIV positivo 
+➡ Colposcopia 
+● ASC-H / AGC (AGUS) / LIE-AG (HSIL) / AOI 
+➡ Encaminhar ginecologista 
+➡ Indicação de colposcopia
+CÂNCER DE COLO DE ÚTERO: 
+--- PAGINA 24 ---
+                 
+ 
+24 
+ 
+SAÚDE DA CRIANÇA E DO ADOLESCENTE 
+ 
+ 
+ 
+Orientações – Puericultura / UBS 
+1. Aleitamento materno 
+o Aleitamento materno exclusivo (AME) até os 6 meses. 
+o Manter aleitamento materno (LM) até 2 anos ou mais, com 
+alimentação complementar adequada. 
+2. Fissura ou dor mamária 
+o Avaliar posição e pega. 
+o Corrigir técnica de amamentação sempre que necessário. 
+3. Triagens neonatais 
+o Verificar se foi realizado o teste do coraçãozinho. 
+o Avaliar resultado do teste do pezinho. 
+4. Triagem auditiva 
+o Solicitar ou confirmar realização do teste da orelhinha. 
+5. Avaliação clínica de rotina 
+o Peso 
+o Estatura 
+o IMC 
+o Perímetro cefálico (PC) 
+o Exame genital 
+o Hábito intestinal 
+o Situação vacinal 
+o Desenvolvimento neuropsicomotor (DNPM) 
+6. Aos 12 meses de idade 
+o Tratar parasitoses intestinais. 
+o Solicitar exames laboratoriais: 
+§ Hemograma 
+§ Glicemia de jejum (GJ) 
+§ EAS (urina tipo I) 
+ 
+ 
+Suplementações: 
+1. Vitamina D 200UI ——————————————— Uso contínuo  
+* Tomar 02 gotas, via oral, 1x/dia até 1 ano de idade 
+* Tomar 03 gotas, via oral, 1x/dia até 2 anos de idade 
+ 
+ 
+PUERICULTURA: 
+ 
+--- PAGINA 25 ---
+                 
+ 
+25 
+2. Sulfato Ferroso 125mg/mL ————————————— Uso contínuo 
+ 
+● PN > 2,5 kg + > 3 meses: Tomar (Peso/1,25) gotas, VO, antes da 
+alimentação, até 2 anos 
+● PT ou PN < 2,5 kg: Tomar (2xPeso/1,25) gotas, VO, antes da alimentação, a 
+partir 30ddv até 1 ano 
+● PN < 1,5 kg: Tomar (3xPeso/1,25) gotas, VO, antes da alimentação, a partir 
+30ddv até 1 ano 
+● PN < 1,0 kg: Tomar (4xPeso/1,25) gotas, VO, antes da alimentação a partir 
+30ddv até 1 ano 
+ 
+ 
+ 
+• Avaliar testículos em todas as consultas de puericultura. 
+• Confirmar ausência do testículo na bolsa após 6 meses de vida (idade 
+corrigida). 
+• Diferenciar de testículo retrátil: 
+o Desce ao escroto à manipulação; 
+o Permanece no escroto durante o exame. 
+• Não solicitar ultrassonografia ou outros exames de imagem. 
+• Orientar responsáveis sobre: 
+o Necessidade de avaliação especializada; 
+o Importância do tratamento precoce. 
+Encaminhar quando 
+• Testículo não palpável ou fora da bolsa após 6 meses. 
+• Dúvida diagnóstica (criptorquidia × retrátil). 
+• Criptorquidia bilateral. 
+• Associação com: 
+o Hipospádia; 
+o Anomalias genitais; 
+o Distúrbios do desenvolvimento sexual. 
+Encaminhamento: Pediatria ou Cirurgia Pediátrica. 
+ 
+ 
+ 
+• Diagnóstico clínico. 
+• Orientar conduta expectante: 
+o Alta chance de fechamento espontâneo até 4–5 anos. 
+• Reforçar: 
+o Não usar moedas, faixas ou curativos compressivos. 
+• Acompanhar em consultas de puericultura. 
+• Registrar tamanho aproximado do defeito herniário. 
+HÉRNIA UMBILICAL 
+CRIPTORQUIDIA 
+ 
+--- PAGINA 26 ---
+                 
+ 
+26 
+Encaminhar quando 
+• Persistência após 4–5 anos. 
+• Defeito herniário grande (≈ ≥ 1,5–2 cm). 
+• Dor local, aumento progressivo ou sinais inflamatórios. 
+• Suspeita de complicação (encarceramento – raro). 
+Encaminhamento: Cirurgia Pediátrica. 
+ 
+ 
+• Normal até 1 ano de idade (podendo persistir até 3–5 anos). 
+ 
+• > 1 ano + ITU associada: 
+1. Postec pomada® ——————————————————— 1 tubo  
+Passar 2x ao dia no prepúcio por 3 semanas. Ou esquema 2 
+ 
+2. Valerato de Betametasona 2,5mg + Hialuronidase 150UTR —— qsp 
+1g Passar 2x ao dia no prepúcio por 3 semanas 
+ 
+Encaminhar quando: 
+• Sem melhora após 3 semanas de tratamento tópico. 
+• Fimose recorrente associada a: 
+o ITUs de repetição; 
+o Balanopostites frequentes; 
+o Dor ou dificuldade miccional. 
+• Suspeita de fimose patológica (anel fibroso esbranquiçado). 
+Encaminhamento: Pediatria ou Cirurgia Pediátrica. 
+ 
+ 
+ 
+ 
+1. Ferver e filtrar toda água consumida em casa 
+2. Soro de Reidratação Oral ———————————— 3 envelopes  
+Diluir 1 envelope em 1 litro de água filtrada ou fervida. Tomar 100 mL após 
+vômito ou diarreia, por 3 dias. Associar esquema 3 
+PREPÚCIO NÃO RETRÁTIL 
+GASTROENTERITE VIRAL AGUDA NA INFÂNCIA / DIARREIA AGUDA: 
+ 
+--- PAGINA 27 ---
+                 
+ 
+27 
+3. Nitazoxanida sup 20mg/mL (Annita®)—————————- 1 frasco  
+Tomar (peso x 0,375 mL), via oral, 12/12 horas por 3 dias. Associar esquema 
+4 
+ 
+4. Sulfato de Zinco 20mg/cp —————————————— 14 cp  
+Diluir em água 1/2 cp (< 6 meses) ou 1cp (≥ 6 meses). Tomar, via oral, por 
+14 dias. Ou esquema 5 
+ 
+5. Sulfato de Zinco sol oral 17,6mg/mL ———————— 1 frasco  
+Tomar 2,5mL (< 6 meses) ou 5mL (≥ 6 meses), via oral, por 14 dias. 
+Associar esquema 6 
+ 
+6. Floratil 200mg ————————————————— 6 sachês  
+Diluir 1 sachê em AF. Tomar 12/12 horas por 3 dias. Associar esquema 7 
+7. Ondasetrona 4mg/cp (Vonau ®) ——————————————— 1  cx  
+Diluir 1 cp em 4 mL de AF.  
+ 
+ 
+Tomar conforme esquema: 
+Dose: 6-8kg: 1mL / 9-14kg: 2mL / 15-30kg: 3mL / > 30kg: 4mL, via oral, até 6/6 
+horas (> 6 meses). Ou esquema 8 
+ 
+8. Bromoprida gotas ———————————————- 1 frasco  
+Tomar Peso gotas, via oral, até 8/8 horas se náuseas e/ou vômitos (> 1 
+ano). Ou esquema 9 
+ 
+9. Dimenidrato gotas (Dramin B6 ®) ——————————- 1 frasco 
+Tomar Peso gotas, via oral, até 8/8 horas se náuseas e/ou vômitos (> 2 
+anos).
+--- PAGINA 28 ---
+                 
+ 
+28 
+ 
+ 
+ 
+AMEBÍASE (Diarreia mucossanguinolenta) / GIARDÍASE (Esteatorreia): 
+1. Metronidazol sup oral 200mg/5mL ————————— 1 frasco  
+Tomar Peso/3 mL, VO, 8/8 horas por 7 dias. Pode em < 1 ano. 
+ 
+ 
+ 
+ 
+1. Solicitar EPF 3 amostras 
+ 
+Tratamento empírico: 
+≥ 1 ano: 
+2. Nitazoxanida sup oral 20mg/mL (Annita®) ——————- 1 frasco  
+Tomar Peso x 0,375 mL, via oral, 12/12 horas por 3 dias 
+ 
+> 2 anos: 
+3. Albendazol 400mg/10mL ————————————— 3 frascos 
+ Tomar 10 mL, via oral, 1x/dia por 3 dias. Ou esquema 3 
+4. Mebendazol 100mg/5mL ———————-——————— 6 frascos  
+Tomar 5 mL, via oral, 12/12 horas por 3 dias 
+ 
+Vulvovaginite na infância (Oxiuríase): 
+ 
+5. FlogoRosa ——————-————————————-— 5 sachês  
+ Diluir 1 sachê em 1 litro de água morna e fazer banho de assento por 15 
+minutos, durante 5 dias. Associar esquema 6 
+ 
+6. Nistatina creme vaginal 100.000U/mL ———————————— 1 tubo 
+Aplicar na região acometida a noite, por 5 dias 
+ 
+PARASITOSES INTESTINAIS NA INFÂNCIA: 
+ 
+AMEBÍASE /GIARDÍASE: 
+ASCARIDÍASE/ANCILOSTOMÍASE/OXIURÍASE/TRICURÍASE 
+--- PAGINA 29 ---
+                 
+ 
+29 
+ 
+ 
+> 2 meses: 
+1. Permetrina loção cremosa 5% — ————————— qsp 40mL 
+Aplicar massageando no corpo inteiro. Deixar agir por 8 horas. Fazer o 
+procedimento por 2 dias. Repetir após 7 dias 
+ 
+Tratar contactantes domiciliares: 
+2. Ivermectina 6mg 
+Dose: 15-25kg: 1/2 cp / 26-50kg: 1cp / > 50kg: 2cp, via oral, dose única 
+ 
+ 
+ 
+> 2 meses: 
+1. Permetrina shampoo 1% ——————————————— qsp 40mL 
+Aplicar e deixar agir por 10 minutos no couro cabeludo e retirar. Repetir 
+após 7 dias 
+ 
+ 
+ 
+ 
+ 
+> 2 anos: 
+1. Albendazol 400mg/10mL ————————————— 3 frascos  
+Tomar 10 mL, via oral, 1x/dia por 3 dias. 
+ 
+> 5 anos e > 15 kg: 
+2. Ivermectina 6mg 
+Dose: 15-25kg: 1/2 cp / 26-50kg: 1cp / > 50kg: 2cp, via oral, dose única 
+ 
+Lesão única: 
+3. Tiabendazol tópico 50mg/g —————————————— 45 g 
+Aplicar na lesão na extremidade ativa das trilhas 8/8 horas por 5 dias 
+ 
+PEDICULOSE NA INFÂNCIA: 
+ 
+LARVA MIGRANS NA INFÂNCIA: 
+ 
+ESCABIOSE NA INFÂNCIA: 
+ 
+--- PAGINA 30 ---
+                 
+ 
+30 
+ 
+-  
+1. Orientar banhos frequentes. Secar bem. Roupas leves 
+2. Fisiogel® ————————————————————————— 1 tubo 
+Aplicar em todo corpo 2x/dia 
+3. Mometasona creme 1% (Topison®) ————————————— 1 tubo  
+4. Aplicar em área lesada 2x/dia por 5 dias 
+ 
+ 
+ 
+5. Compressa fria local / Repelentes 
+6. Hidroxizina sol 10mg/5mL (Hixizine ®) ————————— 1 frasco  
+Tomar Peso/4 mL, 8/8 horas, por 7 dias. Associado ao esquema 3 
+ 
+7. Mometasona creme 1% (Topison®) ——————————— 1 tubo  
+Aplicar em área lesada 2x/dia por 5 dias. Ou esquema 4 
+ 
+8. Hidrocortisona creme 1% ———————-——————— 1 tubo  
+Aplicar na área acometida de 8/8 horas, por 5 dias. Ou esquema 5 
+ 
+9. Ácido fusídico + Betametasona (Verutex B®) —————   1 tubo. 
+Aplicar na área acometida de 8/8 horas, por 5 dias 
+ 
+ 
+ 
+10. Compressa com água morna 
+11. Mupirocina pomada 2% (Bactroban®)————————— 1 tubo  
+Passar na lesão 2x/dia por 5 dias 
+ 
+Repetição: 
+MILIÁRIA / BROTOEJA: 
+ 
+ESTRÓFULO: 
+ 
+FURUNCULOSE NA INFÂNCIA: 
+ 
+--- PAGINA 31 ---
+                 
+ 
+31 
+12. Mupirocina pomada 2% (Bactroban®) ——————— 1 tubo  
+Passar atrás das orelhas, narinas, axilas e virilhas, à noite, nos 7 
+primeiros dias de cada mês por 6 meses 
+ 
+ 
+ 
+13. Nistatina sup oral 100.000U/mL ———————————— 1 frasco  
+Aplicar 1-2 mL em cada lado da bochecha, em 6/6 horas, por 14 dias 
+ 
+ 
+14. Nistatina 100.000U/g + Óxido de Zinco 200mg/g ————— 1 tubo 
+ Aplicar na região acometida 2x/dia por 14 dias 
+ 
+ 
+CANDIDÍASE CUTÂNEA NA INFÂNCIA: 
+ 
+15. Trocar fraldas com mais frequência / Manter pele limpa e seca 
+16. Nistatina creme vaginal 100.000U/mL —————————— 1 tubo 
+ Aplicar na região acometida de 6/6 horas, por 14 dias. Ou esquema 3 
+17. Miconazol pomada 2% ————————————————— 1 tubo  
+Aplicar na região acometida 2x/dia, por 14 dias 
+ 
+ 
+Reação inflamatória significativa: 
+18. Hidrocortisona creme 1% ———————-—————— 1 tubo  
+Aplicar na área acometida de 8/8 horas, após limpa e seca, nos dois 
+primeiros dias. 
+ 
+ 
+ 
+ 
+> 2 anos: 
+1. Terbinafina 250mg/cp —————————————————— 42-56 cp 
+CANDIDÍASE ORAL NA INFÂNCIA (MONILÍASE): 
+ 
+CANDIDÍASE CUTÂNEA NA INFÂNCIA: 
+ 
+ 
+ 
+DERMATITE DE FRALDAS: 
+ 
+ 
+ 
+TINEA CAPITIS NA INFÂNCIA: 
+ 
+ 
+ 
+--- PAGINA 32 ---
+                 
+ 
+32 
+Dose: 62,5mg (< 20kg) / 125mg (20-40kg) / 250mg (> 40kg), via oral, 1x/ 
+dia por 6-8 semanas 
+ 
+ 
+ 
+ 
+19. Cetoconazol creme 2% ———————————————— 1 tubo  
+Aplicar na lesão, após limpeza da pele, 8/8 horas, por 14 dias 
+ 
+ 
+ 
+20. Cetoconazol creme 2% ———————————————— 1 tubo 
+Aplicar na lesão, após limpeza da pele, 8/8 horas, por 14 dias. Ou 
+esquema 2 
+21. Terbinafina 250mg/cp —————————————————— 42-56 
+cp 
+Dose: 62,5mg (< 20kg) / 125mg (20-40kg) / 250mg (> 40kg), via oral, 1x/ 
+dia por 6-8 semanas (> 2 anos) 
+ 
+ 
+ 
+ 
+22. Cetoconazol creme 2% ——————————————— 1 tubo  
+Aplicar na lesão, após limpeza da pele, 8/8 horas, por 14 dias 
+Obs.: Pitiríase Alba não descama e piora com o sol 
+ 
+ 
+ 
+ 
+23. Orientar sabonetes hipoalergênicos (Baby dove) 
+24. Fisiogel® ————————————————————————— 1 
+tubo 
+Aplicar em todo corpo 2x/dia. Associado ao esquema 3 
+25. Mometasona creme 1% (Topison®) ——————————— 1 tubo 
+Aplicar em área lesada 2x/dia por 5 dias. Ou esquema 4 
+TINEA CORPORIS / CRURIS / PEDIS NA INFÂNCIA: 
+ 
+ 
+ 
+PITIRÍASE VERSICOLOR NA INFÂNCIA (ZILLERI POSITIVO): 
+ 
+ 
+ 
+URTICÁRIA NA INFÂNCIA / DERMATITE ATÓPICA NA INFÂNCIA: 
+ 
+ 
+ 
+ONICOMICOSE NA INFÂNCIA (TINEA DA UNHA): 
+ 
+ 
+ 
+--- PAGINA 33 ---
+                 
+ 
+33 
+26. Hidrocortisona creme 1% ——————————-——————— 1 
+tubo 
+Aplicar na área acometida de 8/8 horas, por 5 dias. Associado ao esquema 5 
+27. Hidroxizina sol 10mg/5mL (Hixizine ®) ————————— 1 frasco 
+Tomar Peso/4 mL, 8/8 horas, por 7 dias. Ou esquema 6 
+ 
+28. Desloratadina sol 2,5mg/mL (Desalex®) ——-——————— 1 
+frasco 
+Dose: 6-12 meses: 2mL / 1-5 anos: 2,5 mL / 6-11 anos: 5mL, via oral, 1x/ 
+dia por 7 dias. Ou esquema 7 
+ 
+29. Fexofenadina sol 6mg/mL (Allegra®) ——————————— 1 
+frasco 
+Dose: 6m-2 anos: 2,5 mL / > 2 anos: 5 mL, via oral, 12/12 horas por 7 
+dias. Ou esquema 8 
+30. Dexclorferinamina sol 2mg/5mL (Polaramine®) —————— 1 
+frasco 
+Dose: 2-6 anos: 1,25mL / 6-12 anos: 2,5 mL / > 12 anos: 5 mL, via oral, 
+8/8 horas por 7 dias 
+ 
+Lesão infectada:  
+31. Mupirocina pomada 2% (Bactroban®)—————————— 1 tubo  
+Passar nas lesões infectadas de 8/8 horas por 7-10 dias 
+Dose: 2-6 anos: 1,25mL / 6-12 anos: 2,5 mL / > 12 anos: 5 mL, via oral, 
+8/8 horas por 7 dias 
+ 
+Refratário: 
+32. Prednisolona sol 3mg/mL (Predsim®) ————————- 1 frasco  
+Tomar Peso/6 mL, via oral, 12/12 horas por 5 dias 
+ 
+ 
+ 
+ 
+IMPETIGO NA INFÂNCIA: 
+ 
+ 
+ 
+--- PAGINA 34 ---
+                 
+ 
+34 
+33. Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco  
+Tomar Peso gotas até 6/6 horas se dor e/ou febre. Ou esquema 2 
+34. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 
+frasco 
+Tomar Peso gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+3 
+35. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————— 1 frasco 
+ Tomar 2x Peso gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+Lesão localizada: 
+36. Mupirocina pomada 2% (Bactroban®)—————————— 1 tubo 
+ Passar nas lesões infectadas de 8/8 horas por 7-10 dias 
+ 
+Lesões múltiplas / Febre / Linfadenomegalia: 
+37. Cefalexina sus 250mg/5mL ———————————— 1 frasco 
+ Tomar Peso/4 mL, via oral, 6/6 horas por 7 - 10 dias. Ou esquema 6 
+38. Eritromicina 250mg/5mL ————-—————————— 1 frasco  
+Tomar Peso/5 mL, via oral, 6/6 horas por 7-10 dias. 
+ 
+ 
+ 
+Desaconselhar uso de massa (Mucilon) 
+39. Lactulona 667mg/mL ————-————————— 1 frasco  
+Dose: Peso x 0,3-0,6mL, via oral, 8/8 horas 
+Obs1.: Tratar por 3 meses 
+Obs2.: Óleo Mineral não usar em < 1 ano 
+ 
+Fecaloma: 
+CONSTIPAÇÃO INTESTINAL NA INFÂNCIA: 
+ 
+--- PAGINA 35 ---
+                 
+ 
+35 
+1. Glicerina supositório —-———————— 3 supositórios  
+Aplicar 1 supositório, via retal, 1x/dia até melhora (cerca de 3 dias) 
+2. Minilax sol retal —-—————————————— 3 bisnaga 
+Aplicar metade da bisnaga, via retal, 1x/dia até melhora (cerca de 3 dias) 
+ 
+ 
+ 
+ 
+Refluxo fisiológico (lactente saudável): 
+40. Orientar medidas posturais (pelo menos 30 min na vertical 
+pós mamada). Tranquilizar quanto a benignidade 
+41. Refratariedade —> Encaminhar ao especialista 
+ 
+ 
+Doença do Refluxo Gastroesofágico (Perda de peso / Irritabilidade / 
+Desconforto / Soluço / Engasgo / Pigarro / Dor epigástrica): 
+Com sinais de alarme: 
+1. Encaminhar ao especialista  
+Sem sinais de alarme: 
+1. Mylanta plus® ———————————————————— 1 frasco 
+Tomar 5 - 10 mL, via oral, até 8/8 horas se dor epigástrica. Associado ao 
+esquema 2 
+2. Omeprazol 10-20mg/cp ——————————————— 42 cp  
+Tomar 5mg (5-10kg) / 10mg (10-20kg) / 20mg (≥20kg), via oral, 1x/dia 30 
+min antes da primeira alimentação por 6 semanas 
+3. Encaminhar ao especialista sem melhora após 4 semanas 
+ 
+ 
+ 
+ 
+42. Soro fisiológico 0,9% (Rinosoro®, Salsep®) ——————1 frasco  
+Aplicar 1 mL em cada narina cada 4/4 horas. Associado ao esquema 2  
+ 
+REFLUXO / REGURGITAÇÃO NA INFÂNCIA: 
+ 
+RESFRIADO COMUM NA INFÂNCIA: 
+ 
+--- PAGINA 36 ---
+                 
+ 
+36 
+43. Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco 
+Tomar Peso gotas até 6/6 horas se dor e/ou febre. Ou esquema 3 
+ 
+44. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 
+frasco 
+Tomar Peso gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+4 
+ 
+45. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————— 1 frasco  
+Tomar 2xPeso gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+ 
+ 
+46. Amoxicilina susp 250mg/5mL ———————————- 1 frasco  
+Tomar (Peso/2) mL, via oral, 12/12 horas por 10 dias. Associar esquema 2 
+47. Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco  
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre. Ou esquema 3 
+ 
+48. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 
+frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+4 
+ 
+49. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————- 1 frasco 
+Tomar (2xPeso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+Falha terapêutica / conjuntivite: 
+50. Amoxicilina + Clavulanato susp 400mg/5mL —————- 1 frasco  
+Tomar (Peso/2) mL, via oral, 12/12 horas por 10 dias 
+ 
+OTITE MÉDIA AGUDA NA INFÂNCIA: 
+ 
+--- PAGINA 37 ---
+                 
+ 
+37 
+ 
+51. Solicitar internação hospitalar 
+52. Ceftriaxona 1g - 1 FR + 3,5 mL ABD. Fazer 0,18x Peso da 
+solução + 100mL de SF 0,9%, EV, em 30 minutos 
+ 
+ 
+ 
+ 
+ 
+1. Amoxicilina susp 250mg/5mL —————————————- 1 frasco 
+Tomar Peso/2 mL, via oral, 12/12 horas por mais 7 dias após melhora 
+clínica. Associar esquema 2 
+2. Paracetamol gotas 200mg/mL (Tylenol gotas®) ——————- 1 frasco 
+Tomar Peso gotas até 6/6 horas se dor e/ou febre. Ou esquema 3 
+ 
+3. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+4 
+ 
+4. Ibuprofeno gotas 50mg/mL (Alivium gotas®) ———————- 1 frasco 
+Tomar (2x Peso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+< 2 anos / Sem resposta: 
+5. Amoxicilina + Clavulanato susp 400mg/5mL ———————- 1 frasco  
+Tomar (Peso/2) mL, via oral, 12/12 horas por mais 7 dias após melhora 
+clínica 
+ 
+ 
+ 
+ 
+≤ 27 kg: 
+53. Penicilina Benzatina 600.000U ———————————— 1 amp  
+Aplicar 1 amp, IM, em nádega dose única. 
+> 27 kg: 
+MASTOIDITE AGUDA NA INFÂNCIA: 
+ 
+FARINGOAMIGDALITE NA INFÂNCIA / ESCARLATINA: 
+ 
+SINUSITE BACTERIANA AGUDA NA INFÂNCIA: 
+ 
+--- PAGINA 38 ---
+                 
+ 
+38 
+54. Penicilina Benzatina 1.200.000U ——————————— 1 amp 
+Aplicar 1 amp, IM, em nádega dose única. Ou esquema 3 
+55. Amoxicilina susp 250mg/5mL ———————————- 1 frasco 
+Tomar (Peso/2) mL, via oral, 12/12 horas por 10 dias. Associar esquema 4 
+56. Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco  
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre. Ou esquema 5 
+57. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 
+frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou 
+esquema 6 
+58. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————- 1 frasco  
+Tomar (2xPeso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+Alérgicos a penicilina: 
+59. Cefalexina sus 250mg/5mL ———————————— 1 frasco 
+Tomar (Peso/4) mL, via oral, 6/6 horas por 7 dias. Ou esquema 5 
+60. Azitromicina 200mg/5mL ————————————— 1 frasco 
+Tomar (Peso/4) mL, via oral, por 5 dias 
+ 
+ 
+ 
+ 
+Avaliação inicial na UBS 
+Anamnese dirigida: 
+- Idade 
+- Início do exantema 
+- Presença de febre 
+- Sintomas associados (tosse, coriza, conjuntivite, adenomegalias) 
+- Situação vacinal 
+Exame físico completo: 
+- Características do exantema 
+- Estado geral 
+- Sinais de gravidade 
+ 
+Conduta na UBS: 
+1. Investigação etiológica (quando indicado) 
+DOENÇAS EXANTEMÁTICAS VIRAIS NA INFÂNCIA: 
+ 
+--- PAGINA 39 ---
+                 
+ 
+39 
+- Solicitar sorologias apenas quando houver suspeita clínica ou necessidade 
+epidemiológica: 
+- IgM para Sarampo 
+- IgM e IgG anti-Rubéola 
+- IgM e IgG anti-EBV 
+ 
+Observação UBS 
+- Casos típicos e leves → conduta clínica + notificação quando indicada. 
+- Suspeita de sarampo ou rubéola → notificação imediata e coleta de exames 
+conforme protocolo. 
+ 
+TRATAMENTO CLINICO/SINTOMÁTICO: 
+ 
+Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco  
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre. Ou esquema 3 
+Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 4 
+Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————- 1 frasco  
+Tomar (2xPeso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+Sarampo (mobiliforme / linha implantação do cabelo): 
+Isolar até 5º dia do desaparecimento do exantema 
+Vitamina A sol 150.000U/mL———————————————— 1 frasco 
+Dose: < 6m: 10 gotas / 6-11m: 20 gotas / ≥ 1 ano: 30 gotas, via oral, 1x/ dia por 2 
+dias 
+ 
+ 
+Varicela (erupção vesicular pruriginosa): 
+Isolar até todas as lesões tornarem crostas 
+Aciclovir sol 80mg/mL ———————————————— 1 frasco  
+Tomar (Peso/4), via oral, 6/6 horas por 5 dias. Associar esquema 9 
+Desloratadina sol 2,5mg/mL (Desalex®) ——-——————— 1 frasco 
+Dose: 6-12 meses: 2mL / 1-5 anos: 2,5 mL / 6-11 anos: 5mL, via oral, 1x/ dia por 
+7 dias. Ou esquema 10 
+Fexofenadina sol 6mg/mL (Allegra®) ————————— 1 frasco 
+Dose: 6m-2 anos: 2,5 mL / > 2 anos: 5 mL, via oral, 12/12 horas por 7 dias. Ou 
+esquema 7 
+ 
+ 
+ 
+Encaminhar quando: 
+- Lactentes pequenos com mau estado geral. 
+Suspeita de: 
+- Sarampo grave; 
+- Complicações neurológicas; 
+- Infecção bacteriana associada. 
+- Dificuldade diagnóstica ou evolução atípica. 
+Encaminhamento: Pediatria / Emergência, conforme gravidade. 
+ 
+--- PAGINA 40 ---
+                 
+ 
+40 
+ 
+ 
+ 
+ 
+ 
+ 
+-STEP 1 e STEP 2 (Asma intermitente ou leve persistente) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 6/200 MCG————————————— 01 
+FRASCO 
+ASMA NA INFÂNCIA:   
+ 
+--- PAGINA 41 ---
+                 
+ 
+41 
+INALAR 01 CÁPSULA SOB DEMANDA, PODENDO REPETIR ATÉ A CADA 4/4 
+HORAS, EM CASO DE DESCONFORTO RESPIRATÓRIO. 
+APÓS O USO, ENXAGUAR A BOCA OU ESCOVAR OS DENTES. 
+ 
+RECOMENDAÇÕES : 
+-Evite contato com substâncias que possam causar alergias, como: poeira, fumaça, 
+tabaco, perfumes, mofo, ácaros, ratos e baratas. 
+-Use as medicações conforme orientação médica, mesmo quando os sintomas 
+forem leves. 
+-Procure IMEDIATAMENTE UMA UNIDADE DE EMERGÊNCIA se ocorrer: 
+-Febre persistente 
+-Aumento da tosse com secreção 
+-Falta de ar mesmo após o uso correto da medicação 
+-Sensação de fraqueza intensa 
+ 
+-STEP 3 (Asma persistente moderada) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 6/200 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA A CADA 12/12 HORAS, USO CONTÍNUO. 
+- ENXAGUAR A BOCA E/OU ESCOVAR OS DENTES APÓS O USO. 
+2) FORMOTEROL + BUDESONIDA 6/200 MCG—————————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA ATÉ A CADA 4/4 HORAS, EM CASO DE NOVA CRISE DE 
+ASMA. 
+ 
+RECOMENDAÇÕES : 
+-Use as medicações diariamente, mesmo na ausência de sintomas. 
+-Evite fatores desencadeantes ambientais. 
+-Se houver piora intensa ou refratária, procurar UPA ou emergência hospitalar. 
+ 
+-STEP 4 (Asma persistente moderada a grave) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 12/400 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA A CADA 12/12 HORAS, USO CONTÍNUO. 
+- ENXAGUAR A BOCA E/OU ESCOVAR OS DENTES APÓS O USO. 
+ 
+2) FORMOTEROL + BUDESONIDA 6/200 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA ATÉ A CADA 4/4 HORAS, EM CASO DE CRISE DE ASMA. 
+ 
+ 
+ 
+ 
+1. Retirar desencadeante 
+RINITE ALÉRGICA NA INFÂNCIA: 
+ 
+--- PAGINA 42 ---
+                 
+ 
+42 
+2. Desloratadina sol 2,5mg/mL (Desalex®) ——-——————— 1 frasco 
+Dose: 6-12 meses: 2mL / 1-5 anos: 2,5 mL / 6-11 anos: 5mL, via oral, 1x/ dia 
+por 7 dias. Ou esquema 3 
+3. Fexofenadina sol 6mg/mL (Allegra®) ——————————— 1 frasco 
+Dose: 6m-2 anos: 2,5 mL / > 2 anos: 5 mL, via oral, 12/12 horas por 7 dias. 
+Ou esquema 4 
+4. Dexclorferinamina sol 2mg/5mL (Polaramine®) —————— 1 frasco 
+Dose: 2-6 anos: 1,25mL / 6-12 anos: 2,5 mL / > 12 anos: 5 mL, via oral, 8/8 
+horas por 7 dias. Associado ao esquema 5 
+ 
+5. Prednisolona sol 3mg/mL (Predsim®) ————————- 1 frasco 
+ Tomar Peso/3 mL, via oral, 1x/dia por 5 dias. Associado ao esquema 6 
+6. Fluticasona intranasal (Avamys®) ———————————- 1 frasco 
+Aplicar 1-2 jatos em cada narina à noite por 60 dias 
+ 
+ 
+ 
+ 
+ 
+ 
+Avaliação inicial na UBS 
+Avaliar: 
+- Idade 
+- Estado geral 
+- Frequência respiratória 
+- Tiragens, batimento de asa nasal, gemência 
+- Aceitação alimentar 
+- Saturação (se disponível) 
+ 
+Conduta na UBS 
+1. Exames 
+Hemograma: pode auxiliar, mas não é obrigatório para tratamento ambulatorial. 
+ 
+RX de tórax: solicitar apenas se: 
+- < 2 meses 
+-Tiragens subcostais importantes 
+-Recusa alimentar 
+-Dúvida diagnóstica 
+-Falha terapêutica 
+ 
+PNEUMONIA NA INFÂNCIA: 
+ 
+--- PAGINA 43 ---
+                 
+ 
+43 
+2. Avaliar critérios de internação 
+Encaminhar se: 
+- < 2 meses 
+- Desconforto respiratório moderado/grave 
+- Hipoxemia 
+- Incapacidade de ingestão oral 
+- Piora clínica 
+ 
+Tratamento ambulatorial: 
+1. Amoxicilina susp 250mg/5mL ————————————-- 1 frasco  
+Tomar (Peso/3) mL, via oral, 8/8 horas por 7-10 dias. Associar esquema 4 
+2. Paracetamol gotas 200mg/mL (Tylenol gotas®) ———— 1 frasco  
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre. Ou esquema 5 
+3. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+6 
+4. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————— 1 frasco  
+Tomar (2xPeso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+5. SF 0,9% - 5 mL 
+Fenoterol (Berotec®) Peso/3 gotas 
+Ipratrópio - 20 (≤ 12 anos) - 40 (> 12 anos) gotas 
+Nebulizar 8/8 horas por 5 dias 
+ 
+FALHA TERAPÊUTICA: 
+Sem melhora após 48 horas, porém sem critérios de internação: 
+6. Amoxicilina + Clavulanato susp 400mg/5mL —————— 1 frasco  
+Tomar (Peso/2) mL, via oral, 12/12 horas por 10 dias 
+ 
+ 
+PNEUMONIA ATÍPICA / SITUAÇÕES ESPECIAIS 
+Suspeitar quando: 
+• Lactente afebril + eosinofilia + antecedente de conjuntivite 
+→ Pneumonia afebril do lactente (Chlamydia trachomatis) 
+--- PAGINA 44 ---
+                 
+ 
+44 
+• Quadro respiratório arrastado pós-IVAS 
+• Tosse paroxística + guincho inspiratório 
+→ Coqueluche 
+7. Eritromicina 250mg/5mL ————-———————————— 1 frasco 
+Tomar (Peso/5) mL, via oral, 6/6 horas por 14 dias. Ou esquema 10 
+ 
+8. Azitromicina 200mg/5mL ———————————————— 1 frasco 
+Tomar (Peso/4) mL, via oral, 1x/dia por 5 dias. Ou esquema 11 
+ 
+9. Claritromicina 125mg/5mL ——————————————— 1 frasco 
+Tomar (0,3xPeso) mL, via oral, 12/12 horas por 10 dias. 
+Obs.: Isolamento até 5 dias após ATB em pacientes com Coqueluche 
+ 
+ENCAMINHAR QUANDO: 
+• < 2 meses 
+• Piora clínica 
+• Desconforto respiratório importante 
+• Hipoxemia 
+• Falha terapêutica após troca de antibiótico 
+ 
+ 
+ 
+10. Solicitar Hemograma / EAS / Urocultura  
+Cistite: 
+11. Sulfametoxazol + Trimetoprim 200mg + 40mg/5mL ——— 1 frasco  
+Tomar (Peso/2) mL, via oral, 12/12 horas por 7 dias. Ou esquema 3 
+12. Nitrofurantoína 5mg/mL ——————————————— 1 frasco  
+Tomar (0,3xPeso) mL, via oral, 6/6 horas por 7 dias. Ou esquema 4 
+13. Cefalexina susp 250mg/5mL ———————————— 1 frasco 
+Tomar (Peso/4) mL, via oral, 6/6 horas por 7 dias. Associar ao esquema 5 
+14. Paracetamol gotas 200mg/mL (Tylenol gotas®) ————- 1 frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre. Ou esquema 6 
+ITU NA INFÂNCIA: 
+ 
+--- PAGINA 45 ---
+                 
+ 
+45 
+15. Dipirona gotas 500mg/mL (Novalgina gotas®) ——————- 1 
+frasco 
+Tomar (Peso) gotas até 6/6 horas se dor e/ou febre (> 3 meses). Ou esquema 
+7 
+16. Ibuprofeno gotas 50mg/mL (Alivium gotas®) —————- 1 frasco 
+Tomar (2xPeso) gotas até 6/6 horas se dor e/ou febre (> 6 meses) 
+ 
+Pielonefrite: 
+1. Solicitar USG de vias urinárias (após 1º episódio entre 2-24 meses) 
+2. Internar casos graves / < 3 meses 
+3. Ceftriaxona 250mg/FA ———————————————— 1 FA  
+Diluir 1 FA em 2 mL de lidocaína. Fazer Peso/2,5 mL da solução, IM, 1x/ 
+dia por 7-14 dias
+--- PAGINA 46 ---
+                 
+ 
+46 
+ 
+SAÚDE DO ADULTO 
+ 
+● PA ≥ 140/90 em pelo menos duas consultas. 
+● Medidas Não Farmacológicas: Orientações quanto a perda de peso, dieta, 
+exercício físico, restrição de sal, alcoolismo 
+● Medidas Farmacológicas:  
+○ E1 / > 80 anos 
+➡ Monoterapia 
+➡ Meta: < 140/90 mmHg. 
+○ E1 (DM / IAM / AVC) / E2 ou E3 
+➡ Terapia dupla 
+➡Meta:<130/90 
+HIPERTENSÃO ARTERIAL SISTÊMICA: 
+ 
+--- PAGINA 47 ---
+                 
+ 
+47 
+fonte: Diretriz Brasileira de Hipertensão Arterial – 2025 
+● Em ordem de preferência, de acordo com medicamentos do SUS:  
+○ Obs.: Gota: Evitar tiazídico / Preferir Losartana 
+ 
+Negros / Idosos: (Preferência inicial: bloqueadores de canal de cálcio + diuréticos 
+tiazídicos): 
+1. Anlodipina 5mg/cp ———————————————— 30 cp/mês 
+ Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 02 
+2. Nifedipina 20mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, até 3x/dia. Associar esquema 03 
+3. Hidroclorotiazida 25mg/cp ———————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã. Associar esquema 04 
+4. Captopril 25-50mg/cp —————————————— 60 cp/mês  
+Tomar 01 comp, via oral, 2-3x/dia. Ou esquema 05 
+5. Losartana 50mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite) 
+ 
+Nefropatas / DM / Obesos: (Preferência inicial: inibidores do SRAA — IECA ou 
+BRA) 
+ 
+1. Captopril 25-50mg/cp —————————————— 60 cp/mês  
+Tomar 01 comp, via oral, 2-3x/dia. Ou esquema 02 
+2. Enalapril 5-10mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 03 
+3. Losartana 50mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Associar esquema 04 
+4. Anlodipina 5mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 05 
+5. Nifedipina 20mg/cp ————————————— 30 cp/mês  
+Tomar 01 comp, via oral, até 3x/dia 
+--- PAGINA 48 ---
+                 
+ 
+48 
+ 
+Brancos / Jovens: (Preferência inicial: IECA/BRA + bloqueadores de canal de cálcio 
+ou diurético) 
+ 
+1. Captopril 25-50mg/cp —————————————— 60 cp/mês 
+ Tomar 01 comp, via oral, 2-3x/dia. Ou esquema 02 
+2. Enalapril 5-10mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 03 
+3. Losartana 50mg/cp ————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Associar esquema 04 
+4. Anlodipina 5mg/cp ————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Associar esquema 05 
+5. Propranolol 40mg/cp —————————————— 30 cp/mês 
+ Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 06 
+6. Atenolol 25-50mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite) 
+ 
+Insuficiência cardíaca / DAC: (IECA/BRA + Betabloqueador + Diurético + 
+Espironolactona se indicado) 
+ 
+1. Captopril 25-50mg/cp —————————————— 60 cp/mês  
+Tomar 01 comp, via oral, 2-3x/dia. Ou esquema 02 
+2. Enalapril 5-10mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Ou esquema 03 
+3. Losartana 50mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã (+ noite). Associar esquema 04 
+4. Carvedilol 3,125-25mg/cp ————————————60 cp/mês  
+Tomar 01 comp, via oral, 12/12 horas. Ou esquema 05 
+5. Metroprolol 100mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, pela manhã. Associar esquema 06 
+6. Espironolactona 25mg/cp ———————————— 30 cp/mês 
+ Tomar 01 comp, via oral, pela manhã 
+--- PAGINA 49 ---
+                 
+ 
+49 
+ 
+Rotina anual do hipertenso: 
+● Colesterol total e frações 
+● Potássio (Hipocalemia, pensar em hiperaldosteronismo) 
+● Creatinina  
+● GJ / HbA1c  
+● Ácido úrico  
+● EAS 
+● Eletrocardiograma 
+ 
+ 
+ 
+ 
+PRIMEIRO PASSO (SEMPRE): 
+- CALCULAR RISCO CARDIOVASCULAR (SBC): PREVENT 
+CALCULATOR  
+LINK: CALCULADORA DE RISCO CARDIOVASCULAR 
+ 
+ 
+ 
+Orientar medidas não farmacológicas para TODOS 
+SEM RECEITA: 
+- DIETA SAUDÁVEL 
+- ATIVIDADE FÍSICA 
+- PARAR DE FUMAR 
+- EVITAR ÁLCOOL 
+- DORMIR BEM 
+ 
+ESCOLHA RÁPIDA PELO RISCO 
+ 
+RISCO BAIXO 
+- Tratar só se LDL ≥ 145 mg/dL 
+ 
+RX USO ORAL 
+SINVASTATINA 10–20 MG------------------------------30 cp/mês 
+TOMAR 1 CP VO À NOITE, 1X/DIA. 
+  
+Meta: LDL < 115 | ↓ ≥ 30% 
+ 
+RISCO INTERMEDIÁRIO 
+ 
+RX USO ORAL 
+SINVASTATINA 20–40 MG------------------------------30 cp/mês 
+TOMAR 1 CP VO À NOITE, 1X/DIA 
+ 
+Se não bater meta: ASSOCIAR EZETIMIBA 
+Meta: LDL < 100 | ↓ ≥ 30% 
+ 
+DISLIPIDEMIA: 
+ 
+
+--- PAGINA 50 ---
+                 
+ 
+50 
+ 
+ALTO RISCO 
+ 
+RX USO ORAL 
+ATORVASTATINA 40 MG------------------------------30 cp/mês 
+TOMAR 1 CP, VO, 1X/DIA. 
+: ASSOCIAR EZETIMIBA 10 MG 
+Meta: LDL < 70 | ↓ ≥ 50% 
+ 
+MUITO ALTO RISCO 
+ 
+RX USO ORAL 
+ATORVASTATINA 40–80 MG------------------------------30 cp/mês 
+TOMAR 1 CP VO 1X/DIA 
++ EZETIMIBA 10 MG --------------------------------------30 cp/mês 
+TOMAR 1 CP VO 1X/DIA 
+ 
+Meta: LDL < 55 | ↓ ≥ 50% 
+ 
+ 
+RISCO EXTREMO 
+ 
+RX USO ORAL 
+ESTATINA ALTA DOSE + EZETIMIBA (OBRIGATÓRIO) 
+ 
+Avaliar PCSK9 ou Ácido bempedoico (fora UBS) 
+Meta: LDL < 40 | ↓ ≥ 50% 
+ 
+TG ≥ 500mg/dL:(RISCO DE PANCREATITE) 
+1. CIPROFIBRATO 100MG/CP --------------------------- 30 cp/mês  
+TOMAR 01 COMP, VIA ORAL, 1X/DIA 
+2. FENOFIBRATO 160MG/CP --------------------------- 30 cp/mês 
+TOMAR 01 COMP, VIA ORAL, 1X/DIA 
+3. REAVALIAR TG APÓS 3 MESES DE TRATAMENTO  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+--- PAGINA 51 ---
+                 
+ 
+51 
+ 
+ 
+ 
+ 
+Pelo menos dois exames alterados realizados em dias distintos:  
+-GJ: ≥ 126 mg/dL/  
+-HbA1c: ≥ 6,5%/  
+-TOTG com 75g de glicose 1h: ≥ 209 mg/dL/  
+-TOTG com 75g de glicose 2h: ≥ 200 mg/dL.  
+OU 
+Sintomas clássicos: poliúria, polidipsia e perda de peso inexplicada + 
+glicemia plasmática aleatória ≥ 200 mg/dL também confirma o 
+diagnóstico. 
+ 
+● Alvo terapêutico geral (Idoso): HbA1c < 7% (< 8%) / GJ < 100 mg/dL (< 130) 
+1. MEV (Tabagismo / Atividade física / Alimentação) 
+ 
+HbA1c até 7,5% (GJ < 200 mg/dL): 
+2. Metformina 500-850mg/cp (Glifage®) --> Dose máx: 2g. 
+Intolerância do TGI: Glifage XR® 500mg/cp 
+3. Avaliar após 3 meses 
+ 
+ 
+HbA1c 7,5-9,0%: 
+1. Metformina 500mg/cp (Glifage®) 
+Tomar 01 comp, via oral, 6/6 horas (2g). Ou esquema 2 
+ 
+2. Metformina 850mg/cp 
+Tomar 01 comp, via oral, 8/8 horas. Associar esquema 3 
+ 
+3. Glibenclamida 5mg/cp 
+DIABETES MELLITUS TIPO 2: 
+ 
+--- PAGINA 52 ---
+                 
+ 
+52 
+Tomar 01 comp, via oral, até 4x/dia. Ou esquema 4 
+ 
+4. Gliclazida 30-60mg/cp (Diamicron MR®) 
+Dose máx: 120mg/dia. Ou esquema 5 
+ 
+5. Glimepirida 1-2-3-4mg/cp 
+Dose: 1-4 mg/dia 
+6. Avaliar após 3 meses 
+ 
+ 
+HbA1c > 9,0% (GJ > 300mg/dL): 
+Assintomáticos: 
+1. Metformina 500mg/cp (Glifage®) 
+Tomar 01 comp, via oral, 6/6 horas (2g). Ou esquema 2 
+2. Metformina 850mg/cp 
+Tomar 01 comp, via oral, 8/8 horas. Associar esquema 3 
+3. Glibenclamida 5mg/cp 
+Tomar 01 comp, via oral, até 4x/dia. 
+4. Encaminhar à endocrinologia 
+Sintomáticos: 
+1. Metformina 500mg/cp (Glifage®) 
+Tomar 01 comp, via oral, 6/6 horas (2g). Ou esquema 2 
+ 
+2. Metformina 850mg/cp 
+Tomar 01 comp, via oral, 8/8 horas. Associar esquema 3 
+ 
+3. Insulina NPH 100U/mL ————————————————— 1 frasco 
+ 
+4. Insulina Regular 100U/mL ————————————— 1 frasco  
+Dose inicial: 0,5 U/kg. 2/3 pela manhã (2/3 NPH + 1/3 Regular) / 1/3 à noite 
+(1/2 NPH + 1/2 Regular) 30 minutos antes da alimentação. 
+ 
+5. Seringas e Agulhas ———————————————— —60 unidades 
+ 
+--- PAGINA 53 ---
+                 
+ 
+53 
+6. Encaminhar à endocrinologia 
+ 
+Obs.: Rastreio anual Fundoscopia (Encaminhar à Oftalmologia) 
+DRC: ClCr < 30 = Suspender Hipoglicemiantes orais 
+Alteração em pulsos (Encaminhar à Cirurgia Vascular) 
+ 
+ 
+ 
+ 
+1. Amitriptilina 25-75mg/cp ————————————— 30 cp/mês Tomar 
+01 comp, via oral, à noite. Ou esquema 2 
+2. Duloxetina 30mg/cp ——————————————— 30 cp/mês Tomar 
+01 comp, via oral, 1x/dia. Ou esquema 3 
+3. Gabapentina 300-600mg/cp—————————————90 cp/mês 
+Tomar 01 comp, via oral, 8/8 horas. Ou esquema 4 
+4. Pregabalina 75-150mg/cp ————————————— 60 cp/mês 
+Tomar 01 comp, via oral, 12/12 horas 
+ 
+ 
+Leve: 
+1. Cefalexina 500mg/cp —————————————— 28 cp  
+Tomar 01 comp, via oral, 6/6 horas por 7 dias. Ou esquema 2 
+ 
+2. Amoxicilina + Clavulanato 500/125mg/cp —————— 21 cp  
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. Ou esquema 3 
+ 
+3. Ciprofloxacino 500mg/cp ———————————— 14 cp 
+Tomar 01 comp, via oral, 12/12 horas por 7 dias. Ou esquema 4 
+ 
+NEUROPATIA PERIFÉRICA: 
+ 
+PÉ DIABÉTICO: 
+ 
+--- PAGINA 54 ---
+                 
+ 
+54 
+4. Clindamicina 300mg/cp ———————————— 28 cp 
+Tomar 01 comp, via oral, 6/6horas por 7 dias 
+ 
+Moderada / Grave 
+1. Referenciar para internação 
+ 
+ 
+1. Solicitar Hemograma / Ferritina / Saturação de Transferrina / Ur / Cr 
+2. Idoso: Avaliar necessidade EDA / Sangue oculto nas fezes 
+3. Hb < 7 / Instabilidade hemodinâmica = Referenciar internação  
+VCM > 100: 
+1. Ácido Fólico 5mg/cp ——————————————— 90 cp 
+Tomar 01 comp, via oral, 1x/dia. Associar esquema 2 
+2. Cianocobalamina 1.000mcg/cp —————————— 90 cp  
+Tomar 01 comp, via oral, 1x/dia. 
+3. Reavaliar após 3 meses. Refratário referenciar Hematologia 
+ 
+ 
+Carência de ferro: 
+1. Sulfato Ferroso 300mg —————————————— 90 cp/mês  
+Tomar 01 comp, via oral, 8/8 horas 30 minutos antes das refeições. Ou 
+esquema 02 
+2. Combiron Fólico —————————————— 30 cp/mês 
+Tomar 01 comp, via oral, 1x/dia 30 min antes do almoço. Ou esquema 3 
+ 
+3. Noripurum 100mg/5mL ——————————————— Déficit Fe 
+Fazer 01-02 amp + 100-200 mL SF 0,9%, EV, em 15-30 minutos cada 3 dias 
+Obs.: Avaliar após 3 meses (controle com Ferritina) 
+ 
+ 
+ 
+OSTEOPOROSE: 
+ 
+INVESTIGAÇÃO INICIAL E ABORDAGEM DA ANEMIA: 
+ 
+--- PAGINA 55 ---
+                 
+ 
+55 
+ 
+ 
+Densitometria óssea (> 65 anos / Tabagismo / Etilismo / IMC < 19 / Fratura 
+patológica / Corticóide > 3 meses) à  Z-score ≥ 2,5 ou T-score ≤ -2,5 
+1. Solicitar 25-OH-Vitamina D / Cálcio / TSH / TGO / TGP / Ur / Cr 
+2. Carbonato de cálcio 600mg + Vitamina D 400UI —————— 60cp  
+Tomar 01 comp, via oral, à noite 1x/dia. Associado ao esquema 7 
+ 
+3. Alendronato de Sódio 70mg ———————————————— 8 cp 
+Tomar 01 comp, via oral, em jejum 1x por semana. Não deitar após tomada.  
+ 
+Se 25-OH-Vitamina D < 20 ng/mL 
+4. Vitamina D 50.000 UI ———————————————————— 8 cp 
+Tomar 01 comp, via oral, 1x/semana por 8 semanas 
+5. Vitamina D 1.000 UI —————————————— uso contínuo  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+ 
+ 
+1. Radiografia da articulação 
+2. Dipirona 500mg/cp ———————————————— 20 cp 
+ Tomar 01 comp, via oral, 6/6 horas por 5 dias. Ou esquema 3 
+3. Paracetamol 500mg/cp -————————————— 20 cp  
+Tomar 01 comp, via oral, 6/6 horas por 5 dias. Associar esquema 4 
+4. Diclofenaco 50mg/cp ——————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 5 
+5. Ibuprofeno 600mg/cp ———————————————— 15 cp  
+Tomar 01 comp, via oral, até 6/6 horas por 5 dias. Ou esquema 6 
+6. Cetoprofeno 50-100mg/cp ————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 7 
+OSTEOARTRITE: 
+ 
+--- PAGINA 56 ---
+                 
+ 
+56 
+7. Indometacina 50mg/cp ———————————————— 15 cp 
+ Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 8 
+8. Naproxeno 500mg/cp ———————————————— 10cp  
+Tomar 01 comp, via oral, 12/12 horas por 5 dias. Ou esquema 9 
+9. Meloxicam 7,5mg/cp ———————————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia por 5 dias 
+ 
+ 
+ 
+TSH alto / T4 livre baixo ou normal / Solicitar anti-TPO 
+1. Levotiroxina 50mcg/cp (Puran T4®) ————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia em jejum. Aumentar 12,5mg cada semana, 
+até manutenção: 1,6mcg/kg/dia 
+2. Acompanhar TSH após 6 semanas 
+3. Hipotireoidismo secundário/terciário = Encaminhar à endocrinologia 
+ 
+ 
+ 
+TSH baixo / T4 livre alto / Solicitar T3: 
+ 
+1. Tiamazol 5mg/cp (Tapazol®) ——————————— 90 cp/mês  
+Tomar 01 comp, via oral, 8/8 horas por 4 semanas. Retornar ao 
+ambulatório. Ou esquema 2 (Gestante 1ºtrimestre / Durante crise) 
+ 
+2. Propiltiouracil 100mg/cp ————————————— 90 cp/mês  
+Tomar 01 comp, via oral, 8/8 horas por 4 semanas. Retornar ao 
+ambulatório. Associar esquema 3 
+ 
+3. Propranolol 40mg/cp ——————————— 60 cp/mês  
+Tomar 01 comp, via oral, 12/12 horas por 4 semanas. Retornar ao 
+ambulatório 
+4. Acompanhar TSH e T4 livre após 6 semanas 
+5. Hipertireoidismo secundário/terciário = Encaminhar à endocrinologia 
+ 
+ 
+ 
+ 
+1. Compressa com água morna 
+HIPOTIREOIDISMO PRIMÁRIO: 
+ 
+HIPERTIREOIDISMO: 
+ 
+ABSCESSO CUTÂNEO / CELULITE: 
+ 
+--- PAGINA 57 ---
+                 
+ 
+57 
+2. Cefalexina 500mg/cp ——————————————— 28 cp 
+ Tomar 01 comp, via oral, 6/6 horas por 7 dias 
+3. Drenar se flutuação 
+ 
+ 
+ 
+ 
+-Elevar os membros inferiores. 
+1. Clindamicina 300mg/cp———————————  
+Tomar 01 comp, via oral, 6/6 horas por 7-14 dias. Ou esquema 2 
+2. Sulfametoxazol + Trimetoprim 800/160mg/cp ————Tomar 01 comp, 
+via oral, 12/12 horas por 7-14 dias. Ou esquema 3 
+3. Cefalexina 500mg/cp ——————————— Tomar 01 comp, via 
+oral, 6/6 horas por 7-14 dias. Associar esquema 4 
+4. Permanganato de potássio 100mg/cp ————————— 10 cp 
+Diluir 01 comp em 2 litros de água morna. Fazer compressa de 15 minutos, 
+3x/dia, por 5 dias. 
+ 
+Se bolhas: 
+5. Neomicina + Bacitracina pomada ——————————1 tubo  
+Aplicar na pele lesada 3x/dia 
+ 
+ 
+Crostoso poucas lesões: 
+1. Mupirocina 2% creme ———————————————1 tubo  
+Aplicar na lesão 8/8 horas por 7 dias 
+ 
+Crostoso muitas lesões: 
+1. Penicilina Benzatina 1.200.000U ———————————1 amp  
+Aplicar 1 amp, IM, em região glútea, dose única. Ou esquema 2 
+ERISIPELA: 
+ 
+IMPETIGO: 
+ 
+--- PAGINA 58 ---
+                 
+ 
+58 
+2. Sulfametoxazol 800mg + Trimpetoprim 160mg/cp ———————14 cp 
+Tomar 01 comp, via oral, 12/12 horas por 7 dias 
+ 
+Bolhoso: 
+1. Mupirocina 2% creme ————————————————1 tubo  
+Aplicar na lesão 8/8 horas por 7 dias. Ou esquema 2 
+2. Cefalexina 500mg ————————————————— 28 cp 
+Tomar 01 comp, via oral, 6/6 horas por 7 dias. Ou esquema 3 
+3. Sulfametoxazol 800mg + Trimpetoprim 160mg/cp ———————14 cp 
+Tomar 01 comp, via oral, 12/12 horas por 7 dias. Ou esquema 4 
+4. Clindamicina 300mg/cp ——————————————— 28 cp  
+Tomar 01 comp, via oral, 6/6 horas Por 7 dias 
+ 
+ 
+ 
+● Solicitar Hemograma / EAS/ Urocultura  
+Cistite: 
+1. Pyridium 100mg/cp ————————————————— 6 cp  
+Tomar 01 comp, via oral, 12/12 horas por 3 dias. Associar esquema 2 
+2. Ciprofloxacino 500mg/cp ————————————— 14 cp  
+Tomar 01 comp, via oral, 12/12 horas por 7 dias. Ou esquema 3 
+3. Sulfametoxazol + Trimetoprim 800/160mg/cp ——————— 14 cp  
+Tomar 01 comp, via oral, 12/12 horas por 7 dias. Ou esquema 4 
+4. Fosfomicina 3g ———————————————————— 1 env 
+ Diluir 1 envelope em água. Tomar à noite em dose única (Alt: Mulheres) 
+ 
+ 
+ 
+INFECÇÃO DO TRATO URINÁRIO: 
+ 
+PROSTATITE: 
+ 
+--- PAGINA 59 ---
+                 
+ 
+59 
+1. Ciprofloxacino 500mg/cp ————————————— 56 cp  
+Tomar 01 comp, via oral, 12/12 horas por 28 dias 
+ 
+ 
+● Solicitar PSA total e livre / Encaminhar ao Urologista 
+1. Doxasozina 4mg/cp ———————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia à noite 
+2. Finasterida 5mg/cp ———————————————— 30cp/mês  
+Tomar 01 comp, via oral, 1x/dia à noite 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+● Submeter ao CURB-65 (Ambulatorial: 0-1) 
+HIPERPLASIA PROSTÁTICA BENIGNA: 
+ 
+PNEUMONIA COMUNITÁRIA: 
+ 
+--- PAGINA 60 ---
+                 
+ 
+60 
+ 
+ 
+Sem comorbidades: 
+1. Azitromicina 500mg/cp ————————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia por 5 dias 
+ 
+Comorbidades (DM / DPOC / CA): 
+ 
+1. Levofloxacino 500mg/cp ——————————————— 7 cp 
+Tomar 01 comp, via oral, 1x/dia por 7 dias. Ou associação de esquema 2 + 3 
+ 
+
+--- PAGINA 61 ---
+                 
+ 
+61 
+2. Azitromicina 500mg/cp —————————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia por 5dias. Associar esquema 3 
+3. Amoxicilina 500mg/cp ——————————————— 21 cp 
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. 
+ 
+ 
+Idosos acamados / Suspeita de broncoaspiração .: 
+1. Clindamicina 300mg/cp ———————————— 28 cp  
+Tomar 02 comp, via oral, 6/6 horas por 7 dias 
+2. Observar critérios de internação 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ASMA: 
+ 
+--- PAGINA 62 ---
+                 
+ 
+62 
+ 
+ 
+ 
+-STEP 1 e STEP 2 (Asma intermitente ou leve persistente) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 6/200 MCG————————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA SOB DEMANDA, PODENDO REPETIR ATÉ A CADA 4/4 
+HORAS, EM CASO DE DESCONFORTO RESPIRATÓRIO. 
+APÓS O USO, ENXAGUAR A BOCA OU ESCOVAR OS DENTES. 
+ 
+RECOMENDAÇÕES : 
+
+--- PAGINA 63 ---
+                 
+ 
+63 
+-Evite contato com substâncias que possam causar alergias, como: poeira, fumaça, 
+tabaco, perfumes, mofo, ácaros, ratos e baratas. 
+-Use as medicações conforme orientação médica, mesmo quando os sintomas 
+forem leves. 
+-Procure IMEDIATAMENTE UMA UNIDADE DE EMERGÊNCIA se ocorrer: 
+-Febre persistente 
+-Aumento da tosse com secreção 
+-Falta de ar mesmo após o uso correto da medicação 
+-Sensação de fraqueza intensa 
+ 
+-STEP 3 (Asma persistente moderada) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 6/200 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA A CADA 12/12 HORAS, USO CONTÍNUO. 
+- ENXAGUAR A BOCA E/OU ESCOVAR OS DENTES APÓS O USO. 
+2) FORMOTEROL + BUDESONIDA 6/200 MCG—————————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA ATÉ A CADA 4/4 HORAS, EM CASO DE NOVA CRISE DE 
+ASMA. 
+ 
+RECOMENDAÇÕES: 
+-Use as medicações diariamente, mesmo na ausência de sintomas. 
+-Evite fatores desencadeantes ambientais. 
+-Se houver piora intensa ou refratária, procurar UPA ou emergência hospitalar. 
+ 
+-STEP 4 (Asma persistente moderada a grave) 
+USO INALATÓRIO 
+1) FORMOTEROL + BUDESONIDA 12/400 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA A CADA 12/12 HORAS, USO CONTÍNUO. 
+- ENXAGUAR A BOCA E/OU ESCOVAR OS DENTES APÓS O USO. 
+2) FORMOTEROL + BUDESONIDA 6/200 MCG———————————— 01 
+FRASCO 
+INALAR 01 CÁPSULA ATÉ A CADA 4/4 HORAS, EM CASO DE CRISE DE ASMA. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DPOC: 
+ 
+--- PAGINA 64 ---
+                 
+ 
+64 
+ 
+ 
+ 
+ 
+ 
+DPOC – GRUPO A (Sintomas leves / baixo risco de exacerbação) 
+ 
+-MANUTENÇÃO – LABA (uso contínuo) 
+RX USO INALATÓRIO 
+1. XINAFOATO DE SALMETEROL 25 MCG – AEROSSOL———————— 01 
+FRASCO 
+INALAR 02 JATOS VIA INALATÓRIA, A CADA 12 HORAS, USO CONTÍNUO. 
+ 
+INFORMAÇÕES IMPORTANTES 
+-LABA de uso regular para controle de sintomas. 
+-Não usar como medicação de resgate. 
+-Orientar técnica inalatória correta. 
+ 
+-RESGATE – SABA 
+RX USO INALATÓRIO 
+2. SALBUTAMOL 100 MCG – AEROSSOL—————————— 01 FRASCO 
+INALAR 02 JATOS VIA INALATÓRIA ATÉ A CADA 6 HORAS, SE NECESSÁRIO. 
+ 
+INFORMAÇÕES IMPORTANTES 
+-Medicação de alívio rápido. 
+-Se uso frequente → reavaliar esquema de manutenção. 
+ 
+ 
+DPOC – GRUPO B (Mais sintomas, baixo risco de exacerbação) 
+ 
+
+--- PAGINA 65 ---
+                 
+ 
+65 
+- MANUTENÇÃO – LAMA + LABA (preferencialmente em dispositivo único) 
+RX USO INALATÓRIO 
+1. TIOTRÓPIO + OLODATEROL 2,5 + 2,5 MCG – AEROSSOL————— 01 
+FRASCO 
+INALAR 02 JATOS VIA INALATÓRIA, 1 VEZ AO DIA, USO CONTÍNUO. 
+ 
+INFORMAÇÕES IMPORTANTES: 
+-Associação LAMA + LABA melhora dispneia e qualidade de vida. 
+-Uso diário, mesmo sem sintomas. 
+-Não substitui medicação de resgate. 
+ 
+- RESGATE – SABA 
+RX USO INALATÓRIO 
+2. SALBUTAMOL 100 MCG – AEROSSOL——————— 01 FRASCO 
+INALAR 02 JATOS VIA INALATÓRIA ATÉ A CADA 6 HORAS, SE NECESSÁRIO. 
+ 
+INFORMAÇÕES IMPORTANTES: 
+-Pode ser associado a SAMA se crise mais intensa. 
+-Uso frequente indica necessidade de ajuste da manutenção. 
+ 
+DPOC – GRUPO E (Alto risco de exacerbação) 
+ 
+- MANUTENÇÃO – LAMA + LABA 
++ CONSIDERAR CORTICOIDE INALATÓRIO 
+Opção 1 – Tripla terapia em dispositivo único (PREFERIDA) 
+ 
+RX USO INALATÓRIO 
+1. FLUTICASONA + UMECLIDÍNIO + VILANTEROL 
+100 + 62,5 + 25 MCG – AEROSSOL———————————— 01 FRASCO 
+INALAR 01 JATO VIA INALATÓRIA, 1 VEZ AO DIA, USO CONTÍNUO. 
+INFORMAÇÕES IMPORTANTES 
+ 
+Indicado se: 
+-Eosinófilos > 300 células/mcL OU 
+-100 células/mcL + exacerbações frequentes OU 
+-Asma associada 
+-Enxaguar a boca após o uso (risco de candidíase). 
+ 
+Opção 2 – LAMA + LABA + CI em dispositivos separados 
+RX USO INALATÓRIO 
+1. TIOTRÓPIO + OLODATEROL 2,5 + 2,5 MCG – AEROSSOL——————— 01 
+FRASCO 
+INALAR 02 JATOS, 1 VEZ AO DIA. 
+ 
+2. DIPROPIONATO DE BECLOMETASONA 200 MCG – AEROSSOL————— 01 
+FRASCO 
+INALAR 02 JATOS A CADA 12 HORAS. 
+ 
+INFORMAÇÕES IMPORTANTES 
+--- PAGINA 66 ---
+                 
+ 
+66 
+-Alternativa quando tripla terapia em dispositivo único não está disponível. 
+-CI só deve ser usado em pacientes bem indicados. 
+ 
+- RESGATE – SABA ou SAMA 
+RX USO INALATÓRIO 
+3. SALBUTAMOL 100 MCG – AEROSSOL—————————————— 01 
+FRASCO 
+INALAR 02 JATOS VIA INALATÓRIA ATÉ A CADA 6 HORAS, SE NECESSÁRIO. 
+ 
+OU 
+ 
+BROMETO DE IPRATRÓPIO 25 MCG/DOSE – AEROSSOL 
+INALAR 02 JATOS VIA INALATÓRIA ATÉ A CADA 6 HORAS, SE NECESSÁRIO. 
+ 
+INFORMAÇÕES IMPORTANTES 
+-SABA ou SAMA podem ser usados isolados ou associados. 
+-Preferir ipratrópio se tremor ou taquicardia com beta-agonista. 
+ 
+ 
+ 
+1. Retirar desencadeantes 
+2. Soro fisiológico 0,9% 
+Fazer lavagem nasal com 40mL em cada narina 
+ 
+3. Dexclorferinamina 2mg/cp (Polaramine®) ———————— 15 cp 
+ Tomar 01 comp, via oral, 8/8 horas à noite por 5 dias. Ou esquema 4 
+4. Loratadina 10mg/cp —————————————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia à noite por 5 dias. Ou esquema 5 
+5. Hidroxizina 25mg/cp (Hixizine®) ————————————— 5cp  
+Tomar 01 comp, via oral, 1x/dia à noite por 5 dias. Ou esquema 6 
+6. Desloratadina 5mg/cp ————————————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia à noite por 5 dias. Ou esquema 7 
+7. Fexofenadina 60mg/cp (Allegra®) ———————————10 cp  
+Tomar 01 comp, via oral, 12/12 horas por 5 dias. Ou esquema 8 
+8. Fexofenadina + Pseudoefedrina 60/120mg/cp (Allegra D®) – 
+ 10 cp  
+Tomar 01 comp, via oral, 12/12 horas por 5 dias. Ou esquema 9 
+RINITE ALÉRGICA: 
+ 
+--- PAGINA 67 ---
+                 
+ 
+67 
+9. Bromofeniramina+ Fenilefriina 12/15mg/cp (Decongex plus®) — 10 cp  
+Tomar 01 comp, via oral, 12/12 horas por 5 dias. Associar esquema 10 
+10. Budesonida spray nasal 50mcg/jato ————————— 1 spray  
+Aplicar 1-2 jatos em cada narina por 30 dias. Ou esquema 11 
+11. Fluticasona spray nasal ——————————————— 1 spray  
+Aplicar 1-2 jatos em cada narina por 30 dias 
+ 
+ 
+ 
+1. Soro fisiológico 0,9% 
+Fazer lavagem nasal com 40mL em cada narina várias vezes ao dia 
+2. Amoxicilina + Clavulanato 500/125mg/cp ——————— 21 cp  
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. Ou esquema 3 (Alérgicos) 
+3. Levofloxacino 750mg/cp —————————————— 7cp  
+Tomar 01 comp, via oral, 1x/dia por 7 dias. Associar esquema 4 
+4. Prednisona 5mg/cp ————————————————— 10 cp  
+Tomar 01 comp, via oral, 12/12 horas por 5 dias. Associar esquema 5 
+5. Loratadina + Pseudoefedrina xarope —————————1 frasco  
+Tomar 5 mL, via oral, 12/12 horas por 5 dias 
+6. Dipirona 500mg/cp —————————————————— 1 cx 
+Tomar 01 comp, via oral, até 6/6 horas se dor e/ou febre. Ou esquema 7 
+7. Paracetamol 500mg/cp ———————————————— 1 cx  
+Tomar 01 comp, via oral até 6/6 horas se dor e/ou febre. 
+ 
+ 
+ 
+● Rastreio ativo respiratório crônico (Tosse ≥ 3 sem) 
+● Solicitar Rx de tórax + Escarro (Baciloscopia 2 amostras - momento da 
+consulta e manhã seguinte) 
+○ Positivo: Solicitar Anti-HIV 
+○ Controle: Baciloscopia ao final do 2º/4º/6º mês 
+RINOSSINUSITE: 
+ 
+TUBERCULOSE PULMONAR: 
+ 
+--- PAGINA 68 ---
+                 
+ 
+68 
+ 
+ 
+Esquemas Farmacológicos: 
+ 
+1. RIPE ———————————————————————— 30 cp/mês 
+Tomar 01 comp, via oral, 1x/dia por 2 meses. Após término Iniciar esquema 2 
+2. RI ————————————————————————— 30 cp/mês 
+Tomar 01 comp, via oral, 1x/dia por 4 meses  
+ 
+Gestante: 
+1. Encaminhar para pré-natal de alto risco: 
+2. Impossibilidade: 
+Piridoxina 50mg/cp ——————————————————— 30 cp/mês 
+Tomar 01 comp, via oral, 1x/dia durante o tratamento RIPE 
+ 
+Encaminhar ao Infectologista (resistência, intolerância, outras formas de TB) 
+Obs.: Avaliar necessidade de solicitar TDO para o agente de saúde 
+ 
+ 
+--- PAGINA 69 ---
+                 
+ 
+69 
+ 
+ 
+ 
+ 
+ 
+Solicitar PPD em contactantes  
+assintomáticos: 
+ 
+ 
+○ ≥ 5 mm: Solicitar raio-x de 
+tórax 
+■ Raio-x de tórax 
+normal: Tratar 
+ILTB (Infecção 
+Latente da 
+Tuberculose). 
+■ Raio-x de tórax 
+suspeito: Investigar 
+TB (tuberculose 
+ativa) 
+○ < 5 mm: Repetir PPD em 
+8 sem 
+■ Aumento ≥ 10 mm 
+em relação ao 
+primeiro teste: 
+Solicitar Raio-x de 
+tórax. Seguir 
+mesma conduta 
+anterior. 
+■ Sem aumento em 
+10 mm: Alta 
+Ilustração: Realização do PPD. 
+Fonte: MS/PNCT, 2013. 
+ 
+ 
+ 
+1. Isoniazida 75mg/cp ———————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia por 9 meses. Ou esquema 2 
+2. Rifampicina 150mg/cp —————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia por 4 meses. 
+INFECÇÃO LATENTE DE TUBERCULOSE: 
+--- PAGINA 70 ---
+                 
+ 
+70 
+ 
+ 
+ 
+ 
+ 
+1. Busca ativa e avaliação clínica 
+- Realizar investigação ativa em pacientes com lesões de pele suspeitas. 
+- Avaliar lesões cutâneas 
+-Máculas, placas ou áreas infiltradas 
+- Hipo ou anestesia associada 
+- Bordas mal definidas ou bem delimitadas 
+ 
+2. Teste de sensibilidade (obrigatório na UBS) 
+Avaliar sensibilidade na lesão e ao redor: 
+- Térmica 
+- Dolorosa 
+- Tátil 
+- Alteração de sensibilidade = forte suspeita de hanseníase 
+ 
+3. Avaliação neurológica periférica 
+Palpar nervos periféricos, principalmente: 
+- Nervo ulnar 
+- Nervo tibial posterior 
+ 
+Avaliar: 
+- Espessamento 
+- Dor à palpação 
+- Déficit motor ou sensitivo 
+ 
+4. Suspeita clínica 
+Na presença de: 
+- Lesão de pele + alteração de sensibilidade OU 
+- Espessamento neural 
+ 
+à Solicitar baciloscopia (quando disponível). 
+Diagnóstico é essencialmente clínico — baciloscopia auxilia, mas não é obrigatória 
+para iniciar tratamento. 
+ 
+5. Classificação operacional (UBS) 
+- Paucibacilar (PB): Até 5 lesões cutâneas 
+Tratamento com 6 cartelas 
+ 
+-Multibacilar (MB): Mais de 5 lesões cutâneas 
+Tratamento com 12 cartelas 
+ 
+ 
+HANSENÍASE: 
+ 
+--- PAGINA 71 ---
+                 
+ 
+71 
+1. Rifampicina 300mg/cp —————————————— 02 cp/mês 
+Tomar 02 cp, via oral, 1x/mês (dose supervisionada). Associar esquema 2 
+2. Dapsona 100mg/cp ———————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia. Associar esquema 3 
+3. Clofazimina 100mg/cp ——————————————— 03 cp/mês 
+Tomar 03 comp, via oral, 1x/mês (dose supervisionada). Associar esquema 
+4 
+4. Clofazimina 50mg/cp ——————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia 
+ 
+ 
+ 
+1. Itraconazol 100mg/cp ———————————————— 56 cp 
+Tomar 01 comp, via oral, 1x/dia por 8 semanas. Ou esquema 2 
+2. Terbinafina 250mg/cp ——————————————— 28 cp  
+Tomar 01 comp, via oral, 1x/dia por 4 semanas. Associar esquema 3 
+3. Cetoconazol 2% shampoo ————————————— qsp 40g 
+Aplicar no couro cabeludo, deixar agir por 10 minutos. Fazer 
+procedimento 3x/sem por 4 semanas. 
+ 
+ 
+ 
+ 
+1. Itraconazol 100mg/cp ———————————————— 28 cp  
+Tomar 01 comp, via oral, 1x/dia por 4 semanas. Ou esquema 2 
+2. Terbinafina 250mg/cp ——————————————— 28cp  
+Tomar 01 comp, via oral, 1x/dia por 4 semanas 
+Poucas lesões: 
+3. Isoconazol 1% creme ————————————————1 tubo  
+Aplicar na região 2x/dia por 28 dias. Ou esquema 4 
+TINEA CAPITIS: 
+ 
+TINEA CORPORIS / CRURIS / PEDIS: 
+ 
+--- PAGINA 72 ---
+                 
+ 
+72 
+4. Terbinafina 1% creme ———————————————1 tubo  
+Aplicar na região 2x/dia por 28 dias 
+--- PAGINA 73 ---
+                 
+ 
+73 
+ 
+ 
+ 
+1. Cetoconazol creme 2% ——————————————— 1 tubo  
+Aplicar na lesão, após limpeza da pele, 8/8 horas, por 14 dias. Ou 
+esquema 2 
+2. Terbinafina 250mg/cp ———————————————— 28 cp  
+Tomar 1 comp, via oral, 1x/dia por 4 semanas 
+ 
+ 
+ 
+1. Isoconazol 1% creme —————————————————1 tubo  
+Aplicar na região 2x/dia por 28 dias. Ou esquema 2 
+2. Terbinafina 1% creme ————————————————1 tubo  
+Aplicar na região 2x/dia por 28 dias 
+Lesão extensa: 
+3. Fluconazol 150mg/cp ———————————————— 14 cp  
+Tomar 01 comp, via oral, 1x/dia por 14 dias 
+ 
+Infecção secundária: 
+4. Mupirocina 2% pomada ———————————————1 tubo  
+Aplicar nas lesões de 12/12 horas por 14 dias 
+ 
+ 
+ 
+1. Cetoconazol creme 2% ——————————————— 1 tubo  
+Aplicar na lesão, após limpeza da pele, 8/8 horas, por 14 dias 
+Obs.: Pitiríase Alba não descama e piora com o sol 
+ 
+ 
+ 
+ONICOMICOSE: 
+ 
+CANDIDÍASE CUTÂNEA: 
+ 
+PITIRÍASE VERSICOLOR: 
+ 
+ESCABIOSE: 
+ 
+--- PAGINA 74 ---
+                 
+ 
+74 
+ 
+1. Ivermectina 6mg 
+Dose: 15-25kg: 1/2 cp / 26-50kg: 1cp / > 50kg: 2cp, via oral, dose única. 
+Repetir com 14 dias 
+2. Tratar contactantes domiciliares 
+ 
+ 
+1. Ivermectina 6mg 
+Dose: 15-25kg: 1/2 cp / 26-50kg: 1cp / > 50kg: 2cp, via oral, dose única. 
+Repetir com 14 dias 
+ 
+ 
+ 
+ 
+Geral: 
+1. Albendazol 400mg/cp ————————————————— 3 cp  
+Tomar 01 comp, via oral, 1x/dia por 3 dias. Associar esquema 2 
+2. Secnidazol 1g/cp ——————————————————1 cp  
+Tomar 01 comp, via oral, 1x/dia após término do Albendazol 
+ 
+Amebíase (Diarréia mucossanguinolenta): 
+1. Metronidazol 250mg/cp ———————————————— 21 cp  
+Tomar 02 comp, via oral, 8/8 horas por 7 dias 
+ 
+ 
+Leve: 
+1. Peróxido de Benzoíla 5% gel (Benzac AC) ———————— 60g  
+Aplicar nas áreas com acne, após limpeza da pele com água e sabonete à 
+noite. Ou esquema 2 
+2. Tretinoina 0,025% (Vitanol-A) —————————————— 30g  
+Aplicar nas áreas com acne, após limpeza da pele com água e sabonete à 
+noite 
+PEDICULOSE: 
+ 
+PARASITOSE INTESTINAL: 
+ 
+ACNE: 
+--- PAGINA 75 ---
+                 
+ 
+75 
+ 
+Moderada: 
+1. Peróxido de Benzoíla 5% gel + Clindamicina 1% (Clindoxyl®)— 30g  
+Aplicar nas áreas com acne, após limpeza da pele com água e sabonete à 
+noite 
+ 
+ 
+ 
+ 
+1. Triancinolona acetonida tópica (Omcilon A Orabase®) —— 1 tubo  
+Aplicar sobre lesão 1-3x/dia por 7 dias  
+ 
+ 
+ 
+Uréia ———————————————— 20% 
+Ácido salicílico ——————————— 10% 
+Creme ——————————————— 30g 
+● Aplicar na lesão (verruga) e ocluir com esparadrapo. Fazer o procedimento 
+2x/ dia até resolução 
+ 
+ 
+ 
+ 
+Crise: 
+1. Sumatriptana 25mg/cp ——————————————— 9 cp  
+Tomar 01 comp, via oral, 8/8 horas por 3 dias. Associar esquema 2 
+2. Paracetamol 500mg/cp ——————————————— 9 cp  
+Tomar 01 comp, via oral, 6/6 horas por 3 dias 
+ 
+Profilático: 
+DOENÇA AFTOSA: 
+ 
+VERRUGA VULGAR: 
+ 
+CEFALEIA MIGRÂNEA: 
+ 
+--- PAGINA 76 ---
+                 
+ 
+76 
+1. Propranolol 40mg/cp ———————————————— 1cx  
+Tomar 01 comp, via oral, 12/12 horas (Bom para jovens) 
+2. Amitripitilina 25mg/cp ———————————————— 1cx  
+Tomar 01 comp, via oral, 1x/dia à noite (Evitar em obesos) 
+3. Topiramato 25mg/cp ———————————————— 1cx  
+Tomar 01 comp, via oral, 12/12 horas 
+ 
+ 
+ 
+1. Ciclobenzaprina 5mg/cp (Musculare® / Miosan®)———— 21 cp  
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. Associar esquema 2 
+ 
+2. Carisoprodol (Tandrilax® / Trimusk® / Mioflex-A®) ——— 14 cp  
+Tomar 01 comp, via oral, 12/12 horas por 7 dias. 
+ 
+Dor refratária:  
+Trometamol 10mg/cp (Toragesic®) ————————————— 15 cp 
+Tomar 01 comp, via oral, 8/8 horas por 5 dias 
+1. Encaminhar ao especialista 
+ 
+ 
+ 
+ 
+1. Dipirona 1g/cp ————————————————————— 1cx 
+Tomar 01 comp, via oral, até 6/6 horas se dor. Ou esquema 2 (Alérgicos) 
+ 
+2. Paracetamol 500mg/cp ——————————————— 1cx  
+Tomar 01 comp, via oral, até 6/6 horas se dor. Associar esquema 3 
+ 
+DORSALGIA / DOR INTENSA / DISCOPATIA: 
+ 
+FIBROMIALGIA: 
+ 
+--- PAGINA 77 ---
+                 
+ 
+77 
+3. Ciclobenzaprina 5mg/cp (Musculare® / Miosan®) —— 90cp/mês  
+Tomar 01 comp, via oral, 8/8 horas. Ou esquema 4 
+ 
+4. Amitriptilina 25mg/cp ——————————————— 30cp/mês  
+Tomar 01 comp, via oral, pela noite por. Ou esquema 5 
+ 
+5. Duloxetina 30mg/cp ———————————————— 30 cp/mês  
+Tomar 01 comp, via oral, 1x/dia. Ou esquema 6 
+ 
+6. Gabapentina 300-600mg/cp —————————————90 cp/mês  
+Tomar 01 comp, via oral, 8/8 horas. Ou esquema 7 
+ 
+7. Pregabalina 75-150mg/cp ————————————— 60 cp/mês  
+Tomar 01 comp, via oral, 12/12 horas 
+ 
+ 
+ 
+Diferenciar síncope (vista escura) x vertigem 
+ 
+VERTIGEM: 
+ 
+--- PAGINA 78 ---
+                 
+ 
+78 
+ 
+1. Dimenidrato 50mg (Dramin B6®) ———————————— 20 cp  
+Tomar 01 comp, via oral, 6/6 horas por 5 dias. Ou esquema 2 (Preferir em 
+Idoso) 
+2. Cinarizina 25mg ————————————————————— 15 cp 
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 3 (Evitar em 
+idoso) 
+3. Flunarizina 10mg —————————————————————15 cp 
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 4 (Evitar em 
+idosos 
+4. Meclozina 50mg/cp ———————————————————— 10 cp 
+Tomar 01 comp, via oral, 12/12 horas por 5 dias
+ 
+Obs.: Refratário / Crônico: Avaliar associação com Predsin 20mg/cp - 02cp, via 
+oral, por 5 dias  
+ 
+ 
+ 
+ 
+ 
+1. Soro de Reidratação Oral —————————————— 3 sachês 
+ Diluir 1 sachê em 1 litro de água. 200mL após cada evacuação. Associar 
+esquema 2 
+2. Bromoprida 10mg/cp ——————————————— 1 cx  
+Tomar 01 comp, via oral, até 8/8 horas se náusea e/ou vômitos 
+3. Floratil 200mg/cp ——————————————————— 6 cp  
+Tomar 01 comp, via oral, 12/12 horas por 3 dias 
+ 
+Sem história recente de tratamento anti-parasitário: 
+1. Albendazol 400mg/cp ——————————————— 3 cp  
+Tomar 01 comp, via oral, 1x/dia por 3 dias. Associar esquema 2 
+2. Secnidazol 1g/cp —————————————————1 cp  
+Tomar 01 comp, via oral, 1x/dia após término do Albendazol 
+ 
+GECA / DIARRÉIA: 
+ 
+--- PAGINA 79 ---
+                 
+ 
+79 
+Diarréia mucossanguinolenta (Amebíase): 
+1. Metronidazol 250mg/cp —————————————— 21 cp  
+Tomar 02 comp, via oral, 8/8 horas por 7 dias 
+ 
+ 
+ 
+1. Aumentar ingesta hídrica 
+ 
+2. Lactulose 667mg/mL (SUS) ————————————— 1 fr  
+Tomar 15 mL, via oral, 12/12 horas. Ajustar conforme resposta. Ou 
+esquema 3 
+ 
+3. Óleo Mineral (SUS) ——————————————————— 1 fr 
+Tomar 1 colher de sopa, via oral, 12/12 horas. Ou esquema 4 
+ 
+4. Polietilenoglicol 4000 (PEG 4000®) —————————— 1cx  
+Diluir 1 sachê em água ou suco 1x/dia  
+ 
+Idosos / Acamados: 
+1. Phosfoenema ® ——————————————————— 3 fr  
+Aplicar 1 frasco, via retal, 1x/dia. Repetir por 2/3 dias até melhora. Ou 
+esquema 2 
+2. Glicerina supositório ————————————————— 3 cp  
+Aplicar 1 supositório, via retal, 1x/dia. Repetir por 2/3 dias até melhora 
+ 
+ 
+ 
+1. Solicitar EDA em > 45 anos ou sinais de alarme 
+2. Omeprazol 20mg/cp —————————————————— 60 cp  
+Tomar 01 comp, via oral, 30 min antes do café. Ou esquema 3 
+CONSTIPAÇÃO INTESTINAL: 
+ 
+DOENÇA DO REFLUXO GASTROESOFÁGICO: 
+ 
+--- PAGINA 80 ---
+                 
+ 
+80 
+3. Pantoprazol 20mg/cp —————————————————— 60 cp 
+ Tomar 01 comp, via oral, 30 min antes do café. Ou esquema 4 
+4. Esomeprazol 20mg ——————————————————— 60 cp  
+Tomar 01 comp, via oral, 30 min antes do café por 8 semanas 
+Obs.: Se não melhorar: Dobrar a dose (2x/dia) / Encaminhar ao especialista 
+ 
+ 
+Dor aguda: 
+1. Hidróxido de Alumínio ——————————————— 1 sachê  
+Tomar 10 mL, via oral, para alívio imediato 
+ 
+ 
+ 
+● Solicitar EDA + Teste da urease em > 45 anos / sinais de alarme / Não 
+melhora após tratamento clínico 
+ 
+1.  Omeprazol 20mg/cp ————————————————— 60 cp  
+Tomar 01 comp, via oral, 30 min antes do café. Ou esquema 2 
+2.  Pantoprazol 20mg/cp ————————————————— 60 cp  
+Tomar 01 comp, via oral, 30 min antes do café. Ou esquema 3 
+3.  Esomeprazol 20mg ————————————————— 60 cp  
+Tomar 01 comp, via oral, 30 min antes do café por 8 semanas 
+ 
+Obs.: Teste da urease positivo: 
+1. Amoxicilina 500mg/cp ———————————————— 56 cp  
+Tomar 02 comp, via oral, 12/12 horas por 14 dias. Associar esquema 2 
+2. Claritromicina 500mg/cp ——————————————— 28 cp  
+Tomar 01 comp, via oral, 12/12 horas por 14 dias. Associar esquema 3 
+3. Omeprazol 20mg/cp —————————————————— 28 cp 
+Tomar 01 comp, via oral, 12/12 horas 30 min antes das refeições por 14
+dias  
+GASTRITE / DOENÇA ULCEROSA PÉPTICA: 
+ 
+--- PAGINA 81 ---
+                 
+ 
+81 
+ 
+Alérgicos a penicilina: 
+1. Furazolidona 200mg/cp ——————————————————— 28 cp 
+Tomar 01 comp, via oral, 12/12 horas por 14 dias 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Viral: 
+1. Afastamento das atividades 
+2. Aplicar compressa de água gelada 4x/dia por 15 minutos 
+3. Lavar os olhos com soro fisiológico 
+ 
+ 
+Bacteriana: 
+1. Afastamento das atividades 
+2. Tobramicina colírio 0,3% (Tobrex®) ———————— 1 fr  
+Aplicar 1 gota 4x/dia por 7 dias. Ou esquema 3 
+CONJUNTIVITE  
+ 
+--- PAGINA 82 ---
+                 
+ 
+82 
+3. Ciprofloxacino colírio 0,3% ———————————— 1 fr  
+Aplicar 1 gota 4x/dia por 7 dias 
+ 
+ 
+ 
+1. Ciprofloxacino + Dexametasona pomada (Cylocort®)—— 1 tubo  
+Aplicar em lesão cada 8/8 horas até resolução 
+ 
+ 
+ 
+ 
+1. Amoxicilina 500mg/cp ——————————————— 21 cp  
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. Associar esquema 2 
+ 
+2. Dipirona 500mg/cp ——————————————— 1 cx 
+Tomar 01 comp, via oral, até 6/6 horas se dor e/ou febre. Ou esquema 3 
+ 
+3. Paracetamol 500mg/cp——————————————— 1 cx Tomar 
+01 comp, via oral até 6/6 horas se dor e/ou febre. 
+ 
+Repetição: 
+1. Amoxicilina 875mg + Clavulanato 125mg/cp —————— 14cp 
+Tomar 01 comp, via oral, 12/12 horas por 7 dias 
+ 
+ 
+ 
+1. Ciprofloxacino + Hidrocortisona sol. Otológica (Otociriax®)—1 fr  
+Pingar 3 gotas no ouvido acometido de 12/12 horas até resolução do 
+quadro 
+ 
+Fúngica: 
+HORDÉOLO: 
+ 
+OTITE MÉDIA AGUDA: 
+ 
+OTITE EXTERNA: 
+ 
+--- PAGINA 83 ---
+                 
+ 
+83 
+1. Cetoconazol creme 2% ———————————————— 1 tubo  
+Passar no canal auditivo de 8/8 horas por 10 dias 
+ 
+Celulite: 
+1. Cefalexina 500mg/cp ————————————————— 28 cp  
+Tomar 01 comp, via oral, 6/6 horas por 7 dias 
+ 
+ 
+1. Cerumin® sol otológica ———————————————— 1 fr  
+Pingar 3 gotas no ouvido acometido 3x/dia por 5 dias. Após, fazer 
+lavagem com AF ou soro fisiológico morno 
+ 
+ 
+ 
+1. Penicilina Benzatina 1.200.000U/amp ————————— 1amp 
+Aplicar 1 amp, IM, em nádega dose única. Ou esquema 2 
+ 
+2. Amoxicilina 500mg/cp ——————————————— 21 cp  
+Tomar 01 comp, via oral, 8/8 horas por 7 dias. Associar esquema 3 
+ 
+3. Dipirona 500mg/cp —————————————————— 1 cx 
+Tomar 01 comp, via oral, até 6/6 horas se dor e/ou febre. Ou esquema 4 
+ 
+4. Paracetamol 500mg/cp ———————————————1 cx  
+Tomar 01 comp, via oral até 6/6 horas se dor e/ou febre. 
+ 
+Repetição: 
+1. Amoxicilina 875mg + Clavulanato 125mg/cp —————— 14cp  
+Tomar 01 comp, via oral, 12/12 horas por 7 dias 
+ 
+ROLHA DE CERUME: 
+ 
+FARINGOAMIGDALITE: 
+ 
+--- PAGINA 84 ---
+                 
+ 
+84 
+ 
+ 
+Crise: 
+1. Diclofenaco 50mg/cp ——————————————— 15 cp 
+ Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 2 
+2. Ibuprofeno 600mg/cp ———————————————— 15 cp  
+Tomar 01 comp, via oral, até 6/6 horas por 5 dias. Ou esquema 3 
+3. Cetoprofeno 50-100mg/cp ————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Ou esquema 4 
+4. Indometacina 50mg/cp ——————————————— 15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias. Associar esquema 5 
+ 
+5. Colchicina 1mg/cp ——————————————15 cp  
+Tomar 01 comp, via oral, 8/8 horas por 5 dias 
+ 
+Manutenção: 
+1. Alopurinol 100mg/cp (Zyloric®) —————————— 30 cp  
+Tomar 01 comp, via oral, 1x/dia por 30 dias. Associar esquema 2 
+2. Colchicina 0,5mg/cp ———————————————— 60 cp  
+Tomar 01 comp, via oral, 12/12 horas por 30 dias 
+ 
+ 
+ 
+1. Elevação dos mmii 
+2. Diosmina 450mg +Hesperidina 50mg/cp (Diosmin®) -— 60cp/mês  
+Tomar 01 comp, via oral, 12/12 horas uso contínuo 
+ 
+Se úlcera: 
+3. Pentoxifilina 400mg/cp ———————————————— 1cx  
+Tomar 01 comp, via oral, 12/12 horas até cicatrização. Associar 4 
+GOTA: 
+ 
+INSUFICIÊNCIA VENOSA CRÔNICA: 
+ 
+--- PAGINA 85 ---
+                 
+ 
+85 
+4. Kollagenase® ——————————————————1 tubo  
+Aplicar na área da lesão 2x/dia por 14 dias 
+Obs.: Sem melhora = Encaminhar à cirurgia vascular 
+ 
+ 
+ 
+ 
+1. Aciclovir 200mg/cp —————————————————— 35 cp  
+Tomar 1 cp, via oral, 5x/dia por 7-10 dias 
+Alternativa: 400mg/cp de 8/8 horas (Geralmente não tem no SUS) 
+ 
+ 
+ 
+1. Aciclovir 400mg/cp —————————————————— 35 cp  
+Tomar 2 cp, via oral, 5x/dia por 7-10 dias 
+2. Analgésicos  
+ 
+Neuropatia: 
+3. Capsaicina creme 0,025% —————————————— 1 tubo  
+Aplicar na região acometida 3x/dia. Ou esquema 4 
+4. Amitriptilina 25mg/cp ————————————————— 1 cx 
+ Tomar 01 comp, via oral, 1x/dia até melhora 
+ 
+ 
+● Solicitar anti-HIV / TR para sífilis / VDRL / HBsAg / Anti-HCV 
+ 
+- Úlceras dolorosas: 
+Herpes Genital (Fundo limpo / Linfonodo não fistuliza): 
+1. Aciclovir 200mg/cp ———————————35 cp  
+Tomar 01 comp, via oral, 5x/dia por 7-10 dias. 
+2. Aciclovir 200mg/cp —————————————— 60cp/mês 
+Tomar 01 comp, via oral, 12/12 horas por 6 meses (recidiva >6x/ano) 
+HERPES MUCOCUTÂNEA: 
+ 
+INFECÇÕES SEXUALMENTE TRANSMISSÍVEIS: 
+ 
+HERPES-ZOSTER: 
+ 
+--- PAGINA 86 ---
+                 
+ 
+86 
+ 
+Cancro Mole (Fundo purulento / Linfonodo fistuliza orifício único): 
+1. Azitromicina 500mg/cp ———————————2 cp  
+Tomar 02 comp, via oral, dose única 
+ 
+- Úlceras indolores: 
+Sífilis: 
+● Solicita TR sífilis / Positivo: Solicita VDRL (Positivo se > 1:4) 
+● Gestante / Violência sexual / Sintomáticos só necessitam de 1 teste positivo 
+● Neurossífilis = Encaminhar para Infectologia 
+● Acompanhar tratamento com VDRL cada 3 meses / Gestante (mensal) 
+ 
+ 
+Primária (úlcera única, bordas endurecidas e indolor) / Secundária: 
+1. Penicilina Benzatina 1.200.000U ————————— 02 amp  
+Aplicar 01 amp, IM, em cada glúteo, dose única 
+2. Doxiciclina 100mg/cp ——————————————— 28 cp  
+ 
+Tomar 01 comp, via oral, 12/12 horas por 14 dias (p/ alérgicos) 
+ 
+ 
+Latente Tardia (VDRL ≤ 1:4 sem tratamento prévio) / Incerto / Terciária 
+(Goma): 
+1. Penicilina Benzatina 1.200.000U ————————— 06 amp  
+Aplicar 01 amp, IM, em cada glúteo 1x/ sem por 3 semanas 
+2. Doxiciclina 100mg/cp —————————————— 56 cp  
+Tomar 01 comp, via oral, 12/12 horas por 28 dias (p/ alérgicos) 
+ 
+Obs.: Gestantes alérgicas a Penicilina —> Encaminhar para dessensibilização. 
+Doxiciclina é contraindicado. Na impossibilidade: 
+1. Ceftriaxona 1g/amp ————————————————— 14 amp  
+Aplicar 01 amp, IM, 1x/dia por 14 dias 
+ 
+ 
+Linfogranuloma venéreo (úlcera indolor / Linfonodo fistuliza em vários 
+orifícios): 
+--- PAGINA 87 ---
+                 
+ 
+87 
+1. Doxiciclina 100mg/cp —————————————— 42 cp  
+Tomar 01 comp, via oral, 12/12 horas por 21 dias. Ou esquema 2 
+2. Azitromicina 500mg/cp ———————————————— 6 cp 
+Tomar 02 comp, via oral, 1x/sem por 3 semanas (Serve para danovanose) 
+ 
+ 
+ 
+ 
+CÂNCER COLORRETAL 
+ 
+População-alvo: 
+- Adultos entre 50 e 85 anos, assintomáticos e sem fatores de alto risco. 
+(Obs.: algumas diretrizes priorizam até 75 anos; acima disso, individualizar conforme 
+expectativa de vida.) 
+ 
+Conduta na UBS 
+-Rastreamento 
+- Solicitar Pesquisa de Sangue Oculto nas Fezes (PSOF) ANUALMENTE. 
+ 
+-Resultado 
+- PSOF NEGATIVO → manter rastreamento anual.  
+- PSOF POSITIVO → encaminhar para colonoscopia. 
+ 
+Orientações para coleta do exame 
+Restringir por 72 horas antes da coleta: 
+-  Carne vermelha 
+- Peixe 
+- AINEs (anti-inflamatórios não esteroidais) 
+ 
+Evitar coleta durante: 
+- Menstruação 
+- Sangramentos anorretais ativos (ex: hemorroidas sangrantes) 
+ 
+Quando NÃO é apenas rastreamento 
+- Encaminhar diretamente para avaliação especializada, independentemente da 
+idade, se houver: 
+- Sangramento retal persistente 
+- Anemia ferropriva sem causa definida 
+- Perda ponderal inexplicada 
+- Alteração recente do hábito intestinal 
+- História familiar de câncer colorretal 
+ 
+ 
+ 
+ 
+RASTREIO DE CÂNCERES: 
+ 
+ABORDAGEM NA COVID-19: 
+ 
+--- PAGINA 88 ---
+                 
+ 
+88 
+ 
+Avaliação inicial 
+- Data de início dos sintomas (D1 = início dos sintomas). 
+- Sintomas respiratórios e sistêmicos. 
+- Avaliar sinais de gravidade. 
+ 
+Diagnóstico Etiológico 
+- Testes diretos (preferenciais) 
+ 
+-Swab Antigênico 
+- Indicado a partir do 1º dia até, preferencialmente, o 7º dia de sintomas. 
+- Melhor desempenho entre o 2º e o 5º dia. 
+- Útil na UBS pela rapidez e disponibilidade. 
+- Teste positivo confirma diagnóstico. 
+ 
+-RT-PCR 
+Padrão-ouro. 
+- Pode ser realizado a partir do 1º dia de sintomas. 
+- Maior sensibilidade do 3º ao 7º dia, podendo positivar por mais tempo. 
+ 
+Indicado quando: 
+- Antígeno negativo com forte suspeita clínica; 
+- Necessidade de confirmação diagnóstica; 
+- Pacientes de risco. 
+ 
+Quando NÃO há teste direto disponível 
+- Sorologia (IgM e IgG anti–COVID-19) 
+-Indicar após o 7º dia de sintomas. 
+Não serve para diagnóstico precoce. 
+Útil apenas para: 
+Investigação tardia; 
+Confirmação retrospectiva; 
+Situações epidemiológicas específicas. 
+-Não usar sorologia como teste inicial na fase aguda. 
+ 
+ 
+- Sintomas gripais (cefaleia, coriza, diarreia) + Sat. O2 ≥ 94% (FR < 22 irpm): 
+1. Solicitar Hemograma / LDH / PCR 
+2. Sintomáticos VO 
+ 
+ 
+ 
+- Dispneia / Dor torácica / Febre persistente + Sat. O2 ≥ 94% (FR < 22 irpm): 
+1. Solicitar Hemograma / LDH / PCR / D-dímero 
+2. Solicitar radiografia de tórax / TC de tórax 
+--- PAGINA 89 ---
+                 
+ 
+89 
+3. Azitromicina 500mg/cp ———————————— 5 cp  
+Tomar 01 comp, via oral, 1x/dia por 5 dias 
+3. Sintomáticos VO 
+ 
+ 
+≥ 7 dias de sintomas (Associar): 
+4. Dexametasona 4mg/cp——————————— 1 cx 
+Tomar 1comp e meio, via oral, 1x/dia por 5 dias. Ou esquema 5 
+5. Prednisona 20mg/cp——————————— 1 cx 
+Tomar 02 comp, via oral, 1x/dia por 5 dias 
+6. Reavaliar após 72 horas. Considerar PCR seriado se sintomas 
+persistentes 
+ 
+ 
+- Sat < 93% / FR ≥ 22 irpm / RNC / PAS < 100 mmHg: 
+1. Internar o paciente 
+2. Solicitar Hemograma / LDH / PCR / Ur / Cr / Fibrinogênio / D-dímero 
+3. Solicitar radiografia de tórax / TC de tórax 
+4. Repouso no leito 
+5. Oxigênio úmido 100% em CN conforme demanda (máx: 5L/min) 
+  Obs.: Oxigênio úmido 100% em Máscara com reservatório 
+conforme demanda (máx: 10-15L/min) = Regular/Solicitar internação na UTI. 
+ 
+6. Ceftriaxona 1g/amp ———————  
+01 amp + AD, EV, 1x/dia por 7-14 dias. Associar esquema 7 
+7. Dexametasona 4mg/mL —-———-  
+Aplicar 2,5mL (1amp) + AD, EV, 1x/dia por 10 dias. Ou esquema 8 
+8. Hidrocortisona 100mg/amp ———-  
+Aplicar 1 amp + SF 0,9% 100mL, EV, 12/12 horas por 10 dias. Associar 
+esquema 9 
+ 
+9. Heparina não-fracionada 5.000U/0,25mL ————-  
+Aplicar 01 amp, SC, 12/12 horas. Ou esquema 10 
+10. Enoxaparina 40mg/0,4mL -———  
+Aplicar 01 amp, SC, 1x/dia. Associar esquema 11 
+ 
+11. Sintomáticos EV 
+ 
+--- PAGINA 90 ---
+                 
+ 
+90 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. ESCITALOPRAM 10 MG——————————————————————30 CP 
+ 
+TOMAR 01 COMPRIMIDO VIA ORAL, 1 VEZ AO DIA, PELA MANHÃ. 
+ 
+- SE NECESSÁRIO, AUMENTAR PARA 20 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• ISRS mais seletivo → menos efeitos colaterais. 
+• Boa opção para ansiedade associada. 
+• Atenção à retirada: reduzir gradualmente. 
+• Boa opção em idosos (dose baixa). 
+ 
+2. SERTRALINA 50 MG ———————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, PELA MANHÃ, 1 VEZ AO DIA. 
+ 
+TITULAR ATÉ 200 MG/DIA, SE NECESSÁRIO. 
+INFORMAÇÕES IMPORTANTES 
+• ISRS mais seguro em cardiopatas. 
+• Preferido na amamentação. 
+• Pode causar diarreia. 
+• Síndrome de retirada é comum → reduzir lentamente. 
+ 
+ 
+ 
+ 
+1. BUPROPIONA 150 MG———————————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, PELA MANHÃ, 1 VEZ AO DIA. 
+ 
+-  SE NECESSÁRIO, AUMENTAR PARA 300 MG/DIA. 
+TRANSTORNO DEPRESSIVO MAIOR (TDM) 
+DEPRESSÃO COM LETARGIA/APATIA/BAIXA MOTIVAÇAO 
+SAÚDE MENTAL 
+--- PAGINA 91 ---
+                 
+ 
+91 
+INFORMAÇÕES IMPORTANTES 
+• Não causa disfunção sexual (pode melhorar). 
+• Boa para apatia, fadiga e déficit de atenção. 
+• Evitar em ansiedade importante. 
+• Contraindicada em epilepsia, bulimia e anorexia. 
+ 
+ 
+ 
+1. MIRTAZAPINA 15 MG ———————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, À NOITE, ANTES DE DORMIR. 
+ 
+- TITULAR ATÉ 45 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Excelente indutor do sono. 
+• Não prejudica função sexual. 
+• Causa ganho de peso (maior em doses baixas). 
+• Boa associação com venlafaxina ou duloxetina. 
+ 
+OU 
+2. TRAZODONA 50 MG —————————————————————30 CP 
+TOMAR 01 A 02 COMPRIMIDOS VIA ORAL, À NOITE. 
+INFORMAÇÕES IMPORTANTES 
+• Muito usada como hipnótico antidepressivo. 
+• Pode ajudar em disfunção erétil. 
+• Risco raro, mas grave, de priapismo. 
+• Pode causar hipotensão ortostática. 
+ 
+ 
+ 
+1. DULOXETINA 60 MG ———————————————————30 CÁPSULAS 
+TOMAR 01 CÁPSULA VIA ORAL, 1 VEZ AO DIA. 
+ 
+PODE INICIAR COM 30 MG/DIA POR 7 DIAS. 
+INFORMAÇÕES IMPORTANTES 
+• Primeira linha para dor neuropática. 
+DEPRESSÃO COM INSÔNIA/PERDA DE PESO/AGITAÇÃO 
+DEPRESSÃO COM DOR NEUROPÁTICA/MUSCULOESQUELÉTICA 
+--- PAGINA 92 ---
+                 
+ 
+92 
+• Útil em fibromialgia e dor lombar crônica. 
+• Pode elevar a pressão arterial. 
+• Evitar em insuficiência hepática. 
+ 
+2. AMITRIPTILINA 25 MG———————————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, À NOITE. 
+ 
+TITULAR ATÉ 75–100 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Muito eficaz para dor crônica. 
+• Perfil anticolinérgico importante. 
+• Evitar em idosos e cardiopatas. 
+• Alto risco em superdosagem. 
+ 
+ 
+1. ESCITALOPRAM 10 MG——————————————————————30 CP 
+ 
+TOMAR 01 COMPRIMIDO VIA ORAL, 1 VEZ AO DIA, PELA MANHÃ. 
+ 
+- SE NECESSÁRIO, AUMENTAR PARA 20 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Excelente equilíbrio entre eficácia e tolerabilidade. 
+• Boa opção como primeira escolha na UBS. 
+OU 
+2. VENLAFAXINA 75 MG –——————————————30 CÁPSULAS 
+TOMAR 01 CÁPSULA VIA ORAL, PELA MANHÃ, 1 VEZ AO DIA. 
+ 
+TITULAR ATÉ 225 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Boa em quadros refratários. 
+• Ajuda em sintomas vasomotores e dor. 
+• Pode elevar PA. 
+• Síndrome de retirada intensa → reduzir lentamente. 
+ 
+ 
+TRANSTORNO DE ANSIEDADE GENERALIZADA (TAG) 
+--- PAGINA 93 ---
+                 
+ 
+93 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. ESCITALOPRAM 5 MG –----------------------------------————30 CP 
+ 
+TOMAR 01 COMPRIMIDO VIA ORAL, POR 7 DIAS. 
+ 
+- APÓS, AUMENTAR PARA 10 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Iniciar dose baixa evita ansiedade paradoxal. 
+• Resposta plena pode levar 8–12 semanas. 
+ 
+ 
+ 
+1. FLUOXETINA 20 MG ——————--------------------------------——30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, PELA MANHÃ. 
+ 
+TITULAR ATÉ 60–80 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Meia-vida longa → menos síndrome de retirada. 
+• Pode piorar ansiedade inicial. 
+• Mais interações medicamentosas. 
+ 
+ 
+ 
+ 
+1. MIRTAZAPINA 15 MG ———————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, À NOITE, ANTES DE DORMIR. 
+ 
+- TITULAR ATÉ 45 MG/DIA. 
+TRANSTORNO DO PÂNICO: 
+TRANSTORNO OBSESSIVO-COMPULSIVO (TOC): 
+INSÔNIA ASSOCIADA A DEPRESSÃO 
+--- PAGINA 94 ---
+                 
+ 
+94 
+OU 
+2. TRAZODONA 50 MG —————————————————————30 CP 
+TOMAR 01 A 02 COMPRIMIDOS VIA ORAL, À NOITE. 
+INFORMAÇÕES IMPORTANTES (GERAL) 
+• Preferir doses baixas para efeito sedativo. 
+• Evitar associação com álcool ou benzodiazepínicos. 
+ 
+ 
+ 
+1. BUPROPIONA 150 MG———————————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, PELA MANHÃ, 1 VEZ AO DIA. 
+ 
+SE NECESSÁRIO, AUMENTAR PARA 300 MG/DIA. 
+INFORMAÇÕES IMPORTANTES 
+• Pode ser usada associada ao ISRS. 
+• Boa estratégia quando há anorgasmia ou queda de libido. 
+ 
+ 
+ 
+1. SERTRALINA 50 MG ———————————————————30 CP 
+TOMAR 01 COMPRIMIDO VIA ORAL, PELA MANHÃ, 1 VEZ AO DIA. 
+ 
+TITULAR ATÉ 200 MG/DIA, SE NECESSÁRIO. 
+OU 
+2. ESCITALOPRAM 10 MG——————————————————————30 CP 
+ 
+TOMAR 01 COMPRIMIDO VIA ORAL, 1 VEZ AO DIA, PELA MANHÃ. 
+ 
+- SE NECESSÁRIO, AUMENTAR PARA 20 MG/DIA. 
+ 
+INFORMAÇÕES IMPORTANTES: 
+DEPRESSÃO COM DISFUNÇÃO SEXUAL: 
+IDOSOS/CARDIOPATAS 
+--- PAGINA 95 ---
+                 
+ 
+95 
+• Iniciar sempre com metade da dose usual. 
+• Evitar tricíclicos e paroxetina. 
+ 

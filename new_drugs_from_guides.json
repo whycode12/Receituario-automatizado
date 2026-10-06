@@ -1,0 +1,226 @@
+[
+  [
+    "Cetoconazol",
+    "Antifúngico imidazólico (comprimido 200mg, creme 2%, shampoo 2% - Guia UBS, UPA e PSZerado)"
+  ],
+  [
+    "Clobetasol",
+    "Propionato de clobetasol creme/pomada 0,05% (corticoide tópico superpotente - Guia UPA)"
+  ],
+  [
+    "Isoconazol",
+    "Nitrato de isoconazol creme vaginal e dermatológico (Guia UBS)"
+  ],
+  [
+    "Oxiconazol",
+    "Nitrato de oxiconazol creme/loção tópica (Guia UPA)"
+  ],
+  [
+    "Griseofulvina",
+    "Antifúngico oral para dermatofitoses e tinha do couro cabeludo (Guia UPA)"
+  ],
+  [
+    "Tiabendazol tópico",
+    "Antiparasitário tópico para larva migrans cutânea (Guia UBS)"
+  ],
+  [
+    "Peróxido de benzoíla",
+    "Antibacteriano e queratolítico tópico para acne (Guia UBS)"
+  ],
+  [
+    "Tretinoína",
+    "Ácido retinoico tópico para acne vulgar e fotoenvelhecimento (Guia UBS)"
+  ],
+  [
+    "Capsaicina tópica",
+    "Analgésico tópico para neuropatia pós-herpética / dor crônica (Guia UBS)"
+  ],
+  [
+    "Cetorolaco",
+    "AINE potente trometamol sublingual e injetável (Guia UPA)"
+  ],
+  [
+    "Piroxicam",
+    "AINE oral e intramuscular de longa meia-vida (Guia UPA)"
+  ],
+  [
+    "Morfina",
+    "Opioide potente padrão-ouro no IAM, edema agudo e dor intensa (Prescrições, Guia UPA e PSZerado)"
+  ],
+  [
+    "Paracetamol + codeína",
+    "Associação analgésica clássica Tylex 500/30mg (Guia UPA)"
+  ],
+  [
+    "Diclofenaco + paracetamol + cafeína + carisoprodol",
+    "Miorrelaxante Torsilax / Tandrilax (Prescrições e Guia UPA)"
+  ],
+  [
+    "Betahistina",
+    "Vasodilatador labiríntico / Labirin para vertigem e síndrome de Ménière (Guia UPA)"
+  ],
+  [
+    "Levodropropizina",
+    "Antitussígeno de ação periférica / Antux xarope (Guia UPA)"
+  ],
+  [
+    "Ambroxol",
+    "Mucolítico e expectorante oral xarope (Guia UPA)"
+  ],
+  [
+    "Claritromicina",
+    "Macrolídeo oral 500mg para PAC e infecções respiratórias (Guia UBS, UPA e Prescrições)"
+  ],
+  [
+    "Cefalotina",
+    "Cefalosporina de 1ª geração injetável profilaxia cirúrgica e celulite (Guia UBS e Prescrições)"
+  ],
+  [
+    "Daptomicina",
+    "Lipopeptídeo injetável para Gram-positivos multirresistentes (Prescrições)"
+  ],
+  [
+    "Doxiciclina",
+    "Tetraciclina oral para clamídia, sífilis, DIPA e zoonoses (Guia UPA)"
+  ],
+  [
+    "Praziquantel",
+    "Antiparasitário de escolha para esquistossomose e teníase (Guia UPA)"
+  ],
+  [
+    "Furazolidona",
+    "Antimicrobiano intestinal (Guia UBS)"
+  ],
+  [
+    "Clofazimina",
+    "Hanseníase / esquema PQT (Guia UBS)"
+  ],
+  [
+    "Tenofovir + lamivudina",
+    "Antirretroviral do SUS / PrEP / PEP (Guia UBS)"
+  ],
+  [
+    "Dolutegravir",
+    "Inibidor de integrase antirretroviral SUS (Guia UBS)"
+  ],
+  [
+    "Losartana",
+    "BRA de primeira linha anti-hipertensivo mais prescrito no Brasil (Guia UBS)"
+  ],
+  [
+    "Nifedipina",
+    "Bloqueador de canal de cálcio di-hidropiridínico oral e retard (Guia UBS)"
+  ],
+  [
+    "Dinitrato de isossorbida",
+    "Nitrato vasodilatador sublingual e oral para angina e IC (Guia UPA)"
+  ],
+  [
+    "Doxazosina",
+    "Bloqueador alfa-1 para HPB e hipertensão resistente (Guia UBS)"
+  ],
+  [
+    "Pentoxifilina",
+    "Hemodiluente vasodilatador para claudicação e úlceras venosas (Guia UBS)"
+  ],
+  [
+    "Glibenclamida",
+    "Sulfonilureia hipoglicemiante oral padrão SUS (Guia UBS)"
+  ],
+  [
+    "Tiamazol",
+    "Antitireoidiano para hipertireoidismo / Doença de Graves (Guia UBS)"
+  ],
+  [
+    "Estradiol",
+    "Terapia hormonal estrogênica oral/gel (Guia UBS)"
+  ],
+  [
+    "Acetato de medroxiprogesterona",
+    "Progestágeno injetável trimestral e oral (Guia UBS)"
+  ],
+  [
+    "Tibolona",
+    "Terapia de reposição hormonal na pós-menopausa (Guia UBS)"
+  ],
+  [
+    "Tamoxifeno",
+    "Modulador seletivo do receptor de estrogênio (Guia UBS)"
+  ],
+  [
+    "Finasterida",
+    "Inibidor da 5-alfa-redutase para HPB e alopecia (Guia UBS)"
+  ],
+  [
+    "Fluoxetina",
+    "ISRS clássico de primeira linha na UBS para depressão e ansiedade (Guia UBS e UPA)"
+  ],
+  [
+    "Haloperidol",
+    "Antipsicótico típico de alta potência para agitação, delírio e psicose (PSZerado e Guia UPA)"
+  ],
+  [
+    "Prometazina",
+    "Anti-histamínico fenotiazínico sedativo e antiemético injetável/oral Fenergan (Guia UPA)"
+  ],
+  [
+    "Passiflora incarnata",
+    "Fitoterápico ansiolítico fitomedicamento consagrado (Guia UPA)"
+  ],
+  [
+    "Fexofenadina",
+    "Anti-histamínico de 2ª geração não sedativo Allegra (Guia UBS e UPA)"
+  ],
+  [
+    "Proparacaína",
+    "Anestésico tópico ocular colírio para procedimentos (Prescrições)"
+  ],
+  [
+    "Tetracaina + fenilefrina",
+    "Anestésico tópico oftalmológico / orofaríngeo (Prescrições)"
+  ],
+  [
+    "Loperamida",
+    "Antidiarreico opioide periférico Imosec (Guia UPA)"
+  ],
+  [
+    "Polietilenoglicol (PEG)",
+    "Laxativo osmótico Muvinlax sem eletrólitos (Prescrições e Guia UPA)"
+  ],
+  [
+    "Plantago ovata",
+    "Fibra solúvel formadora de massa Metamucil (Prescrições)"
+  ],
+  [
+    "Ácido fólico",
+    "Suplementação essencial pré-natal e gestação (Guia UBS)"
+  ],
+  [
+    "Carbonato de cálcio",
+    "Suplementação de cálcio elementar e quelante de fósforo (Guia UBS)"
+  ],
+  [
+    "Cloreto de potássio",
+    "Reposição de potássio oral xarope e injetável Slow-K (Guia UPA)"
+  ],
+  [
+    "Bicarbonato de sódio",
+    "Alcalinizante sistêmico injetável 8,4% para acidose metabólica grave (Guia UPA)"
+  ],
+  [
+    "Sulfato de zinco",
+    "Suplemento oral adjuvante na diarreia infantil e imunidade (Guia UBS)"
+  ],
+  [
+    "Cianocobalamina",
+    "Vitamina B12 injetável e oral para anemia megaloblástica (Guia UBS)"
+  ],
+  [
+    "Glicose hipertônica",
+    "Glicose 50% injetável para reversão de hipoglicemia aguda no PS (Guia UPA e PSZerado)"
+  ],
+  [
+    "Soro de reidratação oral (SRO)",
+    "Sais de reidratação oral padronizados OMS/SUS (Guia UBS e UPA)"
+  ]
+]

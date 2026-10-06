@@ -1,0 +1,38 @@
+--- PAGINA
+AAS
+Aciclovir
+Adrenalina IM
+Antibioticoterapia
+Azitromicina
+Beta-bloqueador
+Budesonida
+Ceftriaxona
+Cetoprofeno
+Ciprofloxacino
+Ciprofloxacino colírio
+Dimenidrato
+Dipirona
+Domperidona
+Doxiciclina
+Enoxaparina
+Hidrocortisona
+Ibuprofeno
+Ipratrópio
+Loratadina
+Metilprednisolona
+Metronidazol
+Midazolam
+Nitroglicerina
+Noradrenalina
+Paracetamol
+Penicilina Benzatina
+Penicilina G
+Penicilina G Cristalina
+Penicilina benzatina
+Prednisolona
+Prednisona
+Salbutamol
+Soro Ringer lactato ou soro fisiológico
+Sulfato de magnésio
+Sumatriptano + naproxeno
+Vasopressina

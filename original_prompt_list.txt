@@ -1,0 +1,410 @@
+<USER_REQUEST>
+Consegue rankear, enumerando do mais comum em ser usado em UPA/UBS por menos comum, sem excluir nenhum da lista?
+1. AAS 
+2. Acebrofilina
+3. Acetato de hidrocortisona
+4. Acetilcisteína
+5. Aciclovir
+6. Ácido bórico
+7. Ácido mefenâmico
+8. Ácido tranexâmico
+9. Ácido ursodesoxicólico
+10. Ácido valpróico
+11. Ácido zoledrônico
+12. Adenosina
+13. Adrenalina
+14. Albendazol
+15. Albumina humana
+16. Alendronato
+17. Alopurinol
+18. Alprazolam
+19. Alteplase
+20. Amilorida
+21. Amiodarona
+22. Amitriptilina
+23. Amoxicilina
+24. Amoxicilina + clavulanato
+25. Amoxicilina + sulbactam
+26. Ampicilina
+27. Ampicilina + sulbactam
+28. Anlodipino
+29. Apixabana
+30. Aspartato de ornitina
+31. Atorvastatina
+32. Atropina
+33. Azitromicina
+34. Baclofeno
+35. Beclometasona
+36. Benazepril
+37. Benzbromarona
+38. Benzetacil (penicilina benzatina)
+39. Betametasona
+40. Betatrinta
+41. Biperideno
+42. Bisacodil
+43. Bisoprolol
+44. Bromazepam
+45. Brometo de ipratrópio
+46. Bromoprida
+47. Budesonida
+48. Bupivacaína
+49. Bupropiona
+50. Captopril
+51. Carboximaltose férrica
+52. Carbamazepina
+53. Carvedilol
+54. Cefaclor
+55. Cefadroxila
+56. Cefalexina
+57. Cefazolina
+58. Cefepima
+59. Cefotaxima
+60. Ceftazidima
+61. Ceftriaxona
+62. Cefuroxima
+63. Celecoxibe
+64. Cetamina
+65. Cetirizina
+66. Cetoprofeno
+67. Ciclesonida
+68. Ciclobenzaprina
+69. Ciclopentolato
+70. Ciclossilicato de zircônio
+71. Cinarizina
+72. Ciprofibrato
+73. Ciprofloxacino
+74. Ciprofloxacino + dexametasona
+75. Cimetidina
+76. Cinchocaína
+77. Citalopram
+78. Clindamicina
+79. Clomipramina
+80. Clonazepam
+81. Clopidogrel
+82. Clorpromazina
+83. Clortalidona
+84. Clotrimazol
+85. Codeína
+86. Colchicina
+87. Colestiramina
+88. Colagenase
+89. Colecalciferol
+90. Deslanosídeo
+91. Desloratadina
+92. Desonida
+93. Dexametasona
+94. Dexclorfeniramina
+95. Diazepam
+96. Diclofenaco
+97. Diclofenaco + paracetamol + cafeína + carisoprodol
+98. Diltiazem
+99. Dimenidrinato
+100. Dimenidrinato + piridoxina
+101. Dimeticona
+102. Diosmina + hesperidina
+103. Dipirona
+104. Dobesilato de cálcio
+105. Dobutamina
+106. Domperidona
+107. Dopamina
+108. Doxiciclina
+109. Dronedarona
+110. Duloxetina
+111. Edoxabana
+112. Enalapril
+113. Enoxaparina
+114. Escetamina
+115. Escitalopram
+116. Escopolamina
+117. Esomeprazol
+118. Espironolactona
+119. Estreptoquinase
+120. Estrogênio conjugado
+121. Etinilestradiol
+122. Etodolaco
+123. Etomidato
+124. Ezetimiba
+125. Ezetimiba + rosuvastatina
+126. Ezetimiba + sinvastatina
+127. Exenatida
+128. Fanciclovir
+129. Fenazopiridina
+130. Fenitoína
+131. Fenobarbital
+132. Fenofibrato
+133. Fentanil
+134. Fenticonazol
+135. Febuxostate
+136. Flunarizina
+137. Flucitosina
+138. Fluconazol
+139. Fludrocortisona
+140. Flumazenil
+141. Fluticasona
+142. Fluvoxamina
+143. Fosfato de sódio
+144. Fosfomicina
+145. Furoato de mometasona
+146. Furosemida
+147. Gabapentina
+148. Gentamicina
+149. Genfibrozila
+150. Gliclazida
+151. Glimepirida
+152. Glipizida
+153. Glucagon
+154. Gluconato de cálcio
+155. Glicerina
+156. Hidralazina
+157. Hidroclorotiazida
+158. Hidrocortisona
+159. Hidróxido de alumínio
+160. Hidróxido de magnésio
+161. Hidróxido férrico
+162. Hidroxizina
+163. Hialuronato de sódio
+164. Heparina não fracionada
+165. Ibandronato
+166. Ibuprofeno
+167. Imipramina
+168. Indometacina
+169. Insulina asparte
+170. Insulina degludeca
+171. Insulina detemir
+172. Insulina glargina
+173. Insulina glulisina
+174. Insulina lispro
+175. Insulina NPH
+176. Insulina regular
+177. Ipratrópio
+178. Irbesartana
+179. Isoniazida
+180. Itraconazol
+181. Ivermectina
+182. L-glutamina
+183. Lactulose
+184. Leishmanicida antimonial
+185. Levetiracetam
+186. Levonorgestrel
+187. Levotiroxina
+188. Levofloxacino
+189. Lidocaína
+190. Linezolida
+191. Lisinopril
+192. Loratadina
+193. Lorazepam
+194. Lornoxicam
+195. Lubiprostona
+196. Maleato de dexclorfeniramina
+197. Mebendazol
+198. Mebeverina
+199. Melatonina
+200. Meloxicam
+201. Mepivacaína
+202. Meropeném
+203. Mesalazina
+204. Metformina
+205. Metformina XR
+206. Metildopa
+207. Metilprednisolona
+208. Metimazol
+209. Metoclopramida
+210. Metoprolol
+211. Metronidazol
+212. Miconazol
+213. Midazolam
+214. Minociclina
+215. Mirtazapina
+216. Moxifloxacino
+217. Mupirocina
+218. Nalbufina
+219. Naloxona
+220. Naproxeno
+221. Naratriptano
+222. Neomicina
+223. Neomicina + bacitracina
+224. Neomicina + polimixina B + hidrocortisona
+225. Niclosamida
+226. Nimesulida
+227. Nistatina
+228. Nistatina + metronidazol
+229. Nistatina + polimixina B + neomicina
+230. Nitazoxanida
+231. Nitrofurantoína
+232. Nitroglicerina
+233. Nitroprussiato de sódio
+234. Noradrenalina
+235. Nortriptilina
+236. Norfloxacino
+237. Octreotida
+238. Olanzapina
+239. Olopatadina
+240. Omeprazol
+241. Ondansetrona
+242. Oxacilina
+243. Oxicodona
+244. Óleo mineral
+245. Pantoprazol
+246. Paracetamol
+247. Paracetamol + codeína
+248. Paroxetina
+249. Penicilina benzatina
+250. Penicilina cristalina
+251. Penicilina G
+252. Penicilina procaína
+253. Permetrina
+254. Pimecrolimo
+255. Pindolol
+256. Pioglitazona
+257. Piperacilina + tazobactam
+258. Piridoxina
+259. Pitavastatina
+260. Poliestirenossulfonato de cálcio
+261. Polimixina B
+262. Policresuleno + cinchocaína
+263. Prednisolona
+264. Prednisona
+265. Pregabalina
+266. Probenecida
+267. Propafenona
+268. Propiltiouracil
+269. Propofol
+270. Propranolol
+271. Prucaloprida
+272. Prasugrel
+273. Quetiapina
+274. Racecadotrila
+275. Ramelteona
+276. Ramipril
+277. Rabeprazol
+278. Rifampicina
+279. Rifaximina
+280. Risedronato
+281. Risperidona
+282. Rivaroxabana
+283. Rocurônio
+284. Sacubitril + valsartana
+285. Saccharomyces boulardii
+286. Salbutamol
+287. Secnidazol
+288. Semaglutida
+289. Sertralina
+290. Simeticona
+291. Sinvastatina
+292. Sitagliptina
+293. Sorbitol + laurilsulfato de sódio
+294. Succinilcolina
+295. Sulfadiazina de prata
+296. Sulfametoxazol + trimetoprima
+297. Sulfato de magnésio
+298. Sulfato ferroso
+299. Sumatriptano
+300. Tansulosina
+301. Tazobactam
+302. Tenoxicam
+303. Terbinafina
+304. Terbutalina
+305. Terlipressina
+306. Tiamina
+307. Ticagrelor
+308. Tinidazol
+309. Tiopental
+310. Tobramicina
+311. Tobramicina + dexametasona
+312. Topiramato
+313. Tramadol
+314. Tranexâmico
+315. Trazodona
+316. Triancinolona acetonida
+317. Trimebutina
+318. Valaciclovir
+319. Valerato de betametasona
+320. Valproato
+321. Vancomicina
+322. Varfarina
+323. Vasopressina
+324. Vecurônio
+325. Venlafaxina
+326. Verapamil
+327. Vildagliptina
+328. Vitamina E
+329. Vitamina K
+330. Vonoprazana
+331. Zolmitriptano
+332. Acebrofilina
+333. Ácido fusídico
+334. Ácido mefenâmico
+335. Ácido ursodesoxicólico
+336. Alopurinol
+337. Amitriptilina
+338. Anlodipino
+339. Apixabana
+340. Atorvastatina
+341. Azitromicina
+342. Biperideno
+343. Bromazepam
+344. Cefadroxila
+345. Cefepima
+346. Cefotaxima
+347. Ceftazidima
+348. Cefuroxima
+349. Cinarizina
+350. Ciprofloxacino
+351. Clonazepam
+352. Clotrimazol
+353. Dapagliflozina
+354. Desvenlafaxina
+355. Difenidramina
+356. Dronedarona
+357. Empagliflozina
+358. Eritromicina
+359. Fenofibrato
+360. Fibrato
+361. Furosemida
+362. Hidroclorotiazida
+363. Isoniazida
+364. Lamotrigina
+365. Liraglutida
+366. Lixisenatida
+367. Meclizina
+368. Meclozina
+369. Metilprednisolona
+370. Nateglinida
+371. Neomicina
+372. Nimesulida
+373. Noradrenalina
+374. Oxibutinina
+375. Pamidronato
+376. Prazosin
+377. Rosuvastatina
+378. Salmeterol
+379. Tiorfan
+380. Tolterodina
+381. Trimebutina
+382. Ureia
+383. Vareniclina
+384. Ácido bórico
+385. Alginato de sódio
+386. Bromazepam
+387. Ciclobenzaprina
+388. Dapsona
+389. Eritropoetina
+390. Hidroxicloroquina
+391. Iodopovidona
+392. Lidocaína + epinefrina
+393. Metotrexato
+394. Misoprostol
+395. Nitrofurazona
+396. Povidona-iodo
+397. Sulfadiazina
+398. Terbutalina
+399. Tiotrópio
+400. Umeclidínio
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-05T11:56:40-03:00.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Claude Opus 5.5 (Medium). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
