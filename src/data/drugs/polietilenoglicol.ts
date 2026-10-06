@@ -26,42 +26,86 @@ export const polietilenoglicol: Farmaco = {
       obs: 'Contém eletrólitos balanceados (bicarbonato, cloreto de sódio e potássio). Indicado para adultos e crianças acima de 7 anos.'
     },
     {
-      id: 'sache_peg4000_puro',
+      id: 'sache_17g',
       forma: 'sachet',
-      nome: 'Sachê pó oral PEG 4000 puro sem eletrólitos (10 g a 17 g)',
-      comercial: 'PEG 4000 / Pielsana PEG / Manipulação',
-      conc: '10g a 17g/sachê',
-      rotulo: 'Polietilenoglicol 4000 puro pó para solução oral',
-      mg: 10000,
+      nome: 'Sachê pó oral 17 g (PEG 4000 puro sem eletrólitos)',
+      comercial: 'Pielsana PEG / Muvinor / Manipulação',
+      conc: '17g/sachê',
+      rotulo: 'Polietilenoglicol 4000 puro pó para solução oral (sachê 17g)',
+      mg: 17000,
       vias: ['VO'],
       disp: '1 caixa com 30 sachês',
       acesso: { rename: false, fp: false },
       instrucao: 'Dissolver 1 sachê em 150 a 200 mL de água, suco, leite ou líquido de preferência (produto inodoro e insípido). Ingerir imediatamente após dissolver. Manter ingestão regular de líquidos ao longo do dia.',
+      obs: 'Formulação pura de 17 g sem eletrólitos e sem sabor, consagrada para adultos e adolescentes.'
+    },
+    {
+      id: 'sache_10g',
+      forma: 'sachet',
+      nome: 'Sachê pó oral 10 g (PEG 4000 puro sem eletrólitos)',
+      comercial: 'PEG 4000 pediátrico / Manipulação',
+      conc: '10g/sachê',
+      rotulo: 'Polietilenoglicol 4000 puro pó para solução oral (sachê 10g)',
+      mg: 10000,
+      vias: ['VO'],
+      disp: '1 caixa com 30 sachês',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Dissolver 1 sachê em 100 a 150 mL de água, suco, leite ou líquido de preferência. Ingerir preferencialmente pela manhã.',
       obs: 'Formulação de escolha padrão-ouro pela Sociedade Brasileira de Pediatria (SBP) pela alta palatabilidade e ausência de sabor salgado.'
     }
   ],
   regras: [
-    // 1. Adulto Constipação Crônica / Manutenção
+    // 1. Adulto Constipação Crônica - Sachê 14g
     {
       pub: 'adulto',
       vias: ['VO'],
-      apres: ['sache_14g', 'sache_peg4000_puro'],
+      apres: ['sache_14g'],
       tipo: 'mg',
-      min: 10000,
+      min: 14000,
       max: 28000,
       padrao: 14000,
       dosesDia: [1, 2],
       dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO / BULA',
-      trecho: 'Adultos: 10 a 28 g/dia (1 a 2 sachês) diluídos em água, tomados preferencialmente pela manhã.'
+      trecho: 'Adultos: 14 a 28 g/dia (1 a 2 sachês de 14g) diluídos em água, tomados preferencialmente pela manhã.'
     },
-    // 2. Pediatria Constipação Funcional Manutenção (>= 2 anos)
+    // 2. Adulto Constipação Crônica - Sachê 17g
+    {
+      pub: 'adulto',
+      vias: ['VO'],
+      apres: ['sache_17g'],
+      tipo: 'mg',
+      min: 17000,
+      max: 34000,
+      padrao: 17000,
+      dosesDia: [1, 2],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      fonte: 'PSZERADO / BULA',
+      trecho: 'Adultos: 17 a 34 g/dia (1 a 2 sachês de 17g) diluídos em água, tomados preferencialmente pela manhã.'
+    },
+    // 3. Adulto Constipação Crônica - Sachê 10g
+    {
+      pub: 'adulto',
+      vias: ['VO'],
+      apres: ['sache_10g'],
+      tipo: 'mg',
+      min: 10000,
+      max: 20000,
+      padrao: 10000,
+      dosesDia: [1, 2],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      fonte: 'PSZERADO / BULA',
+      trecho: 'Adultos: 10 a 20 g/dia (1 a 2 sachês de 10g) diluídos em água, tomados preferencialmente pela manhã.'
+    },
+    // 4. Pediatria Constipação Funcional Manutenção (>= 2 anos)
     {
       pub: 'ped',
       se: { idadeMinAnos: 2 },
       vias: ['VO'],
-      apres: ['sache_peg4000_puro'],
+      apres: ['sache_10g', 'sache_17g'],
       tipo: 'mg_kg_dia',
       min: 500,
       max: 1000,
@@ -72,12 +116,12 @@ export const polietilenoglicol: Farmaco = {
       fonte: 'SBP / ESPGHAN',
       trecho: 'Pediatria (manutenção): 0,5 a 0,8 g/kg/dia (padrão 0,7 g/kg/dia = 700 mg/kg/dia) em dose única pela manhã diluído em líquidos.'
     },
-    // 3. Pediatria Desimpactação Fecal (>= 2 anos)
+    // 5. Pediatria Desimpactação Fecal (>= 2 anos)
     {
       pub: 'ped',
       se: { idadeMinAnos: 2 },
       vias: ['VO'],
-      apres: ['sache_peg4000_puro'],
+      apres: ['sache_10g', 'sache_17g'],
       tipo: 'mg_kg_dia',
       min: 1000,
       max: 1500,

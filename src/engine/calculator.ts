@@ -15,7 +15,8 @@ export function nomeUnid(ap: Apresentacao, q: number): string {
   const mapa: Record<string, string> = {
     cp: pl ? 'comprimidos' : 'comprimido',
     cap: pl ? 'cápsulas' : 'cápsula',
-    sup: pl ? 'supositórios' : 'supositório'
+    sup: pl ? 'supositórios' : 'supositório',
+    sachet: pl ? 'envelopes' : 'envelope'
   };
   return mapa[ap.forma] || '';
 }
@@ -70,6 +71,7 @@ export function unidades(ap: Apresentacao, peso: number | null, modo: string): U
   if (mgml(ap)) u.push('ml');
   if (ap.forma === 'gotas') u.push('gotas');
   if (isUnid(ap)) u.push('unid');
+  if (ap.forma === 'sachet') u.push('sachet');
   if (ap.forma === 'spray') u.push('puff');
   if (['gel', 'pomada', 'creme'].includes(ap.forma)) u.push('aplic');
   if (!u.length) u.push('ml');
@@ -91,7 +93,7 @@ export function toMg(val: number | null, unid: UnidadeDose, ap: Apresentacao, pe
     }
     case 'gotas': return ap.mgml && ap.gotasml ? (val * ap.mgml) / ap.gotasml : val;
     case 'unid':  return ap.mg ? val * ap.mg : val;
-    case 'sachet': return val;
+    case 'sachet': return ap.mg ? val * ap.mg : val;
     case 'puff':   return ap.mg ? val * ap.mg : val;
     default: return val;
   }
@@ -109,7 +111,7 @@ export function fromMg(mg: number | null, unid: UnidadeDose, ap: Apresentacao, p
     }
     case 'gotas': return ap.mgml && ap.gotasml ? mg / (ap.mgml / ap.gotasml) : mg;
     case 'unid':  return ap.mg ? mg / ap.mg : mg;
-    case 'sachet': return mg;
+    case 'sachet': return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
     case 'puff':   return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
     default: return mg;
   }
@@ -149,8 +151,13 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
 
   // 2. Envelopes / Sachês
   if (ap.forma === 'sachet') {
-    const q = Math.max(1, Math.round(mg));
-    return { mg: q, ml: null, txt: `${q} envelope${q > 1 ? 's' : ''}`, whole: true };
+    const dosePorSache = ap.mg || 1;
+    // Se mg <= 10 e sachê tem >= 100mg, o valor de entrada já é a quantidade de envelopes (ex: 1 ou 2)
+    const q = (mg <= 10 && dosePorSache >= 100)
+      ? Math.max(1, Math.round(mg))
+      : Math.max(1, Math.round(mg / dosePorSache));
+    const pl = q > 1;
+    return { mg: q * dosePorSache, q, txt: `${q} envelope${pl ? 's' : ''}`, whole: true };
   }
 
   // 3. Spray / Aerossol inalatório (puffs/jatos)

@@ -454,7 +454,7 @@
 443. Fexofenadina  # Anti-histamínico de 2ª geração não sedativo Allegra (Guia UBS e UPA)
 444. Proparacaína  # Anestésico tópico ocular colírio para procedimentos (Prescrições)
 445. Tetracaina + fenilefrina  # Anestésico tópico oftalmológico / orofaríngeo (Prescrições)
-446. Loperamida  # Antidiarreico opioide periférico Imosec (Guia UPA)
+[x] 446. Loperamida  # Antidiarreico opioide periférico Imosec (Guia UPA)
 [x] 447. Polietilenoglicol (PEG)  # Laxativo osmótico Muvinlax sem eletrólitos (Prescrições e Guia UPA)
 448. Plantago ovata  # Fibra solúvel formadora de massa Metamucil (Prescrições)
 449. Ácido fólico  # Suplementação essencial pré-natal e gestação (Guia UBS)
