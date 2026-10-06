@@ -95,6 +95,8 @@ export function toMg(val: number | null, unid: UnidadeDose, ap: Apresentacao, pe
     case 'unid':  return ap.mg ? val * ap.mg : val;
     case 'sachet': return ap.mg ? val * ap.mg : val;
     case 'puff':   return ap.mg ? val * ap.mg : val;
+    case 'ui':     return val;
+    case 'ui_kg_dia': return peso ? (val * peso) / n : null;
     default: return val;
   }
 }
@@ -113,6 +115,8 @@ export function fromMg(mg: number | null, unid: UnidadeDose, ap: Apresentacao, p
     case 'unid':  return ap.mg ? mg / ap.mg : mg;
     case 'sachet': return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
     case 'puff':   return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
+    case 'ui':     return mg;
+    case 'ui_kg_dia': return peso ? (mg * n) / peso : null;
     default: return mg;
   }
 }
@@ -120,9 +124,9 @@ export function fromMg(mg: number | null, unid: UnidadeDose, ap: Apresentacao, p
 export function faixaRegra(r: RegraDose, p: Paciente, n: number): [number, number] | null {
   const k = p.peso;
   let f: [number, number] | null = null;
-  if (r.tipo === 'mg' || r.tipo === 'ml' || r.tipo === 'sachet') f = [r.min, r.max];
+  if (r.tipo === 'mg' || r.tipo === 'ml' || r.tipo === 'sachet' || r.tipo === 'ui') f = [r.min, r.max];
   else if (r.tipo === 'mg_kg_dose') f = k ? [r.min * k, r.max * k] : null;
-  else if (r.tipo === 'mg_kg_dia')  f = k ? [(r.min * k) / n, (r.max * k) / n] : null;
+  else if (r.tipo === 'mg_kg_dia' || r.tipo === 'ui_kg_dia') f = k ? [(r.min * k) / n, (r.max * k) / n] : null;
   else if (r.tipo === 'mg_dia')     f = [r.min / n, r.max / n];
   if (f && r.maxDoseMg) f = [Math.min(f[0], r.maxDoseMg), Math.min(f[1], r.maxDoseMg)];
   return f;
@@ -158,6 +162,13 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
       : Math.max(1, Math.round(mg / dosePorSache));
     const pl = q > 1;
     return { mg: q * dosePorSache, q, txt: `${q} envelope${pl ? 's' : ''}`, whole: true };
+  }
+
+  // 2.1. Insulinas e soluções dosadas em UI
+  if (ap.unidades?.includes('ui')) {
+    const q = Math.round(mg);
+    const ml = rml(q / 100);
+    return { mg: q, ml, txt: `${q} UI (${fmt(ml)} mL)`, whole: false };
   }
 
   // 3. Spray / Aerossol inalatório (puffs/jatos)

@@ -24,7 +24,9 @@ export const UNID_LBL: Record<string, string> = {
   mg_dia: 'mg/dia',
   sachet: 'envelope(s)',
   puff: 'jatos (puffs)',
-  aplic: 'aplicação(ões)'
+  aplic: 'aplicação(ões)',
+  ui: 'UI',
+  ui_kg_dia: 'UI/kg/dia'
 };
 
 export const VIA_GRUPO: Record<string, string> = {

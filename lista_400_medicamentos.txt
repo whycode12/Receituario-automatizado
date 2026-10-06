@@ -178,7 +178,7 @@
 172. Insulina glargina
 173. Insulina glulisina
 174. Insulina lispro
-175. Insulina NPH
+[x] 175. Insulina NPH
 176. Insulina regular
 177. Ipratrópio
 178. Irbesartana

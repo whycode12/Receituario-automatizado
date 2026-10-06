@@ -339,11 +339,11 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
                 Recomendado:{' '}
                 {uLo === uHi || Math.abs(uLo - uHi) < 1e-9 ? fmt(uHi) : `${fmt(uLo)} – ${fmt(uHi)}`}{' '}
                 {unidLbl(unid, apres)}
-                {unid !== 'mg'
+                {unid !== 'mg' && unid !== 'ui'
                   ? ` (${calcResult.lo === calcResult.hi ? fmtMg(calcResult.hi) : fmt(calcResult.lo, 1) + ' – ' + fmtMg(calcResult.hi)})`
                   : ''}
                 {modo !== 'agora' && calcResult.dailyMax != null
-                  ? ` · máx. ${fmtMg(calcResult.dailyMax)}/dia`
+                  ? ` · máx. ${apres.unidades?.includes('ui') ? fmt(calcResult.dailyMax) + ' UI/dia' : fmtMg(calcResult.dailyMax) + '/dia'}`
                   : ''}
               </div>
 
@@ -397,7 +397,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
           {calcResult.arr && (
             <>
               <div className="big">
-                {fmtMg(calcResult.arr.mg)} → {calcResult.arr.txt}
+                {apres.unidades?.includes('ui') ? `${fmt(calcResult.arr.mg)} UI` : fmtMg(calcResult.arr.mg)} → {calcResult.arr.txt}
               </div>
               {calcParts.length > 0 && <div className="sub">{calcParts.join(' · ')}</div>}
             </>
