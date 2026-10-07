@@ -31,7 +31,7 @@
 25. Amoxicilina + sulbactam
 26. Ampicilina
 27. Ampicilina + sulbactam
-28. Anlodipino
+[x] 28. Anlodipino
 29. Apixabana
 30. Aspartato de ornitina
 31. Atorvastatina
@@ -189,8 +189,8 @@
 183. Lactulose
 184. Leishmanicida antimonial
 185. Levetiracetam
-186. Levonorgestrel
-187. Levotiroxina
+[x] 186. Levonorgestrel
+[x] 187. Levotiroxina
 188. Levofloxacino
 189. Lidocaína
 190. Linezolida
@@ -207,8 +207,8 @@
 201. Mepivacaína
 202. Meropeném
 203. Mesalazina
-204. Metformina
-205. Metformina XR
+[x] 204. Metformina
+[x] 205. Metformina XR
 206. Metildopa
 207. Metilprednisolona
 208. Metimazol
@@ -294,7 +294,7 @@
 288. Semaglutida
 289. Sertralina
 290. Simeticona
-291. Sinvastatina
+[x] 291. Sinvastatina
 292. Sitagliptina
 293. Sorbitol + laurilsulfato de sódio
 294. Succinilcolina
@@ -479,3 +479,11 @@
 [x] 468. Carmelose sódica colírio 0,5%  # Lubrificante ocular e lágrima artificial para olho seco e conjuntivite viral Fresh Tears (HSL, PSZerado e CBO)
 [x] 469. Polimixina B + Neomicina + Hidrocortisona gotas otológicas  # Tratamento tópico de escolha para otite externa bacteriana Otosporin (RENAME e ABORL-CCF)
 [x] 470. Hidroxiquinolina + Trolamina (Cerumin gotas otológicas)  # Emoliente e ceruminolítico para remoção de rolha de cera no ouvido (HSL e ABORL-CCF)
+[x] 471. Metronidazol gel vaginal 100 mg/g  # Tratamento tópico de 1ª linha para vaginose bacteriana Flagyl vaginal (MS, PCDT IST e PSZerado)
+[x] 472. Nitrato de miconazol creme vaginal 2%  # Tratamento tópico de 1ª linha para candidíase vulvovaginal Gyno-Daktarin (MS, PCDT IST e FEBRASGO)
+[x] 473. Levonorgestrel 1,5 mg  # Contracepção de emergência pós-coito desprotegido em dose única (MS, FEBRASGO e RENAME)
+[x] 474. Sulfato ferroso (comprimidos 40 mg Fe e gotas 25 mg/mL Fe)  # Tratamento e profilaxia de anemia ferropriva na infância e gestação (SBP, MS e PNSF)
+[x] 475. Ácido fólico (comprimidos 5 mg e gotas 0,2 mg/mL)  # Prevenção de defeitos do tubo neural e resgate de metotrexato (HSL, MS e FEBRASGO)
+[x] 476. Losartana potássica (comprimidos 50 mg e 25 mg)  # Anti-hipertensivo BRA de 1ª linha e nefroproteção Cozaar (HSL, SBC e Farmácia Popular)
+[x] 477. Maleato de enalapril (comprimidos 5 mg, 10 mg e 20 mg)  # Anti-hipertensivo IECA padrão-ouro e cardioprotetor Renitec (HSL, SBC e Farmácia Popular)
+[x] 478. Hidroclorotiazida 25 mg  # Diurético tiazídico de 1ª linha anti-hipertensivo Clorana (HSL, SBC e Farmácia Popular)
