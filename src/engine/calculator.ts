@@ -197,6 +197,18 @@ export function arred(mg: number | null, ap: Apresentacao): Arredondamento | nul
     return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
   }
 
+  // 5.1. Bolsas de soro e soluções parenterais EV (dose em mL)
+  if (ap.forma === 'bolsa') {
+    const ml = rml(mg);
+    const volBolsa = ap.volml || 500;
+    const k = ml / volBolsa;
+    if (Math.abs(k - Math.round(k)) < 1e-6 && k >= 1) {
+      const q = Math.round(k);
+      return { mg: ml, ml, txt: `${q} bolsa${q > 1 ? 's' : ''} (${fmt(ml)} mL)`, whole: true, q };
+    }
+    return { mg: ml, ml, txt: `${fmt(ml)} mL`, whole: false };
+  }
+
   // 6. Soluções líquidas e injetáveis com concentração mg/mL
   const c = mgml(ap);
   if (!c) {
@@ -415,8 +427,8 @@ export function calcularPrescricao(
     const ev = drug.ev;
     const mg = C.arr.mg;
     const cAmp = mgml(apres);
-    const vDose = apres.forma === 'fap' ? (apres.reconstMl || 0) : cAmp ? mg / cAmp : 0;
-    const vol = evVolManual && evVol != null ? evVol : volAuto(ev, mg, p.pub, vDose);
+    const vDose = apres.forma === 'fap' ? (apres.reconstMl || 0) : cAmp ? mg / cAmp : (apres.forma === 'bolsa' ? (C.arr.ml || mg) : 0);
+    const vol = apres.forma === 'bolsa' ? (C.arr.ml || mg) : (evVolManual && evVol != null ? evVol : volAuto(ev, mg, p.pub, vDose));
     const seringa = vol <= CFG.limiteSeringaMl;
     const conc = Math.round((mg / vol) * 100) / 100;
 

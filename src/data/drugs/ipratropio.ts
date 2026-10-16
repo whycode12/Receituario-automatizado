@@ -24,7 +24,7 @@ export const ipratropio: Farmaco = {
       vias: ['INALATORIA'],
       disp: '1 frasco',
       acesso: { rename: true, fp: false },
-      instrucao: 'Diluir a quantidade prescrita de gotas em 3 a 5 mL de SF 0,9% no copinho do nebulizador. Inalar com fluxo de oxigênio/ar de 6 a 8 L/min até o término da solução. Descartar sobras.',
+      instrucao: 'Como fazer a nebulização: Colocar a quantidade prescrita de gotas no copinho do inalador e adicionar 3 a 4 mL de Soro Fisiológico 0,9%. Em crise aguda de asma no PS/UPA, pode ser associado no mesmo copinho às gotas de salbutamol. Ajustar a máscara cobrindo boca e nariz e ligar o inalador a 6-8 L/min. Respirar com calma até o fim da névoa (10 a 15 min). Manter os olhos fechados para não irritar as pupilas.',
       obs: 'RENAME (Componente Básico). 20 gotas = 1 mL = 0,25 mg; 40 gotas = 2 mL = 0,5 mg.'
     },
     {
@@ -39,7 +39,7 @@ export const ipratropio: Farmaco = {
       unidades: ['puff'],
       disp: '1 frasco',
       acesso: { rename: true, fp: false },
-      instrucao: 'Agitar o inalador. Expirar profundamente, fechar os lábios ao redor do bocal e inspirar profundamente ao liberar a dose. Segurar a respiração por alguns segundos.',
+      instrucao: 'Como fazer a inalação com espaçador: 1. Agitar bem a bombinha. 2. Encaixar o bocal da bombinha no espaçador valvulado. 3. Soltar todo o ar dos pulmões. 4. Colocar o bocal na boca vedando bem com os lábios. 5. Disparar 1 jato por vez no espaçador. 6. Respirar profundamente pela boca e segurar o ar por 10 segundos (ou respirar 5 a 6 vezes no espaçador). 7. Esperar 30 a 60 segundos antes do próximo jato.',
       obs: 'RENAME. Dose máxima diária recomendada: 12 doses (240 mcg/dia).'
     }
   ],

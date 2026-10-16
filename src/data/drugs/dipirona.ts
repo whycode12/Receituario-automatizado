@@ -12,6 +12,18 @@ export const dipirona: Farmaco = {
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg, solução oral 500 mg/mL e ampola 500 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
+      id: 'cp500',
+      forma: 'cp',
+      nome: 'Comprimido 500 mg',
+      conc: '500mg',
+      rotulo: 'Dipirona 500mg',
+      mg: 500,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: true, fp: false }
+    },
+    {
       id: 'cp1g',
       forma: 'cp',
       nome: 'Comprimido 1 g',
@@ -24,18 +36,6 @@ export const dipirona: Farmaco = {
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
       obs: 'Fracionamento em ½ comprimido: confirmar presença de sulco (informação não consta nas fontes).'
-    },
-    {
-      id: 'cp500',
-      forma: 'cp',
-      nome: 'Comprimido 500 mg',
-      conc: '500mg',
-      rotulo: 'Dipirona 500mg',
-      mg: 500,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false }
     },
     {
       id: 'gts',
@@ -99,7 +99,7 @@ export const dipirona: Farmaco = {
       tipo: 'mg',
       min: 500,
       max: 1000,
-      padrao: 1000,
+      padrao: 500,
       dosesDia: [1, 4],
       fonte: 'HSL',
       trecho: 'Adulto e adolescentes acima de 15 anos (> 31kg) — VO: 500 - 1000 mg até 4 vezes/dia.'

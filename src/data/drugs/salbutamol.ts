@@ -23,7 +23,7 @@ export const salbutamol: Farmaco = {
       unidades: ['puff'],
       disp: '1 frasco',
       acesso: { rename: true, fp: true },
-      instrucao: 'Agitar bem o frasco antes de usar. Expirar todo o ar, acoplar ao espaçador/boca, acionar 1 jato inspirando lenta e profundamente, e segurar a respiração por 10 segundos. Aguardar 30 a 60 segundos entre cada jato.',
+      instrucao: 'Como fazer a inalação (Técnica com Espaçador): 1. Agitar a bombinha por 5 segundos. 2. Encaixar o bocal da bombinha no espaçador valvulado. 3. Sentar com as costas retas e soltar todo o ar dos pulmões. 4. Ajustar bem a máscara ao redor do nariz e da boca (ou colocar o bocal entre os dentes e vedar com os lábios). 5. Disparar APENAS 1 JATO por vez dentro do espaçador. 6. Respirar devagar e profundamente pela boca de 5 a 6 vezes (ou puxar todo o ar e prender a respiração por 10 segundos). 7. Aguardar 30 a 60 segundos antes de aplicar o próximo jato (NUNCA disparar vários jatos juntos no espaçador). Na crise aguda no PS: realizar 4 a 8 jatos com espaçador a cada 20 minutos na primeira hora.',
       obs: 'Consta na RENAME e no Programa Farmácia Popular. Frasco com 200 acionamentos.'
     },
     {

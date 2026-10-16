@@ -6,9 +6,11 @@ interface PrescriptionPanelProps {
   calcResult: ResultadoCalculo;
   cards: ItemReceita[];
   receita: ItemReceita[];
-  receitaGrp: Record<string, string>;
+  receitaGrp?: Record<string, string>;
   onUpdateCardTexto: (index: number, newTexto: string) => void;
-  onUpdateGrpTexto: (grupo: string, newTexto: string) => void;
+  onUpdateGrpTexto?: (grupo: string, newTexto: string) => void;
+  onUpdateReceitaItem: (id: string, newTexto: string) => void;
+  onDeleteReceitaItem: (id: string) => void;
   onAddToReceita: (cardIndex: number) => void;
   onDelGrp: (grupo: string) => void;
   onClear: () => void;
@@ -58,9 +60,9 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
   calcResult,
   cards,
   receita,
-  receitaGrp,
   onUpdateCardTexto,
-  onUpdateGrpTexto,
+  onUpdateReceitaItem,
+  onDeleteReceitaItem,
   onAddToReceita,
   onDelGrp,
   onClear,
@@ -144,31 +146,64 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
             </div>
           </div>
 
-          {grps.map(g => {
-            const txt = receitaGrp[g.k] != null ? receitaGrp[g.k] : grpTxt(g);
-            return (
-              <React.Fragment key={g.k}>
-                <div className="ghead">{g.k.toUpperCase()}</div>
-                <div className="card">
-                  <AutoTextarea
-                    value={txt}
-                    onChange={val => onUpdateGrpTexto(g.k, val)}
-                  />
-                  <div className="acts">
-                    <button
-                      onClick={() => onCopy(`${g.k.toUpperCase()}\n\n${txt}`)}
-                      title="Copiar"
-                    >
-                      ⧉
-                    </button>
-                    <button onClick={() => onDelGrp(g.k)} title="Remover">
-                      ✕
-                    </button>
-                  </div>
+          {grps.map(g => (
+            <React.Fragment key={g.k}>
+              <div
+                className="ghead"
+                style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+              >
+                <span>{g.k.toUpperCase()}</span>
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <button
+                    className="btn"
+                    style={{ fontSize: '11.5px', padding: '2px 8px' }}
+                    onClick={() => onCopy(`${g.k.toUpperCase()}\n\n${grpTxt(g)}`)}
+                    title="Copiar medicamentos desta seção"
+                  >
+                    Copiar seção
+                  </button>
+                  <button
+                    className="btn"
+                    style={{ fontSize: '11.5px', padding: '2px 8px' }}
+                    onClick={() => onDelGrp(g.k)}
+                    title="Remover toda esta seção"
+                  >
+                    Remover seção
+                  </button>
                 </div>
-              </React.Fragment>
-            );
-          })}
+              </div>
+
+              {g.items.map((item, itemIdx) => {
+                const lines = item.texto.split('\n');
+                const firstLine = lines[0].replace(/^\d+\.\s*/, `${itemIdx + 1}. `);
+                const currentText = [firstLine, ...lines.slice(1)].join('\n');
+
+                return (
+                  <div className="card" key={item.id || itemIdx}>
+                    <AutoTextarea
+                      value={currentText}
+                      onChange={val => item.id && onUpdateReceitaItem(item.id, val)}
+                    />
+                    <div className="acts">
+                      <button
+                        onClick={() => onCopy(currentText)}
+                        title="Copiar este medicamento"
+                      >
+                        ⧉
+                      </button>
+                      <button
+                        onClick={() => item.id && onDeleteReceitaItem(item.id)}
+                        title="Remover este medicamento da receita"
+                        style={{ color: 'var(--red)' }}
+                      >
+                        ✕
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+            </React.Fragment>
+          ))}
         </>
       )}
 

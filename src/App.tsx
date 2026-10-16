@@ -361,13 +361,23 @@ export const App: React.FC = () => {
   const handleAddToReceita = (cardIndex: number) => {
     const c = activeCards[cardIndex];
     if (!c) return;
-    setReceita(prev => [...prev, { grupo: c.grupo, sub: c.sub, texto: c.texto }]);
+    const id = 'rx_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+    setReceita(prev => [...prev, { id, grupo: c.grupo, sub: c.sub, texto: c.texto }]);
     setReceitaGrp(prev => {
       const next = { ...prev };
       delete next[c.grupo];
       return next;
     });
     showToast('Adicionado à receita');
+  };
+
+  const handleUpdateReceitaItem = (id: string, newTexto: string) => {
+    setReceita(prev => prev.map(r => (r.id === id ? { ...r, texto: newTexto } : r)));
+  };
+
+  const handleDeleteReceitaItem = (id: string) => {
+    setReceita(prev => prev.filter(r => r.id !== id));
+    showToast('Medicamento removido');
   };
 
   const handleUpdateCardTexto = (index: number, newTexto: string) => {
@@ -458,6 +468,8 @@ export const App: React.FC = () => {
           receitaGrp={receitaGrp}
           onUpdateCardTexto={handleUpdateCardTexto}
           onUpdateGrpTexto={handleUpdateGrpTexto}
+          onUpdateReceitaItem={handleUpdateReceitaItem}
+          onDeleteReceitaItem={handleDeleteReceitaItem}
           onAddToReceita={handleAddToReceita}
           onDelGrp={handleDelGrp}
           onClear={handleClear}

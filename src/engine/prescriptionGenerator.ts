@@ -113,6 +113,34 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
     });
   }
 
+  if (via === 'EV' && ap.forma === 'bolsa' && calcResult.ev) {
+    const E = calcResult.ev;
+    const volPrescrito = a.ml != null ? a.ml : a.mg;
+    const t = E.t != null ? fmt(E.t, 1) : '__';
+    const gt = E.gtt != null ? ` (≈ ${E.gtt} gts/min)` : '';
+    const vazaoTxt = E.mlh != null ? ` ou ${fmt(E.mlh)} mL/h` : '';
+    const qtdEV = a.whole ? a.txt : `${fmt(volPrescrito)} mL`;
+
+    const rawInstrucao = typeof ap.instrucao === 'function' ? ap.instrucao(p, a) : ap.instrucao;
+    const extra = rawInstrucao ? `\n   ${rawInstrucao}` : '';
+
+    let velocidadeTxt: string;
+    if (E.t != null && E.t <= 40) {
+      velocidadeTxt = `em correr aberto ou rápido (${t} min)${gt}`;
+    } else if (E.t != null) {
+      velocidadeTxt = `em ${t} min${gt}${vazaoTxt}`;
+    } else {
+      velocidadeTxt = `em correr aberto`;
+    }
+
+    out.push({
+      grupo: VIA_GRUPO.EV,
+      sub: 'Prescrição Interna',
+      texto: `${leader('1. ' + ap.nome, qtdEV)}\nInfundir ${fmt(volPrescrito)} mL, EV, ${velocidadeTxt}, ${posAbr}.${extra}`
+    });
+    return out;
+  }
+
   if (via === 'EV' && calcResult.ev) {
     const E = calcResult.ev;
     const dil = evDil;
