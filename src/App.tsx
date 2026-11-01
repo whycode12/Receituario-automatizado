@@ -8,8 +8,12 @@ import { Header } from './components/Header';
 import { DrugList } from './components/DrugList';
 import { CenterPanel } from './components/CenterPanel';
 import { PrescriptionPanel } from './components/PrescriptionPanel';
+import { ProtocolosView } from './components/ProtocolosView';
 
 export const App: React.FC = () => {
+  // 0. Visualização: Prescritor Livre vs Guia UPA 2026
+  const [viewMode, setViewMode] = useState<'prescritor' | 'protocolos'>('prescritor');
+
   // 1. Paciente
   const [pub, setPub] = useState<'adulto' | 'ped'>('adulto');
   const [peso, setPeso] = useState<string>('');
@@ -506,6 +510,8 @@ export const App: React.FC = () => {
   return (
     <>
       <Header
+        viewMode={viewMode}
+        setViewMode={setViewMode}
         pub={pub}
         setPub={handlePubChange}
         peso={peso}
@@ -517,73 +523,83 @@ export const App: React.FC = () => {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       />
-      <main className="grid">
-        <DrugList
-          drugs={DRUGS}
-          selectedDrug={selectedDrug}
-          onSelectDrug={handleSelectDrug}
-          favorites={favorites}
-          onToggleFavorite={toggleFavorite}
-          search={search}
-          setSearch={setSearch}
-        />
-        <CenterPanel
-          drug={selectedDrug}
+      {viewMode === 'protocolos' ? (
+        <ProtocolosView
           paciente={pacienteObj}
-          via={via}
-          onViaChange={handleViaChange}
-          apres={currentApres}
-          onApresChange={handleApresChange}
-          modo={modo}
-          onModoChange={handleModoChange}
-          n={n}
-          setN={setN}
-          dias={dias}
-          setDias={setDias}
-          usoContinuo={usoContinuo}
-          setUsoContinuo={setUsoContinuo}
-          condText={condText}
-          setCondText={setCondText}
-          frascoMl={frascoMl}
-          setFrascoMl={setFrascoMl}
-          doseVal={doseVal}
-          setDoseVal={setDoseVal}
-          unid={unid}
-          onUnidChange={handleUnidChange}
-          calcResult={calcResult}
-          isFav={selectedDrug ? favorites.includes(selectedDrug.id) : false}
-          onToggleFav={() => selectedDrug && toggleFavorite(selectedDrug.id)}
-          evDil={evDil}
-          setEvDil={setEvDil}
-          evVol={evVol}
-          setEvVol={v => {
-            setEvVol(v);
-            setVolManual(true);
+          onAddToReceita={novosItens => {
+            setReceita(prev => renumberReceita([...prev, ...novosItens]));
           }}
-          evTempo={evTempo}
-          setEvTempo={setEvTempo}
+          showToast={showToast}
         />
-        <PrescriptionPanel
-          drug={selectedDrug}
-          calcResult={calcResult}
-          cards={activeCards}
-          receita={receita}
-          receitaGrp={receitaGrp}
-          onUpdateCardTexto={handleUpdateCardTexto}
-          onUpdateGrpTexto={handleUpdateGrpTexto}
-          onUpdateReceitaItem={handleUpdateReceitaItem}
-          onDeleteReceitaItem={handleDeleteReceitaItem}
-          onMoveReceitaItem={handleMoveReceitaItem}
-          onReorderReceita={handleReorderReceita}
-          onMoveGroup={handleMoveReceitaGroup}
-          onAddToReceita={handleAddToReceita}
-          onDelGrp={handleDelGrp}
-          onClear={handleClear}
-          onCopy={handleCopy}
-          onCopyAll={() => handleCopy(getTextoReceita())}
-          grpTxt={grpTxt}
-        />
-      </main>
+      ) : (
+        <main className="grid">
+          <DrugList
+            drugs={DRUGS}
+            selectedDrug={selectedDrug}
+            onSelectDrug={handleSelectDrug}
+            favorites={favorites}
+            onToggleFavorite={toggleFavorite}
+            search={search}
+            setSearch={setSearch}
+          />
+          <CenterPanel
+            drug={selectedDrug}
+            paciente={pacienteObj}
+            via={via}
+            onViaChange={handleViaChange}
+            apres={currentApres}
+            onApresChange={handleApresChange}
+            modo={modo}
+            onModoChange={handleModoChange}
+            n={n}
+            setN={setN}
+            dias={dias}
+            setDias={setDias}
+            usoContinuo={usoContinuo}
+            setUsoContinuo={setUsoContinuo}
+            condText={condText}
+            setCondText={setCondText}
+            frascoMl={frascoMl}
+            setFrascoMl={setFrascoMl}
+            doseVal={doseVal}
+            setDoseVal={setDoseVal}
+            unid={unid}
+            onUnidChange={handleUnidChange}
+            calcResult={calcResult}
+            isFav={selectedDrug ? favorites.includes(selectedDrug.id) : false}
+            onToggleFav={() => selectedDrug && toggleFavorite(selectedDrug.id)}
+            evDil={evDil}
+            setEvDil={setEvDil}
+            evVol={evVol}
+            setEvVol={v => {
+              setEvVol(v);
+              setVolManual(true);
+            }}
+            evTempo={evTempo}
+            setEvTempo={setEvTempo}
+          />
+          <PrescriptionPanel
+            drug={selectedDrug}
+            calcResult={calcResult}
+            cards={activeCards}
+            receita={receita}
+            receitaGrp={receitaGrp}
+            onUpdateCardTexto={handleUpdateCardTexto}
+            onUpdateGrpTexto={handleUpdateGrpTexto}
+            onUpdateReceitaItem={handleUpdateReceitaItem}
+            onDeleteReceitaItem={handleDeleteReceitaItem}
+            onMoveReceitaItem={handleMoveReceitaItem}
+            onReorderReceita={handleReorderReceita}
+            onMoveGroup={handleMoveReceitaGroup}
+            onAddToReceita={handleAddToReceita}
+            onDelGrp={handleDelGrp}
+            onClear={handleClear}
+            onCopy={handleCopy}
+            onCopyAll={() => handleCopy(getTextoReceita())}
+            grpTxt={grpTxt}
+          />
+        </main>
+      )}
       <div className={`toast ${toastMsg ? 'on' : ''}`} id="toast">
         {toastMsg || 'Copiado'}
       </div>

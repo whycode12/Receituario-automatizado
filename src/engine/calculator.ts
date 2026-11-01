@@ -95,6 +95,8 @@ export function toMg(val: number | null, unid: UnidadeDose, ap: Apresentacao, pe
     case 'unid':  return ap.mg ? val * ap.mg : val;
     case 'sachet': return ap.mg ? val * ap.mg : val;
     case 'puff':   return ap.mg ? val * ap.mg : val;
+    case 'mcg':    return val / 1000;
+    case 'g':      return val * 1000;
     case 'ui':     return val;
     case 'ui_kg_dia': return peso ? (val * peso) / n : null;
     default: return val;
@@ -115,6 +117,8 @@ export function fromMg(mg: number | null, unid: UnidadeDose, ap: Apresentacao, p
     case 'unid':  return ap.mg ? mg / ap.mg : mg;
     case 'sachet': return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
     case 'puff':   return ap.mg ? Math.round((mg / ap.mg) * 10) / 10 : mg;
+    case 'mcg':    return mg * 1000;
+    case 'g':      return mg / 1000;
     case 'ui':     return mg;
     case 'ui_kg_dia': return peso ? (mg * n) / peso : null;
     default: return mg;

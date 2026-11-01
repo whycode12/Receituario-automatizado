@@ -2,6 +2,8 @@ import React from 'react';
 import { Pub } from '../types';
 
 interface HeaderProps {
+  viewMode: 'prescritor' | 'protocolos';
+  setViewMode: (v: 'prescritor' | 'protocolos') => void;
   pub: Pub;
   setPub: (p: Pub) => void;
   peso: string;
@@ -15,6 +17,8 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
+  viewMode,
+  setViewMode,
   pub,
   setPub,
   peso,
@@ -29,6 +33,20 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="top">
       <div className="brand">Receituário</div>
+      <div className="nav-tab-seg">
+        <button
+          className={viewMode === 'prescritor' ? 'active' : ''}
+          onClick={() => setViewMode('prescritor')}
+        >
+          💊 Prescritor Livre
+        </button>
+        <button
+          className={viewMode === 'protocolos' ? 'active' : ''}
+          onClick={() => setViewMode('protocolos')}
+        >
+          📋 Guia UPA 2026
+        </button>
+      </div>
       <div className="seg" id="pubSeg">
         <button
           className={pub === 'adulto' ? 'on' : ''}

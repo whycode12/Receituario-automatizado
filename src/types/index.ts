@@ -2,7 +2,7 @@ export type Pub = 'adulto' | 'ped';
 export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA' | 'OFTALMICA' | 'OTOLOGICA' | 'VAGINAL' | 'SC';
 export type ModoUso = 'agora' | 'sn' | 'continuo';
 export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal' | 'gel' | 'pomada' | 'creme' | 'pomada_oft' | 'bolsa';
-export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic' | 'ui' | 'ui_kg_dia';
+export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic' | 'ui' | 'ui_kg_dia' | 'mcg' | 'g';
 
 export interface Paciente {
   pub: Pub;
@@ -192,3 +192,5 @@ export interface ItemReceita {
   sub: string;
   texto: string;
 }
+
+export * from './protocolos';
