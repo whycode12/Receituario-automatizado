@@ -20,6 +20,8 @@ interface CenterPanelProps {
   setN: (n: number) => void;
   dias: number;
   setDias: (d: number) => void;
+  usoContinuo: boolean;
+  setUsoContinuo: (u: boolean) => void;
   condText: string;
   setCondText: (c: string) => void;
   frascoMl: number | null;
@@ -53,6 +55,8 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
   setN,
   dias,
   setDias,
+  usoContinuo,
+  setUsoContinuo,
   condText,
   setCondText,
   frascoMl,
@@ -262,29 +266,45 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
               />
             </div>
           ) : (
-            <div className="row" style={{ marginTop: '18px' }}>
-              <label className="field" style={{ flex: 1, marginTop: 0 }}>
-                <div className="lbl">Duração (dias)</div>
-                <input
-                  inputMode="numeric"
-                  value={dias}
-                  onChange={e => setDias(parseInt(e.target.value) || 1)}
-                  style={{ width: '100%' }}
-                />
-              </label>
-              {(apres.frascoMl ||
-                (['sol', 'gotas', 'susp', 'sol_nasal'].includes(apres.forma) && mgml(apres))) && (
-                <label className="field" style={{ flex: 1, marginTop: 0 }}>
-                  <div className="lbl">Volume do frasco (mL)</div>
+            <div style={{ marginTop: '16px' }}>
+              <div style={{ marginBottom: '10px' }}>
+                <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '13px', fontWeight: 500, userSelect: 'none' }}>
                   <input
-                    inputMode="numeric"
-                    placeholder={apres.frascoMl ? String(apres.frascoMl) : 'ex: 150'}
-                    value={frascoMl != null ? frascoMl : ''}
-                    onChange={e => setFrascoMl(e.target.value ? parseFloat(e.target.value) : null)}
-                    style={{ width: '100%' }}
+                    type="checkbox"
+                    checked={usoContinuo}
+                    onChange={e => setUsoContinuo(e.target.checked)}
+                    style={{ width: '16px', height: '16px', cursor: 'pointer' }}
                   />
+                  <span>Uso contínuo (sem data de término)</span>
                 </label>
-              )}
+              </div>
+
+              <div className="row" style={{ marginTop: 0 }}>
+                {!usoContinuo && (
+                  <label className="field" style={{ flex: 1, marginTop: 0 }}>
+                    <div className="lbl">Duração (dias)</div>
+                    <input
+                      inputMode="numeric"
+                      value={dias}
+                      onChange={e => setDias(parseInt(e.target.value) || 1)}
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                )}
+                {(apres.frascoMl ||
+                  (['sol', 'gotas', 'susp', 'sol_nasal'].includes(apres.forma) && mgml(apres))) && (
+                  <label className="field" style={{ flex: 1, marginTop: 0 }}>
+                    <div className="lbl">Volume do frasco (mL)</div>
+                    <input
+                      inputMode="numeric"
+                      placeholder={apres.frascoMl ? String(apres.frascoMl) : 'ex: 150'}
+                      value={frascoMl != null ? frascoMl : ''}
+                      onChange={e => setFrascoMl(e.target.value ? parseFloat(e.target.value) : null)}
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                )}
+              </div>
             </div>
           )}
         </>

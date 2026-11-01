@@ -11,6 +11,9 @@ interface PrescriptionPanelProps {
   onUpdateGrpTexto?: (grupo: string, newTexto: string) => void;
   onUpdateReceitaItem: (id: string, newTexto: string) => void;
   onDeleteReceitaItem: (id: string) => void;
+  onMoveReceitaItem?: (id: string, direction: 'up' | 'down') => void;
+  onReorderReceita?: (sourceId: string, targetId: string) => void;
+  onMoveGroup?: (grupo: string, direction: 'up' | 'down') => void;
   onAddToReceita: (cardIndex: number) => void;
   onDelGrp: (grupo: string) => void;
   onClear: () => void;
@@ -63,6 +66,9 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
   onUpdateCardTexto,
   onUpdateReceitaItem,
   onDeleteReceitaItem,
+  onMoveReceitaItem,
+  onReorderReceita,
+  onMoveGroup,
   onAddToReceita,
   onDelGrp,
   onClear,
@@ -70,6 +76,9 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
   onCopyAll,
   grpTxt
 }) => {
+  const [draggedItemId, setDraggedItemId] = React.useState<string | null>(null);
+  const [dragOverItemId, setDragOverItemId] = React.useState<string | null>(null);
+
   // Agrupar receita montada por grupo (ex: Uso Oral, Uso Nasal)
   const grps: { k: string; items: ItemReceita[] }[] = [];
   receita.forEach(r => {
@@ -146,13 +155,39 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
             </div>
           </div>
 
-          {grps.map(g => (
+          {grps.map((g, grpIdx) => (
             <React.Fragment key={g.k}>
               <div
                 className="ghead"
                 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
               >
-                <span>{g.k.toUpperCase()}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span>{g.k.toUpperCase()}</span>
+                  {grps.length > 1 && onMoveGroup && (
+                    <div style={{ display: 'inline-flex', gap: '2px', marginLeft: '6px' }}>
+                      <button
+                        type="button"
+                        className="btn"
+                        style={{ fontSize: '10px', padding: '1px 5px', lineHeight: 1 }}
+                        onClick={() => onMoveGroup(g.k, 'up')}
+                        disabled={grpIdx === 0}
+                        title="Mover seção para cima"
+                      >
+                        ▲
+                      </button>
+                      <button
+                        type="button"
+                        className="btn"
+                        style={{ fontSize: '10px', padding: '1px 5px', lineHeight: 1 }}
+                        onClick={() => onMoveGroup(g.k, 'down')}
+                        disabled={grpIdx === grps.length - 1}
+                        title="Mover seção para baixo"
+                      >
+                        ▼
+                      </button>
+                    </div>
+                  )}
+                </div>
                 <div style={{ display: 'flex', gap: '6px' }}>
                   <button
                     className="btn"
@@ -175,15 +210,87 @@ export const PrescriptionPanel: React.FC<PrescriptionPanelProps> = ({
 
               {g.items.map((item, itemIdx) => {
                 const lines = item.texto.split('\n');
-                const firstLine = lines[0].replace(/^\d+\.\s*/, `${itemIdx + 1}. `);
+                const firstLine = /^\d+\.\s*/.test(lines[0])
+                  ? lines[0].replace(/^\d+\.\s*/, `${itemIdx + 1}. `)
+                  : `${itemIdx + 1}. ${lines[0]}`;
                 const currentText = [firstLine, ...lines.slice(1)].join('\n');
 
                 return (
-                  <div className="card" key={item.id || itemIdx}>
-                    <AutoTextarea
-                      value={currentText}
-                      onChange={val => item.id && onUpdateReceitaItem(item.id, val)}
-                    />
+                  <div
+                    className={`card card-receita ${dragOverItemId === item.id ? 'drag-over' : ''}`}
+                    key={item.id || itemIdx}
+                    onDragOver={e => {
+                      e.preventDefault();
+                      if (draggedItemId && draggedItemId !== item.id) {
+                        setDragOverItemId(item.id || null);
+                      }
+                    }}
+                    onDragLeave={() => {
+                      if (dragOverItemId === item.id) {
+                        setDragOverItemId(null);
+                      }
+                    }}
+                    onDrop={e => {
+                      e.preventDefault();
+                      if (draggedItemId && item.id && draggedItemId !== item.id && onReorderReceita) {
+                        onReorderReceita(draggedItemId, item.id);
+                      }
+                      setDraggedItemId(null);
+                      setDragOverItemId(null);
+                    }}
+                    style={{
+                      opacity: draggedItemId === item.id ? 0.45 : 1,
+                      transition: 'border-color 0.15s, opacity 0.15s'
+                    }}
+                  >
+                    {onMoveReceitaItem && item.id && (
+                      <div className="card-order-col">
+                        <button
+                          type="button"
+                          className="btn-icon"
+                          onClick={() => item.id && onMoveReceitaItem(item.id, 'up')}
+                          disabled={itemIdx === 0}
+                          title="Mover para cima"
+                          aria-label="Mover para cima"
+                        >
+                          ▲
+                        </button>
+                        <div
+                          className="drag-handle"
+                          draggable
+                          onDragStart={e => {
+                            if (item.id) {
+                              setDraggedItemId(item.id);
+                              e.dataTransfer.effectAllowed = 'move';
+                              e.dataTransfer.setData('text/plain', item.id);
+                            }
+                          }}
+                          onDragEnd={() => {
+                            setDraggedItemId(null);
+                            setDragOverItemId(null);
+                          }}
+                          title="Arraste para mudar a ordem"
+                        >
+                          ⋮⋮
+                        </div>
+                        <button
+                          type="button"
+                          className="btn-icon"
+                          onClick={() => item.id && onMoveReceitaItem(item.id, 'down')}
+                          disabled={itemIdx === g.items.length - 1}
+                          title="Mover para baixo"
+                          aria-label="Mover para baixo"
+                        >
+                          ▼
+                        </button>
+                      </div>
+                    )}
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <AutoTextarea
+                        value={currentText}
+                        onChange={val => item.id && onUpdateReceitaItem(item.id, val)}
+                      />
+                    </div>
                     <div className="acts">
                       <button
                         onClick={() => onCopy(currentText)}

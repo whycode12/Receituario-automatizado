@@ -12,12 +12,85 @@ export interface PrescriptionParams {
   n: number;
   condText: string;
   dias: number;
+  usoContinuo?: boolean;
   frascoMl: number | null;
   evDil: string;
 }
 
+export function isAntibiotico(drug: Farmaco): boolean {
+  const cat = (drug.categoria || '').toLowerCase();
+  const classe = (drug.classe || '').toLowerCase();
+
+  // Antifúngicos puros e antiparasitários puros sem ação antibacteriana
+  if (classe.includes('antifúngic') || cat.includes('antifúngic')) {
+    return false;
+  }
+  if (
+    cat.includes('antiparasitários') &&
+    !classe.includes('antibacteriano') &&
+    !classe.includes('antimicrobiano') &&
+    !classe.includes('antibiótico')
+  ) {
+    return false;
+  }
+
+  if (cat.includes('antimicrobianos') || cat.includes('antibióticos')) {
+    return true;
+  }
+  if (
+    classe.includes('antibacteriano') ||
+    classe.includes('antibiótico') ||
+    classe.includes('antimicrobiano') ||
+    classe.includes('penicilina') ||
+    classe.includes('cefalosporina') ||
+    classe.includes('macrolídeo') ||
+    classe.includes('fluoroquinolona') ||
+    classe.includes('quinolona') ||
+    classe.includes('lincosamida') ||
+    classe.includes('tetraciclina') ||
+    classe.includes('sulfonamida') ||
+    classe.includes('carbapenêmico') ||
+    classe.includes('aminoglicosídeo')
+  ) {
+    return true;
+  }
+  return false;
+}
+
+export function getHorariosSugeridos(modo: ModoUso, n: number, via: Via, drug?: Farmaco): string | null {
+  const isAbx = drug ? isAntibiotico(drug) : false;
+  // Sugestão para todos os fármacos em uso 'continuo', ou antibióticos que não sejam dose imediata ('agora')
+  const shouldSuggest = modo === 'continuo' || (isAbx && modo !== 'agora');
+  if (!shouldSuggest) return null;
+
+  let times: string | null = null;
+  if (n === 1) {
+    times = '8h';
+  } else if (n === 2) {
+    times = isAbx ? '7h e 19h' : '8h e 20h';
+  } else if (n === 3) {
+    times = '6h, 14h, 22h';
+  } else if (n === 4) {
+    times = '6h, 12h, 18h, 00h';
+  }
+
+  if (!times) return null;
+
+  const prefix = n === 1 ? 'Sugestão de horário' : 'Sugestão de horários';
+  const aviso = '(Utilize alarme recorrente no celular para evitar esquecimento).';
+  if (via === 'VO') {
+    return `${prefix} para tomar: ${times} ${aviso}`;
+  } else {
+    return `${prefix}: ${times} ${aviso}`;
+  }
+}
+
+export const getHorariosSugeridosAntibiotico = (h: number, n: number, via: Via): string | null => {
+  return getHorariosSugeridos('continuo', n, via);
+};
+
 export function generatePrescriptionCards(params: PrescriptionParams): ItemReceita[] {
-  const { drug: d, apres: ap, calcResult, paciente: p, via, modo, n, condText, dias, frascoMl, evDil } = params;
+  const { drug: d, apres: ap, calcResult, paciente: p, via, modo, n, condText, dias, usoContinuo, frascoMl, evDil } = params;
   if (!calcResult.arr) return [];
 
   const a = calcResult.arr;
@@ -29,9 +102,13 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       : modo === 'sn'
       ? n === 1
         ? `até 1 vez ao dia, se ${condText}`
-        : `até de ${h} em ${h} horas, se ${condText}`
+        : `podendo repetir de ${h} em ${h} horas, se ${condText}`
       : n === 1
-      ? `1 vez ao dia, por ${dias} dias`
+      ? usoContinuo
+        ? `1 vez ao dia`
+        : `1 vez ao dia, por ${dias} dias`
+      : usoContinuo
+      ? `de ${h} em ${h} horas`
       : `de ${h} em ${h} horas, por ${dias} dias`;
 
   const posAbr =
@@ -40,9 +117,13 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       : modo === 'sn'
       ? n === 1
         ? `até 1x/dia, se ${condText}`
-        : `até de ${h}/${h}h, se ${condText}`
+        : `podendo repetir de ${h}/${h}h, se ${condText}`
       : n === 1
-      ? `1x/dia, por ${dias} dias`
+      ? usoContinuo
+        ? `1x/dia`
+        : `1x/dia, por ${dias} dias`
+      : usoContinuo
+      ? `de ${h}/${h}h`
       : `de ${h}/${h}h, por ${dias} dias`;
 
   const fapVol = ap.forma === 'fap' ? (ap.volml != null ? ap.volml : ap.reconstMl != null ? ap.reconstMl : null) : null;
@@ -75,7 +156,11 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
     }
 
     const rawInstrucao = typeof ap.instrucao === 'function' ? ap.instrucao(p, a) : ap.instrucao;
-    const extra = rawInstrucao ? `\n   ${rawInstrucao}` : '';
+    const sugestaoHorarios = getHorariosSugeridos(modo, n, via, d);
+    const extraParts: string[] = [];
+    if (rawInstrucao) extraParts.push(rawInstrucao);
+    if (sugestaoHorarios) extraParts.push(sugestaoHorarios);
+    const extra = extraParts.length > 0 ? '\n   ' + extraParts.join('\n   ') : '';
     const doseTxt = a.txt + (via === 'NASAL' ? ' em cada narina' : '');
 
     out.push({
@@ -101,10 +186,17 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       disp = `${disp} (${fmt(fapVol)} mL)`;
     }
 
+    const rawInstrucao = typeof ap.instrucao === 'function' ? ap.instrucao(p, a) : ap.instrucao;
+    const sugestaoHorarios = getHorariosSugeridos(modo, n, via, d);
+    const extraParts: string[] = [];
+    if (rawInstrucao) extraParts.push(rawInstrucao);
+    if (sugestaoHorarios) extraParts.push(sugestaoHorarios);
+    const extra = extraParts.length > 0 ? '\n   ' + extraParts.join('\n   ') : '';
+
     out.push({
       grupo: VIA_GRUPO.IM,
       sub: 'Receita Médica',
-      texto: `${leader('1. ' + rot, disp)}\nAplicar ${dose}, intramuscular, ${posExt}.`
+      texto: `${leader('1. ' + rot, disp)}\nAplicar ${dose}, intramuscular, ${posExt}.${extra}`
     });
     out.push({
       grupo: VIA_GRUPO.IM,

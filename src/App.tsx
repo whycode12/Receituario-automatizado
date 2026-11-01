@@ -34,6 +34,7 @@ export const App: React.FC = () => {
   const [modo, setModo] = useState<ModoUso>('sn');
   const [n, setN] = useState<number>(4);
   const [dias, setDias] = useState<number>(7);
+  const [usoContinuo, setUsoContinuo] = useState<boolean>(false);
   const [condText, setCondText] = useState<string>('dor');
   const [doseVal, setDoseVal] = useState<number | null>(null);
   const [unid, setUnid] = useState<UnidadeDose>('mg');
@@ -151,6 +152,7 @@ export const App: React.FC = () => {
       setVolManual(false);
       setEvVol(null);
       setEvTempo(null);
+      setUsoContinuo(false);
       setEvDil(targetDrug.ev ? targetDrug.ev.diluentes[0] : 'SF 0,9%');
     },
     []
@@ -309,10 +311,11 @@ export const App: React.FC = () => {
       n,
       condText,
       dias,
+      usoContinuo,
       frascoMl,
       evDil
     });
-  }, [selectedDrug, currentApres, calcResult, pacienteObj, via, modo, n, condText, dias, frascoMl, evDil]);
+  }, [selectedDrug, currentApres, calcResult, pacienteObj, via, modo, n, condText, dias, usoContinuo, frascoMl, evDil]);
 
   // Cards ativos com possíveis edições manuais
   const activeCards = useMemo(() => {
@@ -322,14 +325,30 @@ export const App: React.FC = () => {
     }));
   }, [generatedCards, previewCardTexts]);
 
-  // Funções de formatação de receita
+  // Funções de formatação e renumeração de receita
+  const adaptItemNumber = (texto: string, newNum: number): string => {
+    const lines = texto.split('\n');
+    const first = /^\d+\.\s*/.test(lines[0])
+      ? lines[0].replace(/^\d+\.\s*/, `${newNum}. `)
+      : `${newNum}. ${lines[0]}`;
+    return [first, ...lines.slice(1)].join('\n');
+  };
+
+  const renumberReceita = (items: ItemReceita[]): ItemReceita[] => {
+    const groupCounts: Record<string, number> = {};
+    return items.map(item => {
+      const count = (groupCounts[item.grupo] || 0) + 1;
+      groupCounts[item.grupo] = count;
+      return {
+        ...item,
+        texto: adaptItemNumber(item.texto, count)
+      };
+    });
+  };
+
   const grpTxt = useCallback((g: { k: string; items: ItemReceita[] }): string => {
     return g.items
-      .map((r, idx) => {
-        const lines = r.texto.split('\n');
-        const first = lines[0].replace(/^\d+\.\s*/, `${idx + 1}. `);
-        return [first, ...lines.slice(1)].join('\n');
-      })
+      .map((r, idx) => adaptItemNumber(r.texto, idx + 1))
       .join('\n\n');
   }, []);
 
@@ -362,7 +381,10 @@ export const App: React.FC = () => {
     const c = activeCards[cardIndex];
     if (!c) return;
     const id = 'rx_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
-    setReceita(prev => [...prev, { id, grupo: c.grupo, sub: c.sub, texto: c.texto }]);
+    setReceita(prev => {
+      const next = [...prev, { id, grupo: c.grupo, sub: c.sub, texto: c.texto }];
+      return renumberReceita(next);
+    });
     setReceitaGrp(prev => {
       const next = { ...prev };
       delete next[c.grupo];
@@ -376,8 +398,87 @@ export const App: React.FC = () => {
   };
 
   const handleDeleteReceitaItem = (id: string) => {
-    setReceita(prev => prev.filter(r => r.id !== id));
+    setReceita(prev => {
+      const filtered = prev.filter(r => r.id !== id);
+      return renumberReceita(filtered);
+    });
+    setReceitaGrp({});
     showToast('Medicamento removido');
+  };
+
+  const handleMoveReceitaItem = (id: string, direction: 'up' | 'down') => {
+    setReceita(prev => {
+      const itemIndex = prev.findIndex(item => item.id === id);
+      if (itemIndex === -1) return prev;
+      const currentItem = prev[itemIndex];
+
+      const sameGroupIndices = prev
+        .map((item, idx) => (item.grupo === currentItem.grupo ? idx : -1))
+        .filter(idx => idx !== -1);
+
+      const posInGroup = sameGroupIndices.indexOf(itemIndex);
+      if (direction === 'up' && posInGroup > 0) {
+        const targetIndex = sameGroupIndices[posInGroup - 1];
+        const next = [...prev];
+        const temp = next[itemIndex];
+        next[itemIndex] = next[targetIndex];
+        next[targetIndex] = temp;
+        return renumberReceita(next);
+      } else if (direction === 'down' && posInGroup < sameGroupIndices.length - 1) {
+        const targetIndex = sameGroupIndices[posInGroup + 1];
+        const next = [...prev];
+        const temp = next[itemIndex];
+        next[itemIndex] = next[targetIndex];
+        next[targetIndex] = temp;
+        return renumberReceita(next);
+      }
+      return prev;
+    });
+    setReceitaGrp({});
+  };
+
+  const handleReorderReceita = (sourceId: string, targetId: string) => {
+    if (sourceId === targetId) return;
+    setReceita(prev => {
+      const srcIdx = prev.findIndex(x => x.id === sourceId);
+      const dstIdx = prev.findIndex(x => x.id === targetId);
+      if (srcIdx === -1 || dstIdx === -1) return prev;
+      const next = [...prev];
+      const [moved] = next.splice(srcIdx, 1);
+      const targetGroup = next[dstIdx < next.length ? dstIdx : next.length - 1]?.grupo;
+      if (targetGroup) moved.grupo = targetGroup;
+      next.splice(dstIdx, 0, moved);
+      return renumberReceita(next);
+    });
+    setReceitaGrp({});
+  };
+
+  const handleMoveReceitaGroup = (grupo: string, direction: 'up' | 'down') => {
+    setReceita(prev => {
+      const groups: string[] = [];
+      prev.forEach(item => {
+        if (!groups.includes(item.grupo)) groups.push(item.grupo);
+      });
+      const gIdx = groups.indexOf(grupo);
+      if (gIdx === -1) return prev;
+      if (direction === 'up' && gIdx > 0) {
+        const temp = groups[gIdx - 1];
+        groups[gIdx - 1] = grupo;
+        groups[gIdx] = temp;
+      } else if (direction === 'down' && gIdx < groups.length - 1) {
+        const temp = groups[gIdx + 1];
+        groups[gIdx + 1] = grupo;
+        groups[gIdx] = temp;
+      } else {
+        return prev;
+      }
+      const reordered: ItemReceita[] = [];
+      groups.forEach(gName => {
+        reordered.push(...prev.filter(item => item.grupo === gName));
+      });
+      return renumberReceita(reordered);
+    });
+    setReceitaGrp({});
   };
 
   const handleUpdateCardTexto = (index: number, newTexto: string) => {
@@ -439,6 +540,8 @@ export const App: React.FC = () => {
           setN={setN}
           dias={dias}
           setDias={setDias}
+          usoContinuo={usoContinuo}
+          setUsoContinuo={setUsoContinuo}
           condText={condText}
           setCondText={setCondText}
           frascoMl={frascoMl}
@@ -470,6 +573,9 @@ export const App: React.FC = () => {
           onUpdateGrpTexto={handleUpdateGrpTexto}
           onUpdateReceitaItem={handleUpdateReceitaItem}
           onDeleteReceitaItem={handleDeleteReceitaItem}
+          onMoveReceitaItem={handleMoveReceitaItem}
+          onReorderReceita={handleReorderReceita}
+          onMoveGroup={handleMoveReceitaGroup}
           onAddToReceita={handleAddToReceita}
           onDelGrp={handleDelGrp}
           onClear={handleClear}

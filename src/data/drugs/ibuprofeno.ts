@@ -119,7 +119,7 @@ export const ibuprofeno: Farmaco = {
       tipo: 'mg',
       min: 200,
       max: 800,
-      padrao: 400,
+      padrao: 600,
       dosesDia: [3, 4],
       dosesPadrao: 3,
       fonte: 'HSL',

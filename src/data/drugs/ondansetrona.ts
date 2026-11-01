@@ -6,7 +6,7 @@ export const ondansetrona: Farmaco = {
   categoria: 'Gastrintestinal e Antieméticos',
   busca: 'zofran vonau flash ansentron ondansetrona antiemetico nausea vomito',
   classe: 'Antiemético (Antagonista Seletivo dos Receptores 5-HT3 de Serotonina)',
-  dosePratica: 'Adulto: VO: 4 a 8 mg (orodispersível ou comprimido) até de 8/8h se náuseas/vômitos (máx. 24 mg/dia; em hepatopatia grave máx. 8 mg/dia). EV/IM: 4 a 8 mg EV lento em 2-5 min. Pediatria (≥ 6 meses): VO/EV: 0,15 mg/kg/dose (máx. 4 a 8 mg/dose) até de 8/8h.',
+  dosePratica: 'Adulto: VO: 4 a 8 mg (orodispersível ou comprimido) podendo repetir de 8/8h se náuseas/vômitos (máx. 24 mg/dia; em hepatopatia grave máx. 8 mg/dia). EV/IM: 4 a 8 mg EV lento em 2-5 min. Pediatria (≥ 6 meses): VO/EV: 0,15 mg/kg/dose (máx. 4 a 8 mg/dose) podendo repetir de 8/8h.',
   fontes: { HSL: '12/01/2021', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
   snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): comprimido 4 mg, comprimido 8 mg e solução injetável 2 mg/mL (ampola 2 mL e 4 mL). Farmácia Popular: não consta no elenco.',

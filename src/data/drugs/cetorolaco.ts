@@ -6,7 +6,7 @@ export const cetorolaco: Farmaco = {
   categoria: 'Analgésicos e Anti-inflamatórios',
   busca: 'cetorolaco trometamol toragesic cetrolac deocil aine sublingual sl dor aguda colica renal lombalgia',
   classe: 'Anti-inflamatório Não Esteroidal (AINE) e Analgésico Não Opioide Potente',
-  dosePratica: 'Adulto: 10 mg a 20 mg sublingual (SL) ou VO em dose única, ou 10 mg até de 6/6h a 8/8h se dor intensa (máx. 40 mg/dia VO/SL); EV/IM: 30 mg (ou 15 mg se > 65 anos ou < 50 kg) até de 6/6h (máx. 90 mg/dia para jovens ou 60 mg/dia para idosos/baixo peso). ATENÇÃO: Duração MÁXIMA estrita de 5 dias combinando vias (risco alto de hemorragia digestiva e nefrotoxicidade).',
+  dosePratica: 'Adulto: 10 mg a 20 mg sublingual (SL) ou VO em dose única, ou 10 mg podendo repetir de 6/6h a 8/8h se dor intensa (máx. 40 mg/dia VO/SL); EV/IM: 30 mg (ou 15 mg se > 65 anos ou < 50 kg) podendo repetir de 6/6h (máx. 90 mg/dia para jovens ou 60 mg/dia para idosos/baixo peso). ATENÇÃO: Duração MÁXIMA estrita de 5 dias combinando vias (risco alto de hemorragia digestiva e nefrotoxicidade).',
   fontes: { HSL: '05/05/2025', EINA: '2024', EINP: '2024', PSZERADO: '2025', BULA: '04/10/2026' },
   snPadrao: 'dor aguda moderada a intensa (cólica renal, dor pós-traumática ou pós-operatória)',
   acessoFonte: 'RENAME 2024: Não consta na RENAME básica; padronizado no elenco hospitalar, UPAs e prontos-socorros municipais.',
