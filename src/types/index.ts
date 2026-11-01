@@ -1,8 +1,8 @@
 export type Pub = 'adulto' | 'ped';
-export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA' | 'OFTALMICA' | 'OTOLOGICA' | 'VAGINAL' | 'SC';
+export type Via = 'VO' | 'VR' | 'IM' | 'EV' | 'NASAL' | 'INALATORIA' | 'TOPICA' | 'OFTALMICA' | 'OTOLOGICA' | 'VAGINAL' | 'SC' | 'SL';
 export type ModoUso = 'agora' | 'sn' | 'continuo';
-export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal' | 'gel' | 'pomada' | 'creme' | 'pomada_oft' | 'bolsa';
-export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic' | 'ui' | 'ui_kg_dia' | 'mcg' | 'g';
+export type FormaFarmaceutica = 'cp' | 'cap' | 'gotas' | 'sol' | 'amp' | 'fap' | 'sup' | 'sachet' | 'sache' | 'sol_nasal' | 'sol_sro' | 'spray' | 'inal' | 'gel' | 'pomada' | 'creme' | 'pomada_oft' | 'bolsa' | 'seringa';
+export type UnidadeDose = 'mg' | 'mg_kg_dose' | 'mg_kg_dia' | 'ml' | 'gotas' | 'unid' | 'mg_dia' | 'sachet' | 'puff' | 'aplic' | 'ui' | 'ui_kg_dia' | 'mcg' | 'g' | 'UI' | 'ampola';
 
 export interface Paciente {
   pub: Pub;
@@ -73,7 +73,7 @@ export interface MaximoDose {
   se?: CondicaoRegra;
   vias?: Via[];
   apres?: string[];
-  tipo: 'mg_dia' | 'mg_kg_dia' | 'mg_dia_peso';
+  tipo: 'mg_dia' | 'mg_kg_dia' | 'mg_dia_peso' | 'dose_max';
   valor?: number;
   faixas?: [number, number, number][]; // [pesoMin, pesoMax, maxMgDia]
   fonte: string;
@@ -116,7 +116,7 @@ export interface NotasFarmaco {
   indicacao: string;
   administracao: string;
   cuidados: string;
-  ajuste: string;
+  ajuste?: string;
   dosePratica?: string;
 }
 

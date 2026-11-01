@@ -1,10 +1,24 @@
 import { ProtocoloConduta } from '../../types/protocolos';
 import { protocolosRespiratorio } from './respiratorio';
 import { protocolosGastrointestinal } from './gastrointestinal';
+import { protocolosOculares } from './oculares';
+import { protocolosCirurgicas } from './cirurgicas';
+import { protocolosCardiovascular } from './cardiovascular';
+import { protocolosUrinarioEndocrino } from './urinario_endocrino';
+import { protocolosInfecciosasDermato } from './infecciosas_dermato';
+import { protocolosNeuroPsiquiatria } from './neuro_psiquiatria';
+import { protocolosSaudeMulher } from './saude_mulher';
 
 export const PROTOCOLOS: ProtocoloConduta[] = [
   ...protocolosRespiratorio,
-  ...protocolosGastrointestinal
+  ...protocolosOculares,
+  ...protocolosGastrointestinal,
+  ...protocolosCirurgicas,
+  ...protocolosCardiovascular,
+  ...protocolosUrinarioEndocrino,
+  ...protocolosInfecciosasDermato,
+  ...protocolosNeuroPsiquiatria,
+  ...protocolosSaudeMulher
 ];
 
 export const CATEGORIAS_PROTOCOLOS = [

@@ -314,7 +314,7 @@ export function calcularPrescricao(
   });
 
   // 3. Regras ativas
-  C.R = drug.regras.filter(r => aplica(r, p, via, apres.id) === true);
+  C.R = (drug.regras || []).filter(r => aplica(r, p, via, apres.id) === true);
   if (!C.R.length) {
     if (p.pub === 'ped' && !p.peso) {
       C.infos.push({ t: 'Informe o peso da criança para consultar as regras em mg/kg.' });

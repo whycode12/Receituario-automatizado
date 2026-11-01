@@ -365,5 +365,373 @@ export const protocolosGastrointestinal: ProtocoloConduta[] = [
         'Reduzir temporariamente alimentos altamente fermentáveis (FODMAPs: feijão, repolho, brócolis, cebola, leite)'
       ]
     }
+  },
+  {
+    id: 'constipacao_intestinal',
+    titulo: 'Constipação Intestinal Aguda e Funcional',
+    categoria: 'Sistema Gastrointestinal',
+    subcategoria: 'Motilidade Intestinal',
+    paginaPdf: 29,
+    descricao: 'Laxativos osmóticos, alívio de distensão por gases e medidas comportamentais do Guia da UPA.',
+    opcoesPrescricao: [
+      {
+        id: 'constipacao_lactulose',
+        titulo: 'Opção 1 - Lactulose Xarope + Simeticona',
+        subtitulo: 'Laxativo osmótico seguro de primeira escolha para amolecimento das fezes',
+        itens: [
+          {
+            farmacoId: 'lactulose',
+            forma: 'sol',
+            dose: 20,
+            unidade: 'ml',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 7,
+            orientacaoExtra: 'Tomar 15 a 30 mL ao dia, preferencialmente pela manhã em jejum ou dividido em 2 tomadas.'
+          },
+          {
+            farmacoId: 'simeticona',
+            forma: 'cp',
+            dose: 40,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'dor abdominal ou sensação de estufamento'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'Descartar Fecaloma impactado em idosos e acamados (necessita toque retal e lavagem/remoção manual ou clister glicerinado)',
+        'Sinais de obstrução mecânica ou vômitos fecais (contraindicado laxante oral em obstrução)',
+        'Sangramento retal indolor ou dor anal excruciante (descartar fissura anal e hemorroida trombosada)'
+      ],
+      orientacoesNaoFarmacologicas: [
+        'Ingerir bastante água e líquidos (8 a 10 copos de 200 mL por dia, totalizando pelo menos 2 litros/dia)',
+        'Dieta rica em fibras alimentares: frutas com casca (mamão, ameixa, laranja com bagaço), verduras cruas, cereais integrais e aveia',
+        'Praticar atividade física regular e tentar evacuar diariamente no mesmo horário sem inibir o reflexo evacuatório',
+        'Utilizar apoio sob os pés (banquinho) ao sentar no vaso sanitário para simular a posição de cócoras e retificar o reto'
+      ]
+    }
+  },
+  {
+    id: 'diarreia_c_difficile',
+    titulo: 'Diarreia por Clostridioides difficile (Colite Pseudomembranosa)',
+    categoria: 'Sistema Gastrointestinal',
+    subcategoria: 'Diarreia Pós-Antibiótico',
+    paginaPdf: 33,
+    descricao: 'Suspeitar em pacientes com diarreia profusa, dor e febre após uso recente de antibióticos.',
+    opcoesPrescricao: [
+      {
+        id: 'c_difficile_metronidazol',
+        titulo: 'Opção Padrão UPA - Metronidazol Oral + Floratil + SRO',
+        subtitulo: 'Tratamento de episódios leves a moderados no Guia UPA 2026',
+        itens: [
+          {
+            farmacoId: 'metronidazol',
+            forma: 'cp',
+            dose: 500,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 3,
+            dias: 10,
+            orientacaoExtra: 'Tomar 500 mg (2 comprimidos de 250 mg) de 8 em 8 horas por 10 a 14 dias com as refeições.'
+          },
+          {
+            farmacoId: 'saccharomyces_boulardii',
+            forma: 'cap',
+            dose: 200,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 10,
+            orientacaoExtra: 'Auxilia na restauração da flora e redução de recidiva de toxina C. difficile.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'cp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'febre ou dor'
+          },
+          {
+            farmacoId: 'sro',
+            forma: 'sol_sro',
+            dose: 250,
+            unidade: 'ml',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'evacuações diarreicas'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'CONTRAINDICAÇÃO ABSOLUTA DE LOPERAMIDA OU OPIOIDES (risco elevadíssimo de megacólon tóxico, perfuração colônica e peritonite fatal)',
+        'Sinais de gravidade: Leucocitose > 15.000 ou Creatinina sérica > 1,5 vezes o basal (indicação de Vancomicina oral 125 mg 6/6h e internação)',
+        'Sinais fulminantes: hipotensão, choque, íleo paralítico, distensão abdominal maciça e acidose láctica'
+      ],
+      examesSolicitar: [
+        'Pesquisa de Toxinas A e B de C. difficile nas fezes (ELISA ou PCR molecular)',
+        'Hemograma completo, Ureia, Creatinina, Eletrólitos e Lactato',
+        'Radiografia ou TC de abdome se suspeita de megacólon tóxico (dilatação colônica > 6 cm)'
+      ]
+    }
+  },
+  {
+    id: 'parasitoses_intestinais',
+    titulo: 'Parasitoses Intestinais e Verminoses',
+    categoria: 'Sistema Gastrointestinal',
+    subcategoria: 'Helmintíases e Protozooses',
+    paginaPdf: 35,
+    descricao: 'Esquemas antiparasitários empíricos e direcionados (Albendazol, Ivermectina, Nitazoxanida, Secnidazol).',
+    opcoesPrescricao: [
+      {
+        id: 'parasitose_albendazol',
+        titulo: 'Opção 1 - Albendazol 400 mg (Dose Única + Repetir após 10 dias)',
+        subtitulo: 'Tratamento de ampla cobertura para Ascaris, Enterobius, Necator, Ancylostoma e Trichuris',
+        itens: [
+          {
+            farmacoId: 'albendazol',
+            forma: 'cp',
+            dose: 400,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'agora',
+            freq: 1,
+            orientacaoExtra: 'Mastigar ou engolir 1 comprimido de 400 mg em dose única junto com uma refeição gordurosa. Repetir 1 comprimido após 10 a 14 dias para erradicar ovos eclodidos.'
+          }
+        ]
+      },
+      {
+        id: 'parasitose_nitazoxanida',
+        titulo: 'Opção 2 - Nitazoxanida 500 mg (Annita) de 12/12h por 3 dias',
+        subtitulo: 'Ação antiparasitária abrangente contra helmintos e protozoários (Giardia, Ameba, Criptosporídeos)',
+        itens: [
+          {
+            farmacoId: 'nitazoxanida',
+            forma: 'cp',
+            dose: 500,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 3,
+            orientacaoExtra: 'Tomar 1 comprimido de 12 em 12 horas após as refeições por 3 dias consecutivos. Pode tingir a urina de amarelo-esverdeado.'
+          }
+        ]
+      },
+      {
+        id: 'parasitose_ivermectina',
+        titulo: 'Opção 3 - Ivermectina 6 mg (Estrongiloidíase / Escabiose associada)',
+        subtitulo: 'Dose calculada pelo peso corporal (cerca de 200 mcg/kg), repetir após 7 a 14 dias',
+        itens: [
+          {
+            farmacoId: 'ivermectina',
+            forma: 'cp',
+            dose: 12,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'agora',
+            freq: 1,
+            orientacaoExtra: 'Tomar 2 comprimidos de 6 mg (12 mg para 60-80 kg) em jejum com água. Repetir a mesma dose após 7 a 14 dias.'
+          }
+        ]
+      },
+      {
+        id: 'parasitose_secnidazol',
+        titulo: 'Opção 4 - Secnidazol 1000 mg (Amebíase / Giardíase)',
+        subtitulo: 'Dose única de 2 g (2 comprimidos de 1000 mg) para protozoários luminais',
+        itens: [
+          {
+            farmacoId: 'secnidazol',
+            forma: 'cp',
+            dose: 2000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'agora',
+            freq: 1,
+            orientacaoExtra: 'Tomar 2 comprimidos de 1000 mg (2 g) de uma vez em dose única ao fim de uma refeição. Proibido consumo de álcool por 72h (efeito antabuse).'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      orientacoesNaoFarmacologicas: [
+        'Lavar muito bem as mãos antes das refeições e após usar o banheiro',
+        'Lavar cuidadosamente frutas e verduras em água corrente e deixar de molho em solução de hipoclorito de sódio (1 colher de sopa por litro de água por 15 minutos)',
+        'Beber somente água filtrada, fervida ou tratada',
+        'Andar sempre calçado (prevenção de penetração transcutânea por Ancylostoma e Strongyloides)',
+        'Cortar e manter as unhas bem limpas; lavar roupas de cama e toalhas com água quente em caso de oxiuríase'
+      ]
+    }
+  },
+  {
+    id: 'diarreia_cyclospora_protozoarios',
+    titulo: 'Diarreia por Cyclospora, Isospora belli e Protozoários',
+    categoria: 'Sistema Gastrointestinal',
+    subcategoria: 'Diarreia Prolongada / Imunossuprimidos',
+    paginaPdf: 34,
+    descricao: 'Esquemas para infecções por coccídeos intestinais (Cyclospora cayetanensis, Cystoisospora belli) e diarreias prolongadas por protozoários luminais (> 7 dias).',
+    opcoesPrescricao: [
+      {
+        id: 'cyclospora_bactrim',
+        titulo: 'Opção 1 - Sulfametoxazol + Trimetoprima 400/80 mg (Cyclospora e Isospora)',
+        subtitulo: 'Tratamento de primeira escolha: 2 comprimidos de 12/12h por 14 dias (comum em pacientes imunocomprometidos)',
+        itens: [
+          {
+            farmacoId: 'sulfametoxazol-trimetoprima',
+            forma: 'cp',
+            dose: 160,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 14,
+            orientacaoExtra: 'Tomar 2 comprimidos de 400/80 mg (ou 1 comprimido F 800/160 mg) de 12 em 12 horas por 14 dias consecutivos com bastante líquido.'
+          },
+          {
+            farmacoId: 'saccharomyces_boulardii',
+            forma: 'cap',
+            dose: 200,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 5,
+            orientacaoExtra: 'Tomar 1 cápsula de 12 em 12 horas por 5 dias.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'cp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'dor ou febre'
+          },
+          {
+            farmacoId: 'escopolamina',
+            forma: 'cp',
+            dose: 10,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 3,
+            condicao: 'dor em cólica'
+          },
+          {
+            farmacoId: 'metoclopramida',
+            forma: 'cp',
+            dose: 10,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 3,
+            condicao: 'náuseas ou vômitos'
+          },
+          {
+            farmacoId: 'sro',
+            forma: 'sol_sro',
+            dose: 250,
+            unidade: 'ml',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'evacuações líquidas'
+          }
+        ]
+      },
+      {
+        id: 'protozoarios_secnidazol',
+        titulo: 'Opção 2 - Secnidazol 1000 mg (Diarreia > 7 dias por Protozoários / Nematelmintos)',
+        subtitulo: 'Suspeitar se diarreia > 7 dias: cólica, febre e tenesmo (Amebíase) ou fezes volumosas/esteatorreia (Giardíase)',
+        itens: [
+          {
+            farmacoId: 'secnidazol',
+            forma: 'cp',
+            dose: 2000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'agora',
+            freq: 1,
+            orientacaoExtra: 'Tomar 2 comprimidos de 1000 mg (2 g) de uma vez em dose única ao fim de uma refeição. Proibido ingestão de álcool por 72h.'
+          },
+          {
+            farmacoId: 'saccharomyces_boulardii',
+            forma: 'cap',
+            dose: 200,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'continuo',
+            freq: 2,
+            dias: 5,
+            orientacaoExtra: 'Tomar 1 cápsula de 12 em 12 horas por 5 dias.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'cp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'dor ou febre'
+          },
+          {
+            farmacoId: 'escopolamina',
+            forma: 'cp',
+            dose: 10,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 3,
+            condicao: 'dor em cólica'
+          },
+          {
+            farmacoId: 'metoclopramida',
+            forma: 'cp',
+            dose: 10,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 3,
+            condicao: 'náuseas ou vômitos'
+          },
+          {
+            farmacoId: 'sro',
+            forma: 'sol_sro',
+            dose: 250,
+            unidade: 'ml',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'evacuações líquidas'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'Diarreia prolongada (> 14 dias) em imunodeprimidos ou portadores de HIV pode levar a desidratação grave e choque hipovolêmico.',
+        'Sinais de disenteria invasiva com febre alta e toxemia necessitam de hidratação venosa vigorosa e coprocultura.',
+        'Proibido uso de antimotílicos (loperamida) em quadros de febre e diarreia inflamatória.'
+      ],
+      examesSolicitar: [
+        'Exame Parasitológico de Fezes (EPF) em 3 amostras seriadas com métodos específicos para coccídeos (coloração de Kinyoun / Ziehl-Neelsen modificado para Cyclospora e Isospora)',
+        'Hemograma completo, Eletrólitos, Ureia e Creatinina'
+      ]
+    }
   }
 ];

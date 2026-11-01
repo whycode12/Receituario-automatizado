@@ -134,11 +134,12 @@ export const ProtocolosView: React.FC<ProtocolosViewProps> = ({
     const itensParaEnviar: ItemReceita[] = [];
 
     itensVisuais.forEach((it, idx) => {
-      if (it.cardReceita) {
+      const card = it.cardReceita || it.cardInterno;
+      if (card) {
         itensParaEnviar.push({
           id: `${it.id}_rec_${Date.now()}_${idx}`,
-          grupo: it.cardReceita.grupo,
-          sub: it.cardReceita.sub,
+          grupo: card.grupo,
+          sub: card.sub,
           texto: it.textoExibicao
         });
       }
@@ -146,7 +147,7 @@ export const ProtocolosView: React.FC<ProtocolosViewProps> = ({
 
     if (itensParaEnviar.length > 0) {
       onAddToReceita(itensParaEnviar);
-      showToast(`${itensParaEnviar.length} item(ns) adicionado(s) à receita do paciente!`);
+      showToast(`${itensParaEnviar.length} item(ns) adicionado(s) à prescrição do paciente!`);
     }
   };
 
@@ -319,70 +320,99 @@ export const ProtocolosView: React.FC<ProtocolosViewProps> = ({
             </div>
 
             {/* Box de Conduta & Observações Clínicas Abaixo das Receitas */}
-            {currentProto.observacoesClinicas && (
-              <div className="protocolos-obs-box">
-                <div className="protocolos-obs-title">
-                  💡 Conduta Clínica, Alertas & Orientações (Guia UPA 2026)
-                </div>
+            {currentProto.observacoesClinicas && (() => {
+              const obs = currentProto.observacoesClinicas;
+              const alertasArray = [
+                ...(obs.criteriosGravidade || []),
+                ...(obs.criteriosInternacao || []),
+                ...(obs.alertasGravidade || []),
+                ...(Array.isArray(obs.alertasImportantes)
+                  ? obs.alertasImportantes
+                  : obs.alertasImportantes ? [obs.alertasImportantes] : [])
+              ];
+              const examesArray = [
+                ...(obs.examesSolicitar || []),
+                ...(obs.examesRecomendados || []),
+                ...(Array.isArray(obs.examesSugeridos)
+                  ? obs.examesSugeridos
+                  : obs.examesSugeridos ? [obs.examesSugeridos] : [])
+              ];
 
-                <div className="protocolos-obs-grid">
-                  {/* Sinais de Alarme & Critérios de Gravidade */}
-                  {currentProto.observacoesClinicas.criteriosGravidade && (
-                    <div className="obs-panel obs-alert">
-                      <div className="obs-panel-title">🚨 Critérios de Gravidade & Sinais de Alarme</div>
-                      <ul>
-                        {currentProto.observacoesClinicas.criteriosGravidade.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+              return (
+                <div className="protocolos-obs-box">
+                  <div className="protocolos-obs-title">
+                    💡 Conduta Clínica, Alertas & Orientações (Guia UPA 2026)
+                  </div>
 
-                  {/* Exames a Solicitar */}
-                  {currentProto.observacoesClinicas.examesSolicitar && (
-                    <div className="obs-panel obs-lab">
-                      <div className="obs-panel-title">🧪 Exames a Solicitar na UPA</div>
-                      <ul>
-                        {currentProto.observacoesClinicas.examesSolicitar.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Orientações Não Farmacológicas */}
-                  {currentProto.observacoesClinicas.orientacoesNaoFarmacologicas && (
-                    <div className="obs-panel obs-info">
-                      <div className="obs-panel-title">📋 Orientações Não Farmacológicas</div>
-                      <ul>
-                        {currentProto.observacoesClinicas.orientacoesNaoFarmacologicas.map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Classificação / Escores / Notas */}
-                  {(currentProto.observacoesClinicas.classificacao || currentProto.observacoesClinicas.notas) && (
-                    <div className="obs-panel obs-notes">
-                      <div className="obs-panel-title">🏷️ Escores, Classificações & Notas</div>
-                      {currentProto.observacoesClinicas.classificacao && (
-                        <p style={{ margin: '0 0 8px 0', fontWeight: 500 }}>
-                          {currentProto.observacoesClinicas.classificacao}
+                  <div className="protocolos-obs-grid">
+                    {/* Abordagem / Conduta Geral */}
+                    {obs.condutaGeral && (
+                      <div className="obs-panel obs-info" style={{ gridColumn: '1 / -1', background: '#f0fdf4', borderColor: '#bbf7d0' }}>
+                        <div className="obs-panel-title" style={{ color: '#166534' }}>🩺 Conduta Médica & Abordagem Geral</div>
+                        <p style={{ margin: 0, lineHeight: 1.6, fontSize: '13px', color: '#14532d' }}>
+                          {obs.condutaGeral}
                         </p>
-                      )}
-                      {currentProto.observacoesClinicas.notas && (
+                      </div>
+                    )}
+
+                    {/* Sinais de Alarme & Critérios de Gravidade */}
+                    {alertasArray.length > 0 && (
+                      <div className="obs-panel obs-alert">
+                        <div className="obs-panel-title">🚨 Critérios de Gravidade & Sinais de Alarme</div>
                         <ul>
-                          {currentProto.observacoesClinicas.notas.map((n, i) => (
-                            <li key={i}>{n}</li>
+                          {alertasArray.map((item, i) => (
+                            <li key={i}>{item}</li>
                           ))}
                         </ul>
-                      )}
-                    </div>
-                  )}
+                      </div>
+                    )}
+
+                    {/* Exames a Solicitar */}
+                    {examesArray.length > 0 && (
+                      <div className="obs-panel obs-lab">
+                        <div className="obs-panel-title">🧪 Exames a Solicitar na UPA</div>
+                        <ul>
+                          {examesArray.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Orientações Não Farmacológicas */}
+                    {obs.orientacoesNaoFarmacologicas && obs.orientacoesNaoFarmacologicas.length > 0 && (
+                      <div className="obs-panel obs-info">
+                        <div className="obs-panel-title">📋 Orientações Não Farmacológicas</div>
+                        <ul>
+                          {obs.orientacoesNaoFarmacologicas.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Classificação / Escores / Notas */}
+                    {(obs.classificacao || (obs.notas && obs.notas.length > 0)) && (
+                      <div className="obs-panel obs-notes">
+                        <div className="obs-panel-title">🏷️ Escores, Classificações & Notas</div>
+                        {obs.classificacao && (
+                          <p style={{ margin: '0 0 8px 0', fontWeight: 500, fontSize: '13px' }}>
+                            {obs.classificacao}
+                          </p>
+                        )}
+                        {obs.notas && (
+                          <ul>
+                            {obs.notas.map((n, i) => (
+                              <li key={i}>{n}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
           </>
         ) : (
           <div className="empty">Selecione uma condição clínica na barra lateral.</div>

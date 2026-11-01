@@ -21,14 +21,17 @@ export interface ProtocoloItemFarmaco {
   apresentacaoId?: string;
   forma?: string;
   dose: number;
-  unidade: UnidadeDose | 'g';
+  unidade: UnidadeDose | 'g' | 'UI' | 'ampola';
   via: Via;
-  modo: ModoUso;
-  freq: number;
+  modo?: ModoUso;
+  tipoUso?: 'agora' | 'continuo' | 'se_necessario';
+  freq?: number;
+  intervalo?: number;
   condicao?: string;
   dias?: number;
   usoContinuo?: boolean;
   orientacaoExtra?: string;
+  observacaoUso?: string;
 }
 
 export interface OpcaoPrescricao {
@@ -40,7 +43,13 @@ export interface OpcaoPrescricao {
 
 export interface ObservacoesClinicas {
   criteriosGravidade?: string[];
+  criteriosInternacao?: string[];
+  alertasGravidade?: string[];
+  alertasImportantes?: string | string[];
+  condutaGeral?: string;
   examesSolicitar?: string[];
+  examesSugeridos?: string | string[];
+  examesRecomendados?: string[];
   orientacoesNaoFarmacologicas?: string[];
   classificacao?: string;
   notas?: string[];
@@ -49,10 +58,12 @@ export interface ObservacoesClinicas {
 export interface ProtocoloConduta {
   id: string;
   titulo: string;
+  subtitulo?: string;
   categoria: CategoriaProtocolo;
   subcategoria?: string;
   paginaPdf: number;
   descricao?: string;
+  tags?: string[];
   opcoesPrescricao: OpcaoPrescricao[];
   observacoesClinicas?: ObservacoesClinicas;
 }

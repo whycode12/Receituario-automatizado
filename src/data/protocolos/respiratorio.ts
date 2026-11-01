@@ -320,7 +320,7 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
         subtitulo: 'Para sintomas com menos de 10 dias sem piora ou febre alta',
         itens: [
           {
-            farmacoId: 'soro_fisiologico',
+            farmacoId: 'soro_fisiologico_nasal',
             forma: 'sol_nasal',
             dose: 10,
             unidade: 'ml',
@@ -369,7 +369,7 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
             dias: 10
           },
           {
-            farmacoId: 'soro_fisiologico',
+            farmacoId: 'soro_fisiologico_nasal',
             forma: 'sol_nasal',
             dose: 10,
             unidade: 'ml',
@@ -416,7 +416,7 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
             dias: 7
           },
           {
-            farmacoId: 'soro_fisiologico',
+            farmacoId: 'soro_fisiologico_nasal',
             forma: 'sol_nasal',
             dose: 10,
             unidade: 'ml',
@@ -671,7 +671,7 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
             orientacaoExtra: 'Aplicar 1 a 2 jatos em cada narina de 12/12h após higienizar o nariz.'
           },
           {
-            farmacoId: 'soro_fisiologico',
+            farmacoId: 'soro_fisiologico_nasal',
             forma: 'sol_nasal',
             dose: 10,
             unidade: 'ml',
@@ -699,7 +699,7 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
             orientacaoExtra: 'Tomar 1 comprimido de 8 em 8 horas por no máximo 5 a 7 dias. Pode causar sonolência.'
           },
           {
-            farmacoId: 'soro_fisiologico',
+            farmacoId: 'soro_fisiologico_nasal',
             forma: 'sol_nasal',
             dose: 10,
             unidade: 'ml',
@@ -720,6 +720,331 @@ export const protocolosRespiratorio: ProtocoloConduta[] = [
       notas: [
         'Evitar o uso de anti-histamínicos de 1ª geração em idosos pelo risco de sedação, retenção urinária e quedas',
         'Corticosteroides intranasais são a terapia mais eficaz para obstrução nasal e sintomas oculares associados'
+      ]
+    }
+  },
+  {
+    id: 'tosse_seca_resfriado',
+    titulo: 'Tosse Seca e Resfriado Comum / Gripe',
+    categoria: 'Sistema Respiratório',
+    subcategoria: 'Sintomáticos Respiratórios',
+    paginaPdf: 16,
+    descricao: 'Alívio sintomático de tosse seca irritativa, mialgia, febre e congestão nasal.',
+    opcoesPrescricao: [
+      {
+        id: 'tosse_codeina_lavagem',
+        titulo: 'Opção 1 - Antitussígeno (Codeína) + Lavagem Nasal + Dipirona',
+        subtitulo: 'Para tosse seca exaustiva que impede o repouso noturno',
+        itens: [
+          {
+            farmacoId: 'codeina',
+            forma: 'cp',
+            dose: 30,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 3,
+            condicao: 'tosse seca intensa (resgate)',
+            orientacaoExtra: 'Tomar 1 comprimido de 30 mg se tosse incômoda, com intervalo mínimo de 8 horas.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'cp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'dor de garganta, cefaleia ou febre'
+          },
+          {
+            farmacoId: 'soro_fisiologico_nasal',
+            forma: 'sol_nasal',
+            dose: 10,
+            unidade: 'ml',
+            via: 'NASAL',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'congestão nasal e coriza'
+          }
+        ]
+      },
+      {
+        id: 'tosse_sintomaticos_simples',
+        titulo: 'Opção 2 - Hidratação Salina Nasal + Analgésico / Antitérmico',
+        subtitulo: 'Conduta expectante para resfriado comum autolimitado',
+        itens: [
+          {
+            farmacoId: 'soro_fisiologico_nasal',
+            forma: 'sol_nasal',
+            dose: 10,
+            unidade: 'ml',
+            via: 'NASAL',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'obstrução e secreção nasal'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'cp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'VO',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'febre ou dores no corpo'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'Sinais de alerta: dispneia, taquipneia > 24 irpm, dor pleurítica intensa, hemoptise ou febre persistente > 3 dias',
+        'Presença de estertores crepitantes à ausculta pulmonar (suspeitar de pneumonia e solicitar RX de tórax)'
+      ],
+      orientacoesNaoFarmacologicas: [
+        'Ingestão hídrica abundante (água, chás mornos com mel, sucos naturais) para hidratar as vias aéreas',
+        'Umidificação do ambiente e lavagem nasal frequente com soro fisiológico',
+        'Repouso e evitar exposição ao frio, fumaça de cigarro e poluentes'
+      ]
+    }
+  },
+  {
+    id: 'pneumonia_hospitalar',
+    titulo: 'Pneumonia Hospitalar (PAV / Nosocomial)',
+    categoria: 'Sistema Respiratório',
+    subcategoria: 'Infecção Hospitalar',
+    paginaPdf: 20,
+    descricao: 'Sintomas iniciados após 48-72h de internação: cobertura empírica para Pseudomonas aeruginosa e bacilos gram-negativos multirresistentes.',
+    opcoesPrescricao: [
+      {
+        id: 'pave_cefepime',
+        titulo: 'Opção 1 - Cefepime EV (Betalactâmico Antipseudomonas)',
+        subtitulo: 'Cefalosporina de 4ª geração antipseudomonas de primeira linha',
+        itens: [
+          {
+            farmacoId: 'cefepime',
+            forma: 'fap',
+            dose: 2000,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'continuo',
+            freq: 3,
+            dias: 7,
+            orientacaoExtra: 'Infundir 2g EV diluído em 100 mL de SF 0,9% em 30 a 60 minutos (ou infusão estendida de 3h) de 8/8h.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'amp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'febre ou dor'
+          }
+        ]
+      },
+      {
+        id: 'pave_piperacilina_tazo',
+        titulo: 'Opção 2 - Piperacilina + Tazobactam EV (Tazocin)',
+        subtitulo: 'Cobertura ampliada para gram-negativos entéricos, Pseudomonas e anaeróbios',
+        itens: [
+          {
+            farmacoId: 'piperacilina_tazobactam',
+            forma: 'fap',
+            dose: 4500,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'continuo',
+            freq: 4,
+            dias: 7,
+            orientacaoExtra: 'Infundir 4,5 g EV diluído em 100 mL de SF 0,9% em infusão estendida de 3 a 4 horas a cada 6 horas.'
+          },
+          {
+            farmacoId: 'dipirona',
+            forma: 'amp',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'sn',
+            freq: 4,
+            condicao: 'febre ou dor'
+          }
+        ]
+      },
+      {
+        id: 'pave_associacao_mrsa_vanco',
+        titulo: 'Opção 3 - Cefepime + Vancomicina (Cobertura de MRSA)',
+        subtitulo: 'Indicado se prevalência local de MRSA > 20% ou fatores de risco para estafilococo resistente',
+        itens: [
+          {
+            farmacoId: 'cefepime',
+            forma: 'fap',
+            dose: 2000,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'continuo',
+            freq: 3,
+            dias: 7
+          },
+          {
+            farmacoId: 'vancomicina',
+            forma: 'fap',
+            dose: 1000,
+            unidade: 'mg',
+            via: 'EV',
+            modo: 'continuo',
+            freq: 2,
+            dias: 7,
+            orientacaoExtra: 'Infundir EV diluído em 250 mL de SF 0,9% em no mínimo 60 a 90 minutos de 12/12h.'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'Critérios diagnósticos: Infiltrado radiológico novo ou progressivo no RX/TC + pelo menos 2: Febre (> 38°C) ou hipotermia; Leucocitose (> 12.000) ou leucopenia (< 4.000); Secreção traqueal purulenta; Piora da oxigenação (queda de PaO2/FiO2)',
+        'Escore CPIS (Clinical Pulmonary Infection Score) > 6 sugere pneumonia nosocomial',
+        'Choque séptico associado ou necessidade de fração inspirada de oxigênio (FiO2) elevada'
+      ],
+      examesSolicitar: [
+        'Aspirado traqueal quantitativo ou lavado broncoalveolar com bacterioscopia (Gram) e cultura com antibiograma',
+        'Dois pares de hemoculturas periféricas antes de iniciar o novo esquema de ATB',
+        'Gasometria arterial, Hemograma, PCR, Ureia e Creatinina'
+      ]
+    }
+  },
+  {
+    id: 'iot_sequencia_rapida',
+    titulo: 'Intubação Orotraqueal em Sequência Rápida (ISR / IOT)',
+    categoria: 'Sistema Respiratório',
+    subcategoria: 'Via Aérea Avançada na Emergência',
+    paginaPdf: 22,
+    descricao: 'Protocolo dos 7 Ps para manejo de via aérea de urgência e sequência rápida de intubação (pág. 22-25)',
+    opcoesPrescricao: [
+      {
+        id: 'iot_etomidato_succinilcolina',
+        titulo: 'Opção 1: Padrão Ouro (Fentanil + Etomidato + Succinilcolina)',
+        subtitulo: 'Máxima estabilidade hemodinâmica (ideal em choque, sepse, trauma e cardiopatas).',
+        itens: [
+          {
+            farmacoId: 'fentanil',
+            dose: 0.1,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Pré-tratamento (3 min antes da indução): Administrar 100 mcg (0,1 mg = 2 mL) EV lento em 1 a 2 minutos para atenuar o reflexo adrenérgico da laringoscopia.'
+          },
+          {
+            farmacoId: 'etomidato',
+            dose: 20,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Indutor hipnótico: Administrar 20 mg (1 ampola de 10 mL = 0,3 mg/kg) EV direto em 30 a 60 segundos.'
+          },
+          {
+            farmacoId: 'succinilcolina',
+            dose: 100,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Bloqueador neuromuscular: Administrar 100 mg (1 frasco-ampola = 1,0 a 1,5 mg/kg) EV em bolus imediatamente após o etomidato. Aguardar 45 a 60 segundos antes de laringoscopar.'
+          }
+        ]
+      },
+      {
+        id: 'iot_etomidato_rocuronio',
+        titulo: 'Opção 2: Alternativa sem Succinilcolina (Fentanil + Etomidato + Rocurônio)',
+        subtitulo: 'Indicado se suspeita de hipercalemia, queimaduras > 48h, trauma por esmagamento ou hipertermia maligna.',
+        itens: [
+          {
+            farmacoId: 'fentanil',
+            dose: 0.1,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Pré-tratamento: 100 mcg (2 mL) EV lento.'
+          },
+          {
+            farmacoId: 'etomidato',
+            dose: 20,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Indução: 20 mg (10 mL) EV em bolus lento.'
+          },
+          {
+            farmacoId: 'rocuronio',
+            dose: 70,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Paralisante não despolarizante: 70 mg (1,0 a 1,2 mg/kg = 7 mL) EV em bolus imediato. Aguardar 60 segundos.'
+          }
+        ]
+      },
+      {
+        id: 'iot_midazolam_succinilcolina',
+        titulo: 'Opção 3: Indução com Benzodiazepínico (Fentanil + Midazolam + Succinilcolina)',
+        subtitulo: 'Quando não houver disponibilidade de Etomidato ou em paciente hiperadrenérgico normotenso.',
+        itens: [
+          {
+            farmacoId: 'fentanil',
+            dose: 0.1,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Pré-tratamento: 100 mcg (2 mL) EV lento.'
+          },
+          {
+            farmacoId: 'midazolam',
+            dose: 15,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Indutor: 15 mg (0,2 a 0,3 mg/kg = 3 mL da ampola 5 mg/mL) EV lento em 30 segundos.'
+          },
+          {
+            farmacoId: 'succinilcolina',
+            dose: 100,
+            unidade: 'mg',
+            via: 'EV',
+            tipoUso: 'agora',
+            intervalo: 24,
+            dias: 1,
+            observacaoUso: 'Bloqueador neuromuscular: 100 mg EV bolus.'
+          }
+        ]
+      }
+    ],
+    observacoesClinicas: {
+      criteriosGravidade: [
+        'INDICAÇÕES FORMAIS DE IOT IMEDIATA: Incapacidade de falar, respiração paradoxal com exaustão da musculatura acessória, rebaixamento do nível de consciência (Glasgow ≤ 8), perda de reflexos de proteção de via aérea (deglutição/tosse), hipoxemia refratária (PaO2 < 60 com O2 em máscara reservatória) ou hipercapnia progressiva (PaCO2 > 50 com acidose pH < 7,20).',
+        'PREDITORES DE VIA AÉREA DIFÍCIL (Mnemônico LEMON): Look externally (trauma, queixo retraído, barba volumosa); Evaluate 3-3-2 (abertura bucal < 3 dedos, distância tireomentoniana < 3 dedos, distância hiotireóidea < 2 dedos); Mallampati (classes III ou IV); Obstruction (estridor, corpo estranho, abscesso periamigdaliano); Neck mobility (colar cervical rígido, espondilite).'
+      ],
+      orientacoesNaoFarmacologicas: [
+        'PASSO 1 - PREPARAÇÃO: Monitorização multiparamétrica contínua (ECG, oximetria, PNI, capnografia), 2 acessos venosos periféricos calibrosos, aspirador rígido (Yankauer) testado e ligado, laringoscópio testado com lâminas curva (Macintosh 3 e 4) e reta (Miller), tubos orotraqueais 7,5 e 8,0 com balonetes testados e fio-guia lubrificado, coxim suboccipital, material de via aérea cirúrgica (cricotireoidostomia de resgate).',
+        'PASSO 2 - PRÉ-OXIGENAÇÃO: O2 a 100% por 3 a 5 minutos sob máscara com reservatório sem ventilar com pressão positiva (evita distensão gástrica e regurgitação).',
+        'PASSO 5 - POSICIONAMENTO: Posição de olfateamento ("sniffing position") com coxim sob o occipital e hiperextensão cervical suave (PROIBIDA a extensão cervical em suspeita de trauma raquimedular - manter alinhamento neutro com tração manual em linha).',
+        'PASSO 6 - PASSAGEM DO TUBO E CONFIRMAÇÃO: Laringoscopia direta sob visão das cordas vocais, inserção do TOT até marca de 21-23 cm na rima labial, insuflação do balonete, ausculta em 5 pontos (epigástrio primeiro, depois bases e ápices pulmonares bilateralmente) e confirmação ouro por capnografia contínua em onda.'
       ]
     }
   }

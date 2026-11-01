@@ -1,4 +1,4 @@
-import { Farmaco, Apresentacao, Paciente, ItemReceita, ProtocoloConduta, OpcaoPrescricao, ProtocoloItemFarmaco } from '../types';
+import { Farmaco, Apresentacao, Paciente, ItemReceita, ProtocoloConduta, OpcaoPrescricao, ProtocoloItemFarmaco, ModoUso } from '../types';
 import { DRUGS, getDrugById } from '../data';
 import { calcularPrescricao } from './calculator';
 import { generatePrescriptionCards } from './prescriptionGenerator';
@@ -50,8 +50,10 @@ export function processarItemProtocolo(
   const apres = encontrarApresentacao(drug, item);
   if (!apres) return null;
 
-  const modo = item.modo;
-  const n = item.freq;
+  const rawModo = item.modo || (item as any).tipoUso || 'continuo';
+  const modo: ModoUso = (rawModo === 'se_necessario' ? 'sn' : rawModo) as ModoUso;
+  let n = item.freq || ((item as any).intervalo ? Math.round(24 / (item as any).intervalo) : 1) || 1;
+  if (!n || isNaN(n)) n = 1;
   const dias = item.dias || 7;
   const usoContinuo = Boolean(item.usoContinuo);
   const condText = item.condicao || drug.snPadrao || 'se necessário';
@@ -95,8 +97,9 @@ export function processarItemProtocolo(
   let texto = cardReceita ? cardReceita.texto : (cardInterno ? cardInterno.texto : '');
 
   // Se tiver orientação clínica extra específica do protocolo (ex: lavagem nasal, diluição especial)
-  if (item.orientacaoExtra) {
-    texto += `\n   Obs: ${item.orientacaoExtra}`;
+  const extra = item.orientacaoExtra || (item as any).observacaoUso;
+  if (extra) {
+    texto += `\n   Obs: ${extra}`;
   }
 
   return {
