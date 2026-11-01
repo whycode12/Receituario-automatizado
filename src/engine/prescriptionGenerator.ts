@@ -67,7 +67,7 @@ export function getHorariosSugeridos(modo: ModoUso, n: number, via: Via, drug?: 
   if (n === 1) {
     times = '8h';
   } else if (n === 2) {
-    times = isAbx ? '7h e 19h' : '8h e 20h';
+    times = '8h e 20h';
   } else if (n === 3) {
     times = '6h, 14h, 22h';
   } else if (n === 4) {
@@ -77,12 +77,7 @@ export function getHorariosSugeridos(modo: ModoUso, n: number, via: Via, drug?: 
   if (!times) return null;
 
   const prefix = n === 1 ? 'Sugestão de horário' : 'Sugestão de horários';
-  const aviso = '(Utilize alarme recorrente no celular para evitar esquecimento).';
-  if (via === 'VO') {
-    return `${prefix} para tomar: ${times} ${aviso}`;
-  } else {
-    return `${prefix}: ${times} ${aviso}`;
-  }
+  return `${prefix}: ${times}. Utilize alarme recorrente no celular para evitar esquecimento.`;
 }
 
 export const getHorariosSugeridosAntibiotico = (h: number, n: number, via: Via): string | null => {
