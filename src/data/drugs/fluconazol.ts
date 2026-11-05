@@ -8,7 +8,10 @@ export const fluconazol: Farmaco = {
   classe: 'Antifúngico Triazólico Sistêmico Inibidor do Citocromo P450 Fúngico',
   dosePratica: 'Candidíase Vulvovaginal Aguda: 150 mg VO em dose única. Candidíase Cutânea / Intertrigo Fúngico: 150 mg VO uma vez por semana por 2 a 4 semanas. Dermatomicoses / Tinhas corporais: 150 mg VO 1x/semana por 2 a 4 semanas.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'infecção fúngica por Candida ou dermatófitos',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'candidíase vaginal ou infecção fúngica',
   acessoFonte: 'RENAME 2024 (Componente Básico): Fluconazol 150 mg cápsula.',
   apresentacoes: [
     {
@@ -37,6 +40,7 @@ export const fluconazol: Farmaco = {
       max: 150,
       padrao: 150,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Dose única de 150 mg VO ou 150 mg VO uma vez por semana em micoses cutâneas.'

@@ -8,7 +8,10 @@ export const terbinafina: Farmaco = {
   classe: 'Antifúngico Alilamina de Amplo Espectro Fungicida',
   dosePratica: 'Tinea corporis / cruris: VO: 250 mg 1x ao dia por 2 a 4 semanas. Tópico: aplicar o creme 1% 1 a 2x/dia por 1 a 2 semanas. Onicomicose: 250 mg 1x ao dia por 6 semanas (mãos) a 12 semanas (pés).',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'infecção fúngica cutânea (tinea)',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'micoses cutâneas, tinha corporal ou onicomicose',
   acessoFonte: 'RENAME 2024 / Farmácia Básica: Comprimido de 250 mg e creme 10 mg/g (1%) disponíveis na rede pública.',
   apresentacoes: [
     {
@@ -53,7 +56,9 @@ export const terbinafina: Farmaco = {
       max: 250,
       padrao: 250,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
+      duracaoMaxDias: 14,
       fonte: 'PSZERADO',
       trecho: '250 mg VO 1x ao dia por 2 a 4 semanas para micoses cutâneas.'
     },

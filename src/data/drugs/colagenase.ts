@@ -8,7 +8,10 @@ export const colagenase: Farmaco = {
   classe: 'Desbridante Enzimático Tópico Proteolítico',
   dosePratica: 'Desbridamento Enzimático de Feridas com Tecido Desvitalizado (Necrose/Esfacelo): Higienizar a lesão com soro fisiológico 0,9% morno (manter o leito levemente úmido, pois a enzima necessita de umidade para sua ativação proteolítica). Proteger a pele sadia ao redor com pasta de óxido de zinco ou vaselina. Aplicar a pomada de colagenase em camada de cerca de 2 mm de espessura diretamente sobre o tecido necrótico 1 vez ao dia (ou 2x/dia se grande quantidade de tecido desvitalizado). Cobrir com gaze estéril levemente umedecida em SF 0,9% e atadura. NUNCA associar com antissépticos (iodo, clorexidina, prata), sabões ou detergentes, pois inativam a enzima.',
   fontes: { HSL: '30/09/2021', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'troca diária de curativo de ferida com necrose ou esfacelo',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'desbridamento de ferida ou úlcera com tecido necrótico',
   acessoFonte: 'RENAME 2024 / Farmácia Básica do SUS: Pomada 0,6 U/g com ou sem cloranfenicol disponível na Atenção Primária, salas de curativo e UPAs (Kollagenase, Iruxol e genéricos).',
   apresentacoes: [
     {

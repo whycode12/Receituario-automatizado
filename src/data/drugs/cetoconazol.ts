@@ -8,9 +8,26 @@ export const cetoconazol: Farmaco = {
   classe: 'Antifúngico Derivado Imidazólico Inibidor da Síntese de Ergosterol Fúngico',
   dosePratica: 'Dermatite Seborreica e Caspa: Lavar o couro cabeludo com Cetoconazol Xampu 2%, massageando e deixando agir por 3 a 5 minutos antes de enxaguar abundantemente, 2 vezes por semana durante 2 a 4 semanas. Pitiríase Versicolor ("Pano Branco"): Aplicar o xampu 2% sobre a pele úmida 1 vez ao dia por 5 dias consecutivos; ou Cetoconazol Creme 2% 1 vez ao dia por 2 a 3 semanas. Micoses Superficiais (Tinea corporis, tinea cruris, tinea pedis): Aplicar Cetoconazol Creme 2% 1 vez ao dia por 2 a 4 semanas (manter por mais 1 semana após resolução clínica). Via Oral (200 mg): Reservada para casos refratários de exceção com monitorização estrita de função hepática.',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'lesões fúngicas ou dermatite seborreica',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'micoses cutâneas, dermatite seborreica ou pano branco',
   acessoFonte: 'Creme dermatológico 2% disponível na RENAME / Farmácia Básica do SUS. Xampu 2% e comprimidos 200mg amplamente disponíveis comercialmente (Nizoral e genéricos).',
   apresentacoes: [
+    {
+      id: 'creme_2',
+      forma: 'creme',
+      nome: 'Creme dermatológico 2% (20 mg/g - bisnaga 30 g)',
+      comercial: 'Nizoral / Lozan / Genérico',
+      conc: '2% (20mg/g)',
+      rotulo: 'Cetoconazol 2% creme dermatológico (bisnaga 30g)',
+      mg: 1,
+      vias: ['TOPICA'],
+      disp: '1 bisnaga (30 g)',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Higienizar suavemente a área lesionada com água e sabonete e secar bem antes da aplicação. Aplicar uma camada fina sobre a lesão e área circundante 1 vez ao dia (ou 2 vezes ao dia em infecções graves), espalhando suavemente até absorção. Lavar bem as mãos após a aplicação. Continuar o tratamento por mais alguns dias após o desaparecimento completo de todos os sinais clínicos (duração habitual: 2 a 4 semanas para micoses corporais; 4 a 6 semanas para frieira/pé de atleta).',
+      obs: 'RENAME / Atenção Primária. Indicado para dermatofitoses superficiais (tinea corporis, tinea cruris, tinea pedis) e candidíase cutânea.'
+    },
     {
       id: 'shampoo_2',
       forma: 'sol',
@@ -25,20 +42,6 @@ export const cetoconazol: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Lavar as áreas afetadas do couro cabeludo ou da pele com o xampu, massageando suavemente até formar espuma abundante. Deixar agir em contato com a pele/couro cabeludo por 3 a 5 minutos antes de enxaguar abundantemente com água. Na dermatite seborreica e caspa: aplicar 2 vezes por semana por 2 a 4 semanas (manutenção: 1 vez a cada 1 ou 2 semanas). Na pitiríase versicolor: aplicar 1 vez ao dia por 5 dias consecutivos.',
       obs: 'Tratamento padrão-ouro para dermatite seborreica do couro cabeludo e pitiríase versicolor ("pano branco").'
-    },
-    {
-      id: 'creme_2',
-      forma: 'creme',
-      nome: 'Creme dermatológico 2% (20 mg/g - bisnaga 30 g)',
-      comercial: 'Nizoral / Genérico',
-      conc: '2% (20mg/g)',
-      rotulo: 'Cetoconazol 2% creme dermatológico (bisnaga 30g)',
-      mg: 1,
-      vias: ['TOPICA'],
-      disp: '1 bisnaga (30 g)',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Higienizar suavemente a área lesionada com água e sabonete e secar bem antes da aplicação. Aplicar uma camada fina sobre a lesão e área circundante 1 vez ao dia (ou 2 vezes ao dia em infecções graves), espalhando suavemente até absorção. Lavar bem as mãos após a aplicação. Continuar o tratamento por mais alguns dias após o desaparecimento completo de todos os sinais clínicos (duração habitual: 2 a 4 semanas para micoses corporais; 4 a 6 semanas para frieira/pé de atleta).',
-      obs: 'RENAME / Atenção Primária. Indicado para dermatofitoses superficiais (tinea corporis, tinea cruris, tinea pedis) e candidíase cutânea.'
     },
     {
       id: 'cp200',
@@ -57,23 +60,7 @@ export const cetoconazol: Farmaco = {
     }
   ],
   regras: [
-    // 1. Tópico - Xampu 2% (Dermatite Seborreica / Caspa / Pitiríase)
-    {
-      pub: 'adulto',
-      vias: ['TOPICA'],
-      apres: ['shampoo_2'],
-      tipo: 'mg',
-      min: 1,
-      max: 1,
-      padrao: 1,
-      dosesDia: [1, 1],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
-      duracaoMaxDias: 28,
-      fonte: 'HSL / BULA',
-      trecho: 'HSL / Bula: Aplicar na área afetada da pele ou do couro cabeludo, deixando agir por 3 a 5 minutos antes de enxaguar. Caspa e dermatite seborreica: 2 vezes por semana por 2 a 4 semanas. Pitiríase versicolor: 1 vez ao dia por 5 dias consecutivos.'
-    },
-    // 2. Tópico - Creme 2% (Tineas e Candidíase Cutânea)
+    // 1. Tópico - Creme 2% (Tineas e Candidíase Cutânea - Padrão Adulto)
     {
       pub: 'adulto',
       vias: ['TOPICA'],
@@ -88,6 +75,22 @@ export const cetoconazol: Farmaco = {
       duracaoMaxDias: 28,
       fonte: 'HSL / BULA',
       trecho: 'HSL / Bula: Aplicar o creme 1 vez ao dia nas áreas infectadas (ou 2x/dia em casos mais resistentes) durante 2 a 4 semanas.'
+    },
+    // 2. Tópico - Xampu 2% (Dermatite Seborreica / Caspa / Pitiríase)
+    {
+      pub: 'adulto',
+      vias: ['TOPICA'],
+      apres: ['shampoo_2'],
+      tipo: 'mg',
+      min: 1,
+      max: 1,
+      padrao: 1,
+      dosesDia: [1, 1],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 28,
+      fonte: 'HSL / BULA',
+      trecho: 'HSL / Bula: Aplicar na área afetada da pele ou do couro cabeludo, deixando agir por 3 a 5 minutos antes de enxaguar. Caspa e dermatite seborreica: 2 vezes por semana por 2 a 4 semanas. Pitiríase versicolor: 1 vez ao dia por 5 dias consecutivos.'
     },
     // 3. Oral - Comprimido 200 mg Adulto
     {

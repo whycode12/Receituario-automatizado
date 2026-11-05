@@ -17,7 +17,10 @@ export const pastaDagua: Farmaco = {
   classe: 'Protetor Cutâneo, Adstringente e Secativo Tópico',
   dosePratica: '1. Brotoeja (Miliária) e Alívio de Coceira (Varicela/Catapora): Agitar vigorosamente o frasco e aplicar suavemente uma camada fina sobre a pele limpa e seca 2 a 3 vezes ao dia com algodão ou gaze; deixar secar naturalmente ao ar. 2. Queimaduras Solares Leves e Dermatites/Assaduras: Aplicar 2 a 3 vezes ao dia nas áreas avermelhadas ou sob a fralda após a higiene. Uso exclusivamente externo.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'se coceira, calor local, brotoeja ou assadura',
+  modoPadrao: 'sn',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'coceira, brotoeja, queimadura leve ou assadura',
   acessoFonte: 'Padronizada no Formulário Nacional da Farmacopeia Brasileira e na RENAME / Farmácia Básica do SUS (pasta d\'água frasco 100g e 120g).',
   apresentacoes: [
     {

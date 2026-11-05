@@ -17,7 +17,10 @@ export const nitratoDePrata: Farmaco = {
   classe: 'Agente Cauterizante Químico, Adstringente e Hemostático Local',
   dosePratica: '1. Granuloma Umbilical no Recém-Nascido/Lactente: Proteger a pele sadia ao redor do umbigo com vaselina sólida estéril. Umedecer a ponta do bastão com 1 gota de soro fisiológico e tocar delicadamente apenas sobre o granuloma por 2 a 5 segundos (1 a 2 vezes por semana, geralmente 1 a 3 sessões até regressão total). 2. Hipergranulação em Feridas Crônicas / Ostomias: Cauterização pontual do tecido exuberante a cada troca semanal de curativo.',
   fontes: { MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'sessão de cauterização de granuloma ou hipergranulação tecidual',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'cauterização química de granuloma ou hipergranulação tecidual',
   acessoFonte: 'Padronizado na RENAME / Insumos de Atenção Básica para procedimentos em sala de curativos de UBS e consultórios (cautério em bastão de nitrato de prata 90-95%).',
   apresentacoes: [
     {
@@ -50,23 +53,7 @@ export const nitratoDePrata: Farmaco = {
     }
   ],
   regras: [
-    // 1. Pediatria (Granuloma umbilical - lactentes e RNs)
-    {
-      pub: 'ped',
-      vias: ['TOPICA'],
-      apres: ['bastao_unitario', 'caixa_10_bastoes'],
-      tipo: 'mg',
-      min: 1,
-      max: 1,
-      padrao: 1,
-      dosesDia: [1, 1],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
-      duracaoMaxDias: 7,
-      fonte: 'SBP / MS',
-      trecho: 'Granuloma umbilical: Tocar 1 vez a cada 3 a 7 dias (máximo de 1 a 3 aplicações) com proteção perilesional rigorosa com vaselina.'
-    },
-    // 2. Adultos (Hipergranulação em feridas, ostomias e pequenas hemostasias)
+    // 1. Adultos (Hipergranulação em feridas, ostomias e pequenas hemostasias)
     {
       pub: 'adulto',
       vias: ['TOPICA'],
@@ -81,6 +68,22 @@ export const nitratoDePrata: Farmaco = {
       duracaoMaxDias: 14,
       fonte: 'MS / SOBEST',
       trecho: 'Cauterização química tópica pontual: 1 aplicação a cada 3 a 7 dias até regressão do tecido hipergranulado.'
+    },
+    // 2. Pediatria (Granuloma umbilical - lactentes e RNs)
+    {
+      pub: 'ped',
+      vias: ['TOPICA'],
+      apres: ['bastao_unitario', 'caixa_10_bastoes'],
+      tipo: 'mg',
+      min: 1,
+      max: 1,
+      padrao: 1,
+      dosesDia: [1, 1],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 7,
+      fonte: 'SBP / MS',
+      trecho: 'Granuloma umbilical: Tocar 1 vez a cada 3 a 7 dias (máximo de 1 a 3 aplicações) com proteção perilesional rigorosa com vaselina.'
     }
   ],
   contra: [

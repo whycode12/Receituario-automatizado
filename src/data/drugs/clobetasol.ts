@@ -8,7 +8,10 @@ export const clobetasol: Farmaco = {
   classe: 'Corticoide Tópico de Altíssima Potência (Classe I / Superpotente)',
   dosePratica: 'Psoríase em placas e eczemas recalcitrantes em Adultos: Aplicar uma fina camada sobre a lesão 1 a 2 vezes ao dia (a cada 12 ou 24 horas), massageando suavemente até completa absorção. Duração máxima de 2 a 4 semanas (não ultrapassar 50 g/semana para prevenir supressão adrenal). Para lesões secas/hiperceratóticas, preferir POMADA; para lesões úmidas/dobras, preferir CREME; para o couro cabeludo, utilizar SOLUÇÃO CAPILAR.',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'lesões inflamatórias cutâneas ativas',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'lesões inflamatórias cutâneas ativas ou psoríase',
   acessoFonte: 'Disponível em creme e pomada 0,05% (30g) e solução capilar 0,05% (50g) comercialmente (Psorex e genéricos) e padronizado em farmácias ambulatoriais. RENAME 2024: Corticoide tópico de alta potência para dermatologia especializada.',
   apresentacoes: [
     {

@@ -18,7 +18,10 @@ export const levonorgestrel: Farmaco = {
   classe: 'Progestagênio Sintético / Contracepção Hormonal de Emergência em Dose Única',
   dosePratica: 'Contracepção de Emergência Pós-Coito Desprotegido (MS / FEBRASGO): Ingerir 1 comprimido de 1,5 mg VO em DOSE ÚNICA (ou 2 comprimidos de 0,75 mg tomados juntos) o mais precocemente possível, preferencialmente nas primeiras 24 a 72 horas (eficácia decrescente até 120 horas / 5 dias). Se ocorrer vômito em até 2 horas após a ingestão, repetir a dose imediatamente. Orientar início ou retomada imediata de contracepção regular.',
   fontes: { MS: '2023', HSL: '14/02/2017', BULA: '04/10/2026' },
-  snPadrao: 'coito desprotegido ou falha de método contraceptivo de barreira',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'contracepção de emergência pós-coito desprotegido',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Comprimido de 1,5 mg em dose única (ou 2 x 0,75 mg) padronizado e de distribuição gratuita e imediata nas UBSs, UPAs e maternidades do SUS.',
   apresentacoes: [
     {

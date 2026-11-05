@@ -8,6 +8,9 @@ export const oleoAge: Farmaco = {
   classe: 'Protetor Cutâneo, Hidratante e Estimulador da Cicatrização Tecidual',
   dosePratica: '1. Prevenção de Lesões por Pressão (Escaras) em Acamados: Aplicar algumas gotas nas áreas de maior pressão (sacro/cóccix, calcanhares, quadris e cotovelos) 2 a 3 vezes ao dia após o banho, espalhando suavemente com movimentos leves (NUNCA massagear com força sobre proeminências ósseas). 2. Curativo de Feridas Abertas em Fase de Granulação: Limpar com soro fisiológico 0,9%, embeber gaze estéril com o óleo AGE, cobrir a ferida e fixar com atadura (trocar o curativo a cada 24 horas). 3. Hidratação da Pele Seca e Perilesional: Aplicar fina camada 1 a 2 vezes ao dia.',
   fontes: { MS: '2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
   snPadrao: 'prevenção de lesões por pressão ou troca de curativo de ferida',
   acessoFonte: 'Padronizado nos protocolos de prevenção e tratamento de feridas do SUS / Atenção Básica e hospitais (Dersani, Curatec AGE, Mophil AGE e similares).',
   apresentacoes: [

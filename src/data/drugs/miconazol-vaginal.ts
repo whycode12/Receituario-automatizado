@@ -18,7 +18,10 @@ export const miconazolVaginal: Farmaco = {
   classe: 'Antifúngico Imidazólico Ginecológico de Ação Tópica',
   dosePratica: 'Candidíase Vulvovaginal (PCDT IST / MS / PSZerado 2025 pág. 107 / FEBRASGO): Aplicar 1 aplicador cheio (5 g de creme = 100 mg de miconazol) profundamente por via vaginal à noite, ao deitar, durante 7 noites consecutivas (em gestantes ou casos graves/recorrentes: estender para 14 noites). Droga tópica padrão-ouro e mais segura na gravidez e lactação. Evitar preservativos de látex durante o uso (a base do creme pode fragilizar o látex).',
   fontes: { MS: '2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'aplicação vaginal noturna ao deitar',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'candidíase vulvovaginal ou corrimento grumoso',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Bisnaga com 80 g de creme acompanhada de 14 aplicadores descartáveis disponível gratuitamente nas Unidades Básicas de Saúde de todo o Brasil.',
   apresentacoes: [
     {

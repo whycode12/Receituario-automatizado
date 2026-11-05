@@ -18,7 +18,10 @@ export const nistatinaOxidoDeZinco: Farmaco = {
   classe: 'Antifúngico Tópico Associado a Protetor Cutâneo e Barreira Adstringente',
   dosePratica: '1. Dermatite das Fraldas com Candidíase (Assadura Fúngica em Bebês e Idosos): Limpar a área suavemente com água morna e secar bem sem esfregar. Aplicar uma camada protetora da pomada sobre a pele avermelhada a cada troca de fraldas (2 a 4 vezes ao dia), mantendo por pelo menos 48 a 72 horas após o desaparecimento completo das lesões (duração média 7 a 10 dias). 2. Intertrigo Candidiásico em Dobras Cutâneas (Adultos): Aplicar 2 a 3 vezes ao dia sobre a pele limpa e seca.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'a cada troca de fraldas ou após banho e higiene local',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'assaduras, dermatite das fraldas ou intertrigo',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Pomada contendo Nistatina 100.000 UI/g + Óxido de Zinco 200 mg/g (bisnagas de 40g e 60g) disponível gratuitamente na rede pública.',
   apresentacoes: [
     {
@@ -51,23 +54,7 @@ export const nistatinaOxidoDeZinco: Farmaco = {
     }
   ],
   regras: [
-    // 1. Pediatria (Lactentes e crianças usando fraldas)
-    {
-      pub: 'ped',
-      vias: ['TOPICA'],
-      apres: ['pomada_60g', 'pomada_40g'],
-      tipo: 'mg',
-      min: 1,
-      max: 1,
-      padrao: 1,
-      dosesDia: [2, 4],
-      dosesPadrao: 4,
-      intervaloFixo: 6,
-      duracaoMaxDias: 14,
-      fonte: 'SBP / MS / BULA',
-      trecho: 'Dermatite das fraldas com candidíase: Aplicar a cada troca de fralda (2 a 4 vezes ao dia) durante 7 a 10 dias.'
-    },
-    // 2. Adultos (Intertrigo candidiásico em dobras ou pacientes acamados usando fraldas geriátricas)
+    // 1. Adultos (Intertrigo candidiásico em dobras ou uso de fraldas geriátricas)
     {
       pub: 'adulto',
       vias: ['TOPICA'],
@@ -82,6 +69,22 @@ export const nistatinaOxidoDeZinco: Farmaco = {
       duracaoMaxDias: 14,
       fonte: 'SBD / BULA',
       trecho: 'Intertrigo e dermatites de dobras: Aplicar 2 a 4 vezes ao dia sobre a pele limpa e seca até resolução clínica completa.'
+    },
+    // 2. Pediatria (Lactentes e crianças usando fraldas)
+    {
+      pub: 'ped',
+      vias: ['TOPICA'],
+      apres: ['pomada_60g', 'pomada_40g'],
+      tipo: 'mg',
+      min: 1,
+      max: 1,
+      padrao: 1,
+      dosesDia: [2, 4],
+      dosesPadrao: 4,
+      intervaloFixo: 6,
+      duracaoMaxDias: 14,
+      fonte: 'SBP / MS / BULA',
+      trecho: 'Dermatite das fraldas com candidíase: Aplicar a cada troca de fralda (2 a 4 vezes ao dia) durante 7 a 10 dias.'
     }
   ],
   contra: [

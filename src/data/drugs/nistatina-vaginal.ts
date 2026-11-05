@@ -8,7 +8,10 @@ export const nistatinaVaginal: Farmaco = {
   classe: 'Antifúngico Poliénico Tópico Ginecológico',
   dosePratica: 'Candidíase vulvovaginal: Aplicar 1 aplicador cheio (cerca de 4 g = 100.000 UI) profundamente por via vaginal à noite, ao deitar, por 14 noites consecutivas.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'aplicação vaginal noturna',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
+  snPadrao: 'candidíase vaginal',
   acessoFonte: 'RENAME 2024 / Farmácia Básica: Bisnaga 60 g com aplicadores disponível gratuitamente no SUS.',
   apresentacoes: [
     {
@@ -38,7 +41,9 @@ export const nistatinaVaginal: Farmaco = {
       max: 1,
       padrao: 1,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
+      duracaoMaxDias: 14,
       fonte: 'PSZERADO',
       trecho: 'Aplicar 1 aplicador cheio via vaginal 1x à noite por 14 dias.'
     }

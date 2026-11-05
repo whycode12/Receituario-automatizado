@@ -18,7 +18,10 @@ export const polimixinaNeomicinaHidrocortisona: Farmaco = {
   classe: 'Antibacteriano e Anti-inflamatório Otológico (Aminoglicosídeo + Polipeptídeo + Corticosteroide)',
   dosePratica: 'Otite Externa Aguda Bacteriana e Eczematosa ("Otite do Nadador" / Dor Intensa à Tração do Pavilhão Auricular e Compressão do Trágus): Adultos: Pingar 3 a 4 gotas no conduto auditivo afetado 3 a 4 vezes ao dia (a cada 6 ou 8 horas) por 7 a 10 dias. Crianças a partir de 2 anos: Pingar 2 a 3 gotas 3 a 4 vezes ao dia por 7 dias. ATENÇÃO: Contraindicado se houver suspeita de perfuração da membrana timpânica (risco de ototoxicidade por neomicina).',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'aplicação no conduto auditivo afetado',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'otite externa aguda ou dor de ouvido',
   acessoFonte: 'Padronizado na RENAME / Farmácia Básica e hospitalar e amplamente disponível nas drogarias brasileiras (Otosporin e genéricos frasco conta-gotas 10 mL).',
   apresentacoes: [
     {

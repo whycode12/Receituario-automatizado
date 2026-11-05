@@ -18,7 +18,10 @@ export const carmeloseSodica: Farmaco = {
   classe: 'Lubrificante Oftálmico e Protetor Epitelial Corneano (Lágrima Artificial)',
   dosePratica: 'Olho Seco, Ardência, Sensação de Areia e Conjuntivite Viral (PSZerado 2025 pág. 149 / HSL): Pingar 1 a 2 gotas no(s) olho(s) acometido(s) de 3 a 6 vezes ao dia (a cada 4 ou 6 horas) ou quantas vezes se fizer necessário para alívio do desconforto. Dica clínica consagrada: manter o frasco na porta da geladeira para efeito calmante e descongestionante imediato.',
   fontes: { HSL: '14/02/2017', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'se ardência, ressecamento, sensação de areia ou irritação ocular',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'olhos secos, ardência, irritação ou sensação de areia',
   acessoFonte: 'Padronizada em guias hospitalares (HSL: Fresh Tears colírio frasco 10 mL/15 mL) e disponível livremente nas farmácias comunitárias e ambulatórios do SUS.',
   apresentacoes: [
     {

@@ -8,9 +8,26 @@ export const ureia: Farmaco = {
   classe: 'Queratolítico, Umectante e Hidratante Tópico Cutâneo-Ungueal',
   dosePratica: 'Onicomicose com Espessamento / Paquioníquia: Aplicar Ureia Creme 40% sob e sobre a lâmina ungueal à noite ao deitar com o auxílio de cotonete ou algodão, cobrindo com micropore. Lavar bem pela manhã com água e sabão. Associar antifúngico tópico (Oxiconazol / Terbinafina) pela manhã. Hiperqueratose e ressecamento severo da pele: Ureia 10% a 20% 1 a 2 vezes ao dia.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'espessamento ungueal ou ressecamento cutâneo severo',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'ressecamento cutâneo intenso, aspereza ou descamação',
   acessoFonte: 'Disponível em farmácias magistrais de manipulação e formulações comerciais (Nutraplus, Ureadin, genéricos).',
   apresentacoes: [
+    {
+      id: 'creme10',
+      forma: 'creme',
+      nome: 'Creme hidratante 10% (frasco / bisnaga 100 mL)',
+      comercial: 'Nutraplus®, Ureadin 10%, Genérico',
+      conc: '10% (100 mg/g)',
+      rotulo: 'Ureia creme 10% hidratante (frasco 100 mL)',
+      mg: 1,
+      vias: ['TOPICA'],
+      disp: '1 frasco (100 mL)',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Aplicar sobre a pele limpa e seca 1 a 2 vezes ao dia massageando suavemente, preferencialmente logo após o banho com a pele levemente úmida.',
+      obs: 'Apresentação padrão para hidratação intensiva, xerose cutânea e ictiose (PuxaFicha).'
+    },
     {
       id: 'creme40',
       forma: 'creme',
@@ -24,20 +41,6 @@ export const ureia: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Aplicar uma camada sob e sobre a unha afetada à noite antes de dormir, com o auxílio de um cotonete ou algodão. Cobrir a unha com fita microporosa se necessário. Lavar bem a região pela manhã com água e sabão. Não aplicar sobre a pele sadia ao redor para evitar irritação.',
       obs: 'Prescrição do Guia UPA 2026 para afinamento da unha (paquioníquia) prévio ou concomitante ao antifúngico.'
-    },
-    {
-      id: 'creme10',
-      forma: 'creme',
-      nome: 'Creme hidratante 10% (frasco / bisnaga 100 mL)',
-      comercial: 'Nutraplus®, Ureadin 10%',
-      conc: '10% (100 mg/g)',
-      rotulo: 'Ureia creme 10% hidratante',
-      mg: 1,
-      vias: ['TOPICA'],
-      disp: '1 frasco (100 mL)',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Aplicar sobre a pele limpa e seca 1 a 2 vezes ao dia massageando suavemente.',
-      obs: 'Indicado para xerose cutânea e ictiose.'
     }
   ],
   regras: [
@@ -49,7 +52,8 @@ export const ureia: Farmaco = {
       max: 1,
       padrao: 1,
       dosesDia: [1, 2],
-      intervaloFixo: 24,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
       fonte: 'BULA',
       trecho: 'Aplicar na área afetada 1 a 2 vezes ao dia.'
     }

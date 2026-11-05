@@ -17,7 +17,10 @@ export const cerumin: Farmaco = {
   classe: 'Ceruminolítico e Emoliente Otológico',
   dosePratica: 'Amolecimento e Remoção da Rolha de Cerúmen (Preparo Domiciliar para Lavagem ou Aspiração de Ouvido na UBS/Consultório): Pingar 4 a 5 gotas no canal do ouvido afetado 3 vezes ao dia (a cada 8 horas) com o paciente deitado por 5 minutos, durante 3 a 5 dias consecutivos prévios ao procedimento. NUNCA introduzir hastes flexíveis (cotonetes) no ouvido.',
   fontes: { HSL: '14/02/2017', BULA: '04/10/2026' },
-  snPadrao: 'aplicação no canal auditivo para amolecer a rolha de cerúmen',
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'amolecimento de rolha de cerúmen ou cera impactada',
   acessoFonte: 'Padronizado no Guia Farmacêutico HSL e amplamente dispensado e comercializado no Brasil (Cerumin e genéricos frasco conta-gotas 8 mL).',
   apresentacoes: [
     {
