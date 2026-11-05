@@ -8,6 +8,9 @@ export const dipirona: Farmaco = {
   classe: 'Analgésico e antipirético',
   dosePratica: 'Adulto: 500 mg a 1.000 mg (1 g) VO ou EV podendo repetir de 6/6h se dor ou febre (máx. 4 g a 5 g/dia). Pediatria (> 3 meses e > 5 kg): 10 a 15 mg/kg/dose VO podendo repetir de 6/6h (1 gota/kg da solução 500 mg/mL, máx. 40 gotas/dose).',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', EINP: '', EINA: '' },
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou febre',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg, solução oral 500 mg/mL e ampola 500 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [

@@ -8,6 +8,9 @@ export const paracetamol: Farmaco = {
   classe: 'Analgésico e antipirético',
   dosePratica: 'Adulto: 500 mg a 750 mg VO a cada 6 horas se dor ou febre (máx. 4 g/dia; em hepatopatas/desnutridos máx. 2 a 3 g/dia). Pediatria: 10 a 15 mg/kg/dose VO a cada 6 horas (1 gota/kg da solução 200 mg/mL, máx. 35 gotas/dose; máx. 75 mg/kg/dia).',
   fontes: { HSL: '29/07/2024', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou febre',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg e solução oral 200 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [

@@ -112,4 +112,29 @@ Sempre consultar em ordem de prioridade:
 - **Apresentação Padrão (`apresentacoes[0]`):** A apresentação adulta consagrada que consta no catálogo do PuxaFicha deve ser posicionada como a primeira apresentação da lista (`apresentacoes[0]`). Dessa forma, ao clicar no fármaco, ela será a primeira a ser selecionada automaticamente na tela.
 - **Posologia Padrão Inicial (`padrao` e `intervaloFixo` / `dosesPadrao`):** A regra para adultos deve ter a dose padrão (`padrao`) e o intervalo (`intervaloFixo` ou `dosesPadrao`) alinhados com a posologia prática do catálogo do PuxaFicha (ex.: Dipirona 500mg 2 comprimidos 6/6h; Paracetamol 750mg 1 comprimido 8/8h; Ibuprofeno 600mg 1 comprimido 8/8h; Amoxicilina 500mg 1 comprimido 8/8h; Azitromicina 500mg 1 comprimido 24/24h; Prednisona 20mg 2 comprimidos 24/24h).
 
+---
+
+## 10. Modos de Uso e Duração Padrão (`modoPadrao`, `diasPadrao`, `usoContinuoPadrao`)
+
+Para garantir que o fármaco abra com a configuração clínica exata sem exigir intervenção desnecessária do médico:
+- **Antibióticos e Tratamentos com Prazo Fixo:**
+  - `modoPadrao: 'continuo'` (Horário fixo)
+  - `diasPadrao: 7` a `10` (ou `5` para Azitromicina)
+  - `usoContinuoPadrao: false`
+  - Gera: *"Tomar ... de 8/8 horas, por 10 dias."* + Sugestão de horários com alarme.
+- **AINEs e Sintomáticos com Limite de Segurança em Dias:**
+  - `modoPadrao: 'sn'` (Se necessário)
+  - `diasPadrao: 5` (trava padrão de segurança renal e gástrica para anti-inflamatórios)
+  - `usoContinuoPadrao: false`
+  - Gera: *"Tomar ... podendo repetir de 8 em 8 horas, por até 5 dias, se dor ou febre."*
+- **Sintomáticos Livres / SOS Puro (Analgésicos simples, antieméticos):**
+  - `modoPadrao: 'sn'`
+  - `diasPadrao: 0` (livre / em branco)
+  - Gera: *"Tomar ... podendo repetir de 6 em 6 horas, se dor ou febre."*
+- **Medicamentos de Uso Contínuo Crônico (Anti-hipertensivos, hipoglicemiantes, estatinas):**
+  - `modoPadrao: 'continuo'`
+  - `usoContinuoPadrao: true`
+  - `diasPadrao: 30`
+  - Gera: *"Tomar ... 1 vez ao dia, de uso contínuo."*
+
 

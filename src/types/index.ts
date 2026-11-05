@@ -63,6 +63,9 @@ export interface RegraDose {
   dosesPadrao?: number;
   intervaloFixo?: number;
   duracaoMaxDias?: number;
+  modoPadrao?: ModoUso;
+  diasPadrao?: number;
+  usoContinuoPadrao?: boolean;
   maxDoseMg?: number;
   fonte: string;
   trecho: string;
@@ -128,6 +131,9 @@ export interface Farmaco {
   classe: string;
   fontes: Record<string, string>;
   snPadrao?: string;
+  modoPadrao?: ModoUso;
+  diasPadrao?: number;
+  usoContinuoPadrao?: boolean;
   acessoFonte?: string;
   dosePratica?: string;
   apresentacoes: Apresentacao[];

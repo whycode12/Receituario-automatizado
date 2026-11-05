@@ -18,7 +18,10 @@ export const losartana: Farmaco = {
   classe: 'Anti-hipertensivo, Bloqueador Seletivo do Receptor AT1 da Angiotensina II (BRA)',
   dosePratica: '1. Hipertensão Arterial Sistêmica (SBC / HSL): Iniciar com 50 mg VO 1 vez ao dia pela manhã. Se controle pressórico insuficiente após 2 a 4 semanas, titular para 100 mg/dia (em tomada única diária ou 50 mg de 12/12h). 2. Nefroproteção no Diabético tipo 2 com Proteinúria: 50 a 100 mg VO 1x/dia. 3. Insuficiência Cardíaca com Fração de Ejeção Reduzida: Iniciar com 25 a 50 mg/dia e titular até 100 mg/dia. CONTRAINDICADO ABSOLUTAMENTE NA GESTAÇÃO.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada matinal contínua para controle da pressão arterial',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle da pressão arterial',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 50 mg disponibilizados com gratuidade total (100% subsidiado) nas farmácias credenciadas e UBSs do SUS.',
   apresentacoes: [
     {

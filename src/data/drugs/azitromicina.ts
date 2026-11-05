@@ -8,6 +8,9 @@ export const azitromicina: Farmaco = {
   classe: 'Antimicrobiano, Macrolídeo',
   dosePratica: 'Adulto: 500 mg VO 1x/dia por 3 a 5 dias (ou 1 g VO em dose única para ISTs). EV: 500 mg 1x/dia em infusão lenta de 1h a 3h. Pediatria: 10 mg/kg/dia VO 1x/dia por 3 dias (máx. 500 mg/dia; não usar comprimido em < 45 kg).',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg e pó para suspensão oral 40 mg/mL (600 mg e 900 mg). Farmácia Popular: não consta no elenco do programa.',
   apresentacoes: [

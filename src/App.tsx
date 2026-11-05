@@ -3,7 +3,7 @@ import { DRUGS } from './data';
 import { Farmaco, Apresentacao, Via, ModoUso, UnidadeDose, Paciente, ItemReceita } from './types';
 import { num } from './utils/constants';
 import { calcularPrescricao, viasDisp, toMg, fromMg, aplica } from './engine/calculator';
-import { generatePrescriptionCards } from './engine/prescriptionGenerator';
+import { generatePrescriptionCards, resolveModoDefaults } from './engine/prescriptionGenerator';
 import { Header } from './components/Header';
 import { DrugList } from './components/DrugList';
 import { CenterPanel } from './components/CenterPanel';
@@ -126,13 +126,15 @@ export const App: React.FC = () => {
         setFrascoMl(chosenApres.frascoMl || null);
       }
 
-      const chosenModo: ModoUso = chosenVia === 'EV' || chosenVia === 'IM' ? 'agora' : 'sn';
-      setModo(chosenModo);
-      setCondText(targetDrug.snPadrao || 'dor');
-
       const r = chosenApres
-        ? targetDrug.regras.find(reg => aplica(reg, p, chosenVia, chosenApres.id) === true)
+        ? (targetDrug.regras.find(reg => aplica(reg, p, chosenVia, chosenApres.id) === true) || null)
         : null;
+
+      const defaults = resolveModoDefaults(targetDrug, r, chosenVia);
+      setModo(defaults.modo);
+      setDias(defaults.dias);
+      setUsoContinuo(defaults.usoContinuo);
+      setCondText(targetDrug.snPadrao || 'dor');
 
       const newN = r ? (r.intervaloFixo ? 24 / r.intervaloFixo : (r.dosesPadrao || (r.dosesDia || [1, 4])[1])) : 4;
       setN(newN);
@@ -156,7 +158,6 @@ export const App: React.FC = () => {
       setVolManual(false);
       setEvVol(null);
       setEvTempo(null);
-      setUsoContinuo(false);
       setEvDil(targetDrug.ev ? targetDrug.ev.diluentes[0] : 'SF 0,9%');
     },
     []

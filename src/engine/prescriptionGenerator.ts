@@ -1,4 +1,4 @@
-import { Farmaco, Apresentacao, ResultadoCalculo, Paciente, Via, ModoUso, ItemReceita } from '../types';
+import { Farmaco, Apresentacao, ResultadoCalculo, Paciente, Via, ModoUso, ItemReceita, RegraDose } from '../types';
 import { fmt, fmtMg, leader, rml, VIA_EXT, VIA_GRUPO } from '../utils/constants';
 import { mgml } from './calculator';
 
@@ -15,6 +15,103 @@ export interface PrescriptionParams {
   usoContinuo?: boolean;
   frascoMl: number | null;
   evDil: string;
+}
+
+export interface ModoDefaults {
+  modo: ModoUso;
+  dias: number;
+  usoContinuo: boolean;
+}
+
+export function resolveModoDefaults(drug: Farmaco, r: RegraDose | null | undefined, via: Via): ModoDefaults {
+  if (via === 'EV' || via === 'IM') {
+    return { modo: 'agora', dias: 0, usoContinuo: false };
+  }
+
+  // 1. Prioridade absoluta: campos explícitos no fármaco ou na regra
+  const explicitModo = r?.modoPadrao || drug.modoPadrao;
+  const explicitDias = r?.diasPadrao ?? drug.diasPadrao;
+  const explicitContinuo = r?.usoContinuoPadrao ?? drug.usoContinuoPadrao;
+
+  if (explicitModo) {
+    const isCont = explicitContinuo ?? (explicitModo === 'continuo' && explicitDias == null && !r?.duracaoMaxDias);
+    const resolvedDias = explicitDias ?? (r?.duracaoMaxDias || (explicitModo === 'continuo' && !isCont ? 7 : 0));
+    return {
+      modo: explicitModo,
+      dias: resolvedDias,
+      usoContinuo: Boolean(isCont)
+    };
+  }
+
+  // 2. Detecção clínica inteligente de fallback
+  const cat = (drug.categoria || '').toLowerCase();
+  const classe = (drug.classe || '').toLowerCase();
+
+  // Antibióticos / Antimicrobianos
+  if (isAntibiotico(drug)) {
+    return {
+      modo: 'continuo',
+      dias: explicitDias ?? (r?.duracaoMaxDias || 7),
+      usoContinuo: false
+    };
+  }
+
+  // Medicamentos de Uso Contínuo Crônico
+  const isCronico =
+    cat.includes('anti-hipertensivo') ||
+    cat.includes('antidiabético') ||
+    cat.includes('hipoglicemiante') ||
+    cat.includes('estatina') ||
+    cat.includes('dislipidemia') ||
+    classe.includes('anti-hipertensivo') ||
+    classe.includes('ieca') ||
+    classe.includes('bra') ||
+    classe.includes('bloqueador dos canais') ||
+    classe.includes('estatina') ||
+    classe.includes('hipoglicemiante') ||
+    classe.includes('antidiabético') ||
+    classe.includes('hormônio tireoidiano') ||
+    classe.includes('levotiroxina');
+
+  if (isCronico) {
+    return {
+      modo: 'continuo',
+      dias: 30,
+      usoContinuo: true
+    };
+  }
+
+  // Corticoides sistêmicos (ex: Prednisona, Dexametasona oral) - cursos curtos habituais de 5 dias
+  if (cat.includes('corticoide') || classe.includes('corticosteroide')) {
+    return {
+      modo: 'continuo',
+      dias: explicitDias ?? (r?.duracaoMaxDias || 5),
+      usoContinuo: false
+    };
+  }
+
+  // AINEs (anti-inflamatórios com limite de tempo por segurança)
+  const isAine =
+    classe.includes('aine') ||
+    classe.includes('não esteroidal') ||
+    classe.includes('anti-inflamatório não esteroide') ||
+    classe.includes('anti-inflamatório, analgésico e antipirético') ||
+    cat.includes('anti-inflamatórios');
+
+  if (isAine) {
+    return {
+      modo: 'sn',
+      dias: explicitDias ?? (r?.duracaoMaxDias || 5),
+      usoContinuo: false
+    };
+  }
+
+  // Sintomáticos puros / Analgésicos / Antieméticos / SOS geral
+  return {
+    modo: 'sn',
+    dias: explicitDias ?? (r?.duracaoMaxDias || 0),
+    usoContinuo: false
+  };
 }
 
 export function isAntibiotico(drug: Farmaco): boolean {
@@ -91,19 +188,22 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
   const a = calcResult.arr;
   const h = 24 / n;
 
+  const duracaoSnExt = dias && dias > 0 ? (dias === 1 ? ', por até 1 dia' : `, por até ${dias} dias`) : '';
+  const duracaoSnAbr = dias && dias > 0 ? (dias === 1 ? ', por até 1 dia' : `, por até ${dias} dias`) : '';
+
   const posExt =
     modo === 'agora'
       ? 'agora'
       : modo === 'sn'
       ? n === 1
-        ? `até 1 vez ao dia, se ${condText}`
-        : `podendo repetir de ${h} em ${h} horas, se ${condText}`
+        ? `até 1 vez ao dia${duracaoSnExt}, se ${condText}`
+        : `podendo repetir de ${h} em ${h} horas${duracaoSnExt}, se ${condText}`
       : n === 1
       ? usoContinuo
-        ? `1 vez ao dia`
+        ? `1 vez ao dia, de uso contínuo`
         : `1 vez ao dia, por ${dias} dias`
       : usoContinuo
-      ? `de ${h} em ${h} horas`
+      ? `de ${h} em ${h} horas, de uso contínuo`
       : `de ${h} em ${h} horas, por ${dias} dias`;
 
   const posAbr =
@@ -111,14 +211,14 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       ? 'agora'
       : modo === 'sn'
       ? n === 1
-        ? `até 1x/dia, se ${condText}`
-        : `podendo repetir de ${h}/${h}h, se ${condText}`
+        ? `até 1x/dia${duracaoSnAbr}, se ${condText}`
+        : `podendo repetir de ${h}/${h}h${duracaoSnAbr}, se ${condText}`
       : n === 1
       ? usoContinuo
-        ? `1x/dia`
+        ? `1x/dia, de uso contínuo`
         : `1x/dia, por ${dias} dias`
       : usoContinuo
-      ? `de ${h}/${h}h`
+      ? `de ${h}/${h}h, de uso contínuo`
       : `de ${h}/${h}h, por ${dias} dias`;
 
   const fapVol = ap.forma === 'fap' ? (ap.volml != null ? ap.volml : ap.reconstMl != null ? ap.reconstMl : null) : null;
@@ -143,7 +243,7 @@ export function generatePrescriptionCards(params: PrescriptionParams): ItemRecei
       : 'Instilar';
     let disp = typeof ap.disp === 'function' ? ap.disp(p, a) : ap.disp;
 
-    if (modo === 'continuo' && ap.frascoMl && frascoMl && a.ml != null) {
+    if ((modo === 'continuo' || (modo === 'sn' && dias && dias > 0)) && ap.frascoMl && frascoMl && a.ml != null) {
       const mlDia = a.ml * n;
       const mlTotal = mlDia * (dias || 1);
       const qtdFrascos = Math.max(1, Math.ceil(mlTotal / frascoMl));

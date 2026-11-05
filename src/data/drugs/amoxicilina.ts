@@ -8,6 +8,9 @@ export const amoxicilina: Farmaco = {
   classe: 'Antimicrobiano, Penicilina',
   dosePratica: 'Adulto: 500 mg VO de 8/8h (ou 875 mg VO de 12/12h) por 7 a 10 dias. Pediatria: 50 mg/kg/dia VO divididos de 8/8h (em otite média aguda de alto risco até 80 a 90 mg/kg/dia; máx. 500 mg/dose ou dose de adulto).',
   fontes: { HSL: '10/12/2018', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): cápsula 500 mg, comprimido 500 mg e suspensão oral 50 mg/mL (250 mg/5 mL). Farmácia Popular: não consta.',
   apresentacoes: [

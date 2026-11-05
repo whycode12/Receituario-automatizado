@@ -8,6 +8,9 @@ export const naproxeno: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE), analgésico e antipirético',
   dosePratica: 'Adulto: 500 mg (ou 550 mg sódico) VO de 12/12h por até 5 a 7 dias (ou 250/275 mg de 12/12h para dor leve; máx. 1.000 mg/dia para analgesia e 1.500 mg/dia para afecções reumatológicas). Pediatria (> 12 anos): 5 a 6 mg/kg/dose de 12/12h (se < 60 kg) ou 250 a 375 mg de 12/12h (se > 60 kg) (máx. 1.000 mg/dia). Ingerir com água, com ou sem alimentos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: Naproxeno comprimido 250 mg e 500 mg consta no Componente Especializado da Assistência Farmacêutica (CEAF) para artrite reumatoide, artrite psoriásica, espondilite e osteoartrite. Não consta no Farmácia Popular.',
   apresentacoes: [

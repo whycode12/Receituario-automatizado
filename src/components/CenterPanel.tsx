@@ -220,7 +220,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
             [
               ['agora', 'Agora'],
               ['sn', 'Se necessário'],
-              ['continuo', 'Contínuo']
+              ['continuo', 'Horário fixo']
             ] as [ModoUso, string][]
           ).map(([k, l]) => (
             <button
@@ -257,13 +257,45 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
           </div>
 
           {modo === 'sn' ? (
-            <div className="field">
-              <div className="lbl">Se…</div>
-              <input
-                value={condText}
-                onChange={e => setCondText(e.target.value)}
-                style={{ width: '100%' }}
-              />
+            <div style={{ marginTop: '16px' }}>
+              <div className="row" style={{ marginTop: 0 }}>
+                <div className="field" style={{ flex: 2, marginTop: 0 }}>
+                  <div className="lbl">Se… (sintoma / condição)</div>
+                  <input
+                    value={condText}
+                    onChange={e => setCondText(e.target.value)}
+                    style={{ width: '100%' }}
+                  />
+                </div>
+                <div className="field" style={{ flex: 1, marginTop: 0 }}>
+                  <div className="lbl">Duração máx (dias)</div>
+                  <input
+                    inputMode="numeric"
+                    placeholder="Opcional"
+                    value={dias > 0 ? dias : ''}
+                    onChange={e => {
+                      const v = e.target.value.trim();
+                      setDias(v === '' ? 0 : parseInt(v) || 0);
+                    }}
+                    style={{ width: '100%' }}
+                  />
+                </div>
+              </div>
+              {(apres.frascoMl ||
+                (['sol', 'gotas', 'susp', 'sol_nasal'].includes(apres.forma) && mgml(apres))) && dias > 0 && (
+                <div className="row" style={{ marginTop: '8px' }}>
+                  <label className="field" style={{ flex: 1, marginTop: 0 }}>
+                    <div className="lbl">Volume do frasco (mL)</div>
+                    <input
+                      inputMode="numeric"
+                      placeholder={apres.frascoMl ? String(apres.frascoMl) : 'ex: 150'}
+                      value={frascoMl != null ? frascoMl : ''}
+                      onChange={e => setFrascoMl(e.target.value ? parseFloat(e.target.value) : null)}
+                      style={{ width: '100%' }}
+                    />
+                  </label>
+                </div>
+              )}
             </div>
           ) : (
             <div style={{ marginTop: '16px' }}>
@@ -285,7 +317,7 @@ export const CenterPanel: React.FC<CenterPanelProps> = ({
                     <div className="lbl">Duração (dias)</div>
                     <input
                       inputMode="numeric"
-                      value={dias}
+                      value={dias > 0 ? dias : 7}
                       onChange={e => setDias(parseInt(e.target.value) || 1)}
                       style={{ width: '100%' }}
                     />
