@@ -8,7 +8,10 @@ export const codeina: Farmaco = {
   classe: 'Analgésico opioide fraco (pró-fármaco convertido em morfina pela CYP2D6)',
   dosePratica: 'Adulto: 30 mg a 60 mg VO a cada 4 a 6 horas conforme a intensidade da dor (dose usual 30 mg de 6/6h; máx. 360 mg/dia). Ingerir com água, com ou sem alimentos. Sujeito a controle especial (Portaria 344/98 - Lista A2/C1). Contraindicado em menores de 12 anos e no pós-operatório de tonsilectomia/adenoidectomia em menores de 18 anos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'dor moderada',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor intensa e persistente',
   acessoFonte: 'RENAME 2024: Fosfato de codeína comprimido 30 mg e solução oral 3 mg/mL constam no Componente Especializado da Assistência Farmacêutica (CEAF) para tratamento da dor crônica (CID10 R52.1 e R52.2). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -64,12 +67,12 @@ export const codeina: Farmaco = {
       min: 30,
       max: 60,
       padrao: 30,
-      dosesDia: [4, 6],
-      dosesPadrao: 4,
-      intervaloFixo: 6,
+      dosesDia: [3, 4],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
       duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'PSZerado p. 123: Codeína 30 mg: Tomar 1 comprimido a cada 6 horas (HSL: 30 mg a cada 4 ou 6 horas; variação de 15 a 60 mg/dose).'
+      trecho: 'PuxaFicha: Codeína 30 mg: Tomar 1 comprimido até de 8/8h se dor intensa e persistente. PSZerado p. 123 / HSL: 30 a 60 mg a cada 6 a 8 horas.'
     },
     {
       pub: 'ped',

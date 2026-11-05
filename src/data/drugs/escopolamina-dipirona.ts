@@ -8,7 +8,10 @@ export const escopolaminaDipirona: Farmaco = {
   classe: 'Antiespasmódico associado a Analgésico',
   dosePratica: 'Adulto: VO: 1 a 2 comprimidos (ou 20 a 40 gotas) podendo repetir de 6/6h a 8/8h se cólica intensa. EV/IM: 1 ampola (5 mL) EV lento em 5 min (ou em 50-100 mL SF) ou IM profunda. Pediatria: Gotas VO (1-6 anos): 5 a 10 gotas até 3-4x/dia; (6-12 anos): 10 a 20 gotas até 3-4x/dia. Injetável contraindicado em < 1 ano.',
   fontes: { HSL: '23/04/2019', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'cólica ou dor espasmódica intensa',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor abdominal ou cólicas',
   acessoFonte: 'RENAME 2024: isolados (butilbrometo de escopolamina e dipirona) constam na RENAME; a associação fixa composta consta amplamente no mercado comercial e em serviços hospitalares.',
   apresentacoes: [
     {
@@ -68,6 +71,7 @@ export const escopolaminaDipirona: Farmaco = {
       padrao: 10, // 1 a 2 comprimidos (10 a 20 mg de escopolamina)
       dosesDia: [3, 4],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Adulto: 1 a 2 comprimidos, ou 20 a 40 gotas, VO, 3 a 4 vezes/dia.'
     },

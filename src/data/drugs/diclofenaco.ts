@@ -8,7 +8,10 @@ export const diclofenaco: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE), analgésico e antirreumático',
   dosePratica: 'Adulto: VO: 50 mg de 8/8h (ou 75 mg de 12/12h) após refeições por até 5 dias. IM: 75 mg (1 ampola) 1x/dia (máx. 2 ampolas/dia em sítios distintos por até 2 dias) exclusivamente em glúteo profundo. Gel: aplicar camada fina 3 a 4x/dia massageando. Crianças ≥ 1 ano: gotas 0,5 a 2 mg/kg/dia (1 a 4 gotas/kg/dia) divididas em 2 a 3 tomadas.',
   fontes: { HSL: '27/02/2017', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'dor ou inflamação',
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: Diclofenaco não consta no elenco nacional (ibuprofeno é a alternativa padronizada no SUS). Pode constar em REMUMEs municipais. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -94,10 +97,11 @@ export const diclofenaco: Farmaco = {
       max: 50,
       padrao: 50,
       dosesDia: [2, 3],
-      dosesPadrao: 3,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
       duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'Diclofenaco 50 mg: Tomar 1 comprimido a cada 8 horas, por até 5 dias (ou a cada 8 a 12 horas).'
+      trecho: 'PuxaFicha: Diclofenaco 50 mg: Tomar 1 comprimido até de 12/12h por 5 dias se dor. PSZerado: 50 mg a cada 8 a 12 horas por até 5 dias.'
     },
     {
       pub: 'adulto',

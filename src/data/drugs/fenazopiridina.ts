@@ -8,9 +8,27 @@ export const fenazopiridina: Farmaco = {
   classe: 'Analgésico Tópico das Vias Urinárias Inferiores',
   dosePratica: 'Adultos e adolescentes > 12 anos: 200 mg VO de 8/8h após as refeições (ou 100 mg de 8/8h), por NO MÁXIMO 2 dias consecutivos quando associado ao tratamento antimicrobiano de ITU. ATENÇÃO: Avisar o paciente que a medicação altera a cor da urina para vermelho-alaranjado e pode manchar roupas íntimas e lentes de contato.',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'disúria, ardência, dor ou urgência miccional',
+  modoPadrao: 'sn',
+  diasPadrao: 2,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor ou ardência ao urinar',
   acessoFonte: 'RENAME 2024: Não consta no elenco básico da RENAME; medicamento de grande circulação comercial e referência no Brasil.',
   apresentacoes: [
+    {
+      id: 'drg200',
+      forma: 'cp',
+      nome: 'Drágea / Comprimido 200 mg',
+      comercial: 'Pyridium 200mg / Genérico',
+      conc: '200mg',
+      rotulo: 'Fenazopiridina 200mg',
+      mg: 200,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Tomar 1 drágea por via oral de 8 em 8 horas após as refeições por até 2 a 3 dias. A medicação tinge a urina de vermelho-alaranjado; suspender o uso após o alívio ou no máximo 2 a 3 dias.',
+      obs: 'Apresentação padrão consagrada (PuxaFicha / Pyridium 200mg). Dose prática de 1 comprimido por tomada.'
+    },
     {
       id: 'drg100',
       forma: 'cp',
@@ -25,21 +43,6 @@ export const fenazopiridina: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Tomar 1 a 2 drágeas por via oral logo após as refeições ou com um lanche leve para evitar náuseas. Não mastigar. AVISO: Esta medicação produz uma coloração vermelho-alaranjada característica na urina e nas fezes, o que é um efeito normal do remédio. Pode manchar roupas íntimas e lentes de contato. Não utilizar por mais de 2 dias.',
       obs: 'Drágea de 100 mg. Posologia usual: 2 drágeas (200 mg) de 8/8h por 2 dias.'
-    },
-    {
-      id: 'drg200',
-      forma: 'cp',
-      nome: 'Drágea / Comprimido 200 mg',
-      comercial: 'Pyridium 200mg / Genérico',
-      conc: '200mg',
-      rotulo: 'Fenazopiridina 200mg',
-      mg: 200,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Tomar 1 drágea por via oral de 8 em 8 horas após as refeições por 2 dias. A medicação tinge a urina de vermelho-alaranjado; suspender o uso após 2 dias.',
-      obs: 'Dose prática de 1 comprimido por tomada.'
     }
   ],
   regras: [

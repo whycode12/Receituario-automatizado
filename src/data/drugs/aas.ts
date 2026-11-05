@@ -8,7 +8,10 @@ export const aas: Farmaco = {
   classe: 'Antiagregante Plaquetário / Anti-inflamatório Não Esteroidal',
   dosePratica: 'Prevenção secundária cardiovascular: 100 mg VO 1x/dia com água após o almoço. SCA / IAM (Ataque): 200 a 300 mg VO (2 a 3 comprimidos) mastigados imediatamente.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'síndrome coronariana aguda ou evento isquêmico',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'prevenção cardiovascular',
   acessoFonte: 'RENAME 2024 (Componente Básico): Ácido acetilsalicílico 100 mg comprimido. Farmácia Popular: Disponível gratuitamente para hipertensão/doença cardiovascular.',
   apresentacoes: [
     {
@@ -37,6 +40,7 @@ export const aas: Farmaco = {
       max: 300,
       padrao: 100,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Prevenção cardiovascular: 100 mg VO 1x/dia. SCA / IAM fase aguda: 200 a 300 mg VO mastigados imediatamente.'

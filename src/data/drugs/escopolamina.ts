@@ -8,7 +8,10 @@ export const escopolamina: Farmaco = {
   classe: 'Antiespasmódico, Anticolinérgico',
   dosePratica: 'Adulto: VO: 10 a 20 mg (1 a 2 drágeas ou 20 a 40 gotas) podendo repetir de 8/8h se cólica abdominal (máx. 60 mg/dia). EV/IM: 20 mg (1 ampola) EV lento em 2-3 min ou em 20 mL de SF (máx. 100 mg/dia). Pediatria: VO (1-6 anos): 0,3 a 0,5 mg/kg/dose até 3x/dia; EV/IM: 0,3 a 0,6 mg/kg/dose (máx. 1,5 mg/kg/dia).',
   fontes: { HSL: '26/02/2024', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
-  snPadrao: 'cólica ou espasmos abdominais',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor abdominal ou cólicas',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido/drágea 10 mg e ampola 20 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -67,6 +70,7 @@ export const escopolamina: Farmaco = {
       padrao: 10,
       dosesDia: [3, 5],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Adulto Via Oral: 1 a 2 drágeas ou 20 a 40 gotas (10 a 20mg), 3 a 5 vezes/dia.'
     },
@@ -93,6 +97,7 @@ export const escopolamina: Farmaco = {
       padrao: 10,
       dosesDia: [3, 5],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Maiores de 6 anos: 1 a 2 drágeas ou 20 a 40 gotas (10 a 20mg), 3 a 5 vezes/dia.'
     },

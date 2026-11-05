@@ -8,7 +8,10 @@ export const tramadol: Farmaco = {
   classe: 'Analgésico opioide (agonista dos receptores mu-opioides e inibidor da recaptação de serotonina/noradrenalina)',
   dosePratica: 'Adulto: VO: 50 a 100 mg a cada 4-6h se dor moderada a intensa (máx. 400 mg/dia). EV/IM: 50 a 100 mg a cada 4-6h (diluir EV em 100 mL de SF 0,9% ou SG 5% e infundir em 30 a 60 min lentamente para prevenir náuseas e vômitos; máx. 400 mg/dia). Pediatria: Einstein Pediátrico padroniza EV (1 mg/mL em 15-60 min) e PSZerado 1-2 mg/kg/dose a cada 6h (bula gotas 100 mg/mL com 40 gts/mL: 4-8 gotas a cada 10 kg/dose).',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '31/08/2026', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'dor moderada a intensa',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor intensa e persistente',
   acessoFonte: 'RENAME 2024: Cloridrato de Tramadol não consta no elenco nacional da RENAME (CONITEC não incorporou para dor crônica). Pode constar em REMUMEs municipais e estaduais com receita de controle especial (Portaria 344/98 - Lista A2/C1). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -95,8 +98,10 @@ export const tramadol: Farmaco = {
       padrao: 50,
       dosesDia: [4, 6],
       dosesPadrao: 4,
+      intervaloFixo: 6,
+      duracaoMaxDias: 5,
       fonte: 'HSL',
-      trecho: 'Adulto Comprimido: 50-100mg, a cada 4-6h. VO: pode ser ingerido com ou sem alimentos, com um copo de água.'
+      trecho: 'PuxaFicha: Tramadol 50mg (Tramal): Tomar 1 cápsula até de 6/6h se dor intensa e persistente. HSL: 50-100mg a cada 4-6h.'
     },
     {
       pub: 'adulto',

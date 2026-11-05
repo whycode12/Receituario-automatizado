@@ -8,6 +8,9 @@ export const piroxicam: Farmaco = {
   classe: 'Anti-inflamatório Não Esteroidal (AINE Oxicam)',
   dosePratica: 'Dismenorreia / Dor aguda musculoesquelética: 20 a 40 mg VO em dose única inicial ou 20 mg 1x/dia (ou 10 mg 12/12h) por 3 a 5 dias. Tomar com alimento.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou inflamação',
   acessoFonte: 'RENAME 2024 / Farmácia Básica: Cápsula / Comprimido 20 mg disponível na rede pública.',
   apresentacoes: [
@@ -37,7 +40,9 @@ export const piroxicam: Farmaco = {
       max: 40,
       padrao: 20,
       dosesDia: [1, 2],
+      dosesPadrao: 1,
       intervaloFixo: 24,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
       trecho: 'Dismenorreia / Condições dolorosas agudas: 20 a 40 mg/dia em dose única ou dividida em 2 tomadas por 3 a 5 dias.'
     }

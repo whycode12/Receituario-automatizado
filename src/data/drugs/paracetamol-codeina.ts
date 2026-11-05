@@ -8,7 +8,10 @@ export const paracetamolCodeina: Farmaco = {
   classe: 'Analgésico Não-Opioide + Opioide Fraco em Associação Sinérgica',
   dosePratica: 'Dor moderada a intensa / Trauma / Pós-operatório: 1 comprimido de 500/30 mg VO a cada 6 ou 8 horas se dor intensa (máximo 4 comprimidos ao dia = 2 g de paracetamol e 120 mg de codeína). Não ultrapassar 4 g/dia de paracetamol total.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'dor moderada a intensa',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor intensa e persistente',
   acessoFonte: 'Disponível comercialmente (Tylex, Paco, genéricos) e farmácias municipais com receituário de controle especial C1 (duas vias).',
   apresentacoes: [
     {
@@ -51,9 +54,11 @@ export const paracetamolCodeina: Farmaco = {
       max: 1060,
       padrao: 530,
       dosesDia: [2, 4],
-      intervaloFixo: 6,
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'Dor moderada a intensa: 1 comprimido de 500/30 mg a cada 6 a 8h se necessário (máx. 4 cp/dia).'
+      trecho: 'PuxaFicha: Paracetamol 500mg + codeína 30mg (Paco): Tomar 1 comprimido até de 8/8h se dor intensa e persistente. PSZerado: 1 cp a cada 6 a 8h se dor.'
     }
   ],
   maximos: [

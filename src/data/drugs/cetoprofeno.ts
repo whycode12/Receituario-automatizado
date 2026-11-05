@@ -8,9 +8,26 @@ export const cetoprofeno: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal, antirreumático',
   dosePratica: 'Adulto: VO: 150 mg 1x/dia (ou 100 mg 12/12h, ou 50 mg 8/8h) junto a refeições. IM/EV: 100 mg a cada 12h a 24h (diluir EV em 100 mL de SF 0,9% em 20-30 min; máx. 300 mg/dia por até 48h). Contraindicado em < 15 anos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '03/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: cetoprofeno não consta. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
+    {
+      id: 'lp150',
+      forma: 'cp',
+      nome: 'Comprimido liberação prolongada 150 mg',
+      comercial: 'Bi-Profenid / Genérico',
+      conc: '150mg',
+      rotulo: 'Cetoprofeno 150mg LP (Bi-Profenid)',
+      mg: 150,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      obs: 'Apresentação padrão consagrada (PuxaFicha / Bi-Profenid). Engolir inteiro com água, durante ou após refeição; só partir se for sulcado.'
+    },
     {
       id: 'cap50',
       forma: 'cap',
@@ -53,19 +70,6 @@ export const cetoprofeno: Farmaco = {
       obs: 'Dose segue a regra HSL do cetoprofeno oral (100 mg VO 2×/dia ou 50 mg 3×/dia). Conferir a forma farmacêutica dispensada.'
     },
     {
-      id: 'lp150',
-      forma: 'cp',
-      nome: 'Comprimido liberação prolongada 150 mg',
-      conc: '150mg',
-      rotulo: 'Cetoprofeno 150mg LP',
-      mg: 150,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      obs: '⚠ Regra de dose vem da BULA — NÃO do HSL/Einstein. Engolir inteiro com água, durante ou após refeição; só partir se for sulcado.'
-    },
-    {
       id: 'fap100',
       forma: 'fap',
       nome: 'Frasco-ampola 100 mg (pó)',
@@ -101,6 +105,22 @@ export const cetoprofeno: Farmaco = {
       pub: 'adulto',
       se: { idadeMinAnos: 15 },
       vias: ['VO'],
+      apres: ['lp150'],
+      tipo: 'mg',
+      min: 75,
+      max: 150,
+      padrao: 150,
+      dosesDia: [1, 2],
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 5,
+      fonte: 'BULA',
+      trecho: 'PuxaFicha / Bula: Cetoprofeno 150mg (Bi-Profenid): Tomar 1 comprimido até de 12/12h por 5 dias se dor (máx. 300 mg/dia).'
+    },
+    {
+      pub: 'adulto',
+      se: { idadeMinAnos: 15 },
+      vias: ['VO'],
       apres: ['cap50', 'cp100'],
       tipo: 'mg',
       min: 50,
@@ -124,20 +144,6 @@ export const cetoprofeno: Farmaco = {
       dosesPadrao: 2,
       fonte: 'HSL',
       trecho: 'Profenid Entérico: Dose usual 200mg/dia, VO, fracionados em 2 doses.'
-    },
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 18 },
-      vias: ['VO'],
-      apres: ['lp150'],
-      tipo: 'mg',
-      min: 75,
-      max: 150,
-      padrao: 150,
-      dosesDia: [1, 2],
-      dosesPadrao: 1,
-      fonte: 'BULA',
-      trecho: 'Bula: manutenção 150 mg ao dia em dose única; enxaqueca ½ comprimido (75 mg); dose máxima 300 mg/dia.'
     },
     {
       pub: 'adulto',

@@ -8,6 +8,9 @@ export const tenoxicam: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE da classe dos oxicans), analgésico e antirreumático',
   dosePratica: 'Adulto: VO/EV/IM: 20 mg 1x/dia (ou 40 mg 1x/dia nos primeiros 2 dias de gota aguda ou pós-operatório; máx. 40 mg/dia). EV: reconstituir com 2 mL de AD e administrar em injeção direta lenta (1 a 2 min no adulto, 3-5 min em pediatria segundo Einstein; não recomendado em infusão contínua). Contraindicado em pediatria na rotina.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '31/08/2026', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou inflamação',
   acessoFonte: 'RENAME 2024: Tenoxicam não consta no elenco nacional (ibuprofeno e naproxeno são alternativas na rede pública). Pode constar em REMUMEs municipais. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -55,7 +58,7 @@ export const tenoxicam: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 7,
+      duracaoMaxDias: 5,
       fonte: 'HSL',
       trecho: 'HSL: Adulto: 20-40mg, VO, 1 vez/dia. Dose máxima: 40mg/dia.'
     },

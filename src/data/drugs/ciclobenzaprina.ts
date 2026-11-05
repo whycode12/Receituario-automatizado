@@ -8,23 +8,12 @@ export const ciclobenzaprina: Farmaco = {
   classe: 'Relaxante muscular de ação central (antiespasmódico relacionado aos antidepressivos tricíclicos)',
   dosePratica: 'Adulto: 5 a 10 mg VO a cada 12 horas (ou 5 a 10 mg até 3-4x/dia se espasmo severo; máx. 60 mg/dia) por até 5 a 7 dias (máx. 2 a 3 semanas). Efeito colateral marcante: sonolência; preferir administração noturna se dose única diária ou 12/12h. Contraindicado em menores de 15 anos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou espasmo muscular',
   acessoFonte: 'RENAME 2024: Cloridrato de Ciclobenzaprina não consta no elenco nacional da RENAME. Pode constar em listas municipais (REMUME). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
-    {
-      id: 'cp5',
-      forma: 'cp',
-      nome: 'Comprimido revestido 5 mg',
-      comercial: 'Miosan',
-      conc: '5mg',
-      rotulo: 'Cloridrato de Ciclobenzaprina 5mg',
-      mg: 5,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      obs: 'Dose inicial recomendada para reduzir a sonolência diurna e para pacientes idosos/disfunção hepática leve (HSL / PSZerado).'
-    },
     {
       id: 'cp10',
       forma: 'cp',
@@ -37,7 +26,23 @@ export const ciclobenzaprina: Farmaco = {
       vias: ['VO'],
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
-      obs: 'Dose padrão em pronto-socorro para espasmo muscular agudo. Tomar com água; preferir dose noturna pelo efeito sedativo (PSZerado).'
+      instrucao: 'Tomar preferencialmente à noite ao deitar. Atenção: esta medicação pode causar sonolência e hipotensão.',
+      obs: 'Apresentação padrão consagrada (PuxaFicha / Miosan). Tomar com água; preferir dose noturna pelo efeito sedativo.'
+    },
+    {
+      id: 'cp5',
+      forma: 'cp',
+      nome: 'Comprimido revestido 5 mg',
+      comercial: 'Miosan',
+      conc: '5mg',
+      rotulo: 'Cloridrato de Ciclobenzaprina 5mg',
+      mg: 5,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Tomar preferencialmente à noite ao deitar. Atenção: pode causar sonolência.',
+      obs: 'Dose inicial recomendada para reduzir a sonolência diurna e para pacientes idosos/disfunção hepática leve (HSL / PSZerado).'
     }
   ],
   regras: [
@@ -45,17 +50,17 @@ export const ciclobenzaprina: Farmaco = {
       pub: 'adulto',
       se: { idadeMinAnos: 15 },
       vias: ['VO'],
-      apres: ['cp5', 'cp10'],
+      apres: ['cp10', 'cp5'],
       tipo: 'mg',
       min: 5,
       max: 10,
       padrao: 10,
-      dosesDia: [2, 4],
-      dosesPadrao: 2,
-      intervaloFixo: 12,
-      duracaoMaxDias: 7,
+      dosesDia: [1, 3],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'PSZerado p. 119 e 143: Ciclobenzaprina 5 mg ou 10 mg: Tomar 1 comprimido VO a cada 12 horas, por 5 dias. Efeito colateral: sonolência excessiva. Preferir dose noturna (HSL: 5 a 10 mg até 4 vezes ao dia).'
+      trecho: 'PuxaFicha: Tomar 1 comprimido (10mg) por dia, à noite, por 5 dias. PSZerado / HSL: 5 a 10 mg 1x ao dia à noite ou até de 8/8h a 12/12h por até 5 a 7 dias.'
     }
   ],
   maximos: [

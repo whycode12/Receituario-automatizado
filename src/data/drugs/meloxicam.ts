@@ -8,7 +8,10 @@ export const meloxicam: Farmaco = {
   classe: 'Anti-inflamatório Não Esteroidal (AINE Oxicam preferencial COX-2)',
   dosePratica: 'Adulto: 7,5 mg a 15 mg VO 1x/dia com água durante ou após uma refeição. Dose máxima: 15 mg/dia.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'dor ou inflamação',
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: Não consta na RENAME básica federal, amplamente disponível em farmácias comerciais.',
   apresentacoes: [
     {
@@ -51,10 +54,12 @@ export const meloxicam: Farmaco = {
       min: 7.5,
       max: 15,
       padrao: 7.5,
-      dosesDia: [1, 1],
+      dosesDia: [1, 2],
+      dosesPadrao: 1,
       intervaloFixo: 24,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'Dose inicial de 7,5 mg 1x/dia, podendo elevar para 15 mg 1x/dia conforme necessidade.'
+      trecho: 'PuxaFicha: Meloxicam 7,5mg: Tomar 1 comprimido 1x ao dia (ou até de 12/12h), por até 5 dias, se dor. PSZerado: 7,5 a 15 mg 1x/dia.'
     }
   ],
   maximos: [

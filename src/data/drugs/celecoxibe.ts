@@ -8,9 +8,26 @@ export const celecoxibe: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE inibidor seletivo da COX-2)',
   dosePratica: 'Adulto: 200 mg VO 1x/dia (ou 100 a 200 mg de 12/12h por até 5 a 7 dias; dor aguda: ataque 400 mg seguido de 200 mg 12/12h; máx. 400 mg/dia em dor musculoesquelética e 800 mg/dia no HSL). Tomar com ou sem alimentos (doses > 400 mg/dia tomar com alimentos). Menor toxicidade gástrica que AINEs não seletivos, porém com risco cardiovascular aumentado.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'dor ou inflamação',
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor intensa',
   acessoFonte: 'RENAME 2024: Celecoxibe não consta no elenco nacional (ibuprofeno e naproxeno são as alternativas públicas). Pode constar em REMUMEs municipais. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
+    {
+      id: 'cap200',
+      forma: 'cap',
+      nome: 'Cápsula 200 mg',
+      comercial: 'Celebra',
+      conc: '200mg',
+      rotulo: 'Celecoxibe 200mg',
+      mg: 200,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      obs: 'Apresentação padrão consagrada para analgesia e osteoartrite (PuxaFicha / PSZerado / HSL). Pode ser tomada em dose única diária ou 12/12h.'
+    },
     {
       id: 'cap100',
       forma: 'cap',
@@ -24,20 +41,6 @@ export const celecoxibe: Farmaco = {
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
       obs: 'Ingerir inteira com líquido. Indicada para artrite reumatoide (100 mg 12/12h) ou titulação de doses menores (HSL).'
-    },
-    {
-      id: 'cap200',
-      forma: 'cap',
-      nome: 'Cápsula 200 mg',
-      comercial: 'Celebra',
-      conc: '200mg',
-      rotulo: 'Celecoxibe 200mg',
-      mg: 200,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      obs: 'Apresentação padrão de pronto-socorro para dor aguda e osteoartrite (PSZerado / HSL). Pode ser tomada em dose única diária ou 12/12h.'
     }
   ],
   regras: [
@@ -51,10 +54,11 @@ export const celecoxibe: Farmaco = {
       max: 200,
       padrao: 200,
       dosesDia: [1, 2],
-      dosesPadrao: 2,
-      duracaoMaxDias: 7,
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
-      trecho: 'PSZerado p. 123: Celecoxibe 200 mg: Tomar 1 cápsula a cada 12 horas, por até 5 dias (ou 200 mg 1 vez ao dia para osteoartrite/espondilite no HSL).'
+      trecho: 'PuxaFicha: Celecoxib 200mg: Tomar 1 cápsula 1 vez ao dia por 5 dias se dor intensa. PSZerado p. 123 / HSL: 200 mg dose única ou até 12/12h por até 5 dias.'
     },
     {
       pub: 'adulto',

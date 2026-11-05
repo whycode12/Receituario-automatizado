@@ -8,6 +8,9 @@ export const acidoMefenamico: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE da classe dos fenamatos), analgésico e antipirético',
   dosePratica: 'Adulto e adolescentes ≥ 14 anos: 500 mg VO de 8/8h (1 comprimido 3x/dia) junto às refeições por até 5 a 7 dias (máx. 1.500 mg/dia). Indicação de excelência para dismenorreia primária e menorragia. Contraindicado em menores de 14 anos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'dor ou cólica',
   acessoFonte: 'RENAME 2024: Ácido mefenâmico não consta no elenco nacional (ibuprofeno é a alternativa padronizada no SUS). Pode constar em listas municipais (REMUME). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -39,7 +42,7 @@ export const acidoMefenamico: Farmaco = {
       dosesDia: [3, 3],
       dosesPadrao: 3,
       intervaloFixo: 8,
-      duracaoMaxDias: 7,
+      duracaoMaxDias: 5,
       fonte: 'HSL',
       trecho: 'HSL: Adulto e Pediatria (a partir de 14 anos): 500mg, VO, 3 vezes/dia. Duração máxima: Usualmente o tratamento não deve se prolongar por mais de 1 semana (PSZerado: até 5 dias).'
     }
