@@ -8,9 +8,27 @@ export const terbutalina: Farmaco = {
   classe: 'Broncodilatador de Curta Duração, Agonista Seletivo Beta-2 Adrenérgico e Tocolítico Uterino',
   dosePratica: 'Crise de Asma / Broncoespasmo Grave no PS (Injetável 0,5 mg/mL): Adultos: 0,25 a 0,5 mg (0,5 a 1 mL da ampola) SC ou IM até 4x/dia (máx. 0,5 mg em 4 horas e 2 mg/dia). Pediatria: 0,005 a 0,01 mg/kg/dose (0,01 a 0,02 mL/kg) SC (máx. 0,25 a 0,3 mg/dose). Asma Manutenção / Ambulatório (Xarope 0,3 mg/mL): Adultos: 3 a 4,5 mg (10 a 15 mL) VO 3x/dia (de 8/8h); Pediatria: 0,075 mg/kg/dose (0,25 mL/kg/dose) VO 3x/dia (8/8h).',
   fontes: { HSL: '07/03/2023', EINA: '2023', EINP: '2023', BULA: '04/10/2026' },
-  snPadrao: 'crise de broncoespasmo agudo, chiado no peito ou tocolise no trabalho de parto prematuro',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'cansaço, tosse ou chieira',
   acessoFonte: 'RENAME 2024: Solução injetável 0,5 mg/mL (ampola 1 mL) padronizada no Componente Hospitalar / Urgência e Emergência. Bricanyl xarope 0,3 mg/mL disponível em farmácias comerciais e REMUME de diversos municípios.',
   apresentacoes: [
+    {
+      id: 'xpe_03',
+      forma: 'sol',
+      nome: 'Xarope 0,3 mg/mL (frasco 100 mL com copo-medida)',
+      comercial: 'Bricanyl Broncodilatador / Genérico',
+      conc: '0,3mg/mL',
+      rotulo: 'Sulfato de terbutalina xarope 0,3mg/mL',
+      mgml: 0.3,
+      frascoMl: 100,
+      vias: ['VO'],
+      disp: '1 frasco com 100 mL',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Tomar a quantidade indicada no copo-medida a cada 8 horas, se cansaço, tosse ou chieira. Em crianças, dosar rigorosamente pela graduação em mL conforme o peso corporal.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (Bricanyl xarope 10 mL até de 8/8h se cansaço/tosse). 10 mL = 3 mg de terbutalina; 15 mL = 4,5 mg.'
+    },
     {
       id: 'amp_05',
       forma: 'amp',
@@ -25,25 +43,25 @@ export const terbutalina: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Uso hospitalar/urgência. Via Subcutânea/Intramuscular: Injetar 0,5 a 1 mL (0,25 a 0,5 mg) lentamente. Via EV: Infundir diluído em SG 5% (1 ampola em 100 mL de SG 5% = 5 mcg/mL) a 20-30 gotas/min sob monitorização cardíaca contínua.',
       obs: 'RENAME Hospitalar. A via SC/IM é clássica e preferencial no broncoespasmo refratário no pronto-socorro; a via EV em bomba/infusão é utilizada em tocólise e exacerbações refratárias de asma.'
-    },
-    {
-      id: 'xpe_03',
-      forma: 'sol',
-      nome: 'Xarope 0,3 mg/mL (frasco 100 mL com copo-medida)',
-      comercial: 'Bricanyl Broncodilatador / Genérico',
-      conc: '0,3mg/mL',
-      rotulo: 'Sulfato de terbutalina xarope 0,3mg/mL',
-      mgml: 0.3,
-      frascoMl: 100,
-      vias: ['VO'],
-      disp: '1 frasco com 100 mL',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Tomar a quantidade indicada no copo-medida a cada 8 horas. Em crianças, dosar rigorosamente pela graduação em mL conforme o peso corporal.',
-      obs: '10 mL = 3 mg de terbutalina; 15 mL = 4,5 mg. Em crianças a dose habitual é 0,25 mL/kg por tomada (ex.: 10 kg = 2,5 mL; 20 kg = 5 mL).'
     }
   ],
   regras: [
-    // 1. Parenteral Adulto (Ampola 0,5 mg/mL) - SC / IM / EV
+    // 1. Xarope Adulto (VO - PuxaFicha Adulto)
+    {
+      pub: 'adulto',
+      vias: ['VO'],
+      apres: ['xpe_03'],
+      tipo: 'mg',
+      min: 3,
+      max: 4.5,
+      padrao: 3,
+      dosesDia: [3, 3],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      fonte: 'BULA / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Terbutalina xarope 0,3mg/mL. Tomar 10mL, até de 8/8 horas, se cansaço, tosse ou chieira.'
+    },
+    // 2. Parenteral Adulto (Ampola 0,5 mg/mL) - SC / IM / EV
     {
       pub: 'adulto',
       vias: ['EV', 'IM'],
@@ -72,21 +90,6 @@ export const terbutalina: Farmaco = {
       intervaloFixo: 8,
       fonte: 'HSL / BULA / SBP',
       trecho: 'Pediatria parenteral: 0,005 a 0,01 mg/kg/dose (0,01 a 0,02 mL/kg) via SC/IM ou EV lento (máx. 0,25 a 0,3 mg por dose).'
-    },
-    // 3. Xarope Adulto (VO)
-    {
-      pub: 'adulto',
-      vias: ['VO'],
-      apres: ['xpe_03'],
-      tipo: 'mg',
-      min: 3,
-      max: 4.5,
-      padrao: 3,
-      dosesDia: [3, 3],
-      dosesPadrao: 3,
-      intervaloFixo: 8,
-      fonte: 'BULA',
-      trecho: 'Adultos via oral: 3 a 4,5 mg (10 a 15 mL do xarope 0,3 mg/mL) 3 vezes ao dia (a cada 8 horas).'
     },
     // 4. Xarope Pediatria (VO)
     {

@@ -8,7 +8,10 @@ export const ipratropio: Farmaco = {
   classe: 'Broncodilatador (Anticolinérgico / Antimuscarínico inalatório)',
   dosePratica: 'Adulto: Nebulização: 40 gotas (2 mL = 0,5 mg) em 3-5 mL de SF até 3-4x/dia (ou a cada 20 min na 1ª hora de crise grave junto ao salbutamol); Spray 20 mcg: 2 jatos 4x/dia. Pediatria: Nebulização (< 6 anos): 10-20 gotas em 3 mL SF; (6-12 anos): 20 gotas (0,25 mg); (> 12 anos): 40 gotas.',
   fontes: { HSL: '17/01/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'falta de ar ou chiado no peito',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'falta de ar, cansaço, tosse ou chieira',
   acessoFonte: 'RENAME 2024 (Componente Básico): solução para inalação 0,25 mg/mL (frasco 20 mL) e aerossol oral 20 mcg/dose. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -55,6 +58,7 @@ export const ipratropio: Farmaco = {
       padrao: 0.5, // 0,5 mg = 40 gotas (2 mL)
       dosesDia: [3, 4],
       dosesPadrao: 4,
+      intervaloFixo: 6,
       fonte: 'HSL',
       trecho: 'Adulto e Geriatria Nebulização: 2mL (40 gotas = 0,5mg), 3 a 4 vezes/dia, podendo administrar doses repetidas até estabilização.'
     },

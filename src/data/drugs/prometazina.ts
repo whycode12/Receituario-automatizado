@@ -8,9 +8,27 @@ export const prometazina: Farmaco = {
   classe: 'Anti-histamínico Fenotiazínico de 1ª Geração com Ação Sedativa e Anticolinérgica Central',
   dosePratica: 'Contenção Química / Agitação Psiquiátrica Aguda: 25 a 50 mg (1/2 a 1 ampola de 50 mg/2 mL) por via intramuscular profunda exclusiva no glúteo (frequentemente associada ao Haloperidol na mesma seringa). Tratamento de Distonia Aguda induzida por antipsicóticos: 25 a 50 mg IM profunda imediata. Alergia / Sedação leve: 25 mg VO de 12 em 12 horas ou ao deitar.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'agitação psicomotora, crise alérgica ou distonia aguda',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'coriza, espirros, coceira ou alergias da pele',
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Prometazina 25 mg comprimido e 25 mg/mL (50 mg/2 mL) injetável.',
   apresentacoes: [
+    {
+      id: 'cp25',
+      forma: 'cp',
+      nome: 'Comprimido revestido 25 mg',
+      comercial: 'Fenergan®, Genérico',
+      conc: '25mg',
+      rotulo: 'Cloridrato de Prometazina 25 mg comprimido',
+      mg: 25,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa com 20 comprimidos',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Tomar por via oral com água, até de 12/12 horas se sintomas alérgicos, preferencialmente à noite ou antes de dormir devido à intensa sonolência.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (tomar 1 comprimido até de 12/12h se coriza, espirros, coceira ou alergia).'
+    },
     {
       id: 'amp50_2ml',
       forma: 'amp',
@@ -26,37 +44,9 @@ export const prometazina: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Aplicar EXCLUSIVAMENTE por via intramuscular profunda na região glútea. PROIBIDA a aplicação subcutânea ou intra-arterial (risco de necrose química severa e gangrena).',
       obs: 'Ação sedativa e anticolinérgica potente; reverte rapidamente espasmos musculares e distonias por antipsicóticos.'
-    },
-    {
-      id: 'cp25',
-      forma: 'cp',
-      nome: 'Comprimido revestido 25 mg',
-      comercial: 'Fenergan®, Genérico',
-      conc: '25mg',
-      rotulo: 'Cloridrato de Prometazina 25 mg comprimido',
-      mg: 25,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa com 20 comprimidos',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Tomar por via oral com água, preferencialmente à noite ou antes de dormir devido à intensa sonolência.',
-      obs: 'Anti-histamínico de primeira geração altamente sedativo.'
     }
   ],
   regras: [
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 15 },
-      vias: ['IM'],
-      tipo: 'mg',
-      min: 25,
-      max: 50,
-      padrao: 50,
-      dosesDia: [1, 2],
-      intervaloFixo: 12,
-      fonte: 'PSZERADO',
-      trecho: 'Contenção química / Distonia: 25 a 50 mg IM profunda no glúteo; pode repetir após 4 a 6h se necessário.'
-    },
     {
       pub: 'adulto',
       se: { idadeMinAnos: 15 },
@@ -66,9 +56,24 @@ export const prometazina: Farmaco = {
       max: 50,
       padrao: 25,
       dosesDia: [1, 2],
+      dosesPadrao: 2,
       intervaloFixo: 12,
-      fonte: 'HSL',
-      trecho: 'Adultos VO: 25 mg de 12/12h ou dose única de 25 a 50 mg à noite.'
+      fonte: 'HSL / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Prometazina 25mg. Tomar 1 comprimido, até de 12/12 horas, se coriza, espirros, coceira ou alergias da pele.'
+    },
+    {
+      pub: 'adulto',
+      se: { idadeMinAnos: 15 },
+      vias: ['IM'],
+      tipo: 'mg',
+      min: 25,
+      max: 50,
+      padrao: 50,
+      dosesDia: [1, 2],
+      dosesPadrao: 1,
+      intervaloFixo: 12,
+      fonte: 'PSZERADO',
+      trecho: 'Contenção química / Distonia: 25 a 50 mg IM profunda no glúteo; pode repetir após 4 a 6h se necessário.'
     }
   ],
   maximos: [

@@ -8,6 +8,9 @@ export const budesonidaFormoterol: Farmaco = {
   classe: 'Associação Corticoide Inalatório (CI) + Broncodilatador LABA de Rápido Início de Ação (Estratégia Preferencial GINA - MART)',
   dosePratica: 'GINA 2024/2025 - Track 1 (Estratégia Preferencial em ≥ 12 anos): Etapas 1 e 2 (sintomas ocasionais ou asma leve): 1 inalação de Budesonida/Formoterol (200/6 mcg ou 100/6 mcg) se sintomas (como medicamento de alívio e prevenção); Etapas 3 a 5 (asma persistente moderada a grave): 1 a 2 inalações 12/12h (tratamento de manutenção) + 1 inalação adicional de alívio se houver falta de ar (máx. 8 a 12 inalações ao dia no regime MART). Sempre enxaguar a boca e cuspir após o uso.',
   fontes: { GINA: '2024/2025', HSL: '2024', PSZERADO: '2025', BULA: '2024' },
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
   snPadrao: 'falta de ar, chiado no peito ou tosse asmática (regime MART)',
   acessoFonte: 'RENAME 2024: Componente Especializado da Assistência Farmacêutica (CEAF) para pacientes com asma grave cadastrados no PCDT do Ministério da Saúde. Amplamente comercializado no mercado farmacêutico nacional.',
   apresentacoes: [

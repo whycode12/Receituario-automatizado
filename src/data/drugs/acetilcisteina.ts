@@ -8,9 +8,40 @@ export const acetilcisteina: Farmaco = {
   classe: 'Mucolítico das Vias Aéreas, Antioxidante e Antídoto da Intoxicação por Paracetamol (Doador de Glutationa)',
   dosePratica: 'Expectorante / Mucolítico Oral: Adultos: 600 mg VO 1x/dia (1 sachê ou 15 mL do xarope 40 mg/mL) de preferência à noite; Pediatria: 2 a 4 anos: 100 mg (5 mL do xarope 20 mg/mL) 2 a 3x/dia; > 4 anos: 100 mg (5 mL do xarope 20 mg/mL) 3 a 4x/dia (ou 200 mg 2x/dia). Intoxicação por Paracetamol: IV (Protocolo HSL / PSZerado): Ataque de 150 mg/kg em 200 mL SG 5% em 1h; seguido de 50 mg/kg em 500 mL SG 5% em 4h; seguido de 100 mg/kg em 1.000 mL SG 5% em 16h.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', EINA: '2023', EINP: '2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'tosse produtiva, hipersecreção pulmonar ou intoxicação aguda por paracetamol',
   acessoFonte: 'RENAME 2024 / REMUME: Componente Básico (CBAF) com xarope adulto 40 mg/mL e pediátrico 20 mg/mL e sachê granulado 600 mg. Hospitalar: ampola injetável 10% (100 mg/mL - 3 mL) como antídoto hospitalar essencial.',
   apresentacoes: [
+    {
+      id: 'sache_200',
+      forma: 'sachet',
+      nome: 'Sachê granulado oral 200 mg',
+      comercial: 'Fluimucil 200mg / Genérico',
+      conc: '200mg',
+      rotulo: 'Acetilcisteína 200mg granulado oral (sachê)',
+      mg: 200,
+      vias: ['VO'],
+      disp: '1 caixa com 16 sachês',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Dissolver o conteúdo do envelope em meio copo de água e ingerir imediatamente.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (tomar até 3 vezes por dia, por 5 dias) ou para crianças acima de 4 anos.'
+    },
+    {
+      id: 'sache_600',
+      forma: 'sachet',
+      nome: 'Sachê granulado oral 600 mg',
+      comercial: 'Fluimucil D 600mg / Cisteil 600mg / Genérico',
+      conc: '600mg',
+      rotulo: 'Acetilcisteína 600mg granulado oral (sachê)',
+      mg: 600,
+      vias: ['VO'],
+      disp: '1 caixa com 16 sachês',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Dissolver completamente o conteúdo de 1 sachê em meio copo de água à temperatura ambiente (cerca de 100 mL) com o auxílio de uma colher. Ingerir imediatamente após a dissolução completa, de preferência à noite.',
+      obs: 'RENAME / REMUME. Forma consagrada para comodidade posológica de dose única diária em adultos.'
+    },
     {
       id: 'xpe_adulto_40',
       forma: 'sol',
@@ -42,34 +73,6 @@ export const acetilcisteina: Farmaco = {
       obs: 'RENAME / REMUME. 5 mL = 100 mg. Indicado para crianças de 2 a 12 anos.'
     },
     {
-      id: 'sache_600',
-      forma: 'sachet',
-      nome: 'Sachê granulado oral 600 mg',
-      comercial: 'Fluimucil D 600mg / Cisteil 600mg / Genérico',
-      conc: '600mg',
-      rotulo: 'Acetilcisteína 600mg granulado oral (sachê)',
-      mg: 600,
-      vias: ['VO'],
-      disp: '1 caixa com 16 sachês',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Dissolver completamente o conteúdo de 1 sachê em meio copo de água à temperatura ambiente (cerca de 100 mL) com o auxílio de uma colher. Ingerir imediatamente após a dissolução completa, de preferência à noite.',
-      obs: 'RENAME / REMUME. Forma consagrada para comodidade posológica de dose única diária em adultos.'
-    },
-    {
-      id: 'sache_200',
-      forma: 'sachet',
-      nome: 'Sachê granulado oral 200 mg',
-      comercial: 'Fluimucil 200mg / Genérico',
-      conc: '200mg',
-      rotulo: 'Acetilcisteína 200mg granulado oral (sachê)',
-      mg: 200,
-      vias: ['VO'],
-      disp: '1 caixa com 16 sachês',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Dissolver o conteúdo do envelope em meio copo de água e ingerir imediatamente.',
-      obs: 'Indicado para esquemas fracionados de 8/8h ou para crianças acima de 4 anos sob orientação médica.'
-    },
-    {
       id: 'amp_100',
       forma: 'amp',
       nome: 'Ampola injetável 10% (100 mg/mL - 3 mL = 300 mg)',
@@ -86,7 +89,23 @@ export const acetilcisteina: Farmaco = {
     }
   ],
   regras: [
-    // 1. Mucolítico Adulto VO (Sachê 600 ou Xarope 40 mg/mL)
+    // 1. Mucolítico Adulto VO Fracionado (Sachê 200 mg - PuxaFicha Adulto)
+    {
+      pub: 'adulto',
+      vias: ['VO'],
+      apres: ['sache_200'],
+      tipo: 'mg',
+      min: 200,
+      max: 200,
+      padrao: 200,
+      dosesDia: [2, 3],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      duracaoMaxDias: 5,
+      fonte: 'HSL / BULA / PUXAFICHA',
+      trecho: 'PuxaFicha: Diluir 1 envelope em copo de água. Tomar até 3 vezes por dia, por 5 dias.'
+    },
+    // 2. Mucolítico Adulto VO Dose Única (Sachê 600 ou Xarope 40 mg/mL)
     {
       pub: 'adulto',
       vias: ['VO'],
@@ -101,22 +120,6 @@ export const acetilcisteina: Farmaco = {
       duracaoMaxDias: 10,
       fonte: 'HSL / BULA',
       trecho: 'Adultos: 600 mg VO 1 vez/dia, de preferência à noite (ou 15 mL do xarope 40 mg/mL), por 5 a 10 dias.'
-    },
-    // 2. Mucolítico Adulto VO Fracionado (Sachê 200 mg)
-    {
-      pub: 'adulto',
-      vias: ['VO'],
-      apres: ['sache_200'],
-      tipo: 'mg',
-      min: 200,
-      max: 200,
-      padrao: 200,
-      dosesDia: [2, 3],
-      dosesPadrao: 3,
-      intervaloFixo: 8,
-      duracaoMaxDias: 10,
-      fonte: 'HSL / BULA',
-      trecho: 'Adultos esquema fracionado: 200 mg VO 2 a 3 vezes ao dia.'
     },
     // 3. Mucolítico Pediatria (2 a 4 anos) - Xarope 20 mg/mL
     {

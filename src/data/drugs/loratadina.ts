@@ -8,7 +8,10 @@ export const loratadina: Farmaco = {
   classe: 'Anti-histamínico H1 de 2ª Geração (Não Sedativo)',
   dosePratica: 'Adulto e crianças > 12 anos (> 30 kg): VO: 10 mg (1 comprimido ou 10 mL de xarope 1 mg/mL) 1x/dia (não sedativo). Pediatria (2-12 anos e ≤ 30 kg): VO: 5 mg (5 mL de xarope) 1x/dia. Contraindicado em < 2 anos.',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'sintomas alérgicos, rinite ou urticária',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'coriza, espirros, coceira ou alergias da pele',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 10 mg e xarope/solução oral 1 mg/mL. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -51,6 +54,7 @@ export const loratadina: Farmaco = {
       padrao: 10,
       dosesDia: [1, 1], // Tomada única diária
       dosesPadrao: 1,
+      intervaloFixo: 24,
       fonte: 'HSL',
       trecho: 'Adulto: 10mg VO 1 vez/dia.'
     },

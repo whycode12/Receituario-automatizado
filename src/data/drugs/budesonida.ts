@@ -8,9 +8,38 @@ export const budesonida: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Glicocorticoide Inalatório e Nasal de Alta Potência Tópica',
   dosePratica: 'Asma / Nebulização: Crianças (≥ 6 meses): 0,25 a 0,5 mg (1 a 2 mL da suspensão 0,25 mg/mL) nebulizado 12/12h (ou dose única diária na manutenção leve). Adultos: 1 a 2 mg (1 a 2 flaconetes de 2 mL) 12/12h. Rinite Alérgica (Spray Nasal 32 ou 64 mcg/dose): Adultos e crianças ≥ 6 anos: 1 a 2 aplicações em cada narina 1 a 2x ao dia (64 a 256 mcg/dia). Asma Pó Inalatório (Cápsulas 200/400 mcg): Adultos: 200 a 800 mcg/dia divididos em 1 a 2 tomadas.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'crise asmática, broncoespasmo, crupe ou exacerbação de rinite',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'sintomas de rinite alérgica',
   acessoFonte: 'RENAME 2024: Componente Básico (CBAF) para apresentações nasais (32 mcg e 64 mcg/dose) e Componente Especializado (CEAF) para apresentações inalatórias orais (200 mcg e 400 mcg pó inalatório / cápsulas e suspensão para nebulização 0,25 mg/mL). Farmácia Popular: Disponibilização gratuita do spray nasal em faixas padronizadas.',
   apresentacoes: [
+    {
+      id: 'spray_nasal_32',
+      forma: 'sol_nasal',
+      nome: 'Spray nasal aquoso 32 mcg/dose (frasco 120 doses)',
+      comercial: 'Busonid 32mcg / Noex 32mcg / Genérico',
+      conc: '32mcg/dose',
+      rotulo: 'Budesonida spray nasal 32mcg/dose',
+      vias: ['NASAL'],
+      disp: '1 frasco com 120 doses',
+      acesso: { rename: true, fp: true },
+      instrucao: 'Assoar suavemente o nariz antes da aplicação. Agitar o frasco. Manter a cabeça ereta e aplicar os jatos em cada narina apontando para a parede lateral externa (evitar aplicar direto sobre o septo nasal para prevenir sangramentos). Respirar suavemente pelo nariz.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (Busonid spray 2 jatos por narina de 12/12h se rinite alérgica). RENAME (CBAF) e Farmácia Popular.'
+    },
+    {
+      id: 'spray_nasal_64',
+      forma: 'sol_nasal',
+      nome: 'Spray nasal aquoso 64 mcg/dose (frasco 120 doses)',
+      comercial: 'Busonid 64mcg / Noex 64mcg / Budecort Aqua',
+      conc: '64mcg/dose',
+      rotulo: 'Budesonida spray nasal 64mcg/dose',
+      vias: ['NASAL'],
+      disp: '1 frasco com 120 doses',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Assoar o nariz antes de aplicar. Agitar o frasco. Aplicar em cada narina direcionando o bico aplicador para a lateral externa do nariz (parede nasal externa). Não direcionar o jato para o septo nasal.',
+      obs: 'RENAME (CBAF). Indicado para sintomas moderados a graves de rinite alérgica e pólipos nasais.'
+    },
     {
       id: 'susp_neb_025',
       forma: 'sol',
@@ -25,32 +54,6 @@ export const budesonida: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Utilizar exclusivamente em aparelho de inalação/nebulizador pneumático a jato de ar (fluxo de 5 a 8 L/min). Não usar nebulizadores ultrassônicos. Misturar o conteúdo do flaconete com 2 a 3 mL de soro fisiológico 0,9% no copinho do nebulizador. Após a inalação, lavar o rosto com água e escovar os dentes ou enxaguar a boca (prevenção de dermatite e candidíase oral). Após aberto, utilizar o frasco em até 12 horas.',
       obs: 'RENAME (CEAF / Hospitalar). 1 mL = 0,25 mg (250 mcg); 1 flaconete inteiro de 2 mL = 0,5 mg (500 mcg). Forma padrão ouro para crupe/laringite e lactentes sibilantes.'
-    },
-    {
-      id: 'spray_nasal_32',
-      forma: 'sol_nasal',
-      nome: 'Spray nasal aquoso 32 mcg/dose (frasco 120 doses)',
-      comercial: 'Busonid 32mcg / Noex 32mcg / Genérico',
-      conc: '32mcg/dose',
-      rotulo: 'Budesonida spray nasal 32mcg/dose',
-      vias: ['NASAL'],
-      disp: '1 frasco com 120 doses',
-      acesso: { rename: true, fp: true },
-      instrucao: 'Assoar suavemente o nariz antes da aplicação. Agitar o frasco. Manter a cabeça ereta e aplicar os jatos em cada narina apontando para a parede lateral externa (evitar aplicar direto sobre o septo nasal para prevenir sangramentos). Respirar suavemente pelo nariz.',
-      obs: 'RENAME (CBAF) e Farmácia Popular. Indicado para rinite alérgica sazonal e perene em adultos e crianças a partir de 6 anos.'
-    },
-    {
-      id: 'spray_nasal_64',
-      forma: 'sol_nasal',
-      nome: 'Spray nasal aquoso 64 mcg/dose (frasco 120 doses)',
-      comercial: 'Busonid 64mcg / Noex 64mcg / Budecort Aqua',
-      conc: '64mcg/dose',
-      rotulo: 'Budesonida spray nasal 64mcg/dose',
-      vias: ['NASAL'],
-      disp: '1 frasco com 120 doses',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Assoar o nariz antes de aplicar. Agitar o frasco. Aplicar em cada narina direcionando o bico aplicador para a lateral externa do nariz (parede nasal externa). Não direcionar o jato para o septo nasal.',
-      obs: 'RENAME (CBAF). Indicado para sintomas moderados a graves de rinite alérgica e pólipos nasais.'
     },
     {
       id: 'cap_inal_200',
@@ -82,7 +85,22 @@ export const budesonida: Farmaco = {
     }
   ],
   regras: [
-    // 1. Nebulização Adulto
+    // 1. Spray Nasal Adulto (PuxaFicha Adulto)
+    {
+      pub: 'adulto',
+      vias: ['NASAL'],
+      apres: ['spray_nasal_32', 'spray_nasal_64'],
+      tipo: 'mg',
+      min: 1,
+      max: 2,
+      padrao: 2,
+      dosesDia: [1, 2],
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      fonte: 'PSZERADO / BULA / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Aplicar 2 jatos por narina, até de 12/12 horas, se sintomas de rinite alérgica.'
+    },
+    // 2. Nebulização Adulto
     {
       pub: 'adulto',
       vias: ['INALATORIA'],
@@ -143,21 +161,6 @@ export const budesonida: Farmaco = {
       intervaloFixo: 12,
       fonte: 'BULA / GINA',
       trecho: 'Crianças de 6 a 12 anos: 200 a 400 mcg/dia (0,2 a 0,4 mg/dia) divididos em 1 a 2 administrações inalatórias diárias.'
-    },
-    // 5. Spray Nasal Adulto (32 e 64 mcg)
-    {
-      pub: 'adulto',
-      vias: ['NASAL'],
-      apres: ['spray_nasal_32', 'spray_nasal_64'],
-      tipo: 'mg',
-      min: 1,
-      max: 2,
-      padrao: 1,
-      dosesDia: [1, 2],
-      dosesPadrao: 2,
-      intervaloFixo: 12,
-      fonte: 'PSZERADO / BULA',
-      trecho: 'Adultos e crianças >= 6 anos: 1 a 2 jatos em cada narina 1 a 2 vezes ao dia (dose usual de 128 a 256 mcg/dia). Após controle dos sintomas, titular para menor dose eficaz (1 jato por narina 1x/dia).'
     },
     // 6. Spray Nasal Pediatria (>= 6 anos)
     {

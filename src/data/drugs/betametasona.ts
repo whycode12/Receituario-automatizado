@@ -8,6 +8,9 @@ export const betametasona: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Corticosteroide de Alta Potência (Uso Tópico e Parenteral)',
   dosePratica: 'Tópico (Dermatoses / Eczemas / Psoríase): Aplicar uma camada fina do creme ou pomada 0,1% sobre a área afetada 1 a 2x/dia (máx. 4 semanas). Injetável sistêmico (Diprospan / Betatrinta): 1 a 2 mL IM profunda em dose única (repetir a cada 2-4 semanas se necessário). Maturação pulmonar fetal (24 a 34 semanas): 12 mg IM a cada 24 horas (total de 2 doses).',
   fontes: { HSL: '07/03/2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
   snPadrao: 'lesões inflamatórias na pele, dermatite ou crise alérgica grave',
   acessoFonte: 'RENAME 2024: Betametasona creme e pomada 1 mg/g (0,1%) no Componente Básico da Atenção Primária. Apresentações injetáveis de depósito e solução (Diprospan, Celestone) de ampla prescrição no mercado e hospitais.',
   apresentacoes: [

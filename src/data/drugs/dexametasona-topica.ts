@@ -18,6 +18,9 @@ export const dexametasonaTopica: Farmaco = {
   classe: 'Corticosteroide Tópico Fluorada de Média/Baixa Potência',
   dosePratica: 'Dermatite de Contato, Eczemas em Tronco/Membros e Picadas de Inseto com Reação Alérgica Exuberante: Aplicar uma camada fina sobre a lesão 2 a 3 vezes ao dia (a cada 8 ou 12 horas) durante 5 a 7 dias (máximo de 14 dias). Para lesões em face e crianças pequenas, preferir Hidrocortisona 1%. Contraindicado em infecções ativas da pele e menores de 2 anos.',
   fontes: { MS: '2023', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'se coceira, vermelhidão ou crise alérgica na pele',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Bisnagas de 10 g e 15 g de creme contendo acetato de dexametasona 1 mg/g (0,1%) amplamente distribuídas em todas as Unidades Básicas de Saúde do país.',
   apresentacoes: [

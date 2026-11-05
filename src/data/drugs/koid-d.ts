@@ -8,6 +8,9 @@ export const koidD: Farmaco = {
   classe: 'Associação de Corticosteroide Sistêmico e Anti-histamínico H1',
   dosePratica: 'Adultos e adolescentes (> 12 anos): VO: 1 comprimido (ou 5 mL a 10 mL do xarope) de 8/8h a 6/6h após as refeições ou ao deitar (máx. 8 comprimidos ou 40 mL/dia). Pediatria: VO (6 a 12 anos): 1/2 comprimido ou 2,5 mL do xarope de 8/8h (máx. 4 comp ou 20 mL/dia); (2 a 6 anos): 1,25 mL a 2,5 mL do xarope de 8/8h (máx. 10 mL/dia). Contraindicado em < 2 anos. Uso pelo menor tempo possível (habitualmente 3 a 7 dias).',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'crise alérgica, rinite aguda ou urticária',
   acessoFonte: 'RENAME 2024: A associação fixa não consta na RENAME básica (os fármacos isolados dexclorfeniramina e betametasona constam no elenco do SUS). Amplamente disponível na rede farmacêutica comercial (Koid D, Koide D, Celestamine e genéricos). Farmácia Popular: não consta.',
   apresentacoes: [
@@ -52,7 +55,7 @@ export const koidD: Farmaco = {
       dosesDia: [3, 4],
       dosesPadrao: 3,
       intervaloFixo: 8,
-      duracaoMaxDias: 10,
+      duracaoMaxDias: 5,
       fonte: 'BULA',
       trecho: 'Adultos e crianças maiores de 12 anos: 1 a 2 comprimidos (ou 5 a 10 mL do xarope), 3 a 4 vezes ao dia, após as refeições e ao deitar; não ultrapassar 8 comprimidos (ou 40 mL) por dia.'
     },

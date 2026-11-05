@@ -8,9 +8,26 @@ export const beclometasona: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Glicocorticoide Inalatório e Nasal',
   dosePratica: 'Asma Spray Oral (Clenil HFA): Crianças: 50 a 100 mcg (1 a 2 jatos de 50 mcg) 12/12h com espaçador. Adultos: 200 a 500 mcg (2 a 4 jatos de 50 mcg ou 1 a 2 jatos de 250 mcg) 12/12h. Nebulização (Clenil A): Crianças: 1 mL (meio flaconete = 400 mcg) 1 a 2x/dia; Adultos: 2 mL (1 flaconete = 800 mcg) 1 a 2x/dia. Rinite Nasal (Spray 50 mcg): Adultos e crianças ≥ 6 anos: 1 a 2 jatos em cada narina 12/12h (100 a 200 mcg/dia).',
   fontes: { HSL: '07/03/2023', BULA: '04/10/2026', GINA: '2024' },
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
   snPadrao: 'manutenção do controle da asma ou exacerbação de rinite alérgica',
   acessoFonte: 'RENAME 2024: Componente Básico (CBAF) com ampla disponibilização nas UBS para spray oral 50 mcg e 250 mcg/dose, suspensão para inalação nasal 50 mcg/dose e cápsulas/pó inalatório 200 e 400 mcg. Farmácia Popular: Disponibilização gratuita nas apresentações de 50 mcg, 200 mcg e 250 mcg.',
   apresentacoes: [
+    {
+      id: 'spray_oral_250',
+      forma: 'spray',
+      nome: 'Aerossol oral 250 mcg/jato (frasco 200 doses com bocal aplicador)',
+      comercial: 'Clenil HFA 250mcg / Genérico',
+      conc: '250mcg/jato (0,25mg/jato)',
+      rotulo: 'Dipropionato de beclometasona spray oral 250mcg/jato',
+      mg: 0.25,
+      vias: ['INALATORIA'],
+      disp: '1 frasco com 200 doses',
+      acesso: { rename: true, fp: true },
+      instrucao: 'Agitar o frasco antes da aplicação. Fazer a inalação profunda pela boca. Segurar a respiração por 10 segundos. Enxaguar a cavidade oral com água abundante e cuspir após cada aplicação.',
+      obs: 'Padrão adulto PuxaFicha (Clenil 250 mcg 2 jatos de 12/12h). RENAME e Farmácia Popular. Indicado para adolescentes e adultos com asma moderada a grave.'
+    },
     {
       id: 'spray_oral_50',
       forma: 'spray',
@@ -24,20 +41,6 @@ export const beclometasona: Farmaco = {
       acesso: { rename: true, fp: true },
       instrucao: 'Agitar bem o frasco antes de usar. Em crianças e idosos, utilizar sempre com câmara espaçadora (acoplada à máscara em lactentes ou ao bocal em maiores). Soltar o ar dos pulmões, acionar o spray e inspirar lenta e profundamente, segurando a respiração por 5 a 10 segundos. Bochechar a boca com água e cuspir após o uso para prevenir candidíase oral (sapinho) e rouquidão.',
       obs: 'RENAME (Componente Básico) e Farmácia Popular. Forma de escolha para pediatria e controle inicial da asma leve a moderada.'
-    },
-    {
-      id: 'spray_oral_250',
-      forma: 'spray',
-      nome: 'Aerossol oral 250 mcg/jato (frasco 200 doses com bocal aplicador)',
-      comercial: 'Clenil HFA 250mcg / Genérico',
-      conc: '250mcg/jato (0,25mg/jato)',
-      rotulo: 'Dipropionato de beclometasona spray oral 250mcg/jato',
-      mg: 0.25,
-      vias: ['INALATORIA'],
-      disp: '1 frasco com 200 doses',
-      acesso: { rename: true, fp: true },
-      instrucao: 'Agitar o frasco antes da aplicação. Fazer a inalação profunda pela boca. Segurar a respiração por 10 segundos. Enxaguar a cavidade oral com água abundante e cuspir após cada aplicação.',
-      obs: 'RENAME (Componente Básico) e Farmácia Popular. Indicado para adolescentes e adultos com asma moderada a grave. Não recomendado para crianças pequenas devido à alta concentração por jato.'
     },
     {
       id: 'susp_neb_04',
@@ -69,7 +72,22 @@ export const beclometasona: Farmaco = {
     }
   ],
   regras: [
-    // 1. Spray Oral 50 mcg Adulto
+    // 1. Spray Oral 250 mcg Adulto (PuxaFicha Adulto)
+    {
+      pub: 'adulto',
+      vias: ['INALATORIA'],
+      apres: ['spray_oral_250'],
+      tipo: 'mg',
+      min: 0.25,
+      max: 0.5,
+      padrao: 0.5,
+      dosesDia: [2, 2],
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      fonte: 'BULA / GINA / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Beclometasona spray 250mcg. Aplicar 2 jatos, de 12/12 horas, como tratamento de manutenção.'
+    },
+    // 2. Spray Oral 50 mcg Adulto
     {
       pub: 'adulto',
       vias: ['INALATORIA'],
@@ -99,21 +117,6 @@ export const beclometasona: Farmaco = {
       intervaloFixo: 12,
       fonte: 'BULA / SBP',
       trecho: 'Crianças: 100 mcg (2 jatos de 50 mcg) de 12 em 12 horas (duas vezes ao dia), sempre utilizando espaçador apropriado.'
-    },
-    // 3. Spray Oral 250 mcg Adulto
-    {
-      pub: 'adulto',
-      vias: ['INALATORIA'],
-      apres: ['spray_oral_250'],
-      tipo: 'mg',
-      min: 0.25,
-      max: 0.5,
-      padrao: 0.5,
-      dosesDia: [2, 2],
-      dosesPadrao: 2,
-      intervaloFixo: 12,
-      fonte: 'BULA / GINA',
-      trecho: 'Adultos: 1 a 2 jatos de 250 mcg (250 a 500 mcg) a cada 12 horas (2x/dia). Em asma grave não controlada: até 1.000 mcg de 12/12h.'
     },
     // 4. Nebulização Adulto (Clenil A - 0,4 mg/mL)
     {

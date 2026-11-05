@@ -8,9 +8,27 @@ export const dexametasona: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Glicocorticoide de Alta Potência e Longa Duração',
   dosePratica: 'Adultos: VO 0,75 a 15 mg/dia (dose anti-inflamatória habitual: 4 a 10 mg/dia); EV/IM: 4 a 10 mg (1 ampola de 2,5 mL de 4 mg/mL = 10 mg) EV direto em 2-5 min ou diluído em 50-100 mL SF (em edema cerebral: até 10 mg EV seguido de 4 mg de 6/6h). Pediatria: Anti-inflamatório/antialérgico: 0,08 a 0,3 mg/kg/dia VO/EV dividido de 1 a 2x/dia; Laringite estridulosa / crupe (dose consagrada SBP): 0,15 a 0,6 mg/kg em DOSE ÚNICA VO/IM (máx. 10 a 16 mg).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', EINA: '2024', EINP: '2024', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'reação alérgica grave, edema de glote, broncoespasmo ou crise inflamatória',
   acessoFonte: 'RENAME 2024: comprimido 4 mg e solução injetável 4 mg/mL (frasco-ampola ou ampola 2,5 mL = 10 mg) no Componente Básico e Hospitalar. Elixir e comprimidos de 0,5 mg / 0,75 mg de ampla circulação comercial (Decadron).',
   apresentacoes: [
+    {
+      id: 'cp4',
+      forma: 'cp',
+      nome: 'Comprimido 4 mg',
+      comercial: 'Decadron / Genérico',
+      conc: '4mg',
+      rotulo: 'Dexametasona 4mg comprimido',
+      mg: 4,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Ingerir pela manhã com as refeições ou com um copo de água/leite para diminuir o desconforto gástrico.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (tomar 1 comprimido pela manhã por 5 dias). RENAME (Componente Básico). Comprimido divisível de 4 mg.'
+    },
     {
       id: 'fap10_4mgml',
       forma: 'amp',
@@ -40,21 +58,6 @@ export const dexametasona: Farmaco = {
       disp: '1 ampola',
       acesso: { rename: false, fp: false },
       obs: 'Formulação injetável de menor concentração para titulação pediátrica ou infiltrações articulares (Einstein Ped).'
-    },
-    {
-      id: 'cp4',
-      forma: 'cp',
-      nome: 'Comprimido 4 mg',
-      comercial: 'Decadron / Genérico',
-      conc: '4mg',
-      rotulo: 'Dexametasona 4mg comprimido',
-      mg: 4,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Ingerir pela manhã com as refeições ou com um copo de água/leite para diminuir o desconforto gástrico.',
-      obs: 'RENAME (Componente Básico). Comprimido divisível de 4 mg.'
     },
     {
       id: 'cp075',
@@ -91,6 +94,21 @@ export const dexametasona: Farmaco = {
     {
       pub: 'adulto',
       se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
+      vias: ['VO'],
+      tipo: 'mg',
+      min: 0.75,
+      max: 15,
+      padrao: 4,
+      dosesDia: [1, 2],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 5,
+      fonte: 'HSL / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Dexametasona 4mg. Tomar 1 comprimido, uma única vez ao dia, pela manhã, por 5 dias.'
+    },
+    {
+      pub: 'adulto',
+      se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
       vias: ['EV', 'IM'],
       tipo: 'mg',
       min: 4,
@@ -102,21 +120,6 @@ export const dexametasona: Farmaco = {
       duracaoMaxDias: 5,
       fonte: 'PSZERADO',
       trecho: 'Adultos (Pronto-atendimento): 4 a 10 mg (1 ampola de 10 mg / 2,5 mL), EV ou IM direto ou diluído em 50 a 100 mL de SF 0,9% (PSZerado). Em edema cerebral: 10 mg EV inicial seguido de 4 mg IM/EV de 6/6h.'
-    },
-    {
-      pub: 'adulto',
-      se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
-      vias: ['VO'],
-      tipo: 'mg',
-      min: 0.75,
-      max: 15,
-      padrao: 4,
-      dosesDia: [1, 2],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
-      duracaoMaxDias: 5,
-      fonte: 'HSL',
-      trecho: 'Adultos (VO): 0,75 a 15 mg/dia (padrão habitual anti-inflamatório/antialérgico: 4 mg a 8 mg em dose única matinal ou dividida a cada 12 horas) por 3 a 5 dias.'
     },
     {
       pub: 'ped',

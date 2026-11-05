@@ -8,6 +8,9 @@ export const hidrocortisona: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Corticosteroide de Ação Rápida e Curta Duração (Ação Glicocorticoide e Mineralocorticoide Equilibrada)',
   dosePratica: 'Crise asmática grave / Anafilaxia / Insuficiência adrenal: Adultos: Ataque de 100 a 300 mg EV seguido de manutenção de 100 mg EV a cada 6 ou 8 horas (ou 200 mg/dia em infusão contínua no choque séptico refratário a vasopressores). Pediatria: 1 a 5 mg/kg/dia EV/IM dividido a cada 6 a 12 horas (em anafilaxia/asma aguda: 4 a 5 mg/kg/dose de ataque, máx. 100 a 200 mg). Reconstituir 100 mg em 2 mL AD e 500 mg em 4 mL AD.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', EINA: '2024', EINP: '2024', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
   snPadrao: 'crise adrenal, anafilaxia, choque séptico ou broncoespasmo grave',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): pó para solução injetável em frasco-ampola de 100 mg e 500 mg de succinato sódico de hidrocortisona. Ampla padronização em salas de emergência e UTIs.',
   apresentacoes: [

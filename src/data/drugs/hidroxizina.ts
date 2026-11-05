@@ -8,7 +8,10 @@ export const hidroxizina: Farmaco = {
   classe: 'Anti-histamínico H1 de 1ª Geração com Ação Sedativa e Antipruriginosa',
   dosePratica: 'Prurido intenso, urticária aguda e dermatite alérgica: Adultos: 25 mg VO a cada 8 a 12 horas (ou 25 a 50 mg dose única à noite ao deitar para evitar insônia pelo prurido). Pediatria (> 6 meses): 0,5 a 1 mg/kg/dose a cada 8 a 12 horas.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'coceira, prurido ou placas de urticária',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'coceira, placas de urticária ou reação alérgica',
   acessoFonte: 'RENAME 2024 (Componente Básico): Hidroxizina 25 mg comprimido e solução oral 2 mg/mL.',
   apresentacoes: [
     {
@@ -52,6 +55,7 @@ export const hidroxizina: Farmaco = {
       max: 50,
       padrao: 25,
       dosesDia: [1, 3],
+      dosesPadrao: 3,
       intervaloFixo: 8,
       fonte: 'PSZERADO',
       trecho: 'Adultos VO: 25 mg a cada 8 a 12 horas (ou 25 a 50 mg à noite ao deitar).'

@@ -8,9 +8,27 @@ export const prednisolona: Farmaco = {
   classe: 'Anti-inflamatório Hormonal, Glicocorticoide Sistêmico (Metabólito Ativo da Prednisona)',
   dosePratica: 'Pediatria (exacerbação de asma / crupe / alergia): 1 a 2 mg/kg/dia VO (com a solução 3 mg/mL ou comprimidos de 5 ou 20 mg) em dose única pela manhã após o café por 3 a 5 dias (máx. 40 a 60 mg/dia sem necessidade de desmame gradual em cursos curtos). Adulto: 20 a 60 mg/dia VO pela manhã por 5 dias.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'crise asmática, broncoespasmo ou reação inflamatória/alérgica aguda',
   acessoFonte: 'RENAME 2024: Solução oral 3 mg/mL (frasco 60 mL ou 100 mL) e comprimidos 5 mg e 20 mg no Componente Básico da Atenção Primária. Ampla disponibilidade em farmácias comerciais (Predsim, Prelone) e UBS.',
   apresentacoes: [
+    {
+      id: 'cp20',
+      forma: 'cp',
+      nome: 'Comprimido 20 mg',
+      comercial: 'Predsim 20mg / Prelone / Genérico',
+      conc: '20mg',
+      rotulo: 'Prednisolona 20mg comprimido',
+      mg: 20,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Ingerir pela manhã após o desjejum com um copo de água.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (tomar 2 comprimidos 1x/dia pela manhã por 5 dias). RENAME (Componente Básico). Comprimido sulcado e divisível em duas metades de 10 mg.'
+    },
     {
       id: 'sol3',
       forma: 'sol',
@@ -25,21 +43,6 @@ export const prednisolona: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Administrar preferencialmente em dose única pela manhã, logo após o café da manhã ou mamada (minimiza desconforto gástrico e respeita o ritmo circadiano do cortisol). Utilizar a seringa dosadora ou copo-medida graduado.',
       obs: 'RENAME (Componente Básico). 1 mL = 3 mg de prednisolona. Forma de escolha em pediatria e pacientes com disfagia.'
-    },
-    {
-      id: 'cp20',
-      forma: 'cp',
-      nome: 'Comprimido 20 mg',
-      comercial: 'Predsim 20mg / Prelone / Genérico',
-      conc: '20mg',
-      rotulo: 'Prednisolona 20mg comprimido',
-      mg: 20,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Ingerir pela manhã após o desjejum com um copo de água.',
-      obs: 'RENAME (Componente Básico). Comprimido sulcado e divisível em duas metades de 10 mg.'
     },
     {
       id: 'cp5',
@@ -59,6 +62,21 @@ export const prednisolona: Farmaco = {
   ],
   regras: [
     {
+      pub: 'adulto',
+      se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
+      vias: ['VO'],
+      tipo: 'mg',
+      min: 5,
+      max: 60,
+      padrao: 40, // 40 mg (2 comprimidos de 20 mg) conforme PuxaFicha / PSZerado
+      dosesDia: [1, 1],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 5,
+      fonte: 'PUXAFICHA / PSZERADO',
+      trecho: 'PuxaFicha Adulto: Prednisolona 20mg. Tomar 2 comprimidos, uma única vez ao dia, pela manhã, por 5 dias.'
+    },
+    {
       pub: 'ped',
       se: { idadeMaxAnos: 14 },
       vias: ['VO'],
@@ -72,21 +90,6 @@ export const prednisolona: Farmaco = {
       duracaoMaxDias: 5,
       fonte: 'PSZERADO',
       trecho: 'Pediatria (exacerbação de asma / alergia aguda / crupe): 1 a 2 mg/kg/dia (padrão 1 mg/kg/dia), VO, 1 vez ao dia pela manhã por 3 a 5 dias (máximo de 40 a 60 mg/dia) (PSZerado / HSL). HSL geral: 0,14 a 2 mg/kg/dia.'
-    },
-    {
-      pub: 'adulto',
-      se: { ou: [{ idadeMinAnos: 15 }, { pesoMin: 40 }] },
-      vias: ['VO'],
-      tipo: 'mg',
-      min: 5,
-      max: 60,
-      padrao: 40, // 40 mg (2 comprimidos de 20 mg) conforme PSZerado para crise asmática / inflamação
-      dosesDia: [1, 1],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
-      duracaoMaxDias: 5,
-      fonte: 'PSZERADO',
-      trecho: 'Adultos: 20 a 60 mg/dia (padrão de pronto-socorro para exacerbação de asma: 40 mg VO pela manhã por 5 dias) (PSZerado / HSL).'
     }
   ],
   maximos: [

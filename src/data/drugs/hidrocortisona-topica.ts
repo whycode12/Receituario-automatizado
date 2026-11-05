@@ -18,6 +18,9 @@ export const hidrocortisonaTopica: Farmaco = {
   classe: 'Corticosteroide Tópico de Baixa Potência (Classe VII - Baixa Atividade Anti-inflamatória)',
   dosePratica: 'Eczema, Dermatite Atópica (especialmente em face e dobras) e Picadas de Insetos Inflamadas: Aplicar uma camada fina sobre a área afetada 1 a 2 vezes ao dia (a cada 12 ou 24 horas) por 7 a 14 dias (máximo de 2 semanas contínuas). Corticoide de primeira escolha em pediatria e áreas de pele fina por apresentar menor risco de atrofia cutânea e absorção sistêmica.',
   fontes: { PSZERADO: '2025', MS: '2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
   snPadrao: 'se coceira intensa, vermelhidão ou crise de dermatite',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Bisnagas de 20 g e 30 g contendo 10 mg/g (1%) de acetato de hidrocortisona disponíveis nas Unidades Básicas de Saúde.',
   apresentacoes: [

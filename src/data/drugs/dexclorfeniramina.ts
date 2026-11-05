@@ -8,7 +8,10 @@ export const dexclorfeniramina: Farmaco = {
   classe: 'Anti-histamínico H1 de 1ª Geração (Sedativo / Clássico)',
   dosePratica: 'Adulto: VO: 2 mg (1 comprimido ou 5 mL da solução 0,4 mg/mL) de 6/6h a 8/8h se alergia/prurido (máx. 12 mg/dia; causa sonolência). Pediatria: VO (2-6 anos): 0,5 mg (1,25 mL) 3x/dia (máx. 3 mg/dia); (6-12 anos): 1 mg (2,5 mL ou 1/2 comp) 3x/dia (máx. 6 mg/dia). Contraindicado em < 2 anos.',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'reação alérgica, prurido ou rinite',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'coceira, dermatite ou outros sintomas alérgicos',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 2 mg e solução oral / xarope 0,4 mg/mL (frasco 120 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -51,6 +54,7 @@ export const dexclorfeniramina: Farmaco = {
       padrao: 2,
       dosesDia: [3, 4],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Adulto: Comprimido: 1cp (2mg) 3 a 4 vezes/dia; Líquido: 5mL (2mg) 3 a 4 vezes/dia.'
     },
@@ -64,6 +68,7 @@ export const dexclorfeniramina: Farmaco = {
       padrao: 2,
       dosesDia: [3, 4],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Pediatria Acima de 12 anos: dose adulto (2mg VO 3 a 4 vezes/dia).'
     },

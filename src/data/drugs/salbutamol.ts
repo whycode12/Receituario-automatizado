@@ -8,7 +8,10 @@ export const salbutamol: Farmaco = {
   classe: 'Broncodilatador (Beta-2 agonista seletivo de curta ação)',
   dosePratica: 'Adulto: Spray 100 mcg: 2 a 4 jatos com espaçador podendo repetir de 4/4h a 6/6h se crise (em exacerbação aguda no PS: 4 a 8 jatos a cada 20 min na 1ª hora); Nebulização: 10 a 20 gotas em 3 mL de SF. Pediatria: Spray: 2 jatos com espaçador e máscara (na crise aguda: 2 a 4 jatos a cada 20 min na 1ª hora); Nebulização: 1 gota a cada 2-3 kg.',
   fontes: { HSL: '17/06/2019', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'falta de ar ou chiado no peito',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'cansaço, tosse ou chieira',
   acessoFonte: 'RENAME 2024 (Componente Básico): aerossol oral 100 mcg/dose (spray com 200 doses) e solução para nebulização 5 mg/mL (frasco 10 mL). Farmácia Popular: aerossol oral 100 mcg/dose.',
   apresentacoes: [
     {
@@ -55,6 +58,7 @@ export const salbutamol: Farmaco = {
       padrao: 0.2, // 2 puffs (200 mcg = 0,2 mg)
       dosesDia: [4, 6],
       dosesPadrao: 4,
+      intervaloFixo: 6,
       fonte: 'HSL',
       trecho: 'Adulto Inalação oral: Alívio do broncoespasmo agudo: 100 a 200 mcg (1 a 2 doses), a cada 4 a 6 horas. Terapia crônica: até 200mcg, 4 vezes/dia. Exacerbação da asma: 4 a 8 inalações a cada 20 minutos por até 4 horas.'
     },
@@ -82,6 +86,7 @@ export const salbutamol: Farmaco = {
       padrao: 0.1, // 1 a 2 puffs (100 a 200 mcg)
       dosesDia: [4, 6],
       dosesPadrao: 4,
+      intervaloFixo: 6,
       fonte: 'HSL',
       trecho: 'Pediatria Inalação oral: Alívio do broncoespasmo agudo ou crise de asma: 100 mcg (1 dose), podendo ser aumentada para 200mcg (2 doses), se necessário, a cada 4 a 6 horas. Exacerbação: 2 a 4 inalações a cada 20 minutos.'
     },
