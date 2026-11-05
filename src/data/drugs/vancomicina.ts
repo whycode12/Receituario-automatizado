@@ -9,25 +9,11 @@ export const vancomicina: Farmaco = {
   dosePratica: 'Adultos: Ataque de 25 a 30 mg/kg EV (máx 2 g); Manutenção: 15 a 20 mg/kg EV a cada 8 a 12 horas (habitual 1 g EV de 12/12h). Infundir no mínimo em 60 minutos para evitar a Síndrome do Homem Vermelho.',
   fontes: { HSL: '2024', EINA: '2024', PSZERADO: '2025' },
   snPadrao: 'infecção bacteriana por Gram-positivos multirresistentes',
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Vancomicina 500 mg pó para solução injetável.',
   apresentacoes: [
-    {
-      id: 'fap500',
-      forma: 'fap',
-      nome: 'Frasco-ampola 500 mg pó liofilizado EV',
-      comercial: 'Vancocina®, Vancoled®',
-      conc: '500 mg',
-      rotulo: 'Cloridrato de Vancomicina 500 mg frasco-ampola',
-      mg: 500,
-      volml: 10,
-      reconstDil: 'Água Destilada',
-      reconstMl: 10,
-      vias: ['EV'],
-      disp: '1 frasco-ampola (500 mg)',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Reconstituir com 10 mL de AD (50 mg/mL) e diluir em no mínimo 100 mL de SF 0,9% ou SG 5%. Infundir EV em no mínimo 60 minutos.',
-      obs: 'Infusão rápida pode causar a Síndrome do Homem Vermelho (eritema, prurido e hipotensão por liberação de histamina).'
-    },
     {
       id: 'fap1g',
       forma: 'fap',
@@ -44,6 +30,23 @@ export const vancomicina: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Reconstituir com 20 mL de AD (50 mg/mL) e diluir em no mínimo 200 a 250 mL de SF 0,9% ou SG 5%. Infundir EV em pelo menos 60 a 120 minutos.',
       obs: 'Padrão ouro hospitalar para infecções graves por MRSA (S. aureus resistente à oxacilina/meticilina).'
+    },
+    {
+      id: 'fap500',
+      forma: 'fap',
+      nome: 'Frasco-ampola 500 mg pó liofilizado EV',
+      comercial: 'Vancocina®, Vancoled®',
+      conc: '500 mg',
+      rotulo: 'Cloridrato de Vancomicina 500 mg frasco-ampola',
+      mg: 500,
+      volml: 10,
+      reconstDil: 'Água Destilada',
+      reconstMl: 10,
+      vias: ['EV'],
+      disp: '1 frasco-ampola (500 mg)',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Reconstituir com 10 mL de AD (50 mg/mL) e diluir em no mínimo 100 mL de SF 0,9% ou SG 5%. Infundir EV em no mínimo 60 minutos.',
+      obs: 'Infusão rápida pode causar a Síndrome do Homem Vermelho (eritema, prurido e hipotensão por liberação de histamina).'
     }
   ],
   regras: [

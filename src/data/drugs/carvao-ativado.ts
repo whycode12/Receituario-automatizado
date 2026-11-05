@@ -8,6 +8,9 @@ export const carvaoAtivado: Farmaco = {
   classe: 'Adsorvente Gastrointestinal / Descontaminação Digestiva de Urgência',
   dosePratica: 'Intoxicação aguda (< 1 a 2h da ingestão): 50 g VO ou por sonda nasogástrica (SNG) diluído em 200 a 300 mL de água ou SF 0,9% em dose única imediata. Se intoxicação por drogas com recirculação entero-hepática (carbamazepina, fenobarbital, dapsona, teofilina): manter doses múltiplas de 25 g a cada 4 a 6 horas.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   snPadrao: 'intoxicação exógena aguda por substância adsorvível',
   acessoFonte: 'RENAME 2024 / Componente Hospitalar: Frascos ou sachês de pó para suspensão oral padronizados na urgência.',
   apresentacoes: [

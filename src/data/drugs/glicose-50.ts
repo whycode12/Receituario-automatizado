@@ -9,6 +9,9 @@ export const glicose50: Farmaco = {
   dosePratica: 'Hipoglicemia com RNC / via oral insegura (Glicemia < 70 mg/dL): Administrar 20 a 40 mL de Glicose 50% (2 a 4 ampolas de 10 mL ou 1 a 2 ampolas de 20 mL = 10 a 20 g de glicose pura) EV em bólus lento em 3 a 5 minutos. Reavaliar glicemia capilar em 15 minutos. Em desnutridos ou etilistas, administrar Tiamina 100-300 mg antes ou junto para prevenir Síndrome de Wernicke.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'glicemia capilar menor que 70 mg/dL ou coma hipoglicêmico',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Glicose 50% solução injetável ampolas de 10 mL e 20 mL.',
   apresentacoes: [
     {

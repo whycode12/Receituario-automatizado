@@ -9,6 +9,9 @@ export const midazolam: Farmaco = {
   dosePratica: 'Sequência Rápida de Intubação (Indutor alternativo): 0,2 a 0,3 mg/kg EV bolus lento em 30 segundos (adulto de 50 kg: 3 mL = 15 mg; 70 kg: 4,2 mL = 21 mg; 90 kg: 5,4 mL). Crise Convulsiva / Mal Epiléptico: 5 a 10 mg IM (0,2 mg/kg) ou 0,1 a 0,2 mg/kg EV lento. Sedação leve / Procedimentos rápidos: 1 a 2,5 mg EV lento a cada 2 min.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'indução anestésica, sedação para procedimento ou crise convulsiva',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Hospitalar): Ampolas de 5 mg/mL (3 mL = 15 mg e 10 mL = 50 mg) e 1 mg/mL (5 mL = 5 mg) padronizadas em todas as salas de emergência.',
   apresentacoes: [
     {

@@ -9,6 +9,9 @@ export const rocuronio: Farmaco = {
   dosePratica: 'Sequência Rápida de Intubação (Alternativa de escolha quando a succinilcolina é contraindicada): 1,0 a 1,2 mg/kg EV em bolus rápido (adulto de 50 kg: 5 mL = 50 mg; 70 kg: 7 mL = 70 mg; 90 kg: 9 mL = 90 mg). Início de ação em 60 segundos com duração de 40 a 60 minutos.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'paralisia neuromuscular em sequência rápida de intubação',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Componente Hospitalar: Solução injetável 10 mg/mL frasco-ampola com 5 mL (50 mg).',
   apresentacoes: [
     {

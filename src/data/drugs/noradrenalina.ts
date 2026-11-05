@@ -9,6 +9,9 @@ export const noradrenalina: Farmaco = {
   dosePratica: 'Choque Séptico / Vasodilatador (PAM < 65 mmHg refratária a 30 mL/kg de cristaloides): Diluir 2 ampolas de 4 mg/4 mL (8 mg base) em 242 mL de SG 5% (32 mcg/mL) ou 4 ampolas em 234 mL SG 5% (64 mcg/mL). Iniciar em BIC a 0,05 a 0,1 mcg/kg/min (ex: 70 kg a 64 mcg/mL ≈ 3 a 7 mL/h); titular a cada 2 a 5 minutos para PAM ≥ 65 mmHg. Faixa usual: 0,05 a 2 mcg/kg/min.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
   snPadrao: 'choque séptico ou hipotensão refratária com PAM menor que 65 mmHg',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Norepinefrina hemitartarato 2 mg/mL (equivalente a 1 mg/mL base) ampolas de 4 mL.',
   apresentacoes: [
     {

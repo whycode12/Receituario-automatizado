@@ -9,6 +9,9 @@ export const dolutegravir: Farmaco = {
   dosePratica: 'PEP HIV (PCDT Ministério da Saúde): 50 mg VO 1x ao dia (24/24h) por 28 dias consecutivos, associado a Tenofovir + Lamivudina (TDF/3TC 300/300 mg). Iniciar em até 72 horas pós-exposição de risco.',
   fontes: { MS: '2024', PSZERADO: '2025', BULA: '2024' },
   snPadrao: 'profilaxia pós-exposição ao vírus HIV',
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Ministério da Saúde: Frasco com 30 comprimidos de 50 mg disponível gratuitamente na rede de urgência e CTAs.',
   apresentacoes: [
     {

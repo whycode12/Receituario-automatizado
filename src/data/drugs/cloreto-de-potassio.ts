@@ -9,6 +9,9 @@ export const cloretoDePotassio: Farmaco = {
   dosePratica: 'Hipocalemia grave (< 3,0 mEq/L ou alterações de ECG): Periférico: 16 mL de KCl 19,1% (40 mEq) em 500 mL de SF 0,9% infundidos em 4 horas (máx 10 mEq/h e concentração máx 40 mEq/L em veia periférica). Central: 10 mL (25 mEq) em 250 mL de SF 0,9% em 2 horas (máx 20 mEq/h). Hipocalemia leve a moderada (> 3,0 mEq/L): VO: Xarope 6% (15 mL = 12 mEq) ou Cápsula 600 mg (8 mEq) 1 a 2 vezes ao dia com as refeições.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
   snPadrao: 'hipocalemia e reposição hidroeletrolítica',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024: Ampola 19,1% (10 mL) padronizada no SUS. Xarope 6% e cápsulas de liberação lenta disponíveis na rede ambulatorial e farmácias.',
   apresentacoes: [
     {
@@ -69,18 +72,6 @@ export const cloretoDePotassio: Farmaco = {
   regras: [
     {
       pub: 'adulto',
-      vias: ['VO'],
-      tipo: 'mg',
-      min: 600,
-      max: 2400,
-      padrao: 1200,
-      dosesDia: [1, 2],
-      intervaloFixo: 12,
-      fonte: 'PSZERADO',
-      trecho: 'Via oral: 15 a 30 mL do xarope 6% (12 a 24 mEq) de 1 a 2x/dia após refeições.'
-    },
-    {
-      pub: 'adulto',
       vias: ['EV'],
       tipo: 'mg',
       min: 1000,
@@ -90,6 +81,18 @@ export const cloretoDePotassio: Farmaco = {
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Via EV: 10 a 20 mL de KCl 19,1% diluídos em 500 mL de SF 0,9% infundidos em 4 horas (máx 10 mEq/h periférico).'
+    },
+    {
+      pub: 'adulto',
+      vias: ['VO'],
+      tipo: 'mg',
+      min: 600,
+      max: 2400,
+      padrao: 1200,
+      dosesDia: [1, 2],
+      intervaloFixo: 12,
+      fonte: 'PSZERADO',
+      trecho: 'Via oral: 15 a 30 mL do xarope 6% (12 a 24 mEq) de 1 a 2x/dia após refeições.'
     }
   ],
   maximos: [

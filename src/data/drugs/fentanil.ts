@@ -9,6 +9,9 @@ export const fentanil: Farmaco = {
   dosePratica: 'Sequência Rápida de Intubação (Pré-tratamento): 1 a 3 mcg/kg EV lento em 1 a 2 min (cerca de 100 a 200 mcg no adulto de 70 kg = 2 a 4 mL). Analgesia aguda intensa / dor refratária: 50 a 100 mcg (1 a 2 mL) EV lento a cada 1 a 2 horas. Sedação contínua em BIC: 1 a 3 mcg/kg/h.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'dor intensa aguda ou sequência rápida de intubação',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Hospitalar / Emergência): Ampolas de 50 mcg/mL (2 mL, 5 mL e 10 mL) padronizadas em UTIs e salas de emergência.',
   apresentacoes: [
     {

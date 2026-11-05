@@ -9,6 +9,9 @@ export const succinilcolina: Farmaco = {
   dosePratica: 'Sequência Rápida de Intubação (Paralisante de primeira escolha na ausência de contraindicações): 1,0 a 1,5 mg/kg EV em bolus rápido (adulto de 50 kg: 75 mg; 70 kg: 105 mg = aprox. 1 frasco de 100 mg; 90 kg: 135 mg). Início de paralisia muscular em 45 a 60 segundos com duração de 6 a 10 minutos.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'paralisia neuromuscular para intubação orotraqueal em sequência rápida',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Hospitalar / Emergência): Pó para solução injetável 100 mg e 500 mg padronizado na urgência.',
   apresentacoes: [
     {

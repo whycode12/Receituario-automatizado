@@ -9,6 +9,9 @@ export const soroAntirrabico: Farmaco = {
   dosePratica: 'Acidentes com risco de transmissão do vírus rábico (animais silvestres, morcegos, cães/gatos raivosos ou suspeitos com lesão grave): Administrar 40 UI/kg de Soro Antirrábico Heterólogo (SAR) ou 20 UI/kg de Imunoglobulina Humana Antirrábica (IGHAR) em dose única imediata. Infiltrar a maior quantidade possível no interior e ao redor do ferimento; o restante deve ser aplicado por via intramuscular profunda em local anatômico diferente da vacina.',
   fontes: { MS: '2024', PSZERADO: '2025', BULA: '2024' },
   snPadrao: 'acidente grave com risco de transmissão do vírus da raiva',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'Programa Nacional de Imunizações (PNI) / Ministério da Saúde: Frascos de 5 mL (200 UI/mL) fornecidos gratuitamente em centros de referência em imunobiológicos especiais (CRIE) e prontos-socorros municipais.',
   apresentacoes: [
     {

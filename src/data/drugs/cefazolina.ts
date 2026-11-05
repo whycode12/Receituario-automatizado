@@ -8,6 +8,9 @@ export const cefazolina: Farmaco = {
   classe: 'Antibacteriano, Cefalosporina de 1ª geração com potente atividade contra estafilococos sensíveis à oxacilina (MSSA) e estreptococos',
   dosePratica: 'Adulto: EV/IM: 1 g a cada 8 horas (faixa usual de 500 mg a 1 g de 8/8h até 1 g a 2 g de 6/6h a 8/8h em infecções graves; profilaxia cirúrgica: 1 g a 2 g EV 30 a 60 min antes da incisão). Pediatria (> 1 mês): EV/IM: 50 a 100 mg/kg/dia divididos a cada 6 a 8 horas (máximo 6 g/dia em infecções graves). Preparo EV: reconstituir com 10 mL de AD (atenção à expansão de volume para ~10,6 mL / 94 mg/mL) e diluir em 50 a 100 mL de SF 0,9% ou SG 5% infundido em 30 a 60 min.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana ou profilaxia cirúrgica',
   acessoFonte: 'RENAME 2024: Pó para solução injetável 1 g consta no Componente Hospitalar da Relação Nacional de Medicamentos Essenciais do SUS. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [

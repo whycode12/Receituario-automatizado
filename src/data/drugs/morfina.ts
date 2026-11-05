@@ -9,6 +9,9 @@ export const morfina: Farmaco = {
   dosePratica: 'Dor aguda intensa / SCA refratária / EAP: Diluir 1 ampola (10 mg/1 mL) em 9 mL de SF 0,9% (1 mg/mL). Administrar 2 a 4 mL (2 a 4 mg) EV lento em 2 a 3 minutos; se persistir a dor, pode repetir a cada 15 a 30 minutos sob rigorosa monitorização respiratória (ter Naloxona disponível à beira-leito).',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
   snPadrao: 'dor intensa refratária ou ansiedade extrema por dispneia no EAP',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Morfina 10 mg/mL solução injetável e 10 mg comprimido. Notificação de Receita A (Amarela).',
   apresentacoes: [
     {

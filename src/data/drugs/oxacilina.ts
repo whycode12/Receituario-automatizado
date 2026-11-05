@@ -9,6 +9,9 @@ export const oxacilina: Farmaco = {
   dosePratica: 'Adulto: 500 mg a 1 g EV ou IM a cada 4 a 6 horas (em infecções graves como osteomielite e endocardite: 1 g a 2 g EV a cada 4 horas; máx. 12 g/dia). Pediatria: 50 a 100 mg/kg/dia EV dividido de 6/6h (leves a moderadas) ou 100 a 200 mg/kg/dia dividido de 4/4h a 6/6h (graves; máx. 12 g/dia).',
   fontes: { HSL: '05/05/2025', EINA: '2024', EINP: '2024', PSZERADO: '2025' },
   snPadrao: 'infecção estafilocócica bacteriana',
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Frasco-ampola 500 mg pó para solução injetável. Padronizado na rede de urgência, emergência e hospitais do SUS.',
   apresentacoes: [
     {

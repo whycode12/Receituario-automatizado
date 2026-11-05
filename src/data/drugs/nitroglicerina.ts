@@ -9,6 +9,9 @@ export const nitroglicerina: Farmaco = {
   dosePratica: 'EAP / IAM / Angina instável: Diluir 1 ampola de 25 mg/5 mL (ou 50 mg/10 mL) em 240 a 250 mL de SG 5% ou SF 0,9% (concentração 100 ou 200 mcg/mL). Iniciar em BIC a 5 mcg/min (≈ 3 a 5 mL/h); titular a cada 5 a 10 min em 5 a 10 mcg/min. Dose usual: 10 a 100 mcg/min (máx 200 mcg/min).',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024' },
   snPadrao: 'dor isquêmica miocárdica ou congestão pulmonar aguda',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Nitroglicerina 5 mg/mL solução injetável frasco-ampola.',
   apresentacoes: [
     {

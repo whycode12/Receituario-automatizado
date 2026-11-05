@@ -9,6 +9,9 @@ export const tiamina: Farmaco = {
   dosePratica: 'Prevenção de Encefalopatia de Wernicke na UPA (etilistas/desnutridos): 100 a 300 mg (1 a 3 ampolas de 100 mg/1 mL) EV diluídos em 100 mL de SF 0,9% (ou IM) ANTES ou junto da infusão de glicose. Tratamento de Wernicke estabelecida (confusão mental, oftalmoplegia e ataxia): 200 a 500 mg EV de 8/8h por 3 a 5 dias. Manutenção oral pós-alta: 300 mg VO 1x ao dia por 30 dias.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'etilismo crônico, desnutrição ou hipoglicemia no paciente de risco',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Tiamina 300 mg comprimido e 100 mg/mL solução injetável.',
   apresentacoes: [
     {

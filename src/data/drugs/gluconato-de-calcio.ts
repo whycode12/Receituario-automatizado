@@ -9,6 +9,9 @@ export const gluconatoDeCalcio: Farmaco = {
   dosePratica: 'Hipercalemia grave com alteração no ECG (ondas T apiculadas em tenda, perda de onda P ou alargamento de QRS): Diluir 1 a 2 ampolas (10 a 20 mL = 1 a 2 g) em 100 mL de SF 0,9% ou SG 5% e infundir EV em 5 a 10 minutos sob monitorização de ECG. Estabiliza a membrana cardíaca em 1 a 3 minutos. Não reduz os níveis séricos de potássio (necessita de medidas de shift como insulina + glicose). Hipocalcemia sintomática: 1 a 2 ampolas em 10 a 20 min.',
   fontes: { PSZERADO: '2025', HSL: '2024', ACLS: '2025', BULA: '2024' },
   snPadrao: 'hipercalemia com alteração eletrocardiográfica ou hipocalcemia sintomática',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Gluconato de cálcio 100 mg/mL (10%) solução injetável ampola 10 mL.',
   apresentacoes: [
     {

@@ -9,6 +9,9 @@ export const fosfatoDePotassio: Farmaco = {
   dosePratica: 'Hipofosfatemia moderada a grave (< 1,5 mg/dL ou sintomática): Reposição periférica: 1 a 2 ampolas (10 a 20 mL) diluídas em 500 mL de SF 0,9% infundidas em 6 horas. Reposição central: 1 a 2 ampolas em 250 mL de SF 0,9% em 3 a 4 horas. Monitorar fósforo, potássio e cálcio séricos.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
   snPadrao: 'hipofosfatemia moderada a grave',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Solução injetável 2 mEq/mL (ampola 10 mL) padronizada em emergências e UTIs.',
   apresentacoes: [
     {

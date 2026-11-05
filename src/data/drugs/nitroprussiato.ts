@@ -9,6 +9,9 @@ export const nitroprussiato: Farmaco = {
   dosePratica: 'Emergência Hipertensiva / EAP grave: Diluir 1 ampola (50 mg/2 mL) em 250 mL de SF 0,9% ou SG 5% (200 mcg/mL). Iniciar em BIC a 0,3 a 0,5 mcg/kg/min (ex: 70 kg ≈ 6 a 10 mL/h); titular a cada 5 min conforme PAM. Dose alvo 1 a 3 mcg/kg/min; dose máxima 10 mcg/kg/min.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024' },
   snPadrao: 'emergência hipertensiva com lesão de órgão-alvo',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Nitroprussiato de sódio 25 mg/mL (50 mg/2 mL) solução injetável.',
   apresentacoes: [
     {

@@ -9,6 +9,9 @@ export const sulfatoDeMagnesio: Farmaco = {
   dosePratica: 'Hipomagnesemia grave (< 1,0 mg/dL): 4 a 8 g (40 a 80 mL a 10%) diluídos em 500 mL de SF 0,9% EV em 12 a 24 horas. Hipomagnesemia moderada (1,0 a 1,5 mg/dL): 2 a 4 g EV em 4 a 12 horas. Asma grave / Broncoespasmo refratário: 2 g EV em 100 mL de SF 0,9% em 20 minutos. Eclâmpsia (esquema de Pritchard): 4 g EV lento + 10 g IM (5 g em cada glúteo).',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
   snPadrao: 'hipomagnesemia, broncoespasmo grave ou prevenção de convulsão na pré-eclâmpsia',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Ampolas de 10% (10 mL = 1 g) e 50% (10 mL = 5 g) padronizadas em salas de emergência e UTIs.',
   apresentacoes: [
     {

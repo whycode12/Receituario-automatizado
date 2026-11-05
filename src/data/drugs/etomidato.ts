@@ -9,6 +9,9 @@ export const etomidato: Farmaco = {
   dosePratica: 'Sequência Rápida de Intubação (Indutor de escolha no choque/instabilidade hemodinâmica): 0,3 mg/kg EV em bolus lento em 30 a 60 segundos (adulto de 50 kg: 7,5 mL; 70 kg: 10,5 mL = 21 mg; 90 kg: 13,5 mL). Início de ação em 30 a 60 segundos com duração de 5 a 15 minutos.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'indução anestésica em sequência rápida de intubação orotraqueal',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Componente Hospitalar: Solução injetável 2 mg/mL em ampolas de 10 mL padronizada em pronto-socorro.',
   apresentacoes: [
     {

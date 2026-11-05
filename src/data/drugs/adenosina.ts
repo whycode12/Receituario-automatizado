@@ -9,6 +9,9 @@ export const adenosina: Farmaco = {
   dosePratica: 'Taquicardia Supraventricular Paroxística (TSV): 1ª dose: 6 mg (2 mL) em bólus EV ultrarrápido (1 a 2 segundos) em torneirinha de 3 vias com membro elevado, seguido imediatamente de flush de 20 mL de SF 0,9%. Se não reverter em 1 a 2 minutos, administrar 2ª dose de 12 mg (4 mL) rápida + flush.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', ACLS: '2025' },
   snPadrao: 'crise de taquicardia supraventricular estável',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Adenosina 3 mg/mL (6 mg/2 mL) solução injetável.',
   apresentacoes: [
     {

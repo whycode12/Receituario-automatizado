@@ -9,6 +9,9 @@ export const tenofovirLamivudina: Farmaco = {
   dosePratica: 'Profilaxia Pós-Exposição (PEP HIV - PCDT MS): 1 comprimido combinado (TDF 300 mg + 3TC 300 mg) VO 1x ao dia (24/24h), no mesmo horário, por 28 dias consecutivos. Iniciar preferencialmente nas primeiras 2 a 72 horas pós-exposição. Sempre associar ao Dolutegravir 50 mg.',
   fontes: { MS: '2024', PSZERADO: '2025', BULA: '2024' },
   snPadrao: 'profilaxia pós-exposição de risco para o HIV',
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Programa Nacional de IST/Aids e Hepatites Virais do Ministério da Saúde: Frasco com 30 comprimidos distribuído gratuitamente em serviços de emergência (UPAs/Hospitais) e Centros de Testagem e Aconselhamento (CTA).',
   apresentacoes: [
     {

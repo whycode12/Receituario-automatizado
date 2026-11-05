@@ -8,6 +8,9 @@ export const acidoTranexamico: Farmaco = {
   classe: 'Antifibrinolítico Inibidor da Ativação do Plasminogênio',
   dosePratica: 'Epistaxe / Sangramento Mucoso Leve a Moderado: 250 mg a 500 mg (1 a 2 comprimidos de 250 mg) VO de 8/8h por 3 a 5 dias. Hemorragias Agudas Graves / Urgência Hospitalar: 1 g (2 ampolas de 500 mg ou 4 ampolas de 250 mg) EV lento em 10 a 20 minutos (10 a 15 mg/kg), podendo repetir de 8/8h.',
   fontes: { HSL: '15/05/2023', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
   snPadrao: 'sangramento ativo ou hemorragia',
   acessoFonte: 'Disponível em comprimidos de 250 mg e ampolas de 250 mg/5 mL (50 mg/mL) sob o nome de referência Transamin e genéricos.',
   apresentacoes: [
@@ -51,7 +54,7 @@ export const acidoTranexamico: Farmaco = {
       tipo: 'mg',
       min: 250,
       max: 1000,
-      padrao: 500,
+      padrao: 750,
       dosesDia: [3, 4],
       dosesPadrao: 3,
       intervaloFixo: 8,

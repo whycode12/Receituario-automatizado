@@ -9,6 +9,9 @@ export const atropina: Farmaco = {
   dosePratica: 'Bradiarritmia Sintomática (FC < 50 bpm + sinais de instabilidade): 1 mg (ou 0,5 a 1 mg) EV em bólus rápido a cada 3 a 5 minutos, até dose máxima de 3 mg. Doses menores que 0,5 mg são contraindicadas por causarem bradicardia paradoxal central.',
   fontes: { PSZERADO: '2025', HSL: '2024', ACLS: '2025' },
   snPadrao: 'bradicardia sintomática ou instabilidade hemodinâmica',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Atropina 0,25 mg/mL e 0,5 mg/mL solução injetável.',
   apresentacoes: [
     {

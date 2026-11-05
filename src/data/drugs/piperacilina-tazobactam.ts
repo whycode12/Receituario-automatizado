@@ -9,6 +9,9 @@ export const piperacilinaTazobactam: Farmaco = {
   dosePratica: 'Adultos: 4,5 g (4 g + 0,5 g) EV a cada 6 horas (ou de 8/8h conforme gravidade e função renal). Infundir em 30 min ou infusão estendida de 3 a 4 horas.',
   fontes: { HSL: '2024', EINA: '2024', PSZERADO: '2025' },
   snPadrao: 'infecção bacteriana nosocomial grave',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): Piperacilina + tazobactam 4 g + 0,5 g pó para solução injetável.',
   apresentacoes: [
     {

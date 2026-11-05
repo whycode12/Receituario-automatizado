@@ -9,6 +9,9 @@ export const soroEv: Farmaco = {
   dosePratica: 'Adulto (Desidratação / Expansão rápida): 500 mL a 1.000 mL EV rápido (correr aberto ou em 30 a 60 min); Manutenção / Hidratação: 500 mL a 1.000 mL EV a cada 8 a 12 horas (≈ 28 a 42 gotas/min ou 80 a 125 mL/h). Pediatria (Desidratação grave / Plano C do MS): 20 mL/kg de SF 0,9% ou Ringer Lactato EV em 20 a 30 minutos (podendo repetir até 3x se choque); Manutenção diária (Holliday-Segar): SG 5% + SF 0,9% 4:1 ou 1:1.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', EINP: '2024', MS: '2023' },
   snPadrao: 'desidratação ou necessidade de hidratação venosa',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Cloreto de sódio 0,9%, Glicose 5% e Ringer com Lactato em bolsas de 250 mL, 500 mL e 1.000 mL constam no elenco público em todas as UBSs, UPAs e hospitais.',
   apresentacoes: [
     {

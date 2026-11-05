@@ -8,7 +8,10 @@ export const cefepime: Farmaco = {
   classe: 'Antibacteriano Betalactâmico Cefalosporina de 4ª Geração com Ação Antipseudomonas',
   dosePratica: 'Pneumonia Hospitalar / Neutropenia Febril / Infecções Graves por Pseudomonas: 2 g (1 frasco de 2 g ou 2 frascos de 1 g) EV diluído em 100 mL de SF 0,9% de 8/8h (infundir em 30 min ou em infusão estendida de 3 a 4h). Infecções Moderadas / ITU Complicada: 1 g a 2 g EV de 12/12h.',
   fontes: { HSL: '10/05/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'infecção bacteriana grave',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'infecção bacteriana grave nosocomial ou neutropenia febril',
   acessoFonte: 'Uso hospitalar restrito em frasco-ampola de 1 g e 2 g de pó liofilizado (Maxcef e genéricos).',
   apresentacoes: [
     {

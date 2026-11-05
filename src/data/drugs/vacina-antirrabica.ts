@@ -9,6 +9,9 @@ export const vacinaAntirrabica: Farmaco = {
   dosePratica: 'Pós-exposição (Esquema de 4 doses do MS): 1 ampola (0,5 ou 1,0 mL) IM no músculo deltoide nos dias 0, 3, 7 e 14. NUNCA aplicar no glúteo (baixa eficácia imunogênica). Pré-exposição: 1 dose nos dias 0 e 7.',
   fontes: { MS: '2024', PSZERADO: '2025', BULA: '2024' },
   snPadrao: 'acidente com risco de transmissão do vírus da raiva',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'Programa Nacional de Imunizações (PNI) / Ministério da Saúde: Fornecida gratuitamente nas salas de vacinação de referência e UPAs.',
   apresentacoes: [
     {

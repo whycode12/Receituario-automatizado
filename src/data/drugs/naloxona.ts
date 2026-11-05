@@ -9,6 +9,9 @@ export const naloxona: Farmaco = {
   dosePratica: 'Intoxicação aguda por opióides (depressão respiratória/coma): 0,04 a 0,4 mg EV direto lento (ou IM se sem acesso imediato). Pode diluir 1 ampola (0,4 mg) em 9 mL de SF 0,9% (0,04 mg/mL) e titular alíquotas de 1 a 2 mL a cada 2 a 3 minutos até FR > 10-12 irpm sem precipitar abstinência aguda severa. Doses repetidas podem ser necessárias (meia-vida de 30-90 min).',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'depressão respiratória por intoxicação ou overdose de opioides',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Componente Hospitalar: Solução injetável 0,4 mg/mL ampola padronizada na emergência.',
   apresentacoes: [
     {

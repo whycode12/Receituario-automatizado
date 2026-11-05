@@ -41,8 +41,24 @@ export const soroFisiologico: Farmaco = {
   dosePratica: 'Lactentes até 6 meses: 0,5 a 1 mL por narina; 6 meses a 2 anos: 2 a 5 mL; 2 a 8 anos: 5 a 10 mL; > 8 anos e adultos: 10 a 20 mL por narina, 3 a 6x ao dia (ou SN antes de mamadas/sono).',
   fontes: { SBP: '2024' },
   snPadrao: 'obstrução ou secreção nasal',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 (Componente Básico): cloreto de sódio 0,9% frasco. Farmácia Popular: não consta.',
   apresentacoes: [
+    {
+      id: 'sf_frasco_500',
+      forma: 'sol_nasal',
+      nome: 'Soro fisiológico 0,9% frasco 500 mL + Seringa',
+      conc: '0,9%',
+      rotulo: (p: Paciente) => `Soro fisiológico 0,9% 500mL + ${getPerfilNasal(p).seringa}`,
+      frascoMl: 500,
+      vias: ['NASAL'],
+      unidades: ['ml'],
+      disp: (p: Paciente) => `01 frasco / 01 ${getPerfilNasal(p).seringa}`,
+      instrucao: (p: Paciente) => `Instruções: ${getPerfilNasal(p).tecnica}`,
+      obs: 'Trocar ou higienizar a seringa periodicamente.'
+    },
     {
       id: 'sf_ampola_10',
       forma: 'sol_nasal',
@@ -81,19 +97,6 @@ export const soroFisiologico: Farmaco = {
       disp: (p: Paciente) => `01 frasco / 01 ${getPerfilNasal(p).seringa}`,
       instrucao: (p: Paciente) => `Instruções: ${getPerfilNasal(p).tecnica}`,
       obs: 'Armazenar em temperatura ambiente.'
-    },
-    {
-      id: 'sf_frasco_500',
-      forma: 'sol_nasal',
-      nome: 'Soro fisiológico 0,9% frasco 500 mL + Seringa',
-      conc: '0,9%',
-      rotulo: (p: Paciente) => `Soro fisiológico 0,9% 500mL + ${getPerfilNasal(p).seringa}`,
-      frascoMl: 500,
-      vias: ['NASAL'],
-      unidades: ['ml'],
-      disp: (p: Paciente) => `01 frasco / 01 ${getPerfilNasal(p).seringa}`,
-      instrucao: (p: Paciente) => `Instruções: ${getPerfilNasal(p).tecnica}`,
-      obs: 'Trocar ou higienizar a seringa periodicamente.'
     }
   ],
   regras: [

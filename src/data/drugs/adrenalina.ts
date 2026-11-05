@@ -9,6 +9,9 @@ export const adrenalina: Farmaco = {
   dosePratica: 'Choque Anafilático: 0,5 mg (0,5 mL da ampola 1:1.000) IM na face anterolateral da coxa (vasto lateral) IMEDIATAMENTE. Pode repetir a cada 5 a 15 min até 2x se refratário. Infusão EV contínua (se refratário): diluir 1 ampola (1 mg) em 100 mL SF 0,9% em BIC iniciando a 0,1 mcg/kg/min. PCR: 1 mg EV/IO a cada 3 a 5 min em bolus.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
   snPadrao: 'reação anafilática ou parada cardiorrespiratória',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   acessoFonte: 'RENAME 2024 / Componente Hospitalar e Urgência: Solução injetável 1 mg/mL ampola disponível em todas as salas de emergência, UPAs e SAMU.',
   apresentacoes: [
     {
