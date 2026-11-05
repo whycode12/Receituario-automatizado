@@ -48,7 +48,7 @@ export const prednisona: Farmaco = {
       tipo: 'mg',
       min: 5,
       max: 60,
-      padrao: 20,
+      padrao: 40,
       dosesDia: [1, 1], // Dose única diária pela manhã (respeitando o ciclo circadiano do cortisol)
       dosesPadrao: 1,
       fonte: 'HSL',

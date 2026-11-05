@@ -104,3 +104,12 @@ Sempre consultar em ordem de prioridade:
 - **Comportamento no Sistema:**
   - Exibido como callout visual informativo amigável no topo do painel e detalhado na seção de fontes, sem interferir nem limitar a flexibilidade do médico na prescrição.
 
+---
+
+## 9. Apresentação Padrão e Posologia Inicial de Referência (PuxaFicha Adulto)
+
+- **Consulta Obrigatória:** Sempre consultar os arquivos `puxaficha_catalogo_completo.md` e `puxaficha_catalogo_completo.json` na raiz do projeto ao cadastrar novos fármacos ou revisar fármacos existentes.
+- **Apresentação Padrão (`apresentacoes[0]`):** A apresentação adulta consagrada que consta no catálogo do PuxaFicha deve ser posicionada como a primeira apresentação da lista (`apresentacoes[0]`). Dessa forma, ao clicar no fármaco, ela será a primeira a ser selecionada automaticamente na tela.
+- **Posologia Padrão Inicial (`padrao` e `intervaloFixo` / `dosesPadrao`):** A regra para adultos deve ter a dose padrão (`padrao`) e o intervalo (`intervaloFixo` ou `dosesPadrao`) alinhados com a posologia prática do catálogo do PuxaFicha (ex.: Dipirona 500mg 2 comprimidos 6/6h; Paracetamol 750mg 1 comprimido 8/8h; Ibuprofeno 600mg 1 comprimido 8/8h; Amoxicilina 500mg 1 comprimido 8/8h; Azitromicina 500mg 1 comprimido 24/24h; Prednisona 20mg 2 comprimidos 24/24h).
+
+

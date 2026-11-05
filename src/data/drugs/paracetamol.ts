@@ -121,10 +121,11 @@ export const paracetamol: Farmaco = {
       min: 500,
       max: 1000,
       padrao: 750,
-      dosesDia: [3, 6],
-      dosesPadrao: 4,
+      dosesDia: [3, 4],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
-      trecho: 'Adulto VO: 500 a 1000mg a cada 8 - 6h ou 750mg a cada 4 - 6h.'
+      trecho: 'Adulto VO: 500 a 1000mg a cada 6 a 8h ou 750mg a cada 8h (PuxaFicha / HSL).'
     },
     {
       pub: 'adulto',

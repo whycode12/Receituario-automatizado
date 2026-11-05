@@ -8,9 +8,23 @@ export const naproxeno: Farmaco = {
   classe: 'Anti-inflamatório não esteroidal (AINE), analgésico e antipirético',
   dosePratica: 'Adulto: 500 mg (ou 550 mg sódico) VO de 12/12h por até 5 a 7 dias (ou 250/275 mg de 12/12h para dor leve; máx. 1.000 mg/dia para analgesia e 1.500 mg/dia para afecções reumatológicas). Pediatria (> 12 anos): 5 a 6 mg/kg/dose de 12/12h (se < 60 kg) ou 250 a 375 mg de 12/12h (se > 60 kg) (máx. 1.000 mg/dia). Ingerir com água, com ou sem alimentos.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'dor ou inflamação',
+  snPadrao: 'dor',
   acessoFonte: 'RENAME 2024: Naproxeno comprimido 250 mg e 500 mg consta no Componente Especializado da Assistência Farmacêutica (CEAF) para artrite reumatoide, artrite psoriásica, espondilite e osteoartrite. Não consta no Farmácia Popular.',
   apresentacoes: [
+    {
+      id: 'cp275',
+      forma: 'cp',
+      nome: 'Comprimido revestido 275 mg (naproxeno sódico)',
+      comercial: 'Flanax 275mg',
+      conc: '275mg',
+      rotulo: 'Naproxeno sódico 275mg',
+      mg: 275,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      obs: 'Apresentação padronizada de referência adulta no PuxaFicha e HSL. 1 comprimido a cada 12h se dor por 5 dias.'
+    },
     {
       id: 'cp500',
       forma: 'cp',
@@ -52,23 +66,25 @@ export const naproxeno: Farmaco = {
       disp: '1 caixa',
       acesso: { rename: true, fp: false },
       obs: 'Consta no CEAF da RENAME. Adequado para doses fracionadas, adolescentes > 60 kg e titulação inicial (HSL).'
-    },
-    {
-      id: 'cp275',
-      forma: 'cp',
-      nome: 'Comprimido revestido 275 mg (naproxeno sódico)',
-      comercial: 'Flanax 275mg',
-      conc: '275mg',
-      rotulo: 'Naproxeno sódico 275mg',
-      mg: 275,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      obs: 'Apresentação padronizada no HSL. 1 comprimido 1 a 2 vezes ao dia (a cada 12h ou 24h).'
     }
   ],
   regras: [
+    {
+      pub: 'adulto',
+      se: { idadeMinAnos: 12 },
+      vias: ['VO'],
+      apres: ['cp275', 'cp250'],
+      tipo: 'mg',
+      min: 250,
+      max: 275,
+      padrao: 275,
+      dosesDia: [1, 2],
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 10,
+      fonte: 'PuxaFicha / HSL',
+      trecho: 'PuxaFicha: Naproxeno 275mg (Flanax): Tomar 1 comprimido a cada 12/12h por 5 dias se dor. HSL: 275-550mg/dia fracionados em 2 tomadas.'
+    },
     {
       pub: 'adulto',
       se: { idadeMinAnos: 12 },
@@ -80,24 +96,10 @@ export const naproxeno: Farmaco = {
       padrao: 500,
       dosesDia: [1, 2],
       dosesPadrao: 2,
+      intervaloFixo: 12,
       duracaoMaxDias: 7,
       fonte: 'PSZERADO',
       trecho: 'PSZerado p. 120 e 192: Naproxeno 500 mg: Tomar 1 comprimido a cada 12 horas, por 5 a 7 dias (ou 550 mg ao dia).'
-    },
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 12 },
-      vias: ['VO'],
-      apres: ['cp250', 'cp275'],
-      tipo: 'mg',
-      min: 250,
-      max: 275,
-      padrao: 275,
-      dosesDia: [1, 2],
-      dosesPadrao: 2,
-      duracaoMaxDias: 10,
-      fonte: 'HSL',
-      trecho: 'HSL: Adulto: 275-550mg/dia, VO, que podem ser fracionados em 2 tomadas (ex.: 275 mg 12/12h).'
     },
     {
       pub: 'ped',
