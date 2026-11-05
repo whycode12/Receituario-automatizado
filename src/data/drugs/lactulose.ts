@@ -8,7 +8,10 @@ export const lactulose: Farmaco = {
   classe: 'Laxativo Osmótico e Agente Redutor de Amônia (Dissacarídeo Sintético não absorvível)',
   dosePratica: 'Constipação: Adultos: 15 a 30 mL/dia em dose única (manhã ou noite) ou dividida em 2 tomadas (máx. 60 mL/dia). Pediatria: 1 a 5 anos: 5 a 10 mL/dia; 6 a 12 anos: 10 a 15 mL/dia (ajustar para 2 a 3 evacuações pastosas/dia). Encefalopatia hepática: Iniciar com 20 a 40 mL a cada 8 ou 12 horas (ajustar para 2 a 4 evacuações ao dia; casos agudos: até 60-150 mL/dia).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'constipação intestinal ou sinais de encefalopatia',
+  modoPadrao: 'sn',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'constipação intestinal',
   acessoFonte: 'RENAME 2024: Lactulose xarope / solução oral 667 mg/mL no Componente Básico da Atenção Primária. Ampla disponibilidade em farmácias comerciais sob a marca de referência Lactulona e genéricos.',
   apresentacoes: [
     {
@@ -35,10 +38,11 @@ export const lactulose: Farmaco = {
       tipo: 'mg',
       min: 10005, // 15 mL * 667 mg/mL ≈ 10.005 mg (10 g)
       max: 20010, // 30 mL * 667 mg/mL ≈ 20.010 mg (20 g)
-      padrao: 10005, // 15 mL
-      dosesDia: [1, 2],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
+      padrao: 13340, // 20 mL
+      dosesDia: [1, 3],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      duracaoMaxDias: 3,
       fonte: 'HSL',
       trecho: 'Adulto Constipação crônica: 15 a 30 mL/dia (10 a 20 g/dia) em dose única pela manhã ou à noite (máx. 60 mL/dia se refratário).'
     },

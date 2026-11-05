@@ -8,9 +8,27 @@ export const dimenidrinato: Farmaco = {
   classe: 'Antiemético e Antivertiginoso (Anti-histamínico H1 com ação anticolinérgica central)',
   dosePratica: 'Adulto e adolescentes > 12 anos: 50 a 100 mg VO (½ a 1 comprimido de 100 mg ou 1 a 2 comprimidos de 50 mg) a cada 4 a 6 horas se náuseas, vômitos, vertigem ou cinetose (máx. 400 mg/dia). Em prevenção de cinetose (enjoo de viagem): tomar a primeira dose cerca de 30 minutos a 1 hora antes da viagem.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'náuseas, vômitos, tontura, vertigem ou cinetose',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'Medicamento isento de prescrição (MIP) e amplamente disponível em farmácias comerciais e serviços de saúde sob as marcas Dramin e genéricos.',
   apresentacoes: [
+    {
+      id: 'cp50',
+      forma: 'cp',
+      nome: 'Comprimido 50 mg',
+      comercial: 'Dimenidrinato / Dramin',
+      conc: '50mg',
+      rotulo: 'Dimenidrinato 50mg',
+      mg: 50,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Ingerir com água antes ou durante as refeições, até de 8/8h se náuseas ou vômitos.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (Dramin 50mg até de 8/8h se náuseas/vômitos).'
+    },
     {
       id: 'cp100',
       forma: 'cp',
@@ -25,21 +43,6 @@ export const dimenidrinato: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Ingerir imediatamente antes ou durante as refeições com um copo de água. Para prevenção de enjoo de movimento/viagem (cinetose), tomar cerca de 30 minutos a 1 hora antes de iniciar o trajeto.',
       obs: 'Comprimido com vinco divisível (pode ser partido ao meio para dose de 50 mg). Indicado para adultos e adolescentes acima de 12 anos.'
-    },
-    {
-      id: 'cp50',
-      forma: 'cp',
-      nome: 'Comprimido 50 mg',
-      comercial: 'Dimenidrinato / Dramin',
-      conc: '50mg',
-      rotulo: 'Dimenidrinato 50mg',
-      mg: 50,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Ingerir com água antes ou durante as refeições. Tomar 30 a 60 minutos antes de viagens se prevenção de cinetose.',
-      obs: 'Dose prática de 50 mg a cada 4 ou 6 horas para vertigem e náuseas (PSZerado).'
     }
   ],
   regras: [
@@ -51,11 +54,11 @@ export const dimenidrinato: Farmaco = {
       min: 50,
       max: 100,
       padrao: 50,
-      dosesDia: [4, 6],
-      dosesPadrao: 4,
-      intervaloFixo: 6,
-      fonte: 'HSL',
-      trecho: 'Adulto e acima de 12 anos: 50 a 100mg (½ a 1 comprimido de 100mg), VO, a cada 4 a 6 horas. Em viagens, tomar 30 minutos antes. Máximo de 400mg em 24 horas.'
+      dosesDia: [3, 4],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      fonte: 'HSL / PUXAFICHA',
+      trecho: 'PuxaFicha Adulto: Dimenidrinato 50mg. Tomar 1 comprimido, até de 8/8 horas, se náuseas ou vômitos.'
     }
   ],
   maximos: [

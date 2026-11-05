@@ -8,7 +8,10 @@ export const loperamida: Farmaco = {
   classe: 'Antidiarreico Agonista de Receptores Opioides Periféricos µ Intestinais',
   dosePratica: 'Diarreia Aguda Inespecífica no Adulto: Tomar 4 mg (2 comprimidos de 2 mg) VO como dose de ataque inicial; em seguida, tomar 2 mg (1 comprimido de 2 mg) após cada nova evacuação líquida desfeita. Dose máxima diária: 16 mg/dia (8 comprimidos). Interromper o tratamento se as fezes se tornarem formadas ou se decorrerem 12 horas sem evacuações. NUNCA utilizar em disenteria (fezes com sangue/muco e febre) ou suspeita de colite por C. difficile.',
   fontes: { HSL: '10/06/2016', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'após cada evacuação líquida não formada (se diarreia)',
+  modoPadrao: 'sn',
+  diasPadrao: 2,
+  usoContinuoPadrao: false,
+  snPadrao: 'após cada evacuação líquida',
   acessoFonte: 'Disponível em comprimidos de 2 mg comercialmente e em farmácias comunitárias (Imosec e genéricos). RENAME 2024: Não consta na relação nacional.',
   apresentacoes: [
     {

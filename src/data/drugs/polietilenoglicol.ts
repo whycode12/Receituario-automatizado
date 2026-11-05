@@ -8,7 +8,10 @@ export const polietilenoglicol: Farmaco = {
   classe: 'Laxativo Osmótico Iso-osmolar Inerte (Macrogol)',
   dosePratica: 'Constipação Crônica / Funcional Adulto: 1 sachê de 14g ou 17g (ou 10 a 20g do pó PEG 4000) diluído em 150 a 200 mL de água/suco 1x/dia pela manhã (pode aumentar até 2 sachês/dia se refratário). Pediatria (Constipação Funcional - SBP): Manutenção: 0,5 a 0,8 g/kg/dia (padrão 0,7 g/kg/dia) VO 1x/dia diluído em líquido; Desimpactação fecal: 1 a 1,5 g/kg/dia por 3 a 6 dias.',
   fontes: { SBP: '2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'constipação intestinal ou desimpactação de fezes endurecidas',
+  modoPadrao: 'sn',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'constipação intestinal',
   acessoFonte: 'Disponível em sachês comerciais padronizados (Muvinlax / Pielsana PEG / Manipulação magistral) e padronizado em diversas REMUME municipais e farmácias comunitárias.',
   apresentacoes: [
     {
@@ -67,6 +70,7 @@ export const polietilenoglicol: Farmaco = {
       dosesDia: [1, 2],
       dosesPadrao: 1,
       intervaloFixo: 24,
+      duracaoMaxDias: 3,
       fonte: 'PSZERADO / BULA',
       trecho: 'Adultos: 14 a 28 g/dia (1 a 2 sachês de 14g) diluídos em água, tomados preferencialmente pela manhã.'
     },

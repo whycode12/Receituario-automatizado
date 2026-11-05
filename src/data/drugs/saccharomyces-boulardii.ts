@@ -8,9 +8,27 @@ export const saccharomycesBoulardii: Farmaco = {
   classe: 'Probiótico Antidiarreico (Levedura viva não patogênica)',
   dosePratica: 'Diarreia aguda / Pós-antibiótico / C. difficile: 200 mg (1 cápsula/envelope de 200 mg ou 2 cápsulas de 100 mg) VO de 12/12h por 3 a 5 dias. Alterações crônicas ou manutenção da flora: 100 mg a 200 mg VO 1 a 2x/dia. Tomar em jejum ou 30 minutos antes das refeições (cápsula pode ser aberta e pó misturado em água, suco ou leite em temperatura ambiente/fria).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'diarreia aguda, evacuações líquidas ou pós-antibioticoterapia',
+  modoPadrao: 'continuo',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'diarreia aguda',
   acessoFonte: 'Medicamento isento de prescrição (MIP) e amplamente disponível no mercado sob a marca de referência Floratil e genéricos/similares (Repoflor, Florax).',
   apresentacoes: [
+    {
+      id: 'env200',
+      forma: 'sachet',
+      nome: 'Pó oral para suspensão 200 mg (envelope / sachê)',
+      comercial: 'Floratil sachê / Repoflor pó',
+      conc: '200mg',
+      rotulo: 'Saccharomyces boulardii 200mg envelope pó oral',
+      mg: 200,
+      frac: 1,
+      vias: ['VO'],
+      disp: '6 envelopes',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Dissolver o conteúdo de 1 envelope em meio copo de água, suco, chá, leite ou mamadeira em temperatura ambiente ou fria, mexer bem e tomar imediatamente. Não misturar com líquidos quentes (> 40°C).',
+      obs: 'Apresentação em pó oral consagrada. Diluir em água ou líquidos frios.'
+    },
     {
       id: 'cap200',
       forma: 'cap',
@@ -40,21 +58,6 @@ export const saccharomycesBoulardii: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Ingerir em jejum ou 30 minutos antes das refeições. Em crianças pequenas ou pacientes com dificuldade de deglutição, abrir a cápsula e misturar em líquidos frios.',
       obs: 'Contém cerca de 2 x 10^9 células de Saccharomyces boulardii-17 liofilizada por cápsula.'
-    },
-    {
-      id: 'env200',
-      forma: 'sachet',
-      nome: 'Pó oral para suspensão 200 mg (envelope / sachê)',
-      comercial: 'Floratil sachê / Repoflor pó',
-      conc: '200mg',
-      rotulo: 'Saccharomyces boulardii 200mg envelope pó oral',
-      mg: 200,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Dissolver o conteúdo de 1 envelope em meio copo de água, suco, chá, leite ou mamadeira em temperatura ambiente ou fria, mexer bem e tomar imediatamente. Não misturar com líquidos quentes (> 40°C).',
-      obs: 'Apresentação em pó oral ideal para pediatria e administração em mamadeiras, sucos ou água fria.'
     }
   ],
   regras: [
@@ -69,7 +72,7 @@ export const saccharomycesBoulardii: Farmaco = {
       dosesDia: [2, 2],
       dosesPadrao: 2,
       intervaloFixo: 12,
-      duracaoMaxDias: 5,
+      duracaoMaxDias: 3,
       fonte: 'PSZERADO',
       trecho: 'Diarreia aguda / infecção gastrointestinal: 200 mg VO a cada 12 horas por 3 a 5 dias (1 cápsula de 200 mg ou 2 cápsulas de 100 mg a cada 12 horas) (PSZerado / HSL).'
     },

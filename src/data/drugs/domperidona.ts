@@ -8,7 +8,10 @@ export const domperidona: Farmaco = {
   classe: 'Antiemético e Procinético (Antagonista Dopaminérgico D2 periférico puro)',
   dosePratica: 'Adultos e > 12 anos (≥ 35 kg): 10 mg VO (1 comprimido ou 10 mL de suspensão 1 mg/mL) até 3x/dia cerca de 15 a 30 minutos antes das principais refeições (máx. 30 mg/dia; dose mais baixa e menor tempo possível devido a risco de prolongamento do intervalo QT). Pediatria (< 12 anos): 0,25 mg/kg/dose (0,25 mL/kg da suspensão 1 mg/mL) VO até 3x/dia antes das refeições (máx. 0,75 mg/kg/dia).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'náuseas, plenitude gástrica, empachamento ou refluxo',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'náuseas e vômitos',
   acessoFonte: 'RENAME 2024: suspensão oral 1 mg/mL e comprimido 10 mg no Componente Básico da Atenção Primária. Ampla disponibilidade em farmácias comerciais e UBS.',
   apresentacoes: [
     {

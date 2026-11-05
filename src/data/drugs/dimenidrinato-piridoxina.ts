@@ -8,7 +8,10 @@ export const dimenidrinatoPiridoxina: Farmaco = {
   classe: 'Antiemético e Antivertiginoso associado a Vitamina (Anti-histamínico H1 + Piridoxina)',
   dosePratica: 'Adultos e > 12 anos: VO 1 comprimido (50 mg + 10 mg) a cada 4 a 6 horas (máx. 400 mg dimenidrinato / 8 cp/dia). EV: 1 ampola de 10 mL (Dramin B6 DL: 30 mg dimenidrinato + 50 mg piridoxina) diluída em 10 mL de AD (ou 100 mL SF) EV lento a cada 4 a 6h. Pediatria (Gotas VO 25 mg + 5 mg/mL): 1 gota/kg/dose (1,25 mg/kg) a cada 6 a 8 horas (máx. habitual 20 a 40 gotas/dose).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
-  snPadrao: 'náuseas, vômitos, tontura, vertigem ou cinetose',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'Medicamento isento de prescrição (MIP nas formas orais) e padronizado em emergências sob a marca Dramin B6 / genéricos.',
   apresentacoes: [
     {
@@ -83,10 +86,10 @@ export const dimenidrinatoPiridoxina: Farmaco = {
       min: 50,
       max: 100,
       padrao: 50,
-      dosesDia: [4, 6],
-      dosesPadrao: 4,
-      intervaloFixo: 6,
-      fonte: 'HSL',
+      dosesDia: [3, 4],
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      fonte: 'HSL / PUXAFICHA',
       trecho: 'Adulto e acima de 12 anos: 50 a 100mg de dimenidrinato (1 a 2 comprimidos), VO, a cada 4 a 6 horas. Prevenção de cinetose: 30 a 60 min antes da viagem.'
     },
     {

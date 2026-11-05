@@ -8,7 +8,10 @@ export const pantoprazol: Farmaco = {
   classe: 'Inibidor da Bomba de Prótons (IBP gástrico que bloqueia a enzima H+/K+ ATPase nas células parietais do estômago)',
   dosePratica: 'Adulto: VO: 40 mg uma vez ao dia em jejum (pela manhã) por 4 a 8 semanas (DRGE, esofagite de refluxo, úlcera péptica); manutenção/profilaxia de lesão por AINEs: 20 a 40 mg/dia; erradicação de H. pylori: 40 mg 12/12h por 14 dias (associado a antibióticos). EV: 40 mg 1x/dia (ou 40-80 mg 12/12h na profilaxia/tratamento de sangramento agudo por estresse/HDA; bolus direto lento em no mínimo 2 min ou infusão em 15 min). Pediatria (≥ 5 anos): Peso 15 a 39 kg: 20 mg VO 1x/dia; Peso ≥ 40 kg: 40 mg VO 1x/dia por até 8 semanas. Comprimidos gastrorresistentes: NÃO partir, mastigar ou triturar.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', BULA: '04/10/2026' },
-  snPadrao: 'epigastralgia ou pirose',
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
+  snPadrao: 'azia, queimação ou dor de estômago',
   acessoFonte: 'RENAME 2024: Pó para solução injetável 40 mg consta no Componente Hospitalar do SUS (nas UBS da Atenção Primária o IBP padrão do CBAF é o omeprazol 20 mg). Comprimidos 20 mg e 40 mg disponíveis no mercado farmacêutico e padronizações hospitalares. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
     {

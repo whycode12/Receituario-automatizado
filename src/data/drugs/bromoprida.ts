@@ -8,7 +8,10 @@ export const bromoprida: Farmaco = {
   classe: 'Antiemético e Procinético (Antagonista Dopaminérgico D2 periférico/central)',
   dosePratica: 'Adulto: 10 mg VO (1 cápsula/comprimido) ou EV/IM (1 ampola de 10 mg / 2 mL) de 8/8h a 12/12h se náuseas/vômitos (máx. 60 mg/dia). Pediatria: VO 1 a 2 gotas/kg/dose até 3x/dia (máx. 30 a 60 gotas por tomada); EV/IM 0,5 a 1 mg/kg/dia dividido em 3 doses (8/8h).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
-  snPadrao: 'náuseas, vômitos ou plenitude pós-prandial',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'RENAME 2024: Bromoprida 5 mg/mL solução injetável (ampola 2 mL = 10 mg) e apresentações orais em componentes da atenção básica/hospitalar. Genérico e comercial de ampla disponibilidade.',
   apresentacoes: [
     {

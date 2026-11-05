@@ -8,7 +8,10 @@ export const metoclopramida: Farmaco = {
   classe: 'Antiemético e Procinético (Antagonista Dopaminérgico D2)',
   dosePratica: 'Adulto: VO/EV/IM: 10 mg (1 comprimido ou 1 ampola 2 mL) podendo repetir de 8/8h se náuseas/vômitos (máx. 30 mg/dia; injetar EV lento em 3-5 min ou diluído em 50 mL de SF para prevenir acatisia). Pediatria: uso restrito (contraindicado em < 1 ano; VO gotas 1-3 anos: 1 mg; 3-5 anos: 2 mg; 5-14 anos: 2,5-5 mg até 3x/dia).',
   fontes: { HSL: '13/04/2023', PSZERADO: '2025', EINA: '2024', EINP: '2024' },
-  snPadrao: 'náuseas, vômitos ou plenitude gástrica',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'náuseas e vômitos',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): comprimido 10 mg e solução injetável 5 mg/mL (ampola 2 mL = 10 mg). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -67,8 +70,9 @@ export const metoclopramida: Farmaco = {
       min: 10,
       max: 10,
       padrao: 10,
-      dosesDia: [3, 3],
+      dosesDia: [1, 3],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Adulto: 10mg, VO/EV/IM, 3 vezes/dia (respeitar intervalo mínimo de 6 horas entre as doses).'
     },

@@ -8,7 +8,10 @@ export const hidroxidoAluminio: Farmaco = {
   classe: 'Antiácido Gástrico e Quelante de Fosfato (Composto Inorgânico de Alumínio)',
   dosePratica: 'Antiácido: Adultos: VO 5 a 10 mL da suspensão oral (ou 1 a 2 colheres de sobremesa / 1 a 2 comprimidos mastigáveis de 230 mg) cerca de 1 hora após as principais refeições e ao deitar (ou nos episódios de azia e queimação; máx. 60 a 80 mL/dia). Pediatria: 2,5 a 5 mL VO até 3 a 4x/dia. Respeitar intervalo mínimo de 2 horas entre o antiácido e outros medicamentos orais.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'azia, queimação epigástrica, dor de estômago ou pirose',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'azia, queimação epigástrica ou dor de estômago',
   acessoFonte: 'RENAME 2024: Hidróxido de alumínio suspensão oral 60 mg/mL ou 61,5 mg/mL (frasco 150 mL ou 240 mL) e comprimido mastigável 230 mg no Componente Básico da Atenção Primária à Saúde.',
   apresentacoes: [
     {

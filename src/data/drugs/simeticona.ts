@@ -8,9 +8,27 @@ export const simeticona: Farmaco = {
   classe: 'Antiflatulento (Agente antiespumante redutor de tensão superficial)',
   dosePratica: 'Adultos: 40 mg VO (1 comprimido) 3 a 4x/dia, ou 1 cápsula gelatinosa de 125 mg até 3 a 4x/dia (máx. 500 mg/dia); ou gotas 75 mg/mL: 13 a 16 gotas 3x/dia (ou até 40-80 gotas se gases intensos/preparo de exames). Pediatria (gotas 75 mg/mL): Lactentes: 3 a 5 gotas até 3x/dia; Crianças até 12 anos: 5 a 10 gotas até 3x/dia. Administrar após refeições e ao deitar.',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'gases, cólica intestinal ou distensão abdominal',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'gases ou cólicas intestinais',
   acessoFonte: 'RENAME 2024: Simeticona emulsão oral 75 mg/mL (frasco 10 mL ou 15 mL) no Componente Básico da Atenção Primária à Saúde. Ampla disponibilidade em farmácias comerciais e UBS.',
   apresentacoes: [
+    {
+      id: 'cp40',
+      forma: 'cp',
+      nome: 'Comprimido 40 mg',
+      comercial: 'Luftal / Simeticona',
+      conc: '40mg',
+      rotulo: 'Simeticona 40mg',
+      mg: 40,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Ingerir com um pouco de água, até de 8/8h se gases, após as refeições e ao deitar-se. Mastigar ou engolir inteiro conforme formulação.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (tomar 1 comprimido até de 8/8h se gases).'
+    },
     {
       id: 'gts75',
       forma: 'gotas',
@@ -26,21 +44,6 @@ export const simeticona: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Agitar bem antes de usar. Pode ser administrado diretamente na boca ou diluído em pequena quantidade de água, chá, suco ou leite. Administrar após as principais refeições ou mamadas e ao deitar.',
       obs: 'RENAME (Componente Básico). 1 mL = 25 gotas = 75 mg. Cada gota contém 3 mg de simeticona.'
-    },
-    {
-      id: 'cp40',
-      forma: 'cp',
-      nome: 'Comprimido 40 mg',
-      comercial: 'Luftal / Simeticona',
-      conc: '40mg',
-      rotulo: 'Simeticona 40mg',
-      mg: 40,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Ingerir com um pouco de água, após as refeições e ao deitar-se. Mastigar ou engolir inteiro conforme formulação.',
-      obs: 'Dose habitual em adultos: 40 mg 3 a 4 vezes ao dia.'
     },
     {
       id: 'cap125',

@@ -8,7 +8,10 @@ export const omeprazol: Farmaco = {
   classe: 'Inibidor da Bomba de Prótons (IBP)',
   dosePratica: 'Adulto: VO: 20 mg a 40 mg 1x/dia pela manhã em jejum (30 min antes do café) por 4 a 8 semanas. EV: 40 mg 1x/dia (ou 40 mg 12/12h em HDA ativa) com diluente próprio de 10 mL. Pediatria (≥ 1 ano): VO: 1 mg/kg/dia 1x/dia em jejum (10-20 kg: 10 mg; > 20 kg: 20 mg); EV: 0,5 a 1 mg/kg/dia.',
   fontes: { HSL: '27/09/2023', PSZERADO: '2025', EINP: '2024', BULA: '04/10/2026' },
-  snPadrao: 'epigastralgia, pirose ou refluxo',
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
+  snPadrao: 'azia, queimação ou dor de estômago',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): cápsula de liberação retardada 20 mg e frasco-ampola pó liofilizado 40 mg. Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -68,6 +71,8 @@ export const omeprazol: Farmaco = {
       padrao: 20,
       dosesDia: [1, 2],
       dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 28,
       fonte: 'HSL',
       trecho: 'Adulto VO: Úlcera péptica, refluxo gastroesofágico e esofagite: 20 a 40mg/dia em jejum. Zollinger-Ellison: iniciar com 60mg/dia.'
     },

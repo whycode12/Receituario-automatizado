@@ -26,7 +26,10 @@ export const sro: Farmaco = {
   classe: 'Solução de Reidratação Hidroeletrolítica Oral',
   dosePratica: 'Plano A (domiciliar): após cada evacuação líquida ou vômito, ingerir aos poucos: < 1 ano: 50 a 100 mL; 1 a 10 anos: 100 a 200 mL; > 10 anos e adultos: 200 a 400 mL (à vontade). Plano B (na unidade de saúde): 50 a 100 mL/kg em 4 a 6 horas em pequenos goles.',
   fontes: { MS: '2023', PSZERADO: '2025' },
-  snPadrao: 'evacuações diarreicas ou vômitos',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'após cada evacuação líquida ou vômito',
   acessoFonte: 'RENAME 2024 (Componente Básico): sais para reidratação oral em envelopes. Farmácia Popular: não consta.',
   apresentacoes: [
     {
@@ -72,6 +75,20 @@ export const sro: Farmaco = {
   ],
   regras: [
     {
+      pub: 'adulto',
+      se: { idadeMinAnos: 15 },
+      vias: ['VO'],
+      tipo: 'ml',
+      min: 200,
+      max: 400,
+      padrao: 300,
+      dosesDia: [1, 6],
+      dosesPadrao: 4,
+      intervaloFixo: 4,
+      fonte: 'MS / PSZERADO',
+      trecho: 'Adultos: 200 a 400 mL (cerca de 300 mL) após cada perda líquida ou vômito.'
+    },
+    {
       pub: 'ped',
       se: { idadeMaxMeses: 12 },
       vias: ['VO'],
@@ -109,19 +126,6 @@ export const sro: Farmaco = {
       dosesPadrao: 4,
       fonte: 'MS',
       trecho: 'Maiores de 10 anos: 200 a 400 mL (volume aceito) após cada perda.'
-    },
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 15 },
-      vias: ['VO'],
-      tipo: 'ml',
-      min: 200,
-      max: 400,
-      padrao: 250,
-      dosesDia: [1, 6],
-      dosesPadrao: 4,
-      fonte: 'MS',
-      trecho: 'Adultos: 200 a 400 mL após cada perda líquida ou vômito.'
     }
   ],
   contra: [

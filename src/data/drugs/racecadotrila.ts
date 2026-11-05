@@ -8,7 +8,10 @@ export const racecadotrila: Farmaco = {
   classe: 'Antidiarreico Antissecretor Puro (Inibidor da Encefalinase Intestinal)',
   dosePratica: 'Adultos: 100 mg VO (1 cápsula) no início dos sintomas, seguido de 100 mg de 8/8h antes das refeições até cessar a diarreia (máx. 400 mg/dia por até 7 dias). Pediatria (≥ 3 meses — envelopes/sachês): 1,5 mg/kg/dose VO de 8/8h misturado em água, alimentos ou mamadeira até cessar a diarreia (máx. 7 dias).',
   fontes: { HSL: '07/03/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'diarreia aguda ou fezes líquidas',
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'diarreia aguda',
   acessoFonte: 'Medicamento comercializado sob o nome de referência Tiorfan e Tiorfan Pediátrico / genéricos em farmácias privadas e serviços de saúde.',
   apresentacoes: [
     {

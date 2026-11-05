@@ -8,9 +8,27 @@ export const ondansetrona: Farmaco = {
   classe: 'Antiemético (Antagonista Seletivo dos Receptores 5-HT3 de Serotonina)',
   dosePratica: 'Adulto: VO: 4 a 8 mg (orodispersível ou comprimido) podendo repetir de 8/8h se náuseas/vômitos (máx. 24 mg/dia; em hepatopatia grave máx. 8 mg/dia). EV/IM: 4 a 8 mg EV lento em 2-5 min. Pediatria (≥ 6 meses): VO/EV: 0,15 mg/kg/dose (máx. 4 a 8 mg/dose) podendo repetir de 8/8h.',
   fontes: { HSL: '12/01/2021', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   snPadrao: 'náuseas ou vômitos',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar): comprimido 4 mg, comprimido 8 mg e solução injetável 2 mg/mL (ampola 2 mL e 4 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
+    {
+      id: 'cp_revestido_8',
+      forma: 'cp',
+      nome: 'Comprimido revestido 8 mg',
+      comercial: 'Zofran / Vonau',
+      conc: '8mg',
+      rotulo: 'Cloridrato de Ondansetrona 8mg comprimido',
+      mg: 8,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Ingerir com água, independente das refeições.',
+      obs: 'Dose padrão para adultos. RENAME.'
+    },
     {
       id: 'cp_orodispersivel_4',
       forma: 'cp',
@@ -25,20 +43,6 @@ export const ondansetrona: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Colocar na ponta da língua até dissolver em segundos e engolir com a própria saliva. Não mastigar.',
       obs: 'Comprimido de desintegração oral (orodispersível / Flash). Excelente tolerabilidade pediátrica e em náuseas ativas.'
-    },
-    {
-      id: 'cp_revestido_8',
-      forma: 'cp',
-      nome: 'Comprimido revestido 8 mg',
-      comercial: 'Zofran / Vonau',
-      conc: '8mg',
-      rotulo: 'Cloridrato de Ondansetrona 8mg comprimido',
-      mg: 8,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      obs: 'Ingerir com água, independente das refeições. RENAME.'
     },
     {
       id: 'cp_revestido_4',
@@ -94,8 +98,9 @@ export const ondansetrona: Farmaco = {
       min: 4,
       max: 8,
       padrao: 8,
-      dosesDia: [2, 3],
+      dosesDia: [1, 3],
       dosesPadrao: 3,
+      intervaloFixo: 8,
       fonte: 'HSL',
       trecho: 'Adulto VO: 4 a 8mg a cada 8h (ou 8mg a cada 12h; náuseas e vômitos no pós-operatório 16mg VO 1h antes).'
     },

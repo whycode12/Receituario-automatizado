@@ -8,7 +8,10 @@ export const hidroxidoMagnesio: Farmaco = {
   classe: 'Antiácido e Laxativo Osmótico (Composto Inorgânico de Magnésio)',
   dosePratica: 'Antiácido: Adultos: 5 a 15 mL (1 colher de chá a 1 colher de sopa = ~427 a 1.283 mg) até 3 a 4x/dia se azia ou má digestão (máx. 45 mL/dia por até 14 dias). Laxante (constipação ocasional): Adultos: 30 a 60 mL (2 a 4 colheres de sopa) em dose única ao deitar ou pela manhã (máx. 3 dias consecutivos). Pediatria (2 a 11 anos): Antiácido: 5 mL conforme necessário (máx. 30 mL/dia); Laxante: 2 a 5 anos: 5 a 15 mL/dia; 6 a 11 anos: 15 a 30 mL/dia. Respeitar intervalo de 2 horas de outros fármacos orais.',
   fontes: { HSL: '07/03/2023', BULA: '04/10/2026' },
-  snPadrao: 'azia, queimação gástrica ou constipação intestinal',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'azia, queimação gástrica ou constipação',
   acessoFonte: 'Medicamento isento de prescrição (MIP) e amplamente disponível em farmácias e unidades básicas sob a denominação Leite de Magnésia de Phillips e genéricos.',
   apresentacoes: [
     {

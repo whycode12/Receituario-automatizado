@@ -8,9 +8,26 @@ export const esomeprazol: Farmaco = {
   classe: 'Inibidor da Bomba de Prótons de 2ª geração (S-isômero purificado do omeprazol com maior biodisponibilidade e supressão ácida gástrica mais previsível e potente)',
   dosePratica: 'Adultos e adolescentes (≥ 12 anos): VO: 20 a 40 mg uma vez ao dia em jejum pela manhã por 4 a 8 semanas (esofagite erosiva de refluxo, DRGE e gastrite); erradicação de H. pylori: 20 mg 12/12h por 7 a 14 dias associado a amoxicilina e claritromicina. EV: 20 a 40 mg 1x/dia (ou 80 mg em bolus em 30 min seguido de 8 mg/h por 72h em HDA com prevenção de ressangramento pós-endoscópico). Pediatria: VO: 1 a 11 anos: < 20 kg = 10 mg 1x/dia; ≥ 20 kg = 10 a 20 mg 1x/dia por até 8 semanas. Comprimidos revestidos de liberação retardada (tecnologia MUPS): podem ser dispersos em meio copo de água sem gás para pacientes com disfagia ou sonda nasoentérica (ingerir os microgrânulos intactos sem mastigar ou esmagar).',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
   snPadrao: 'epigastralgia ou pirose',
   acessoFonte: 'RENAME 2024: Não consta na Relação Nacional de Medicamentos Essenciais do SUS (o SUS fornece omeprazol 20 mg no CBAF). Disponível amplamente no mercado farmacêutico comercial e padronizado em hospitais privados/conveniados. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
+    {
+      id: 'cp20',
+      forma: 'cp',
+      nome: 'Comprimido Revestido 20 mg',
+      comercial: 'Nexium / Esomex / Genérico',
+      conc: '20mg',
+      rotulo: 'Esomeprazol magnésico 20mg comprimido revestido',
+      mg: 20,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: false, fp: false },
+      obs: 'Padrão ambulatorial adulto PuxaFicha (Nexium 20mg 1 comprimido pela manhã em jejum). Indicado para manutenção de esofagite cicatrizada, alívio sintomático de DRGE e gastrite.'
+    },
     {
       id: 'cp40',
       forma: 'cp',
@@ -24,20 +41,6 @@ export const esomeprazol: Farmaco = {
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
       obs: 'Ingerir inteiro pela manhã com água. Pacientes com disfagia ou via sonda (SNE/GTM): dispersar o comprimido em meio copo de água sem gás (50 mL), mexer suavemente até os microgrânulos se soltarem e beber em até 30 min (NÃO mastigar nem esmagar os microgrânulos) (HSL / Bula).'
-    },
-    {
-      id: 'cp20',
-      forma: 'cp',
-      nome: 'Comprimido Revestido 20 mg',
-      comercial: 'Nexium / Esomex / Genérico',
-      conc: '20mg',
-      rotulo: 'Esomeprazol magnésico 20mg comprimido revestido',
-      mg: 20,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      obs: 'Indicado para manutenção de esofagite cicatrizada, alívio sintomático de DRGE e pediatria (1 a 11 anos). Dispersível em água sem gás se necessário.'
     },
     {
       id: 'fap40',
@@ -75,12 +78,12 @@ export const esomeprazol: Farmaco = {
       tipo: 'mg',
       min: 20,
       max: 40,
-      padrao: 40,
+      padrao: 20,
       dosesDia: [1, 2],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 56,
-      fonte: 'HSL',
+      duracaoMaxDias: 28,
+      fonte: 'HSL / PUXAFICHA',
       trecho: 'HSL: Adulto Oral: 20 a 40mg 1 vez ao dia por 4 a 8 semanas para esofagite de refluxo e DRGE (manutenção: 20mg/dia; erradicação de H. pylori: 20mg 12/12h por 7 a 14 dias associado a amoxicilina e claritromicina).'
     },
     {

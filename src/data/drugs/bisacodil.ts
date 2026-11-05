@@ -8,7 +8,10 @@ export const bisacodil: Farmaco = {
   classe: 'Laxativo Estimulante por Contato (Derivado do Difenilmetano)',
   dosePratica: 'Constipação: Adultos e > 10 anos: 5 a 10 mg VO (1 a 2 drágeas) em dose única à noite ao deitar (início de ação em 6 a 12 horas; máx. 10 mg/dia usual, até 20 mg em preparo). Pediatria (4 a 10 anos): 5 mg VO (1 drágea) em dose única à noite. Engolir inteira sem mastigar e NUNCA ingerir junto com leite ou antiácidos. Não usar por mais de 5 a 7 dias seguidos.',
   fontes: { HSL: '07/03/2023', BULA: '04/10/2026' },
-  snPadrao: 'constipação intestinal ou preparo de exames',
+  modoPadrao: 'sn',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'constipação intestinal',
   acessoFonte: 'RENAME 2024: drágea / comprimido revestido 5 mg no Componente Básico da Atenção Primária. Ampla disponibilidade em farmácias comerciais sob a marca de referência Dulcolax e genéricos.',
   apresentacoes: [
     {
@@ -39,8 +42,8 @@ export const bisacodil: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 7,
-      fonte: 'HSL',
+      duracaoMaxDias: 3,
+      fonte: 'HSL / PUXAFICHA',
       trecho: 'Adultos e crianças > 10 anos (Constipação): 5 a 10 mg (1 a 2 drágeas), VO, 1 vez ao dia à noite ao deitar (máx. 10 mg/dia para constipação crônica/ocasional; até 20 mg na noite anterior em preparo de exames/cirurgias).'
     },
     {

@@ -8,9 +8,27 @@ export const cimetidina: Farmaco = {
   classe: 'Antiulceroso e Inibidor da Secreção Ácida Gástrica (Antagonista dos Receptores H2 da Histamina)',
   dosePratica: 'Adultos: VO 200 a 400 mg 2 a 4x/dia (ou 800 mg em dose única ao deitar; máx. 2.400 mg/dia); EV/IM 300 mg (1 ampola de 2 mL = 300 mg) a cada 4 a 6 horas (injetar EV lento em ≥ 2 min ou diluído em 20-100 mL de SF/SG5% em 30 min). Pediatria: EV/VO 20 a 25 mg/kg/dia dividido de 4/4h a 6/6h (neonatos: 10 a 15 mg/kg/dia). Alerta: potente inibidor do citocromo P450 (múltiplas interações medicamentosas).',
   fontes: { HSL: '07/03/2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 28,
+  usoContinuoPadrao: false,
   snPadrao: 'epigastralgia, pirose ou queimação gástrica',
   acessoFonte: 'RENAME 2024: Cimetidina comprimido 200 mg / 400 mg no Componente Básico e solução injetável 150 mg/mL (ampola 2 mL = 300 mg) no Componente Hospitalar.',
   apresentacoes: [
+    {
+      id: 'cp400',
+      forma: 'cp',
+      nome: 'Comprimido 400 mg',
+      comercial: 'Tagamet / Cimetidina 400mg',
+      conc: '400mg',
+      rotulo: 'Cimetidina 400mg comprimido',
+      mg: 400,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Ingerir com água às refeições ou antes da primeira refeição e antes do jantar, por 4 semanas.',
+      obs: 'Padrão ambulatorial adulto PuxaFicha (Tagamet 400mg 1 comprimido 12/12h por 4 semanas). RENAME (Componente Básico).'
+    },
     {
       id: 'cp200',
       forma: 'cp',
@@ -25,21 +43,6 @@ export const cimetidina: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Ingerir com um copo de água junto com as refeições ou ao deitar-se.',
       obs: 'RENAME (Componente Básico). Antagonista H2 clássico.'
-    },
-    {
-      id: 'cp400',
-      forma: 'cp',
-      nome: 'Comprimido 400 mg',
-      comercial: 'Tagamet / Cimetidina 400mg',
-      conc: '400mg',
-      rotulo: 'Cimetidina 400mg comprimido',
-      mg: 400,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Ingerir com água às refeições ou dose única ao deitar.',
-      obs: 'RENAME (Componente Básico).'
     },
     {
       id: 'amp300',
@@ -69,7 +72,8 @@ export const cimetidina: Farmaco = {
       dosesDia: [2, 4],
       dosesPadrao: 2,
       intervaloFixo: 12,
-      fonte: 'HSL',
+      duracaoMaxDias: 28,
+      fonte: 'HSL / PUXAFICHA',
       trecho: 'Adulto (VO): 200mg a 400mg, VO, 2 a 4 vezes ao dia (às refeições e ao deitar), ou dose única diária de 800mg ao deitar para úlcera péptica (dose diária usual: 800 a 1.600mg).'
     },
     {
