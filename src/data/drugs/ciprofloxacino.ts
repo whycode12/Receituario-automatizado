@@ -8,7 +8,10 @@ export const ciprofloxacino: Farmaco = {
   classe: 'Antimicrobiano, Fluoroquinolona de amplo espectro',
   dosePratica: 'Adulto: VO: 500 mg de 12/12h por 7 a 14 dias (pielonefrite, ITU complicada, prostatite; cistite simples 250-500 mg 12/12h por 3 dias). EV: 400 mg de 12/12h em infusão de 60 min. Pediatria: uso excepcional restrito (20 a 30 mg/kg/dia divididos de 12/12h; máx. adulto).',
   fontes: { HSL: '27/09/2022', PSZERADO: '2025', EINA: '2024', BULA: '04/10/2026' },
-  snPadrao: 'infecção bacteriana suscetível',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): comprimido 500 mg e solução injetável 2 mg/mL bolsa 100 mL (200 mg). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
     {
@@ -79,8 +82,10 @@ export const ciprofloxacino: Farmaco = {
       padrao: 500,
       dosesDia: [2, 2],
       dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 7,
       fonte: 'HSL',
-      trecho: 'Adulto VO: 250-750mg a cada 12h (máx 1500mg/dia).'
+      trecho: 'PuxaFicha / HSL: Ciprofloxacino 500mg: Tomar 1 comprimido de 12/12h por 7 dias (250-750mg a cada 12h).'
     },
     {
       pub: 'adulto',

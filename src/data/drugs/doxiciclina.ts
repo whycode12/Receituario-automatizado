@@ -8,6 +8,9 @@ export const doxiciclina: Farmaco = {
   classe: 'Antibacteriano, Derivado de Tetraciclina de amplo espectro com ação contra bactérias atípicas, Rickettsias, Chlamydia e espiroquetas',
   dosePratica: 'Adulto: VO: 100 mg a cada 12 horas por 7 dias (uretrite/cervicite por Chlamydia, Mycoplasma e pneumonia atípica; sífilis secundária/latente em alérgicos à penicilina: 100 mg 12/12h por 14 a 28 dias; febre maculosa: 100 mg 12/12h por 7 a 14 dias). Ingerir obrigatoriamente com copo cheio de água (150-200 mL), preferencialmente com refeição e NUNCA deitar-se por pelo menos 30 a 60 minutos após a tomada (risco severo de esofagite ulcerativa química). Pediatria (> 8 anos): < 45 kg: 2,2 mg/kg a cada 12 horas (máx 4,4 mg/kg/dia); > 45 kg: 100 mg a cada 12 horas (dose de adulto). Contraindicado em menores de 8 anos e gestantes (risco de pigmentação dentária amarelada/castanha e hipoplasia de esmalte definitiva, exceto febre maculosa por risco de vida).',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 14,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Comprimido 100 mg e comprimido solúvel 100 mg constam no Componente Estratégico da Assistência Farmacêutica (CESAF) do SUS para programas de IST, Febre Maculosa e Zoonoses. Farmácia Popular: Não consta.',
   apresentacoes: [

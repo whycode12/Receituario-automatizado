@@ -8,6 +8,9 @@ export const ciprofloxacinoDexametasona: Farmaco = {
   classe: 'Associação tópica ocular de antibacteriano fluoroquinolona (ciprofloxacino 0,35%) e corticosteroide anti-inflamatório potente (dexametasona 0,1%)',
   dosePratica: 'Adultos e crianças (≥ 1 ano): Uso Oftálmico Exclusivo. Suspensão oftálmica (colírio 3,5 mg + 1 mg / mL): Pingar 1 a 2 gotas no(s) olho(s) afetado(s) a cada 4 horas (4 a 6 vezes ao dia) por 7 dias (em infecções graves, pode-se iniciar com 1 a 2 gotas a cada 2 horas nas primeiras 24 a 48h). Pomada oftálmica (3,5 mg + 1 mg / g): Aplicar uma pequena quantidade (~1 a 1,5 cm) no saco conjuntival inferior 3 a 4 vezes ao dia ou ao deitar associada ao colírio diurno. ADVERTÊNCIA CRUCIAL: Uso estritamente ocular. CONTRAINDICADO em ceratite por herpes simples dendrítica, infecções oculares fúngicas ou virais (risco de perfuração de córnea). Não usar lentes de contato durante o tratamento.',
   fontes: { BULA: '04/10/2026', HSL: '05/03/2025' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção e inflamação ocular',
   acessoFonte: 'RENAME 2024: Não consta na Relação Nacional de Medicamentos Essenciais (disponibilizada no SUS via consultas especializadas em oftalmologia ou aquisição direta em farmácias comerciais sob retenção de receita médica). Farmácia Popular: Não consta.',
   apresentacoes: [
@@ -53,8 +56,8 @@ export const ciprofloxacinoDexametasona: Farmaco = {
       max: 2, // 2 gotas
       padrao: 1,
       dosesDia: [4, 6],
-      dosesPadrao: 6,
-      intervaloFixo: 4,
+      dosesPadrao: 4,
+      intervaloFixo: 6,
       duracaoMaxDias: 7,
       fonte: 'BULA',
       trecho: 'Bula Cilodex: Instilar 1 a 2 gotas no saco conjuntival a cada 4 horas (6 vezes ao dia) por aproximadamente 7 dias (nas primeiras 24 a 48h pode-se instilar a cada 2h a critério médico).'

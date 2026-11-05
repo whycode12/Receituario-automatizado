@@ -8,7 +8,10 @@ export const nitazoxanida: Farmaco = {
   classe: 'Antiparasitário e antiviral sintético de amplo espectro da classe dos tiazolidas (inibe a enzima piruvato ferredoxina oxidorredutase - PFOR - e a replicação viral)',
   dosePratica: 'Adultos e adolescentes (≥ 12 anos): VO: 500 mg a cada 12 horas por 3 dias consecutivos (ingerir obrigatoriamente com alimentos/refeições). Crianças (≥ 1 ano a 11 anos): VO: 7,5 mg/kg por dose (0,375 mL/kg da suspensão de 20 mg/mL) a cada 12 horas por 3 dias consecutivos ingerido com alimentos (teto pediátrico: 500 mg/dose). Indicada para gastroenterites virais (rotavírus e norovírus), helmintíases múltiplas, amebíase, giardíase e criptosporidíase. Advertência: Colore a urina e o suor de amarelo-esverdeado fluorescente (inócuo). Contraindicado em menores de 1 ano, insuficiência hepática e renal graves.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'gastroenterite ou parasitose intestinal',
+  modoPadrao: 'continuo',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'parasitose ou gastroenterite',
   acessoFonte: 'RENAME 2024: Não consta na Relação Nacional de Medicamentos Essenciais do SUS (o SUS fornece albendazol, ivermectina e metronidazol no CBAF). Sujeito a controle especial (Lista C1 da Portaria 344/98 / RDC ANVISA). Farmácia Popular: Não consta.',
   apresentacoes: [
     {

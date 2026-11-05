@@ -8,6 +8,9 @@ export const sulfadiazinaDePrata: Farmaco = {
   classe: 'Antimicrobiano Tópico Bactericida de Amplo Espectro',
   dosePratica: 'Queimaduras de 2º Grau e Feridas Infectadas: Limpar a área lesionada com soro fisiológico 0,9% em jato suave sem friccionar. Aplicar uma camada de 1 a 2 mm de espessura do creme sobre toda a lesão 1 a 2 vezes ao dia (a cada 12 ou 24 horas). Cobrir com gaze estéril e atadura de crepom. Trocar o curativo a cada 12 ou 24 horas até a reepitelização completa. Contraindicado em recém-nascidos e lactentes menores de 2 meses e gestantes a termo.',
   fontes: { HSL: '14/02/2017', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'troca de curativo de queimadura ou ferida com risco de infecção',
   acessoFonte: 'RENAME 2024 / Farmácia Básica do SUS: Creme 1% disponível gratuitamente em Unidades Básicas de Saúde, salas de curativo e UPAs (Dermazine e genéricos).',
   apresentacoes: [
@@ -65,9 +68,9 @@ export const sulfadiazinaDePrata: Farmaco = {
       max: 1,
       padrao: 1,
       dosesDia: [1, 2],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
-      duracaoMaxDias: 21,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 14,
       fonte: 'HSL / BULA',
       trecho: 'HSL / Bula Dermazine: Aplicar 1 a 2 vezes ao dia (a cada 12 ou 24 horas) em camada de 1 a 2 mm até a completa cicatrização da ferida.'
     },

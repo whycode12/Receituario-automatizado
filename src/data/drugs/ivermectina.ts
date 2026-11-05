@@ -8,7 +8,10 @@ export const ivermectina: Farmaco = {
   classe: 'Antiparasitário de amplo espectro da classe das avermectinas (atua nos canais de cloro dependentes de glutamato dos neurônios e células musculares dos invertebrados)',
   dosePratica: 'Adultos e crianças com peso ≥ 15 kg (ou > 5 anos): VO: 200 mcg/kg (0,2 mg/kg) em DOSE ÚNICA (esquema prático por faixas de peso com comprimidos de 6 mg: 15-24 kg = 1/2 cp; 25-35 kg = 1 cp; 36-50 kg = 1 e 1/2 cp; 51-65 kg = 2 cp; 66-79 kg = 2 e 1/2 cp; ≥ 80 kg = 3 cp ou 200 mcg/kg). Escabiose (sarna) e pediculose (piolho): repetir a mesma dose única após 7 a 14 dias para erradicar ovos que eclodiram. Tomar com água, em jejum (1 a 2 horas antes de refeição) para parasitoses luminais/escabiose ou com alimentos ricos em gorduras para absorção sistêmica tecidual. Contraindicado em menores de 15 kg, crianças < 5 anos e gestantes.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'parasitose ou escabiose/pediculose',
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
+  snPadrao: 'escabiose ou parasitose',
   acessoFonte: 'RENAME 2024: Comprimido 6 mg consta no Componente Básico da Assistência Farmacêutica (CBAF) e Componente Estratégico (CESAF - Filariose e Doenças Negligenciadas) do SUS. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
     {

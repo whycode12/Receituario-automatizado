@@ -8,6 +8,9 @@ export const cefalexina: Farmaco = {
   classe: 'Antimicrobiano, Cefalosporina de 1ª Geração',
   dosePratica: 'Adulto: 500 mg VO de 6/6h por 7 a 10 dias (infecções de pele/partes moles ou ITU não complicada). Pediatria (> 1 ano): 25 a 50 mg/kg/dia VO divididos de 6/6h (máx. 100 mg/kg/dia ou 4 g/dia).',
   fontes: { HSL: '12/06/2019', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): cápsula/comprimido 500 mg e pó para suspensão oral 50 mg/mL (250 mg/5 mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
@@ -51,8 +54,10 @@ export const cefalexina: Farmaco = {
       padrao: 500,
       dosesDia: [4, 4],
       dosesPadrao: 4,
+      intervaloFixo: 6,
+      duracaoMaxDias: 7,
       fonte: 'HSL',
-      trecho: 'Adulto Oral: 250-500mg a cada 6 horas.'
+      trecho: 'PuxaFicha / HSL: Cefalexina 500mg: Tomar 1 comprimido de 6/6h por 7 dias (250-500mg a cada 6 horas).'
     },
     {
       pub: 'ped',

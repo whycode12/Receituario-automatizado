@@ -18,6 +18,9 @@ export const ciprofloxacinoOftalmico: Farmaco = {
   classe: 'Antibacteriano Oftálmico Fluoroquinolona de Amplo Espectro (Bactericida)',
   dosePratica: 'Conjuntivite Bacteriana Aguda (PSZerado 2025 pág. 149): Pingar 1 a 2 gotas no olho acometido a cada 2 horas (enquanto acordado) nos primeiros 2 dias; após esse período, pingar a cada 4 horas por mais 5 dias (total 7 dias de tratamento). Droga de escolha em usuários de lentes de contato (cobertura contra Pseudomonas aeruginosa). Corticosteroides tópicos são contraindicados na fase bacteriana aguda.',
   fontes: { PSZERADO: '2025', MS: '2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação nos olhos acometidos',
   acessoFonte: 'Padronizado na RENAME / Farmácia Básica do SUS e amplamente comercializado (Ciloxan e genéricos frasco de 5 mL).',
   apresentacoes: [
@@ -50,9 +53,9 @@ export const ciprofloxacinoOftalmico: Farmaco = {
       max: 2,
       padrao: 1,
       dosesDia: [4, 8],
-      dosesPadrao: 6,
-      intervaloFixo: 4,
-      duracaoMaxDias: 10,
+      dosesPadrao: 4,
+      intervaloFixo: 6,
+      duracaoMaxDias: 7,
       fonte: 'PSZERADO / CBO / BULA',
       trecho: 'PSZerado pág. 149: 1 a 2 gotas a cada 2 horas nos primeiros 2 dias; após, a cada 4 horas por mais 5 dias (total 7 dias).'
     },

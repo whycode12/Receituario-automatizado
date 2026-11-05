@@ -8,6 +8,9 @@ export const eritromicina: Farmaco = {
   classe: 'Antibacteriano, Macrolídeo de 1ª geração com ação bacteriostática contra Gram-positivos e bactérias atípicas, além de efeito pró-cinético gastrointestinal',
   dosePratica: 'Adulto: VO: 250 a 500 mg a cada 6 horas (ou 500 mg de 12/12h) por 7 a 14 dias (coqueluche: 500 mg 6/6h por 14 dias). Administrar preferencialmente com alimentos para diminuir dor epigástrica e cólicas (evitar leite e bebidas ácidas na hora da tomada). Pediatria: VO: 30 a 50 mg/kg/dia divididos em 3 ou 4 tomadas (a cada 6 a 8 horas) por 7 a 14 dias (máximo 2 g/dia). Contraindicado em neonatos < 2 semanas pelo risco de estenose hipertrófica do piloro e em pacientes com insuficiência hepática ou histórico de icterícia colestática prévia induzida por estolato de eritromicina.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Comprimido 500 mg e suspensão oral 50 mg/mL (250 mg / 5 mL) constam no Componente Básico da Assistência Farmacêutica (CBAF) do SUS. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
@@ -53,7 +56,7 @@ export const eritromicina: Farmaco = {
       dosesDia: [2, 4],
       dosesPadrao: 4,
       intervaloFixo: 6,
-      duracaoMaxDias: 14,
+      duracaoMaxDias: 10,
       fonte: 'HSL',
       trecho: 'HSL: Adulto Oral: 250-500mg a cada 6 a 12 horas (Dose habitual: 500mg a cada 6 horas ou 500mg a cada 12 horas por 7 a 14 dias; máx 4g/dia).'
     },
@@ -69,7 +72,7 @@ export const eritromicina: Farmaco = {
       dosesDia: [3, 4],
       dosesPadrao: 4,
       intervaloFixo: 6,
-      duracaoMaxDias: 14,
+      duracaoMaxDias: 10,
       fonte: 'HSL',
       trecho: 'HSL: Pediatria Oral: 30-50mg/kg/dia divididos em 2 a 4 doses (Habitual: 40mg/kg/dia a cada 6 ou 8 horas; máximo 2g/dia).'
     }

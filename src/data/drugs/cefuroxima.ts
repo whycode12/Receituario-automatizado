@@ -8,6 +8,9 @@ export const cefuroxima: Farmaco = {
   classe: 'Antibacteriano, Cefalosporina de 2ª geração com atividade ampliada contra Gram-positivos e Gram-negativos (incluindo produtores de betalactamase)',
   dosePratica: 'Adulto: VO: 250 a 500 mg a cada 12 horas por 7 a 10 dias (infecções respiratórias, sinusite, otite, ITU e pele), ingerido preferencialmente após as refeições. EV/IM: 750 mg a 1,5 g a cada 8 horas (infundido em 15 a 30 min ou direto lento em 3-5 min). Pediatria (> 3 meses): VO: 20 a 30 mg/kg/dia divididos a cada 12 horas (máx 500 mg/dia em infecções leves/moderadas); EV: 75 a 150 mg/kg/dia divididos a cada 8 horas.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Não consta na Relação Nacional de Medicamentos Essenciais (uso regulado em hospitais conforme REMUME local). Farmácia Popular: Não consta.',
   apresentacoes: [

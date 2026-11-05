@@ -8,9 +8,26 @@ export const amoxicilinaClavulanato: Farmaco = {
   classe: 'Antimicrobiano, Penicilina associada a Inibidor de Beta-Lactamase',
   dosePratica: 'Adulto: 875 + 125 mg (BD) VO de 12/12h (ou 500 + 125 mg VO de 8/8h) no início das refeições por 7 a 10 dias. EV: 1 g + 200 mg a cada 8h. Pediatria: Formulação BD (400+57mg/5mL): 25 a 45 mg/kg/dia VO divididos de 12/12h; Convencional (250+62,5mg/5mL): 20 a 40 mg/kg/dia divididos de 8/8h.',
   fontes: { HSL: '31/03/2022', PSZERADO: '2025', EINP: '2024' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido 500 mg + 125 mg, comprimido 875 mg + 125 mg, suspensão oral 50 mg/mL + 12,5 mg/mL (250+62,5mg/5mL) e suspensão oral 80 mg/mL + 11,4 mg/mL (400+57mg/5mL). Farmácia Popular: não consta no elenco.',
   apresentacoes: [
+    {
+      id: 'cp500',
+      forma: 'cp',
+      nome: 'Comprimido 500 mg + 125 mg',
+      comercial: 'Clavulin',
+      conc: '500mg + 125mg',
+      rotulo: 'Amoxicilina + Clavulanato 500mg + 125mg',
+      mg: 500,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa (30 comprimidos)',
+      acesso: { rename: true, fp: false },
+      obs: 'Apresentação padrão consagrada (PuxaFicha / RENAME). Posologia habitual de 8 em 8 horas por 10 dias.'
+    },
     {
       id: 'cp875',
       forma: 'cp',
@@ -23,21 +40,7 @@ export const amoxicilinaClavulanato: Farmaco = {
       vias: ['VO'],
       disp: '1 caixa',
       acesso: { rename: true, fp: false },
-      obs: 'Administrar no início da refeição para minimizar intolerância gastrintestinal. Não partir.'
-    },
-    {
-      id: 'cp500',
-      forma: 'cp',
-      nome: 'Comprimido 500 mg + 125 mg',
-      comercial: 'Clavulin',
-      conc: '500mg + 125mg',
-      rotulo: 'Amoxicilina + Clavulanato 500mg + 125mg',
-      mg: 500,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      obs: 'Padronizado na RENAME. Posologia habitual de 8 em 8 horas.'
+      obs: 'Formulação BD (de 12/12h). Administrar no início da refeição para minimizar intolerância gastrintestinal. Não partir.'
     },
     {
       id: 'susp400',
@@ -107,11 +110,13 @@ export const amoxicilinaClavulanato: Farmaco = {
       tipo: 'mg',
       min: 500,
       max: 875,
-      padrao: 875,
+      padrao: 500,
       dosesDia: [2, 3],
-      dosesPadrao: 2,
+      dosesPadrao: 3,
+      intervaloFixo: 8,
+      duracaoMaxDias: 10,
       fonte: 'HSL',
-      trecho: 'Adulto: Oral: 250-875mg a cada 8-12 horas;'
+      trecho: 'PuxaFicha / HSL: Clavulin 500mg+125mg: Tomar 1 comprimido de 8/8h por 10 dias (ou 875mg+125mg de 12/12h).'
     },
     {
       pub: 'adulto',

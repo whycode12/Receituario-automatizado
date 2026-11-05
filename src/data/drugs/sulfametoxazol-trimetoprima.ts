@@ -8,9 +8,26 @@ export const sulfametoxazolTrimetoprima: Farmaco = {
   classe: 'Antibacteriano (associação sinérgica de sulfonamida + inibidor da di-hidrofolato redutase)',
   dosePratica: 'Adulto: VO: 800/160 mg (1 comprimido F ou 2 comprimidos simples) a cada 12 horas por 3 a 14 dias conforme o foco clínico (ITU não complicada: 3 a 5 dias; prostatite/pielonefrite: 14 dias). EV: 8 a 10 mg/kg/dia de Trimetoprima a cada 12h (diluir cada ampola de 5 mL em 75 a 125 mL de SF 0,9% ou SG 5% e infundir em 60 a 90 min). Pediatria (> 6 semanas): 40 mg/kg/dia de SMX + 8 mg/kg/dia de TMP divididos de 12/12h (suspensão 40+8 mg/mL: 1 mL/kg/dia dividido em 2 tomadas de 0,5 mL/kg). Contraindicado em menores de 6 semanas.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Comprimido 400+80 mg, suspensão oral 40+8 mg/mL e ampola injetável 80+16 mg/mL constam no Componente Básico da Assistência Farmacêutica (CBAF) do SUS. Farmácia Popular: não consta no elenco comercial.',
   apresentacoes: [
+    {
+      id: 'cp400',
+      forma: 'cp',
+      nome: 'Comprimido 400 mg + 80 mg',
+      comercial: 'Bactrim',
+      conc: '400/80mg',
+      rotulo: 'Sulfametoxazol + trimetoprima 400/80mg',
+      mg: 80,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa (28 comprimidos)',
+      acesso: { rename: true, fp: false },
+      obs: 'Consta na RENAME (CBAF). Apresentação padrão consagrada (PuxaFicha). Dose usual de adulto: 2 comprimidos a cada 12 horas por 7 dias.'
+    },
     {
       id: 'cp800',
       forma: 'cp',
@@ -24,20 +41,6 @@ export const sulfametoxazolTrimetoprima: Farmaco = {
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
       obs: 'Dose dupla (Forte). Ingerir com água, preferencialmente após as refeições. 1 comprimido = 800 mg SMX + 160 mg TMP (PSZerado / HSL).'
-    },
-    {
-      id: 'cp400',
-      forma: 'cp',
-      nome: 'Comprimido 400 mg + 80 mg',
-      comercial: 'Bactrim',
-      conc: '400/80mg',
-      rotulo: 'Sulfametoxazol + trimetoprima 400/80mg',
-      mg: 80,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      obs: 'Consta na RENAME (CBAF). Dose usual de adulto: 2 comprimidos a cada 12 horas (totalizando 800/160 mg por tomada).'
     },
     {
       id: 'susp40',
@@ -73,6 +76,22 @@ export const sulfametoxazolTrimetoprima: Farmaco = {
       pub: 'adulto',
       se: { idadeMinAnos: 12 },
       vias: ['VO'],
+      apres: ['cp400'],
+      tipo: 'mg',
+      min: 160,
+      max: 160,
+      padrao: 160,
+      dosesDia: [2, 2],
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 7,
+      fonte: 'HSL',
+      trecho: 'PuxaFicha / HSL: Bactrim 400/80mg: Tomar 2 comprimidos (160 mg TMP) de 12/12h por 7 dias.'
+    },
+    {
+      pub: 'adulto',
+      se: { idadeMinAnos: 12 },
+      vias: ['VO'],
       apres: ['cp800'],
       tipo: 'mg',
       min: 160,
@@ -83,23 +102,7 @@ export const sulfametoxazolTrimetoprima: Farmaco = {
       intervaloFixo: 12,
       duracaoMaxDias: 14,
       fonte: 'PSZERADO',
-      trecho: 'PSZerado p. 103 e 189: Sulfametoxazol + trimetoprima [Bactrim] 800 + 160 mg: Tomar 1 comprimido VO a cada 12 horas por 3 a 5 dias (ITU) ou até 14 dias (HSL: 800/160 mg 12/12h).'
-    },
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 12 },
-      vias: ['VO'],
-      apres: ['cp400'],
-      tipo: 'mg',
-      min: 160,
-      max: 160,
-      padrao: 160,
-      dosesDia: [2, 2],
-      dosesPadrao: 2,
-      intervaloFixo: 12,
-      duracaoMaxDias: 14,
-      fonte: 'HSL',
-      trecho: 'HSL: Dose usual adulto: 800mg SMX + 160mg TMP a cada 12h (equivalente a 2 comprimidos de 400/80mg a cada 12h).'
+      trecho: 'PSZerado p. 103 e 189: Sulfametoxazol + trimetoprima [Bactrim F] 800 + 160 mg: Tomar 1 comprimido VO a cada 12 horas por 3 a 5 dias (ITU) ou até 14 dias (HSL: 800/160 mg 12/12h).'
     },
     {
       pub: 'adulto',

@@ -8,6 +8,9 @@ export const penicilinaBenzatina: Farmaco = {
   classe: 'Antibiótico betalactâmico, penicilina natural de depósito',
   dosePratica: 'Faringoamigdalite estreptocócica: Adultos e crianças > 27 kg: 1.200.000 UI IM dose única; Crianças < 27 kg: 600.000 UI IM dose única. Sífilis primária/secundária/latente recente: 2.400.000 UI IM dose única (1 ampola de 1.200.000 UI em cada glúteo). Sífilis tardia/latente tardia: 2.400.000 UI IM por semana por 3 semanas (total 7.200.000 UI). Administração EXCLUSIVA por via intramuscular profunda no glúteo; NUNCA administrar por via intravenosa.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'agora',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Benzilpenicilina benzatina pó para suspensão injetável 600.000 UI e 1.200.000 UI consta no Componente Básico da Assistência Farmacêutica (CBAF) para uso em UBS/postos de saúde. Farmácia Popular: não consta no elenco comercial.',
   apresentacoes: [

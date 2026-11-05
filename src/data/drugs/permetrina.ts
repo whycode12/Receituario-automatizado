@@ -18,6 +18,9 @@ export const permetrina: Farmaco = {
   classe: 'Ectoparasiticida Piretroide Tópico (Escabicida e Pediculicida)',
   dosePratica: '1. Escabiose (Sarna - Permetrina 5%): Aplicar à noite do pescoço para baixo em todo o corpo limpo e seco (inclusive sob as unhas, axilas e virilhas). Deixar agir por 8 a 14 horas e retirar no banho pela manhã. REAPLICAR OBRIGATORIAMENTE APÓS 7 A 14 DIAS para matar ácaros recém-nascidos. Droga de escolha na gestação, lactação e crianças < 15 kg. Tratar todos os contatos domiciliares simultaneamente. 2. Pediculose (Piolhos - Permetrina 1%): Aplicar no couro cabeludo e fios úmidos após lavar com xampu neutro, deixar agir por 10 minutos, enxaguar e passar pente fino. Reaplicar após 7 dias.',
   fontes: { PSZERADO: '2025', MS: '2023', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação noturna para escabiose ou aplicação capilar para pediculose',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Permetrina loção 5% (escabicida) e permetrina loção 1% (pediculicida) amplamente disponíveis em Unidades Básicas de Saúde.',
   apresentacoes: [

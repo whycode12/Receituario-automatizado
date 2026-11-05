@@ -8,9 +8,26 @@ export const metronidazol: Farmaco = {
   classe: 'Antibacteriano e antiparasitário sintético derivado nitroimidazólico com atividade contra anaeróbios e protozoários',
   dosePratica: 'Adulto: VO: 400 mg a cada 8 horas por 7 a 10 dias (infecções anaeróbias e amebíase) ou 250 mg a cada 8 horas por 5 dias (giardíase). Vaginose bacteriana / Tricomoníase: 400 mg VO 12/12h por 7 dias ou 2 g VO dose única. EV: 500 mg (bolsa de 100 mL a 5 mg/mL pronta para uso) infundido em 30 a 60 min a cada 8 horas (ou 6-8h). Pediatria: 30 a 50 mg/kg/dia VO divididos em 3 tomadas (8/8h) por 5 a 10 dias; EV: dose de manutenção de 7,5 mg/kg a cada 8 horas (22,5 mg/kg/dia). Advertência crucial: Efeito antabuse/dissulfiram grave com álcool (abstenção obrigatória durante o tratamento e até 48-72h após).',
   fontes: { HSL: '08/12/2021', EINA: '2026', EINP: '2026', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'infecção por anaeróbios ou protozoários',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'infecção bacteriana ou parasitária',
   acessoFonte: 'RENAME 2024: Comprimido 250 mg, suspensão oral 40 mg/mL (benzoilmetronidazol eq. 25 mg/mL de metronidazol base), gel vaginal 100 mg/g e solução injetável 5 mg/mL constam no Componente Básico da Assistência Farmacêutica (CBAF) do SUS. Farmácia Popular: não consta no elenco comercial.',
   apresentacoes: [
+    {
+      id: 'cp250',
+      forma: 'cp',
+      nome: 'Comprimido 250 mg',
+      comercial: 'Flagyl / Genérico',
+      conc: '250mg',
+      rotulo: 'Metronidazol 250mg',
+      mg: 250,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa (28 comprimidos)',
+      acesso: { rename: true, fp: false },
+      obs: 'Consta na RENAME (CBAF). Apresentação padrão consagrada (PuxaFicha). Posologia: 2 comprimidos (500mg) a cada 12 horas por 7 dias.'
+    },
     {
       id: 'cp400',
       forma: 'cp',
@@ -23,21 +40,7 @@ export const metronidazol: Farmaco = {
       vias: ['VO'],
       disp: '1 caixa',
       acesso: { rename: false, fp: false },
-      obs: 'Apresentação habitual no mercado brasileiro para adultos. Ingerir com água durante ou após as refeições para diminuir desconforto gástrico (HSL / Bula).'
-    },
-    {
-      id: 'cp250',
-      forma: 'cp',
-      nome: 'Comprimido 250 mg',
-      comercial: 'Flagyl / genérico',
-      conc: '250mg',
-      rotulo: 'Metronidazol 250mg',
-      mg: 250,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: true, fp: false },
-      obs: 'Consta na RENAME (CBAF). Apresentação padrão para tratamento de giardíase e esquemas fracionados. Ingerir com alimentos.'
+      obs: 'Apresentação habitual comercial. Ingerir com água durante ou após as refeições para diminuir desconforto gástrico (HSL / Bula).'
     },
     {
       id: 'susp40',
@@ -89,13 +92,13 @@ export const metronidazol: Farmaco = {
       tipo: 'mg',
       min: 250,
       max: 750,
-      padrao: 400,
+      padrao: 500,
       dosesDia: [2, 3],
-      dosesPadrao: 3,
-      intervaloFixo: 8,
-      duracaoMaxDias: 10,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 7,
       fonte: 'HSL',
-      trecho: 'HSL: VO: 250-750mg a cada 8h (Dose habitual: 400mg a cada 8h por 7-10 dias para infecções anaeróbias e amebíase; 250mg 8/8h por 5 dias para giardíase; 400mg 12/12h por 7 dias para vaginose/tricomoníase).'
+      trecho: 'PuxaFicha / HSL: Metronidazol 250mg: Tomar 2 comprimidos (500mg) a cada 12 horas por 7 dias (ou 400mg 8/8h).'
     },
     {
       pub: 'adulto',

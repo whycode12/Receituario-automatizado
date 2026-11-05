@@ -18,6 +18,9 @@ export const tobramicina: Farmaco = {
   classe: 'Antibacteriano Oftálmico Aminoglicosídeo de Amplo Espectro',
   dosePratica: 'Conjuntivite Bacteriana Aguda (Olho com Secreção Purulenta/Remela Espessa Amarela ou Esverdeada): Pingar 1 a 2 gotas no(s) olho(s) afetado(s) a cada 4 horas (enquanto acordado - 4 a 6 vezes ao dia) por 7 dias. Em infecções hiperagudas/graves, pingar a cada 2 horas nas primeiras 24 a 48 horas e espaçar conforme melhora. Droga de primeira linha e perfil consagrado de segurança em pediatria a partir de 2 meses de vida.',
   fontes: { MS: '2023', HSL: '14/02/2017', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação nos olhos acometidos',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Solução oftálmica 3 mg/mL (0,3%) em frasco conta-gotas com 5 mL padronizada na rede pública e disponível amplamente nas drogarias (Tobrex e genéricos).',
   apresentacoes: [
@@ -52,7 +55,7 @@ export const tobramicina: Farmaco = {
       dosesDia: [4, 6],
       dosesPadrao: 4,
       intervaloFixo: 6,
-      duracaoMaxDias: 10,
+      duracaoMaxDias: 7,
       fonte: 'BULA / CBO / MS',
       trecho: 'Conjuntivite bacteriana: Instilar 1 a 2 gotas no saco conjuntival a cada 4 a 6 horas por 7 a 10 dias (nos primeiros 2 dias de casos graves, pode-se instilar a cada 2 horas).'
     },

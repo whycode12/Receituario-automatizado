@@ -18,6 +18,9 @@ export const neomicinaBacitracina: Farmaco = {
   classe: 'Antibacteriano Tópico de Amplo Espectro (Aminoglicosídeo + Polipeptídeo)',
   dosePratica: 'Prevenção e Tratamento de Infecções Cutâneas Bacterianas em Escoriações, Pequenos Cortes, Queimaduras Leves e Feridas Traumáticas: Limpar a área com soro fisiológico ou água morna e sabonete neutro. Aplicar uma camada fina da pomada sobre o ferimento 2 a 3 vezes ao dia (a cada 8 ou 12 horas) durante 5 a 7 dias (máximo de 8 a 10 dias). Contraindicado em menores de 2 anos e em queimaduras/úlceras muito extensas.',
   fontes: { MS: '2023', PSZERADO: '2025', HSL: '14/02/2017', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação sobre ferimentos, escoriações ou pequenos cortes',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Pomada contendo Sulfato de Neomicina 5 mg/g (3,5 mg base) + Bacitracina zíncica 250 UI/g em bisnagas de 15g e 50g (Nebacetin e genéricos).',
   apresentacoes: [
@@ -61,9 +64,9 @@ export const neomicinaBacitracina: Farmaco = {
       max: 1,
       padrao: 1,
       dosesDia: [2, 4],
-      dosesPadrao: 3,
-      intervaloFixo: 8,
-      duracaoMaxDias: 10,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 7,
       fonte: 'BULA / PSZERADO / MS',
       trecho: 'Aplicar fina camada sobre a lesão 2 a 4 vezes ao dia por 5 a 7 dias (máximo de 8 a 10 dias de tratamento contínuo).'
     },

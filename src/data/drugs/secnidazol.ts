@@ -8,6 +8,9 @@ export const secnidazol: Farmaco = {
   classe: 'Antiparasitário e Amebicida Sintético da Família dos 5-Nitroimidazóis',
   dosePratica: 'Amebíase Intestinal / Giardíase / Tricomoníase no Adulto: 2000 mg (2 comprimidos de 1000 mg ou 4 comprimidos de 500 mg) VO em DOSE ÚNICA ao final de uma refeição. Vaginose Bacteriana: 2 g VO em dose única.',
   fontes: { HSL: '14/06/2022', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   snPadrao: 'diarreia por protozoários ou amebíase',
   acessoFonte: 'Disponível em comprimidos de 1000 mg (1 g) e 500 mg sob o nome comercial Secnid e genéricos. RENAME 2024: Não consta na relação nacional básica.',
   apresentacoes: [

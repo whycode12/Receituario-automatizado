@@ -18,6 +18,9 @@ export const metronidazolVaginal: Farmaco = {
   classe: 'Antibacteriano e Antiparasitário Ginecológico de Ação Tópica (Nitroimidazol)',
   dosePratica: 'Vaginose Bacteriana (PCDT IST / Ministério da Saúde / PSZerado 2025): Aplicar 1 aplicador cheio (5 g de gel = 500 mg de metronidazol) profundamente por via vaginal à noite, ao deitar, por 7 noites consecutivas (em casos recorrentes: 10 noites). Evitar consumo de bebidas alcoólicas durante o uso e por 48 horas após a última dose (efeito antabuse/dissulfiram). Não indicado tratamento rotineiro do parceiro sexual na vaginose bacteriana.',
   fontes: { MS: '2023', PSZERADO: '2025', HSL: '14/02/2017', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação vaginal noturna ao deitar',
   acessoFonte: 'RENAME / Farmácia Básica do SUS: Bisnaga de 50 g com 10 aplicadores descartáveis disponível gratuitamente nas Unidades Básicas de Saúde de todo o Brasil.',
   apresentacoes: [

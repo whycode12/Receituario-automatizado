@@ -8,6 +8,9 @@ export const levofloxacino: Farmaco = {
   classe: 'Antibacteriano, Fluoroquinolona respiratória de 3ª geração de amplo espectro com potente atividade contra Streptococcus pneumoniae e bacilos Gram-negativos',
   dosePratica: 'Adulto: VO ou EV: 500 mg uma vez ao dia (24/24h) por 7 a 14 dias (pneumonia comunitária, sinusite bacteriana aguda, ITU complicada e pielonefrite) ou 750 mg uma vez ao dia por 5 dias (esquema de curta duração / alta dose para PAC ou sinusite). Dose máxima: 750 mg/dia (ou 500 mg 12/12h em infecções graves com função renal normal). EV: bolsa pronta de 100 mL (5 mg/mL) infundida em 60 minutos (500 mg) ou 90 minutos (750 mg). Pediatria: uso excepcional e restrito a infecções refratárias sem alternativa (risco de artropatia cartilaginosa). Black Box Warning: risco de tendinite/ruptura do tendão de Aquiles, neuropatia periférica e prolongamento do intervalo QT.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 10,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Comprimidos de 250 mg e 500 mg constam no Componente Estratégico da Assistência Farmacêutica (CESAF) do SUS para Tuberculose Drogarresistente e infecções graves. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
@@ -79,7 +82,7 @@ export const levofloxacino: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 14,
+      duracaoMaxDias: 10,
       fonte: 'HSL',
       trecho: 'HSL: Adulto Oral: 500-750mg VO, 1 vez ao dia (Pneumonia comunitária: 500mg 1x/dia por 7-14 dias ou 750mg 1x/dia por 5 dias; Sinusite aguda: 500mg 1x/dia por 10-14 dias ou 750mg 1x/dia por 5 dias; ITU complicada/pielonefrite: 750mg 1x/dia por 5 dias ou 500mg 1x/dia por 7-14 dias).'
     },
@@ -95,7 +98,7 @@ export const levofloxacino: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 14,
+      duracaoMaxDias: 10,
       fonte: 'HSL',
       trecho: 'HSL: Adulto EV: 500mg a cada 24 horas em infusão lenta de 60 minutos.'
     },

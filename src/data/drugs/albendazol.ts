@@ -8,6 +8,9 @@ export const albendazol: Farmaco = {
   classe: 'Antiparasitário anti-helmíntico benzimidazólico de amplo espectro (inibe a polimerização da tubulina e o transporte de glicose no parasita)',
   dosePratica: 'Adultos e crianças > 2 anos: VO: 400 mg (1 comprimido mastigável ou 10 mL da suspensão) em DOSE ÚNICA para Ascaris lumbricoides, Enterobius vermicularis (oxiúrus), Ancylostoma duodenale e Trichuris trichiura (repetir em 2 semanas para oxiuríase); 400 mg 1x/dia por 3 dias para Strongyloides stercoralis, Taenia solium/saginata e Hymenolepis nana; 400 mg 1x/dia por 5 dias para Giardíase. Crianças de 1 a 2 anos: VO: 200 mg (5 mL da suspensão) em dose única. Administrar obrigatoriamente junto a uma refeição rica em gorduras (leite, queijo, alimentos lipídicos) para aumentar em até 5x a absorção e biodisponibilidade. Contraindicado em gestantes (teratogênico/embriotóxico) e menores de 1 ano.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   snPadrao: 'parasitose intestinal',
   acessoFonte: 'RENAME 2024: Comprimido mastigável 400 mg e suspensão oral 40 mg/mL (frasco 10 mL) constam no Componente Básico da Assistência Farmacêutica (CBAF) e Componente Estratégico (CESAF - Geo-helmintíases) do SUS. Farmácia Popular: Não consta no elenco comercial.',
   apresentacoes: [
@@ -53,7 +56,7 @@ export const albendazol: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 5,
+      duracaoMaxDias: 1,
       fonte: 'HSL',
       trecho: 'HSL / Bula Zentel: Adultos e crianças > 2 anos: 400mg (1 comprimido ou 10mL) em dose única para Ascaris, Necator, Ancylostoma, Trichuris e Enterobius; 400mg 1x/dia por 3 dias consecutivos para Strongyloides e Taenia; e 400mg 1x/dia por 5 dias para Giardíase.'
     },
@@ -69,7 +72,7 @@ export const albendazol: Farmaco = {
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,
-      duracaoMaxDias: 5,
+      duracaoMaxDias: 1,
       fonte: 'HSL',
       trecho: 'HSL / Bula: Crianças acima de 2 anos: 400mg (10mL da suspensão a 4% ou 1 comprimido mastigável) em dose única (ou por 3 a 5 dias para estrongiloidíase ou giardíase).'
     },

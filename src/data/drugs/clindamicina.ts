@@ -8,6 +8,9 @@ export const clindamicina: Farmaco = {
   classe: 'Antibacteriano, Lincosamida de ação potente contra anaeróbios e bactérias Gram-positivas (Streptococcus e MSSA), com efeito antitoxina estafilocócica/estreptocócica',
   dosePratica: 'Adulto: VO: 300 a 450 mg a cada 6 ou 8 horas por 7 a 14 dias (ingerir com copo cheio de água e permanecer ereto por 30 min pelo risco de esofagite ulcerativa). EV: 600 a 900 mg a cada 8 horas (diluir cada ampola de 600 mg em 100 mL de SF 0,9% ou SG 5% e infundir em 30 a 60 min; NUNCA administrar em bolus rápido por risco de colapso cardiovascular e parada cardíaca). IM: máx 600 mg por sítio de aplicação. Pediatria (> 1 mês): VO: 20 a 40 mg/kg/dia divididos em 3 ou 4 tomadas (8/8h ou 6/6h); EV: 20 a 40 mg/kg/dia divididos a cada 6 ou 8 horas.',
   fontes: { HSL: '05/03/2025', EINA: '2026', EINP: '2026', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção bacteriana',
   acessoFonte: 'RENAME 2024: Cápsula 300 mg consta no Componente Básico da Assistência Farmacêutica (CBAF) e ampola injetável 150 mg/mL (600 mg / 4 mL) consta no Componente Hospitalar do SUS. Farmácia Popular: Não consta.',
   apresentacoes: [
@@ -63,11 +66,11 @@ export const clindamicina: Farmaco = {
       max: 600,
       padrao: 300,
       dosesDia: [3, 4],
-      dosesPadrao: 3,
-      intervaloFixo: 8,
-      duracaoMaxDias: 14,
+      dosesPadrao: 4,
+      intervaloFixo: 6,
+      duracaoMaxDias: 7,
       fonte: 'HSL',
-      trecho: 'HSL: Adulto Oral: 600 a 1.800mg/dia divididos a cada 6 ou 8 horas (Habitual: 300mg a cada 8h; infecções mais graves 450 a 600mg de 8/8h ou 6/6h).'
+      trecho: 'PuxaFicha / HSL: Clindamicina 300mg: Tomar 1 cápsula de 6/6h por 7 dias (ou 300-450mg a cada 6 ou 8 horas).'
     },
     {
       pub: 'adulto',

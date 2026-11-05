@@ -8,6 +8,9 @@ export const fosfomicina: Farmaco = {
   classe: 'Antibacteriano urinário bactericida de amplo espectro (derivado do ácido fosfônico que inibe a enolpiruvil transferase na síntese da parede celular bacteriana)',
   dosePratica: 'Adulto e adolescentes (≥ 12 anos): VO: 3 g (1 envelope de 8 g contendo 5,631 g de fosfomicina trometamol eq. a 3 g de fosfomicina base) em DOSE ÚNICA para cistite aguda não complicada e bacteriúria assintomática na gravidez. Profilaxia de infecção em biópsia prostática transretal / manipulação urológica: 3 g VO 3 horas antes da intervenção (podendo repetir 3 g após 24 a 48h a critério médico). Modo de preparo obrigatório: dissolver o conteúdo do envelope em meio copo de água (50 a 75 mL), mexer e ingerir imediatamente com a bexiga vazia, preferencialmente à noite ao deitar e com o estômago vazio (2h após refeição).',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 1,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção urinária',
   acessoFonte: 'RENAME 2024: Não consta na Relação Nacional de Medicamentos Essenciais (disponibilizada em alguns municípios via REMUME local para atenção básica/saúde da mulher). Farmácia Popular: Não consta.',
   apresentacoes: [

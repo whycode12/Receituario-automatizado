@@ -18,6 +18,9 @@ export const mupirocina: Farmaco = {
   classe: 'Antibacteriano Tópico Específico (Inibidor da Isoleucil-tRNA Sintetase bacteriana)',
   dosePratica: 'Impetigo Contagioso, Foliculite e Infecções Bacterianas Cutâneas Localizadas: Limpar a área com soro fisiológico morno, amolecer e remover crostas frouxas suavemente. Aplicar uma camada fina da pomada sobre as lesões 2 a 3 vezes ao dia (a cada 8 ou 12 horas) por 5 a 7 dias (máximo 10 dias). Droga de escolha e primeira linha para impetigo com lesões localizadas em crianças e adultos.',
   fontes: { HSL: '14/02/2017', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'aplicação sobre as lesões cutâneas infectadas',
   acessoFonte: 'Padronizada em guias hospitalares (HSL: Bactroban 20 mg/g tubo 15g) e no mercado farmacêutico nacional / farmácias comunitárias como genérico de amplo acesso.',
   apresentacoes: [
@@ -49,7 +52,7 @@ export const mupirocina: Farmaco = {
       dosesDia: [2, 3],
       dosesPadrao: 3,
       intervaloFixo: 8,
-      duracaoMaxDias: 10,
+      duracaoMaxDias: 7,
       fonte: 'HSL / PSZERADO / BULA',
       trecho: 'HSL: Aplicar uma fina camada sobre a área afetada até 3 vezes/dia, por no máximo 10 dias. Pode ser coberta com curativo oclusivo ou não.'
     },

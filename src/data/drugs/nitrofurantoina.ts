@@ -8,6 +8,9 @@ export const nitrofurantoina: Farmaco = {
   classe: 'Antibacteriano urinário (derivado nitrofurânico de ação antisséptica no trato urinário)',
   dosePratica: 'Adulto: Tratamento de cistite aguda não complicada: 100 mg VO a cada 6 horas (4x/dia) por 7 dias (PSZerado / HSL) ingerido junto às refeições ou com leite. Profilaxia de ITU recorrente: 50 a 100 mg ao deitar. Pediatria (> 1 mês): 5 a 7 mg/kg/dia divididos a cada 6 horas por 7 dias (profilaxia: 1 a 2 mg/kg/dia em dose única noturna). Contraindicado em ClCr < 60 mL/min (ineficaz e risco de neuropatia tóxica), menores de 1 mês e gestantes a termo (38-42 semanas) pelo risco de anemia hemolítica neonatal.',
   fontes: { HSL: '05/03/2025', PSZERADO: '2025', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
   snPadrao: 'infecção urinária',
   acessoFonte: 'RENAME 2024: Cápsula 100 mg e suspensão oral 5 mg/mL constam no Componente Básico da Assistência Farmacêutica (CBAF) do SUS. Farmácia Popular: não consta no elenco comercial.',
   apresentacoes: [
