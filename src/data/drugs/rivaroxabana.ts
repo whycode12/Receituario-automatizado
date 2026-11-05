@@ -8,9 +8,27 @@ export const rivaroxabana: Farmaco = {
   classe: 'Anticoagulante Oral de Ação Direta (Inibidor Direto do Fator Xa)',
   dosePratica: 'Tratamento de TVP / TEP agudo: 15 mg VO de 12/12h com alimentos durante os primeiros 21 dias; a partir do 22º dia, passar para 20 mg VO 1x/dia com o jantar (manter por pelo menos 3 a 6 meses). Prevenção de AVC na Fibrilação Atrial não-valvular: 20 mg VO 1x/dia com o jantar (se ClCr 15 a 49 mL/min: reduzir para 15 mg 1x/dia). Prevenção de TEV pós-artroplastia: 10 mg VO 1x/dia por 14 dias (joelho) ou 35 dias (quadril).',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'tratamento ou profilaxia de eventos tromboembólicos',
+  modoPadrao: 'continuo',
+  diasPadrao: 21,
+  usoContinuoPadrao: false,
+  snPadrao: 'anticoagulação e prevenção de eventos tromboembólicos',
   acessoFonte: 'RENAME 2024: Não consta na RENAME básica. Disponível no Componente Especializado (CEAF) para indicações regulamentadas do SUS e ampla comercialização em farmácias privadas.',
   apresentacoes: [
+    {
+      id: 'cp15',
+      forma: 'cp',
+      nome: 'Comprimido revestido 15 mg',
+      comercial: 'Xarelto / Genérico',
+      conc: '15mg',
+      rotulo: 'Rivaroxabana 15mg',
+      mg: 15,
+      frac: 1,
+      vias: ['VO'],
+      disp: '42 comprimidos',
+      acesso: { rename: false, fp: false },
+      instrucao: 'Tomar com alimentos (refeição principal). Na fase aguda de TVP/TEP, tomar 1 comprimido de 12/12 horas durante as primeiras 3 semanas (21 dias). Em pacientes com fibrilação atrial e insuficiência renal (ClCr 15-49 mL/min), tomar 1 comprimido 1 vez ao dia com o jantar.',
+      obs: 'Apresentação padrão de início / ataque na trombose (15 mg 12/12h por 21 dias - PuxaFicha).'
+    },
     {
       id: 'cp20',
       forma: 'cp',
@@ -25,21 +43,6 @@ export const rivaroxabana: Farmaco = {
       acesso: { rename: false, fp: false },
       instrucao: 'Tomar 1 comprimido uma vez ao dia, OBRIGATORIAMENTE junto com alimentos (com o almoço ou jantar), pois a presença de comida é fundamental para garantir a absorção completa do medicamento (biodisponibilidade de quase 100%).',
       obs: 'Dose padrão para prevenção de AVC em fibrilação atrial e fase de manutenção de TVP/TEP (a partir do 22º dia).'
-    },
-    {
-      id: 'cp15',
-      forma: 'cp',
-      nome: 'Comprimido revestido 15 mg',
-      comercial: 'Xarelto / Genérico',
-      conc: '15mg',
-      rotulo: 'Rivaroxabana 15mg',
-      mg: 15,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa',
-      acesso: { rename: false, fp: false },
-      instrucao: 'Tomar com alimentos (refeição principal). Na fase aguda de TVP/TEP, tomar 1 comprimido de 12/12 horas durante as primeiras 3 semanas (21 dias). Em pacientes com fibrilação atrial e insuficiência renal (ClCr 15-49 mL/min), tomar 1 comprimido 1 vez ao dia com o jantar.',
-      obs: 'Dose de ataque inicial na trombose aguda (15 mg 12/12h por 21 dias) e dose ajustada para disfunção renal em FA.'
     },
     {
       id: 'cp10',
@@ -79,9 +82,11 @@ export const rivaroxabana: Farmaco = {
       tipo: 'mg',
       min: 10,
       max: 20,
-      padrao: 20,
+      padrao: 15,
       dosesDia: [1, 2],
-      dosesPadrao: 1,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
+      duracaoMaxDias: 21,
       fonte: 'HSL / PSZERADO',
       trecho: 'Adulto — Prevenção de AVC em FA: 20 mg 1 vez/dia (15 mg se ClCr 15 a 49 mL/min). Tratamento de TVP e TEP: 15 mg 2 vezes/dia durante 3 semanas, seguido por 20 mg 1 vez/dia. Profilaxia pós-artroplastia: 10 mg 1 vez/dia.'
     }

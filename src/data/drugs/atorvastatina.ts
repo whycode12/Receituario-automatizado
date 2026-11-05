@@ -8,23 +8,26 @@ export const atorvastatina: Farmaco = {
   classe: 'Inibidor da HMG-CoA Redutase (Estatina de Alta Potência)',
   dosePratica: 'Pós-IAM / Síndrome Coronariana Aguda: 80 mg VO 1x ao dia (dose de alta intensidade recomendada pelas diretrizes internacionais). Dislipidemia / Prevenção secundária estável: 20 a 40 mg VO 1x ao dia a qualquer hora do dia (com ou sem alimentos).',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'dislipidemia ou proteção miocárdica pós-evento coronariano',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle do colesterol e prevenção cardiovascular',
   acessoFonte: 'RENAME 2024 (Componente Especializado / Básico): Atorvastatina 10 mg, 20 mg, 40 mg e 80 mg comprimido.',
   apresentacoes: [
     {
-      id: 'cp80',
+      id: 'cp20',
       forma: 'cp',
-      nome: 'Comprimido revestido 80 mg (Alta potência)',
-      comercial: 'Lipitor®, Citalor®',
-      conc: '80mg',
-      rotulo: 'Atorvastatina Cálcica 80 mg comprimido',
-      mg: 80,
+      nome: 'Comprimido revestido 20 mg',
+      comercial: 'Lipitor®, Citalor®, Ateroma®',
+      conc: '20mg',
+      rotulo: 'Atorvastatina Cálcica 20 mg comprimido',
+      mg: 20,
       frac: 1,
       vias: ['VO'],
       disp: '1 caixa',
       acesso: { rename: true, fp: false },
-      instrucao: 'Tomar 1 comprimido por via oral uma vez ao dia com água, preferencialmente à noite ou no mesmo horário todos os dias.',
-      obs: 'Terapia de alta intensidade recomendada no IAM e SCA.'
+      instrucao: 'Tomar 1 comprimido por via oral uma vez ao dia com água, preferencialmente à noite.',
+      obs: 'Dose padrão para controle do colesterol (PuxaFicha).'
     },
     {
       id: 'cp40',
@@ -42,19 +45,19 @@ export const atorvastatina: Farmaco = {
       obs: 'Prevenção cardiovascular de alto risco.'
     },
     {
-      id: 'cp20',
+      id: 'cp80',
       forma: 'cp',
-      nome: 'Comprimido revestido 20 mg',
+      nome: 'Comprimido revestido 80 mg (Alta potência)',
       comercial: 'Lipitor®, Citalor®',
-      conc: '20mg',
-      rotulo: 'Atorvastatina Cálcica 20 mg comprimido',
-      mg: 20,
+      conc: '80mg',
+      rotulo: 'Atorvastatina Cálcica 80 mg comprimido',
+      mg: 80,
       frac: 1,
       vias: ['VO'],
       disp: '1 caixa',
       acesso: { rename: true, fp: false },
-      instrucao: 'Tomar 1 comprimido por via oral uma vez ao dia.',
-      obs: 'Potência intermediária para dislipidemia.'
+      instrucao: 'Tomar 1 comprimido por via oral uma vez ao dia com água, preferencialmente à noite ou no mesmo horário todos os dias.',
+      obs: 'Terapia de alta intensidade recomendada no IAM e SCA.'
     }
   ],
   regras: [
@@ -65,8 +68,9 @@ export const atorvastatina: Farmaco = {
       tipo: 'mg',
       min: 10,
       max: 80,
-      padrao: 40,
+      padrao: 20,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Pós-IAM / SCA: 80 mg VO 1x/dia. Dislipidemia / Prevenção: 20 a 40 mg VO 1x/dia.'

@@ -18,7 +18,10 @@ export const sulfatoFerroso: Farmaco = {
   classe: 'Suplemento Mineral Antianêmico (Sal de Ferro Essencial)',
   dosePratica: '1. Tratamento da Anemia Ferropriva Infantil (SBP): 3 a 5 mg de ferro elementar/kg/dia VO (em gotas) dividido em 1 a 2 tomadas por 3 a 6 meses. 2. Profilaxia da Anemia Ferropriva na Infância (SBP): 1 mg de ferro elementar/kg/dia VO a partir dos 3 ou 6 meses até os 2 anos. 3. Tratamento no Adulto: 80 a 160 mg de ferro elementar/dia VO (1 comp de 40 mg 2 a 3x/dia). 4. Profilaxia na Gestação (MS): 40 mg de ferro elementar/dia a partir da 20ª semana.',
   fontes: { SBP: '2023', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada diária para reposição de ferro e tratamento de anemia',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'tratamento de anemia ferropriva ou reposição de ferro',
   acessoFonte: 'RENAME / Farmácia Básica do SUS / Programa Nacional de Suplementação de Ferro (PNSF): Drágeas de 40 mg de ferro elementar e frasco conta-gotas 25 mg/mL de ferro elementar (125 mg/mL de sal) gratuitos no SUS.',
   apresentacoes: [
     {

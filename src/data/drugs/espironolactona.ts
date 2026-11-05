@@ -8,9 +8,27 @@ export const espironolactona: Farmaco = {
   classe: 'Diurético Poupador de Potássio Antagonista Competitivo dos Receptores de Aldosterona',
   dosePratica: 'Ascite na Cirrose Hepática: Iniciar com 100 mg VO 1x/dia pela manhã (associada a Furosemida 40 mg); titular a cada 3 a 5 dias se resposta insuficiente, até o máximo de 400 mg/dia. Insuficiência Cardíaca com Fração de Ejeção Reduzida (ICFER): 25 mg a 50 mg VO 1x/dia. Hipertensão Resistente: 25 mg a 50 mg VO 1x/dia.',
   fontes: { HSL: '10/05/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'edema ou ascite',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle de edema, ascite ou insuficiência cardíaca',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimidos de 25 mg e 100 mg. Farmácia Popular: não consta.',
   apresentacoes: [
+    {
+      id: 'cp25',
+      forma: 'cp',
+      nome: 'Comprimido 25 mg',
+      comercial: 'Aldactone / Genérico',
+      conc: '25mg',
+      rotulo: 'Espironolactona 25mg comprimido',
+      mg: 25,
+      frac: 1,
+      vias: ['VO'],
+      disp: '1 caixa com 30 comprimidos',
+      acesso: { rename: true, fp: false },
+      instrucao: 'Tomar 1 comprimido com água pela manhã, todos os dias.',
+      obs: 'Dose padrão para adultos na insuficiência cardíaca (ICFER) e hipertensão resistente (PuxaFicha).'
+    },
     {
       id: 'cp100',
       forma: 'cp',
@@ -25,21 +43,6 @@ export const espironolactona: Farmaco = {
       acesso: { rename: true, fp: false },
       instrucao: 'Tomar pela manhã com um copo de água, junto com uma refeição leve para melhorar a absorção.',
       obs: 'Dose padrão para início do esquema de ascite na cirrose (relação 100:40 com furosemida).'
-    },
-    {
-      id: 'cp25',
-      forma: 'cp',
-      nome: 'Comprimido 25 mg',
-      comercial: 'Aldactone / Genérico',
-      conc: '25mg',
-      rotulo: 'Espironolactona 25mg comprimido',
-      mg: 25,
-      frac: 1,
-      vias: ['VO'],
-      disp: '1 caixa com 30 comprimidos',
-      acesso: { rename: true, fp: false },
-      instrucao: 'Tomar com água pela manhã.',
-      obs: 'Dose padrão na insuficiência cardíaca crônica (ICFER) e hipertensão resistente.'
     }
   ],
   regras: [
@@ -50,7 +53,7 @@ export const espironolactona: Farmaco = {
       tipo: 'mg',
       min: 25,
       max: 200,
-      padrao: 100,
+      padrao: 25,
       dosesDia: [1, 1],
       dosesPadrao: 1,
       intervaloFixo: 24,

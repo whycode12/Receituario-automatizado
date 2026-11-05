@@ -8,6 +8,9 @@ export const amiodarona: Farmaco = {
   classe: 'Antiarritmico da Classe III de Vaughan-Williams (Bloqueador de Canais de Potássio)',
   dosePratica: 'Arritmias Estáveis (TV monomórfica com pulso / FA aguda): Ataque de 150 a 300 mg (1 a 2 ampolas) diluídos em 100 mL de SG 5% infundidos em 10 a 20 minutos. Manutenção: 900 mg (6 ampolas) diluídos em 250 a 500 mL de SG 5% em 24h em BIC (1 mg/min nas primeiras 6h = 16 a 18 mL/h; depois 0,5 mg/min nas 18h seguintes = 8 a 9 mL/h). PCR (FV/TVSP refratária): 300 mg IV bólus rápido após 3º choque; segunda dose de 150 mg.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', ACLS: '2025' },
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
   snPadrao: 'taquiarritmia ventricular ou supraventricular grave',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar / Básico): Amiodarona 50 mg/mL injetável e 200 mg comprimido.',
   apresentacoes: [

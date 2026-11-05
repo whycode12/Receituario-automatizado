@@ -18,9 +18,27 @@ export const sinvastatina: Farmaco = {
   classe: 'Inibidor Competitivo da HMG-CoA Redutase (Estatina)',
   dosePratica: '1. Hipercolesterolemia e Prevenção Primária (SBC / HSL): 10 mg a 20 mg VO 1 vez ao dia à noite (ao deitar). 2. Alto Risco Cardiovascular / Prevenção Secundária (Pós-IAM, DAC estável, AVC isquêmico): 20 mg a 40 mg VO 1 vez ao dia à noite. A dose de 80 mg/dia não é recomendada por aumentar expressivamente o risco de miopatia e rabdomiólise.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada noturna contínua para redução do colesterol LDL e proteção vascular',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle do colesterol e redução do risco cardiovascular',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 10 mg, 20 mg e 40 mg distribuídos gratuitamente em farmácias conveniadas e UBS.',
   apresentacoes: [
+    {
+      id: 'cp_20mg',
+      forma: 'cp',
+      nome: 'Comprimido 20 mg',
+      comercial: 'Sinvascor / Zocor / Lipistatina / Genérico',
+      conc: '20 mg',
+      rotulo: 'Sinvastatina 20 mg comprimido',
+      mg: 20,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 a 2 caixas (30 comprimidos)',
+      acesso: { rename: true, fp: true },
+      instrucao: 'Como tomar a sinvastatina para o colesterol:\n1. TOME SEMPRE À NOITE: Tome 1 comprimido à noite ao se deitar para dormir, com água.\n2. CUIDADO COM DORES MUSCULARES: Avise a equipe de saúde caso sinta dor muscular inexplicada, câimbras intensas ou fraqueza muscular.\n3. ATENÇÃO SE USAR ANLODIPINO: Se você também toma remédio de pressão chamado Anlodipino, a dose máxima permitida de sinvastatina é exatamente esta (20 mg/dia) para proteger seus músculos.\n4. ALIMENTAÇÃO: Reduza gorduras saturadas e mantenha caminhadas regulares.',
+      obs: 'RENAME / Farmácia Popular. Apresentação padrão de uso contínuo mais consagrada no Brasil (PuxaFicha).'
+    },
     {
       id: 'cp_10mg',
       forma: 'cp',
@@ -35,21 +53,6 @@ export const sinvastatina: Farmaco = {
       acesso: { rename: true, fp: true },
       instrucao: 'Como tomar a sinvastatina para o colesterol:\n1. TOME SEMPRE À NOITE: Tome 1 comprimido à noite ao se deitar para dormir, com um pouco de água. O fígado produz a maior parte do colesterol durante o sono da madrugada; por isso o remédio é muito mais eficaz quando tomado à noite.\n2. ATENÇÃO A DORES MUSCULARES: Se você começar a sentir dores fortes nos músculos, fraqueza nas pernas ou se sua urina ficar muito escura (cor de refrigerante de cola ou chá escuro), suspenda o remédio imediatamente e procure o posto de saúde para fazer um exame de sangue dos músculos (CPK).\n3. EXAMES DE SANGUE DE ROTINA: Mantenha em dia os exames periódicos de colesterol e de fígado (TGO/TGP) solicitados pelo médico.\n4. DIETA E HÁBITOS: O remédio não substitui os cuidados com a saúde! Mantenha uma alimentação equilibrada, diminua o consumo de frituras, embutidos e gordura animal, e pratique atividades físicas regularmente.',
       obs: 'RENAME / Farmácia Popular. Dose inicial para dislipidemia leve a moderada ou em pacientes com insuficiência renal avançada.'
-    },
-    {
-      id: 'cp_20mg',
-      forma: 'cp',
-      nome: 'Comprimido 20 mg',
-      comercial: 'Sinvascor / Zocor / Genérico',
-      conc: '20 mg',
-      rotulo: 'Sinvastatina 20 mg comprimido',
-      mg: 20,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 a 2 caixas (30 comprimidos)',
-      acesso: { rename: true, fp: true },
-      instrucao: 'Como tomar a sinvastatina para o colesterol:\n1. TOME SEMPRE À NOITE: Tome 1 comprimido à noite ao se deitar para dormir, com água.\n2. CUIDADO COM DORES MUSCULARES: Avise a equipe de saúde caso sinta dor muscular inexplicada, câimbras intensas ou fraqueza muscular.\n3. ATENÇÃO SE USAR ANLODIPINO: Se você também toma remédio de pressão chamado Anlodipino, a dose máxima permitida de sinvastatina é exatamente esta (20 mg/dia) para proteger seus músculos.\n4. ALIMENTAÇÃO: Reduza gorduras saturadas e mantenha caminhadas regulares.',
-      obs: 'RENAME / Farmácia Popular. Apresentação padrão de uso contínuo mais prescrita no SUS.'
     },
     {
       id: 'cp_40mg',

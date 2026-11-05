@@ -18,7 +18,10 @@ export const hidroclorotiazida: Farmaco = {
   classe: 'Diurético Tiazídico Inibidor do Co-transportador Na+/Cl- do Túbulo Contorcido Distal',
   dosePratica: '1. Hipertensão Arterial Sistêmica (SBC / HSL): 25 mg VO 1 vez ao dia pela manhã (em idosos, terapia combinada ou suscetíveis a hipocalemia: iniciar com 12,5 mg a 25 mg/dia; dose máxima habitual: 50 mg/dia). 2. Estados Edematosos Leves (Insuficiência Cardíaca Leve / Síndrome Nefrótica): 25 a 50 mg/dia pela manhã (até 100 mg/dia em edemas refratários). Tomar sempre pela manhã para evitar noctúria.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada matinal contínua para controle da pressão arterial ou edema',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle da pressão arterial ou edema',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 25 mg distribuídos gratuitamente em todas as farmácias credenciadas e Unidades Básicas de Saúde.',
   apresentacoes: [
     {

@@ -8,7 +8,10 @@ export const captopril: Farmaco = {
   classe: 'Anti-hipertensivo (Inibidor da Enzima Conversora de Angiotensina - IECA)',
   dosePratica: 'Adulto (Urgência Hipertensiva no PS/UBS): 25 mg a 50 mg VO ou sublingual (SL) em dose única (reavaliar pressão em 30 a 60 min); Tratamento ambulatorial da hipertensão: iniciar com 25 mg a 50 mg/dia divididos em 2 a 3 tomadas (12,5 mg a 25 mg de 8/8h ou 12/12h), 1 hora antes das refeições (máx. 150 mg/dia em HAS). Pediatria: 0,3 a 0,5 mg/kg/dose VO até 3x/dia (máx. 6 mg/kg/dia).',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'pressão arterial elevada ou urgência hipertensiva',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle da pressão arterial ou se pico pressórico',
   acessoFonte: 'RENAME 2024 (Componente Básico): Comprimido 25 mg consta no elenco essencial. Farmácia Popular: Disponibilização gratuita integral para hipertensão arterial.',
   apresentacoes: [
     {

@@ -8,7 +8,10 @@ export const furosemida: Farmaco = {
   classe: 'Diurético de Alça Inibidor do Co-transportador Na+-K+-2Cl- na Alça de Henle',
   dosePratica: 'Edema / Congestão / Ascite: 20 a 40 mg (1/2 a 1 comprimido de 40 mg) VO pela manhã em jejum, ou 20 a 40 mg (1 a 2 ampolas) EV em bolus lento. Edema Agudo de Pulmão (EAP) na UPA: 40 a 80 mg (2 a 4 ampolas) EV em bolus lento de início, avaliando débito urinário e alívio da dispneia.',
   fontes: { HSL: '04/04/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'edema, congestão ou dispneia paroxística',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'edema, congestão ou sobrecarga volêmica',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido de 40 mg e ampola de 20 mg/2 mL (10 mg/mL). Farmácia Popular: hipertensão arterial (gratuito).',
   apresentacoes: [
     {

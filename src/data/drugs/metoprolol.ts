@@ -8,24 +8,26 @@ export const metoprolol: Farmaco = {
   classe: 'Betabloqueador Cardiosseletivo (Beta-1 Específico)',
   dosePratica: 'Controle Agudo de Frequência Cardíaca (FA / Flutter / TSV): 2,5 a 5 mg EV administrados lentamente em 2 a 5 minutos; pode repetir a cada 5 a 10 minutos conforme tolerância até no máximo 15 mg. Manutenção Oral (Pós-IAM / HAS / Angina estável): 25 a 100 mg VO 1x/dia pela manhã (succinato liberação prolongada).',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
-  snPadrao: 'taquicardia supraventricular ou controle pressórico',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle de frequência cardíaca ou pressão arterial',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar / Básico): Metoprolol succinato 25 mg, 50 mg, 100 mg comprimido e tartarato injetável.',
   apresentacoes: [
     {
-      id: 'amp5_5ml',
-      forma: 'amp',
-      nome: 'Ampola 5 mg / 5 mL (1 mg/mL) Tartarato de Metoprolol EV',
-      comercial: 'Seloken® injetável',
-      conc: '5mg / 5 mL',
-      rotulo: 'Tartarato de Metoprolol 5 mg / 5 mL ampola EV',
-      mg: 5,
-      volml: 5,
-      mgml: 1,
-      vias: ['EV'],
-      disp: '1 ampola (5 mL)',
+      id: 'cp50',
+      forma: 'cp',
+      nome: 'Comprimido revestido 50 mg (Succinato de liberação prolongada)',
+      comercial: 'Selozok®, Succitrat®',
+      conc: '50mg',
+      rotulo: 'Succinato de Metoprolol 50 mg comprimido',
+      mg: 50,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 caixa',
       acesso: { rename: true, fp: false },
-      instrucao: 'Infundir lentamente na velocidade de 1 a 2 mg por minuto sob monitorização contínua de ECG e PA.',
-      obs: 'Controle agudo de resposta ventricular na FA e taquiarritmias.'
+      instrucao: 'Tomar 1 comprimido pela manhã com água, todos os dias.',
+      obs: 'Dose padrão para adultos (PuxaFicha). FA crônica, angina estável e IC crônica compensada.'
     },
     {
       id: 'cp25',
@@ -43,35 +45,23 @@ export const metoprolol: Farmaco = {
       obs: 'Liberação mantida contínua 24h.'
     },
     {
-      id: 'cp50',
-      forma: 'cp',
-      nome: 'Comprimido revestido 50 mg (Succinato de liberação prolongada)',
-      comercial: 'Selozok®, Succitrat®',
-      conc: '50mg',
-      rotulo: 'Succinato de Metoprolol 50 mg comprimido',
-      mg: 50,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 caixa',
+      id: 'amp5_5ml',
+      forma: 'amp',
+      nome: 'Ampola 5 mg / 5 mL (1 mg/mL) Tartarato de Metoprolol EV',
+      comercial: 'Seloken® injetável',
+      conc: '5mg / 5 mL',
+      rotulo: 'Tartarato de Metoprolol 5 mg / 5 mL ampola EV',
+      mg: 5,
+      volml: 5,
+      mgml: 1,
+      vias: ['EV'],
+      disp: '1 ampola (5 mL)',
       acesso: { rename: true, fp: false },
-      instrucao: 'Tomar 1 comprimido pela manhã com água.',
-      obs: 'Dose habitual para FA crônica, angina estável e IC crônica compensada.'
+      instrucao: 'Infundir lentamente na velocidade de 1 a 2 mg por minuto sob monitorização contínua de ECG e PA.',
+      obs: 'Controle agudo de resposta ventricular na FA e taquiarritmias.'
     }
   ],
   regras: [
-    {
-      pub: 'adulto',
-      se: { idadeMinAnos: 15 },
-      vias: ['EV'],
-      tipo: 'mg',
-      min: 2.5,
-      max: 5,
-      padrao: 5,
-      dosesDia: [1, 3],
-      intervaloFixo: 24,
-      fonte: 'PSZERADO',
-      trecho: 'Controle de frequência EV: 2,5 a 5 mg EV lento em 2 a 5 min; repetir a cada 5-10 min se necessário (máx 15 mg).'
-    },
     {
       pub: 'adulto',
       se: { idadeMinAnos: 15 },
@@ -81,9 +71,24 @@ export const metoprolol: Farmaco = {
       max: 200,
       padrao: 50,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
-      fonte: 'HSL',
-      trecho: 'Manutenção oral: 25 a 100 mg VO 1x/dia pela manhã.'
+      fonte: 'HSL / PSZERADO',
+      trecho: 'Manutenção oral: 25 a 100 mg VO 1x/dia pela manhã (padrão 50 mg/dia).'
+    },
+    {
+      pub: 'adulto',
+      se: { idadeMinAnos: 15 },
+      vias: ['EV'],
+      tipo: 'mg',
+      min: 2.5,
+      max: 5,
+      padrao: 5,
+      dosesDia: [1, 3],
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      fonte: 'PSZERADO',
+      trecho: 'Controle de frequência EV: 2,5 a 5 mg EV lento em 2 a 5 min; repetir a cada 5-10 min se necessário (máx 15 mg).'
     }
   ],
   maximos: [

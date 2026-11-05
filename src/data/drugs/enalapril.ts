@@ -18,24 +18,12 @@ export const enalapril: Farmaco = {
   classe: 'Anti-hipertensivo, Inibidor da Enzima Conversora de Angiotensina (IECA)',
   dosePratica: '1. Hipertensão Arterial Sistêmica (SBC / HSL): Iniciar com 10 a 20 mg VO 1 vez ao dia (ou 5 mg se idoso/diurético associado). Titular até dose de manutenção de 20 a 40 mg/dia (em 1 tomada diária ou 12/12h). Dose máxima: 40 mg/dia. 2. Insuficiência Cardíaca com Fração de Ejeção Reduzida e Pós-IAM: Iniciar com 2,5 mg a 5 mg/dia e titular gradualmente até a dose-alvo de 10 a 20 mg de 12/12h (20 a 40 mg/dia). CONTRAINDICADO ABSOLUTAMENTE NA GESTAÇÃO.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada matinal contínua para controle da pressão arterial e insuficiência cardíaca',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle da pressão arterial ou insuficiência cardíaca',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 5 mg, 10 mg e 20 mg distribuídos com 100% de gratuidade nas farmácias credenciadas e UBSs do SUS.',
   apresentacoes: [
-    {
-      id: 'cp_20mg',
-      forma: 'cp',
-      nome: 'Comprimido 20 mg',
-      comercial: 'Renitec / Genérico',
-      conc: '20 mg',
-      rotulo: 'Maleato de enalapril 20 mg comprimido',
-      mg: 20,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 a 2 caixas (30 comprimidos)',
-      acesso: { rename: true, fp: true },
-      instrucao: 'Como tomar o medicamento para pressão e coração:\n1. HORÁRIO E TOMADA: Tomar o comprimido com um copo de água, todos os dias no mesmo horário, com ou sem alimentos.\n2. REMÉDIO DE USO CONTÍNUO: Nunca pare de tomar o remédio por conta própria mesmo que a pressão esteja boa, pois ele protege o coração e os rins.\n3. ATENÇÃO - TOSSE SECA: O enalapril pode provocar uma tosse seca e persistente ("pigarro incômodo na garganta"). Se isso acontecer com você, NÃO use xaropes para tosse; avise seu médico na próxima consulta (ele poderá substituir este medicamento por outro da classe dos BRAs, como a losartana, que não causa tosse).\n4. INCHAÇO RARO NO ROSTO OU LÁBIOS (ANGIOEDEMA): Se notar inchaço repentino nos lábios, língua ou garganta com falta de ar, suspenda o medicamento imediatamente e procure o pronto-socorro.\n5. CUIDADO COM TONTURAS: Nos primeiros dias, evite levantar-se depressa da cama ou cadeira para prevenir quedas por tontura.\n6. GESTAÇÃO: Este remédio é TOTALMENTE PROIBIDO na gravidez. Mulheres em idade fértil que engravidarem devem avisar o médico imediatamente.',
-      obs: 'RENAME / Farmácia Popular. Apresentação mais prescrita na Atenção Básica para manutenção anti-hipertensiva e cardioprotetora.'
-    },
     {
       id: 'cp_10mg',
       forma: 'cp',
@@ -48,8 +36,23 @@ export const enalapril: Farmaco = {
       vias: ['VO'],
       disp: '1 a 2 caixas (30 comprimidos)',
       acesso: { rename: true, fp: true },
-      instrucao: 'Tomar 1 comprimido 1 a 2 vezes ao dia conforme prescrito pelo médico.',
-      obs: 'RENAME / Farmácia Popular. Dose inicial habitual em hipertensos jovens ou intermediária de titulação.'
+      instrucao: 'Como tomar o medicamento para pressão e coração:\n1. HORÁRIO E TOMADA: Tomar o comprimido com um copo de água, todos os dias no mesmo horário, com ou sem alimentos.\n2. REMÉDIO DE USO CONTÍNUO: Nunca pare de tomar o remédio por conta própria mesmo que a pressão esteja boa, pois ele protege o coração e os rins.\n3. ATENÇÃO - TOSSE SECA: O enalapril pode provocar uma tosse seca e persistente ("pigarro incômodo na garganta"). Se isso acontecer com você, avise seu médico na próxima consulta para avaliação de troca por um BRA (como losartana).\n4. INCHAÇO RARO NO ROSTO OU LÁBIOS (ANGIOEDEMA): Se notar inchaço repentino nos lábios, língua ou garganta com falta de ar, suspenda o medicamento imediatamente e procure o pronto-socorro.',
+      obs: 'RENAME / Farmácia Popular. Dose padrão de referência para adultos (PuxaFicha).'
+    },
+    {
+      id: 'cp_20mg',
+      forma: 'cp',
+      nome: 'Comprimido 20 mg',
+      comercial: 'Renitec / Genérico',
+      conc: '20 mg',
+      rotulo: 'Maleato de enalapril 20 mg comprimido',
+      mg: 20,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 a 2 caixas (30 comprimidos)',
+      acesso: { rename: true, fp: true },
+      instrucao: 'Como tomar o medicamento para pressão e coração:\n1. HORÁRIO E TOMADA: Tomar o comprimido com um copo de água, todos os dias no mesmo horário, com ou sem alimentos.\n2. REMÉDIO DE USO CONTÍNUO: Nunca pare de tomar o remédio por conta própria mesmo que a pressão esteja boa, pois ele protege o coração e os rins.\n3. ATENÇÃO - TOSSE SECA: O enalapril pode provocar tosse seca. Avise seu médico se houver tosse persistente.',
+      obs: 'RENAME / Farmácia Popular. Dose de manutenção para hipertensão mais resistente.'
     },
     {
       id: 'cp_5mg',
@@ -76,10 +79,10 @@ export const enalapril: Farmaco = {
       tipo: 'mg',
       min: 5,
       max: 40,
-      padrao: 20,
+      padrao: 10,
       dosesDia: [1, 2],
-      dosesPadrao: 1,
-      intervaloFixo: 24,
+      dosesPadrao: 2,
+      intervaloFixo: 12,
       duracaoMaxDias: 180,
       fonte: 'HSL / SBC / BULA',
       trecho: 'HSL: Hipertensão essencial: 10 a 20 mg 1 vez ao dia (iniciar com 5-10 mg; manutenção até 40 mg/dia em 1 ou 2 tomadas). Insuficiência cardíaca: iniciar com 2,5 mg/dia e titular até 20 mg/dia.'

@@ -8,7 +8,10 @@ export const ticagrelor: Farmaco = {
   classe: 'Antiagregante Plaquetário (Antagonista Reversível do Receptor P2Y12)',
   dosePratica: 'SCA / IAM: Dose de ataque de 180 mg VO (2 comprimidos de 90 mg) imediatamente; Manutenção: 90 mg VO de 12 em 12 horas associado ao AAS.',
   fontes: { HSL: '2024', PSZERADO: '2025', BULA: '2024' },
-  snPadrao: 'síndrome coronariana aguda',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'prevenção cardiovascular e antiagregação pós-SCA',
   acessoFonte: 'Mercado farmacêutico privado / Diretrizes SBC. Não disponível no componente básico do SUS.',
   apresentacoes: [
     {
@@ -37,6 +40,7 @@ export const ticagrelor: Farmaco = {
       max: 180,
       padrao: 90,
       dosesDia: [1, 2],
+      dosesPadrao: 2,
       intervaloFixo: 12,
       fonte: 'PSZERADO',
       trecho: 'Ataque: 180 mg VO dose única. Manutenção: 90 mg VO de 12/12h.'

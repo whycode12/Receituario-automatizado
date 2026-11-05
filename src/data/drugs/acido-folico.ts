@@ -19,7 +19,10 @@ export const acidoFolico: Farmaco = {
   classe: 'Vitamina Hidrossolúvel do Complexo B e Antianêmico',
   dosePratica: '1. Prevenção de Defeitos do Tubo Neural no Pré-Natal (MS / FEBRASGO / HSL): 5 mg VO 1 vez ao dia durante o período fértil/pré-concepcional (iniciar 1 a 3 meses antes da concepção) e manter até a 12ª semana de gestação. 2. Resgate de Toxicidade por Metotrexato (SBR / HSL): 5 mg VO 1 vez por semana (administrado 24 a 48 horas após a dose semanal do metotrexato). 3. Anemia Megaloblástica por Deficiência de Folatos: 5 mg VO 1 vez ao dia por 1 a 4 meses.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada diária pré-natal ou semanal pós-metotrexato',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'suplementação vitamínica pré-natal ou indicação médica',
   acessoFonte: 'RENAME / Farmácia Básica do SUS / Farmácia Popular: Comprimidos de 5 mg de ácido fólico amplamente disponíveis gratuitamente na Atenção Básica de todo o Brasil.',
   apresentacoes: [
     {

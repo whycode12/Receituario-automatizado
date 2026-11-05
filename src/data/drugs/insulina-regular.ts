@@ -8,7 +8,10 @@ export const insulinaRegular: Farmaco = {
   classe: 'Insulina Humana Recombinante de Ação Rápida (Prandial e Parenteral)',
   dosePratica: '1. Controle Prandial / Correção de Hiperglicemia (SC): Injetar 2 a 10 UI SC 30 minutos antes da refeição (ou escala móvel: glicemia 180-250: 2 a 4 UI; 251-300: 4 a 6 UI; > 300: 6 a 8 UI). 2. Emergência - Hipercalemia Grave (Solução Polarizante EV): 10 UI de Insulina Regular EV diluídas em 100 mL de Glicose 50% (G50%) infundidas em 15 a 30 minutos. 3. Cetoacidose Diabética (CAD) / EHH (EV): Diluir 100 UI em 100 mL de SF 0,9% (1 UI/mL) e infundir a 0,14 UI/kg/h em bomba contínua com monitorização horária de glicemia e potássio.',
   fontes: { HSL: '11/12/2018', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'hiperglicemia pré-prandial ou correção glicêmica',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'hiperglicemia pré-prandial ou antes das refeições',
   acessoFonte: 'RENAME 2024 / Farmácia Popular / SUS: Frasco de 10 mL (100 UI/mL) disponibilizado gratuitamente na Atenção Básica, UPAs e hospitais do SUS.',
   apresentacoes: [
     {
@@ -46,7 +49,7 @@ export const insulinaRegular: Farmaco = {
       tipo: 'ui',
       min: 2,
       max: 15,
-      padrao: 4,
+      padrao: 2,
       dosesDia: [1, 4],
       dosesPadrao: 3,
       intervaloFixo: 8,

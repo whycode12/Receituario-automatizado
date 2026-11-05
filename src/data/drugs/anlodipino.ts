@@ -18,7 +18,10 @@ export const anlodipino: Farmaco = {
   classe: 'Bloqueador dos Canais de Cálcio Di-hidropiridínico com Ação Vasodilatadora Periférica Prolongada',
   dosePratica: '1. Hipertensão Arterial Sistêmica e Angina Estável (SBC / HSL): 5 mg VO 1 vez ao dia pela manhã. Se a resposta for insuficiente após 2 a 4 semanas, pode ser titulado para 10 mg VO 1 vez ao dia (dose máxima). 2. Idosos, Hepatopatas Leves ou Pacientes Frágeis: Iniciar com 2,5 mg a 5 mg VO 1 vez ao dia.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada matinal contínua para controle da pressão arterial ou angina',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle da pressão arterial ou angina',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 5 mg distribuídos gratuitamente em todas as farmácias credenciadas e Unidades Básicas de Saúde.',
   apresentacoes: [
     {

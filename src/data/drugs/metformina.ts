@@ -18,7 +18,10 @@ export const metformina: Farmaco = {
   classe: 'Biguanida Redutora da Gliconeogênese Hepática e Sensibilizadora dos Receptores Periféricos de Insulina',
   dosePratica: '1. Diabetes Mellitus Tipo 2 (SBD / HSL): Iniciar com 500 mg VO 2 vezes ao dia (ou 850 mg VO 1 vez ao dia) junto ou logo após as refeições principais (almoço e jantar). Titular a cada 1 a 2 semanas conforme tolerância gastrointestinal até dose ótima de 1.500 mg a 2.000 mg/dia divididos em 2 a 3 tomadas (dose máxima: 2.550 mg/dia de liberação padrão ou 2.000 mg/dia de liberação prolongada XR). 2. Síndrome dos Ovários Policísticos (SOP): 1.000 mg a 1.500 mg/dia divididos em 2 tomadas.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada regular junto às refeições para controle glicêmico contínuo',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle glicêmico no diabetes mellitus',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 500 mg, 850 mg e 500 mg XR distribuídos gratuitamente em farmácias conveniadas e UBS.',
   apresentacoes: [
     {
@@ -76,7 +79,7 @@ export const metformina: Farmaco = {
       tipo: 'mg',
       min: 500,
       max: 2550,
-      padrao: 1000,
+      padrao: 500,
       dosesDia: [1, 3],
       dosesPadrao: 2,
       intervaloFixo: 12,

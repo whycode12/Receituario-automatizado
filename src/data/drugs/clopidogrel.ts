@@ -8,7 +8,10 @@ export const clopidogrel: Farmaco = {
   classe: 'Antiagregante Plaquetário (Inibidor do Receptor P2Y12)',
   dosePratica: 'Prevenção / Manutenção: 75 mg VO 1x/dia. Ataque no IAM / SCA: 300 mg VO (4 comprimidos) ou 600 mg VO se cateterismo / angioplastia imediata (< 24h). Idosos > 75 anos com fibrinólise: omitir dose de ataque e usar 75 mg.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'evento coronariano agudo ou stent recente',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'prevenção cardiovascular e antiagregação plaquetária',
   acessoFonte: 'RENAME 2024 (Componente Especializado / Básico): Clopidogrel 75 mg comprimido.',
   apresentacoes: [
     {
@@ -37,6 +40,7 @@ export const clopidogrel: Farmaco = {
       max: 600,
       padrao: 75,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Manutenção: 75 mg VO 1x/dia. Ataque em SCA: 300 a 600 mg VO dose única inicial.'

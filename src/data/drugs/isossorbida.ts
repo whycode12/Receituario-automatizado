@@ -8,7 +8,10 @@ export const isossorbida: Farmaco = {
   classe: 'Vasodilatador Coronariano (Nitrato Orgânico)',
   dosePratica: 'Crise de dor anginosa aguda: 5 mg sublingual; se persistir a dor, pode repetir a cada 5 minutos até no máximo 3 vezes (dose máxima 15 mg). Prevenção crônica: 10 a 40 mg VO 2 a 3x/dia com período livre de nitrato.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'dor no peito anginosa',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'dor no peito / crise de dor anginosa',
   acessoFonte: 'RENAME 2024 (Componente Básico): Dinitrato de isossorbida 5 mg comprimido sublingual.',
   apresentacoes: [
     {

@@ -18,9 +18,27 @@ export const levotiroxina: Farmaco = {
   classe: 'Hormônio Sintético da Tireoide (T4 Exógeno com Conversão Periférica a T3)',
   dosePratica: '1. Hipotireoidismo Primário em Adultos Jovens (SBEM / HSL): Iniciar com 50 mcg a 100 mcg VO 1 vez ao dia pela manhã em jejum rigoroso (dose de substituição plena ~1,6 mcg/kg/dia; titular a cada 6 a 8 semanas conforme dosagem de TSH). 2. Idosos ou Cardiopatas: Iniciar com dose baixa de 12,5 mcg a 25 mcg VO 1 vez ao dia e aumentar de 12,5 a 25 mcg a cada 4 a 8 semanas. 3. Hipotireoidismo Congênito / Pediatria: 10 a 15 mcg/kg/dia nos primeiros meses de vida.',
   fontes: { HSL: '14/02/2017', MS: '2023', BULA: '04/10/2026' },
-  snPadrao: 'tomada matinal contínua em jejum rigoroso para reposição hormonal da tireoide',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'reposição hormonal do hipotireoidismo',
   acessoFonte: 'RENAME / Programa Farmácia Popular do Brasil: Comprimidos de 25 mcg, 50 mcg e 100 mcg distribuídos gratuitamente em farmácias conveniadas e UBS.',
   apresentacoes: [
+    {
+      id: 'cp_50mcg',
+      forma: 'cp',
+      nome: 'Comprimido 50 mcg',
+      comercial: 'Puran T4 / Synthroid / Euthyrox / Genérico',
+      conc: '50 mcg (0,05 mg)',
+      rotulo: 'Levotiroxina Sódica 50 mcg comprimido',
+      mg: 0.05,
+      frac: 0.5,
+      vias: ['VO'],
+      disp: '1 a 2 caixas (30 comprimidos)',
+      acesso: { rename: true, fp: true },
+      instrucao: 'Como tomar o hormônio da tireoide (levotiroxina) corretamente:\n1. TOME EM JEJUM: Tome 1 comprimido pela manhã logo ao acordar, com água, pelo menos 30 a 60 minutos antes do café da manhã.\n2. CUIDADO COM ALIMENTOS: Café, leite, queijo e fibras diminuem a absorção do remédio se consumidos logo em seguida.\n3. SEPARAR DE FERRO E CÁLCIO: Aguarde 4 horas para tomar suplementos de cálcio ou ferro.\n4. USO CONTÍNUO: Mantenha o uso diário sem interrupções.',
+      obs: 'RENAME / Farmácia Popular. Apresentação padrão de referência para adultos (PuxaFicha).'
+    },
     {
       id: 'cp_25mcg',
       forma: 'cp',
@@ -35,21 +53,6 @@ export const levotiroxina: Farmaco = {
       acesso: { rename: true, fp: true },
       instrucao: 'Como tomar o hormônio da tireoide (levotiroxina) corretamente:\n1. JEJUM ABSOLUTO OBRIGATÓRIO: Tome o comprimido logo ao acordar, em jejum rigoroso, com um copo cheio de água pura. Aguarde de 30 a 60 minutos para tomar o café da manhã. A presença de leite, café, pão ou suco no estômago reduz drasticamente a absorção do medicamento.\n2. DISTÂNCIA DE OUTROS MEDICAMENTOS: Remédios como sulfato ferroso (ferro), carbonato de cálcio, antiácidos, omeprazol ou polivitamínicos grudam na levotiroxina e cortam seu efeito. Tome esses outros remédios pelo menos 4 HORAS DEPOIS da levotiroxina (ex: no almoço ou à tarde).\n3. NÃO INTERROMPA: Este remédio substitui o hormônio natural que a sua tireoide deixou de produzir. É um tratamento contínuo para a vida toda.\n4. EXAMES DE SANGUE: O médico solicitará exames de sangue periódicos (TSH e T4 Livre) a cada 2 a 3 meses para verificar se a dose está sob medida para o seu corpo.',
       obs: 'RENAME / Farmácia Popular. Apresentação ideal para início em idosos, cardiopatas ou pequenos ajustes de dose.'
-    },
-    {
-      id: 'cp_50mcg',
-      forma: 'cp',
-      nome: 'Comprimido 50 mcg',
-      comercial: 'Puran T4 / Synthroid / Euthyrox / Genérico',
-      conc: '50 mcg (0,05 mg)',
-      rotulo: 'Levotiroxina Sódica 50 mcg comprimido',
-      mg: 0.05,
-      frac: 0.5,
-      vias: ['VO'],
-      disp: '1 a 2 caixas (30 comprimidos)',
-      acesso: { rename: true, fp: true },
-      instrucao: 'Como tomar o hormônio da tireoide (levotiroxina) corretamente:\n1. TOME EM JEJUM: Tome 1 comprimido pela manhã logo ao acordar, com água, pelo menos 30 a 60 minutos antes do café da manhã.\n2. CUIDADO COM ALIMENTOS: Café, leite, queijo e fibras diminuem a absorção do remédio se consumidos logo em seguida.\n3. SEPARAR DE FERRO E CÁLCIO: Aguarde 4 horas para tomar suplementos de cálcio ou ferro.\n4. USO CONTÍNUO: Mantenha o uso diário sem interrupções.',
-      obs: 'RENAME / Farmácia Popular. Dose inicial padrão mais frequente em adultos jovens com hipotireoidismo.'
     },
     {
       id: 'cp_75mcg',

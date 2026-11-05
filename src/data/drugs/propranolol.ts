@@ -8,7 +8,10 @@ export const propranolol: Farmaco = {
   classe: 'Betabloqueador Não Seletivo (Antagonista Beta-1 e Beta-2 Adrenérgico)',
   dosePratica: 'Hipertensão Portal / Profilaxia de Sangramento por Varizes Esofágicas: Iniciar com 20 mg a 40 mg VO de 12/12h; titular até frequência cardíaca de repouso entre 55 e 60 bpm (ou redução de 25% da FC basal). Profilaxia de Enxaqueca / Tremor Essencial: 40 mg VO de 12/12h. Hipertensão Arterial: 40 mg a 80 mg VO de 12/12h.',
   fontes: { HSL: '08/02/2023', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'hipertensão ou palpitações',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle pressórico, palpitações ou prevenção de enxaqueca',
   acessoFonte: 'RENAME 2024 (Componente Básico): comprimido de 40 mg. Farmácia Popular: hipertensão arterial (gratuito).',
   apresentacoes: [
     {

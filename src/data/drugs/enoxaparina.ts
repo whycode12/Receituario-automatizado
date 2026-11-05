@@ -8,7 +8,10 @@ export const enoxaparina: Farmaco = {
   classe: 'Anticoagulante (Heparina de Baixo Peso Molecular - HBPM)',
   dosePratica: 'Profilaxia de TVP/TEP: 40 mg SC 1x/dia. Tratamento pleno (TVP/TEP/IAM sem supra): 1 mg/kg SC a cada 12 horas (máximo 100 mg por dose). IAM com supra: Ataque de 30 mg IV em bolus + 1 mg/kg SC. Idosos > 75 anos: 0,75 mg/kg SC de 12/12h sem bolus IV. ClCr < 30 mL/min: 1 mg/kg SC 1x ao dia.',
   fontes: { PSZERADO: '2025', HSL: '2024', EINA: '2024', BULA: '2024' },
-  snPadrao: 'evento tromboembólico agudo ou profilaxia de TEV',
+  modoPadrao: 'continuo',
+  diasPadrao: 7,
+  usoContinuoPadrao: false,
+  snPadrao: 'profilaxia de trombose venosa profunda ou evento tromboembólico',
   acessoFonte: 'RENAME 2024 (Componente Hospitalar / Especializado): Enoxaparina sódica 40 mg e 60 mg solução injetável.',
   apresentacoes: [
     {
@@ -68,9 +71,11 @@ export const enoxaparina: Farmaco = {
       tipo: 'mg',
       min: 40,
       max: 100,
-      padrao: 60,
+      padrao: 40,
       dosesDia: [1, 2],
-      intervaloFixo: 12,
+      dosesPadrao: 1,
+      intervaloFixo: 24,
+      duracaoMaxDias: 14,
       fonte: 'PSZERADO',
       trecho: 'Profilaxia: 40 mg SC 1x/dia. Anticoagulação plena: 1 mg/kg SC a cada 12 horas.'
     },

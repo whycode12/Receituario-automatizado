@@ -8,7 +8,10 @@ export const insulinaNph: Farmaco = {
   classe: 'Insulina Humana Recombinante de Ação Intermediária (Basal)',
   dosePratica: 'DM Tipo 2 (Esquema Basal Bedtime na Atenção Básica / UBS): Iniciar com 10 UI (ou 0,1 a 0,2 UI/kg/dia) SC 1 vez ao dia ao deitar (às 22h). Titular aumentando 2 UI a cada 3 a 7 dias conforme a glicemia capilar de jejum até atingir a meta (glicemia de jejum entre 80 e 130 mg/dL). Se a dose total necessária ultrapassar 20 a 30 UI/dia, fracionar em 2 tomadas: 2/3 pela manhã (30 min antes do café) e 1/3 ao deitar. DM Tipo 1: 0,5 a 1,0 UI/kg/dia associada à insulina prandial (Regular ou ultrarrápida). NUNCA administrar por via intravenosa!',
   fontes: { HSL: '11/12/2018', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'hiperglicemia',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle glicêmico no diabetes mellitus',
   acessoFonte: 'RENAME 2024 / Farmácia Popular / SUS: Frasco de 10 mL e canetas de 3 mL distribuídos gratuitamente na Atenção Primária à Saúde e farmácias conveniadas, acompanhados de seringas e agulhas.',
   apresentacoes: [
     {
