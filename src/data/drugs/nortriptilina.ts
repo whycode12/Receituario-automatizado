@@ -8,6 +8,9 @@ export const nortriptilina: Farmaco = {
   classe: 'Antidepressivo Tricíclico (Inibidor da recaptação de noradrenalina e serotonina)',
   dosePratica: 'Adulto: Dor crônica / neuropática / profilaxia de enxaqueca: iniciar com 10 mg a 25 mg VO à noite ao deitar (1x ao dia); se necessário, titular gradualmente a cada 1-2 semanas até 25 mg a 75 mg/dia. Depressão maior: 25 mg 3-4x/dia ou 50 mg a 100 mg em dose única noturna (máx. 150 mg/dia; idosos máx. 50-75 mg/dia). Ingerir com água, preferencialmente à noite devido à sonolência. Receituário de Controle Especial (Lista C1).',
   fontes: { HSL: '11/09/2019', BULA: '04/10/2026' },
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
   snPadrao: 'dor crônica neuropática ou profilaxia de enxaqueca',
   acessoFonte: 'RENAME 2024 (Componente Básico / Saúde Mental): cápsula 25 mg. Farmácia Popular: não consta no elenco do programa. Medicamento de Controle Especial sujeito a Receita de Controle Especial em 2 vias (Portaria 344/98 - Lista C1).',
   apresentacoes: [
@@ -77,8 +80,9 @@ export const nortriptilina: Farmaco = {
       min: 10,
       max: 150,
       padrao: 25,
-      dosesDia: [1, 3],
+      dosesDia: [1, 1],
       dosesPadrao: 1,
+      intervaloFixo: 24,
       fonte: 'HSL',
       trecho: 'Adulto: 25mg, 3-4 vezes/dia. Iniciar com doses baixas e aumentar gradualmente de acordo com a necessidade. Dose máxima: 150mg/dia (HSL).'
     },

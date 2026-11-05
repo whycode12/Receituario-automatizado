@@ -8,7 +8,10 @@ export const diazepam: Farmaco = {
   classe: 'Benzodiazepínico de Longa Ação (Agonista Alostérico dos Receptores GABA-A)',
   dosePratica: 'Crise Convulsiva Aguda / Estado de Mal (> 5 min): 10 mg (1 ampola de 2 mL) EV puro lento (em 2 a 3 minutos). Pode repetir mais 10 mg após 5 minutos se refratário (máximo 20 mg). Agitação / Pânico agudo / Abstinência Alcoólica: 5 a 10 mg VO ou 10 mg IM profunda em glúteo.',
   fontes: { PSZERADO: '2025', HSL: '2024', ACLS: '2025', BULA: '2024' },
-  snPadrao: 'crise convulsiva aguda, agitação psicomotora ou abstinência alcoólica',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'crise convulsiva aguda ou agitação psicomotora',
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Diazepam 10 mg comprimido e 5 mg/mL (10 mg/2 mL) injetável. Notificação de Receita B (Azul).',
   apresentacoes: [
     {

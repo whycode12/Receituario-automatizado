@@ -8,7 +8,10 @@ export const amitriptilina: Farmaco = {
   classe: 'Antidepressivo Tricíclico (Inibidor Não-Seletivo da Recaptação de Serotonina e Noradrenalina)',
   dosePratica: 'Depressão inicial / Profilaxia de enxaqueca / Dor neuropática: Iniciar com 25 mg VO à noite, ao deitar. Pode titular para 50 mg a 75 mg após 1 a 2 semanas se boa tolerabilidade (dose máxima ambulatorial habitual 150 mg/dia). Idosos: iniciar com 10 a 25 mg à noite.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'depressão, dor crônica ou profilaxia de enxaqueca',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'dor crônica, profilaxia de enxaqueca ou depressão',
   acessoFonte: 'RENAME 2024 (Componente Básico do SUS): Comprimidos de 25 mg e 75 mg disponíveis gratuitamente nas Unidades Básicas de Saúde (UBS). Farmácia Popular: disponível no programa.',
   apresentacoes: [
     {
@@ -51,6 +54,7 @@ export const amitriptilina: Farmaco = {
       max: 150,
       padrao: 25,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'HSL',
       trecho: 'Iniciar com 25 a 50 mg/dia em dose única ao deitar; aumentar progressivamente até 150 mg/dia se necessário.'

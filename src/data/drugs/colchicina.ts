@@ -8,7 +8,10 @@ export const colchicina: Farmaco = {
   classe: 'Agente Antigotoso / Inibidor da Polimerização de Tubulina e Quimiotaxia de Neutrófilos',
   dosePratica: 'Crise Aguda de Artrite Gotosa: Tomar 1 mg (2 comprimidos de 0,5 mg) VO imediatamente; após 1 hora, tomar mais 0,5 mg (1 comprimido) — dose total de 1,5 mg no 1º dia. A partir do 2º dia, manter 0,5 mg VO de 12 em 12 horas até a remissão completa da dor (máx 3 a 5 dias). Profilaxia de crises ao iniciar alopurinol: 0,5 mg VO 1x/dia contínuo.',
   fontes: { PSZERADO: '2025', HSL: '2024', ACR: '2024', BULA: '2024' },
-  snPadrao: 'crise de gota ou dor articular inflamatória aguda',
+  modoPadrao: 'sn',
+  diasPadrao: 3,
+  usoContinuoPadrao: false,
+  snPadrao: 'crise de gota ou dor articular inflamatória',
   acessoFonte: 'RENAME 2024 (Componente Básico): Colchicina 0,5 mg comprimido.',
   apresentacoes: [
     {
@@ -37,7 +40,9 @@ export const colchicina: Farmaco = {
       max: 1.5,
       padrao: 0.5,
       dosesDia: [1, 2],
+      dosesPadrao: 2,
       intervaloFixo: 12,
+      duracaoMaxDias: 3,
       fonte: 'ACR',
       trecho: 'Ataque na gota aguda: 1 mg VO agora + 0,5 mg após 1h. Manutenção: 0,5 mg de 12/12h.'
     }

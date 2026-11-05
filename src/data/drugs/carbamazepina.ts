@@ -8,7 +8,10 @@ export const carbamazepina: Farmaco = {
   classe: 'Antiepiléptico e Estabilizador do Humor (Bloqueador de Canais de Sódio Voltagem-Dependentes)',
   dosePratica: 'Abstinência alcoólica (ambulatorial UPA): 200 mg VO de 12/12h por 5 a 10 dias. Epilepsia: iniciar com 100 a 200 mg 1 a 2x/dia e titular gradualmente até 800 a 1200 mg/dia divididos em 2 a 3 tomadas. Neuralgia do trigêmeo: 100 a 200 mg 2x/dia até alívio da dor.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'abstinência alcoólica ou controle de crises convulsivas',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'controle de crises convulsivas ou dor neuropática',
   acessoFonte: 'RENAME 2024 (Componente Básico do SUS): Comprimidos de 200 mg e 400 mg e suspensão 20 mg/mL disponíveis gratuitamente na rede pública.',
   apresentacoes: [
     {
@@ -51,6 +54,7 @@ export const carbamazepina: Farmaco = {
       max: 1200,
       padrao: 200,
       dosesDia: [2, 3],
+      dosesPadrao: 2,
       intervaloFixo: 12,
       fonte: 'HSL',
       trecho: 'Iniciar com 200 a 400 mg/dia divididos em 2 tomadas; aumentar gradualmente até dose de manutenção.'

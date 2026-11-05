@@ -8,7 +8,10 @@ export const tansulosina: Farmaco = {
   classe: 'Antagonista Seletivo dos Receptores Alfa-1A Adrenérgicos Uroespecíficos',
   dosePratica: 'Terapia Médica Expulsiva (TME) de Cálculo Ureteral distal (5 a 10 mm): 0,4 mg VO 1x ao dia após o mesmo horário da refeição (ex: após o café da manhã) por 14 a 28 dias. Aumenta a taxa de eliminação espontânea do cálculo e diminui episódios de dor. Hiperplasia Prostática Benigna (HPB): 0,4 mg VO 1x ao dia contínuo.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'cálculo ureteral em tentativa de expulsão médica ou sintomas de HPB',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'sintomas urinários de HPB ou cálculo ureteral',
   acessoFonte: 'RENAME 2024 (Componente Especializado): Cloridrato de tansulosina 0,4 mg cápsula de liberação modificada.',
   apresentacoes: [
     {
@@ -37,6 +40,7 @@ export const tansulosina: Farmaco = {
       max: 0.4,
       padrao: 0.4,
       dosesDia: [1, 1],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'PSZERADO',
       trecho: 'Terapia expulsiva de cálculo ureteral ou HPB: 0,4 mg VO 1x ao dia após refeição.'

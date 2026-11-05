@@ -8,7 +8,10 @@ export const haloperidol: Farmaco = {
   classe: 'Antipsicótico Típico de Alta Potência (Bloqueador dos Receptores Dopaminérgicos D2)',
   dosePratica: 'Agitação Psicomotora / Surto Psicótico Agudo na Emergência: 2,5 a 5 mg (1/2 a 1 ampola de 5 mg/mL) IM profunda no glúteo; frequentemente associado à Prometazina 25 a 50 mg IM (mesma seringa) para potencializar sedação e prevenir distonia aguda extrapiramidal. Pode repetir a cada 30 a 60 minutos se necessário (máximo 15 a 20 mg/dia). Delirium em idosos: 0,5 a 1 mg VO ou IM.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'agitação psicomotora intensa, agressividade ou alucinações',
+  modoPadrao: 'agora',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'agitação psicomotora, surto psicótico ou agressividade',
   acessoFonte: 'RENAME 2024 (Componente Básico / Hospitalar): Haloperidol 5 mg comprimido e 5 mg/mL solução injetável ampola 1 mL. Notificação de Receita C1 (Branca em 2 vias).',
   apresentacoes: [
     {

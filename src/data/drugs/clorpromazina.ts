@@ -8,7 +8,10 @@ export const clorpromazina: Farmaco = {
   classe: 'Antipsicótico Típico Fenotiazínico de Baixa Potência e Alta Sedação',
   dosePratica: 'Soluços Incoercíveis / Intractáveis: VO: 5 a 10 gotas (10 a 20 mg) de 8/8h ou 12/12h; ou 25 a 50 mg VO de 6/6h a 8/8h por 3 a 5 dias. EV (urgência grave): 25 mg (1/3 de ampola = 8 mg até 25 mg) diluído em 100 mL de SF 0,9% infundido lentamente em 30 min (risco de hipotensão postural severa). Agitação psicomotora aguda: 25 a 50 mg IM profundo.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'soluços incoercíveis, agitação grave ou vômitos refratários',
+  modoPadrao: 'sn',
+  diasPadrao: 5,
+  usoContinuoPadrao: false,
+  snPadrao: 'soluços incoercíveis ou agitação',
   acessoFonte: 'RENAME 2024 (Componente Básico e Hospitalar): Comprimidos de 25 mg e 100 mg, gotas 40 mg/mL e solução injetável 25 mg/5 mL (5 mg/mL) ampolas gratuitas na rede pública.',
   apresentacoes: [
     {
@@ -69,7 +72,9 @@ export const clorpromazina: Farmaco = {
       max: 100,
       padrao: 25,
       dosesDia: [1, 3],
+      dosesPadrao: 3,
       intervaloFixo: 8,
+      duracaoMaxDias: 5,
       fonte: 'PSZERADO',
       trecho: 'Soluços incoercíveis: 25 a 50 mg VO de 8/8h por 3 a 5 dias.'
     },

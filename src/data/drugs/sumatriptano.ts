@@ -8,7 +8,10 @@ export const sumatriptano: Farmaco = {
   classe: 'Antienxaquecoso Específico (Agonista Seletivo dos Receptores 5-HT1B/1D)',
   dosePratica: 'Adultos (18 a 65 anos) — Via Oral: 50 mg (ou 100 mg se crises graves prévias) VO em dose única logo aos primeiros sinais da crise. Se houver resposta e a dor retornar, pode-se tomar um segundo comprimido após um intervalo MÍNIMO de 2 horas (máx. 200 a 300 mg/dia). Subcutâneo (SC): 6 mg SC (autoinjetor) para alívio ultrarrápido (10 a 15 min) em enxaqueca refratária ou cefaleia em salvas; pode repetir 1 dose após 1 hora se necessário (máx. 12 mg/dia).',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'crise aguda de enxaqueca ou cefaleia em salvas',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'início da dor de cabeça ou crise de enxaqueca',
   acessoFonte: 'RENAME 2024: Componente Especializado (CEAF) para Sumatriptano injetável 6 mg/0,5 mL (apenas cefaleia em salvas). Comprimidos disponíveis no mercado comercial amplo.',
   apresentacoes: [
     {
@@ -80,8 +83,10 @@ export const sumatriptano: Farmaco = {
       min: 25,
       max: 100,
       padrao: 50,
-      dosesDia: [1, 3],
+      dosesDia: [1, 2],
       dosesPadrao: 1,
+      intervaloFixo: 2,
+      duracaoMaxDias: 2,
       fonte: 'HSL / PSZERADO',
       trecho: 'Adulto — VO: 25 a 100 mg em dose única logo aos primeiros sinais da crise. Se a dor retornar após melhora inicial, pode repetir após no mínimo 2 horas. Dose máxima diária: 300 mg/dia (prática clínica habitual: até 200 mg/dia).'
     },

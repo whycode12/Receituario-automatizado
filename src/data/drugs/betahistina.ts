@@ -8,6 +8,9 @@ export const betahistina: Farmaco = {
   classe: 'Análogo da Histamina / Antivertiginoso com Ação Vasodilatadora na Microcirculação da Orelha Interna',
   dosePratica: 'Labirintite / Crise Vertiginosa / Síndrome de Menière: Iniciar com 16 mg VO de 8 em 8 horas (3 vezes ao dia) ou 24 mg VO de 12 em 12 horas, sempre durante ou logo após as principais refeições, por 14 a 30 dias.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
   snPadrao: 'tontura, vertigem ou zumbido no ouvido',
   acessoFonte: 'RENAME 2024 (Componente Especializado / Mercado Privado): Betahistina 16 mg e 24 mg comprimido.',
   apresentacoes: [
@@ -52,6 +55,7 @@ export const betahistina: Farmaco = {
       max: 24,
       padrao: 16,
       dosesDia: [2, 3],
+      dosesPadrao: 3,
       intervaloFixo: 8,
       fonte: 'PSZERADO',
       trecho: 'Adultos VO: 16 mg de 8/8h ou 24 mg de 12/12h durante as refeições.'

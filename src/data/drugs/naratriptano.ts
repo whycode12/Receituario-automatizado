@@ -8,7 +8,10 @@ export const naratriptano: Farmaco = {
   classe: 'Antienxaquecoso Específico (Agonista Seletivo dos Receptores 5-HT1B/1D)',
   dosePratica: 'Adultos (18 a 65 anos): 2,5 mg (1 comprimido) VO logo aos primeiros sinais da crise de enxaqueca. Se a cefaleia retornar ou a resposta inicial for parcial, pode-se tomar um segundo comprimido após um intervalo MÍNIMO de 4 horas. Dose MÁXIMA estrita: 2 comprimidos (5 mg) em 24 horas.',
   fontes: { HSL: '05/05/2025', PSZERADO: '2025', BULA: '04/10/2026' },
-  snPadrao: 'crise de enxaqueca ou cefaleia vascular',
+  modoPadrao: 'sn',
+  diasPadrao: 0,
+  usoContinuoPadrao: false,
+  snPadrao: 'início da dor de cabeça ou crise de enxaqueca',
   acessoFonte: 'RENAME 2024: Não consta na RENAME básica. Amplamente comercializado em drogarias de todo o Brasil.',
   apresentacoes: [
     {
@@ -38,6 +41,8 @@ export const naratriptano: Farmaco = {
       padrao: 2.5,
       dosesDia: [1, 2],
       dosesPadrao: 1,
+      intervaloFixo: 4,
+      duracaoMaxDias: 2,
       fonte: 'HSL / PSZERADO',
       trecho: 'Adulto — VO: dose inicial de 2,5 mg em dose única logo aos primeiros sinais da crise. Se os sintomas retornarem após melhora inicial, uma segunda dose de 2,5 mg pode ser administrada após intervalo de 4 horas. Máximo de 5 mg em 24 horas.'
     }

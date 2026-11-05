@@ -8,7 +8,10 @@ export const passiflora: Farmaco = {
   classe: 'Fitoterápico Ansiolítico e Sedativo Leve (Extrato Seco de Passiflora)',
   dosePratica: 'Ansiedade leve e insônia: Tomar 1 comprimido de 360 mg a 500 mg VO 1 vez ao dia à noite por 10 a 30 dias; ou 1 comprimido de 260 mg a 360 mg de 12/12h por 10 dias. Não causa dependência química.',
   fontes: { PSZERADO: '2025', HSL: '2024', BULA: '2024' },
-  snPadrao: 'ansiedade leve ou dificuldade para conciliar o sono',
+  modoPadrao: 'continuo',
+  diasPadrao: 30,
+  usoContinuoPadrao: true,
+  snPadrao: 'ansiedade leve ou dificuldade para dormir',
   acessoFonte: 'Fitoterápico de venda livre (MIP) e integrante da RENAME / Programa Nacional de Plantas Medicinais e Fitoterápicos do SUS (Seakalm, Passiflorine, Genéricos).',
   apresentacoes: [
     {
@@ -66,6 +69,7 @@ export const passiflora: Farmaco = {
       max: 1000,
       padrao: 360,
       dosesDia: [1, 2],
+      dosesPadrao: 1,
       intervaloFixo: 24,
       fonte: 'BULA',
       trecho: 'Ingerir 1 comprimido à noite ao deitar ou de 12/12h conforme intensidade dos sintomas.'
